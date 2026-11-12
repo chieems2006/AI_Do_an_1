@@ -277,6 +277,21 @@ add("BI-e2e", "FashionCLIP embed+gate+search median (ms)", "168,8", 168.8, 0.05,
     lambda: jget("04_Khoa/results/build_index_fashionclip.json", "query_e2e_ms_median"))
 add("E2E-tsr", "TSR visual-only", "15/18 = 0,833", 0.833, 6e-4, [KHOA_R, BC], "04_Khoa/results/e2e_visual-only.json",
     lambda: jget("04_Khoa/results/e2e_visual-only.json", "visual_only", "tsr"))
+E2H = "04_Khoa/results/e2e_http.json"  # baseline e2e trên hệ thống đã ghép (12/11/2026)
+US44 = "04_Khoa/docs/US_44_baseline_e2e.md"
+add("E2H-tsr", "TSR e2e hệ thống ghép (60 kịch bản)", "39/60 = 0,650", 0.65, 6e-4, [BC, KHOA_R, US44], E2H, lambda: jget(E2H, "task_success_rate"))
+add("E2H-n", "Số kịch bản e2e hệ thống ghép", "39/60", 60, 0, [BC, KHOA_R], E2H, lambda: jget(E2H, "n"))
+add("E2H-route", "Route accuracy e2e", "40/60 = 0,667", 0.6667, 6e-4, [BC, US44], E2H, lambda: jget(E2H, "route_accuracy"))
+add("E2H-p50", "Latency e2e p50 (ms)", "29,1", 29.12, 0.05, [BC, KHOA_R, US44], E2H, lambda: jget(E2H, "latency_ms_p50"))
+add("E2H-p95", "Latency e2e p95 (ms)", "12.759,5", 12759.5, 0.05, [BC, KHOA_R, US44], E2H, lambda: jget(E2H, "latency_ms_p95"))
+add("E2H-gem", "Tỉ lệ chuyển Gemini e2e", "18,3 %", 0.1833, 6e-4, [BC, KHOA_R, US44], E2H, lambda: jget(E2H, "gemini_rate"))
+add("E2H-tin", "Token vào/100 lượt e2e", "3.023,3", 3023.3, 0.05, [BC, KHOA_R, US44], E2H, lambda: jget(E2H, "tokens_per_100_turns", "in"))
+add("E2H-tout", "Token ra/100 lượt e2e", "980,0", 980.0, 0.05, [BC, KHOA_R, US44], E2H, lambda: jget(E2H, "tokens_per_100_turns", "out"))
+add("E2H-calls", "Lời gọi Gemini thành công trong lượt e2e", "11 (+2 lần thử lại)", 11, 0, [BC, US44], E2H, lambda: jget(E2H, "gemini_api_calls_total"))
+add("E2H-retry", "Lần thử lại Gemini trong lượt e2e", "+2 lần thử lại", 2, 0, [BC, US44], E2H, lambda: jget(E2H, "gemini_retries_total"))
+add("E2H-vis", "TSR visual trong e2e hệ thống ghép (DINOv2-S)", "16/18 = 0,889", 0.8889, 6e-4, [BC, US44], E2H, lambda: jget(E2H, "tsr_by_route", "visual"))
+add("E2H-vp95", "Latency p95 truy vấn ảnh e2e (ms)", "215,0", 214.97, 0.05, [BC, US44], E2H, lambda: jget(E2H, "latency_ms_by_kind", "visual", "p95"))
+add("E2H-tp95", "Latency p95 truy vấn văn bản e2e (ms)", "13.266,5", 13266.54, 0.05, [BC, US44], E2H, lambda: jget(E2H, "latency_ms_by_kind", "text", "p95"))
 add("EV-n", "Số truy vấn eval_visual", "600", 600, 0, [KHOA_R], "04_Khoa/eval/eval_visual_stats.json",
     lambda: jget("04_Khoa/eval/eval_visual_stats.json", "n_queries"))
 add("EV-hard", "hard_cross_type (test)", "96 hard_cross_type (53", 53, 0, [KHOA_R], "04_Khoa/eval/eval_visual_stats.json",

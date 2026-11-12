@@ -5,6 +5,8 @@ Chế độ agent:
   --agent fake         : agent giả theo luật (CHỈ để kiểm thử khung, số liệu KHÔNG dùng cho báo cáo)
   --agent visual-only  : chạy THẬT VisualSearcher trên index đã build cho các kịch bản visual; các route khác = not_ready
   --agent http --base-url http://localhost:8000 : gọi API của Hoàng khi hệ thống đã ghép (số e2e thật)
+      + --resume --max-gemini-calls N --pace-s 15 --llm-log ../runtime/logs/llm_calls.jsonl : chạy nhiều đợt theo
+        quota Gemini (ghi từng kịch bản vào results/e2e_http_cases.jsonl; token lấy từ log LLMGateway)
   --agent python --agent-cls msa.agent.router:Agent : gọi trực tiếp Agent của Trung
 
 Kết quả: results/e2e_<agent>.json + results/e2e_<agent>_per_case.csv
@@ -164,33 +166,79 @@ class VisualOnlyAgent:
 
 
 class HttpAgent:
-    def __init__(self, base_url: str):
+    """Gọi API đã ghép (src/msa/api/main.py) đúng hợp đồng mục 5.2: ảnh → POST /search/image (trường `file`);
+    text → POST /chat {message, session_id}. Mỗi kịch bản một phiên mới (kịch bản độc lập, không có ngữ cảnh trước)."""
+
+    def __init__(self, base_url: str, timeout: float = 300.0):
         import httpx
 
-        self.c = httpx.Client(base_url=base_url, timeout=30)
+        self.c = httpx.Client(base_url=base_url, timeout=timeout)
 
-    def handle(self, text=None, image=None, session=None) -> dict:
+    def handle(self, text=None, image=None, session=None, case_id: str | None = None) -> dict:
         if image is not None:
             with open(image, "rb") as f:
-                return self.c.post("/search/image", files={"file": f}).json()
-        return self.c.post("/chat", json={"text": text, "session": session or {}}).json()
+                return self.c.post("/search/image", files={"file": (Path(image).name, f, "image/jpeg")}).json()
+        sid = f"e2e-{case_id or 'x'}-{time.time_ns()}"
+        return self.c.post("/chat", json={"message": text, "session_id": sid}).json()
 
 
-def run(agent, scenarios: list[dict], price_in: float | None, price_out: float | None) -> tuple[dict, pd.DataFrame]:
-    rows = []
-    for sc in scenarios:
-        img = str(ROOT / sc["image"]) if sc.get("image") else None
-        t = time.perf_counter()
-        try:
-            resp = agent.handle(text=sc["text"], image=img, session={})
-        except Exception as ex:  # ghi lỗi thật
-            resp = {"route": "exception", "error": f"{type(ex).__name__}: {ex}"}
-        lat = (time.perf_counter() - t) * 1000
-        ok, err = judge(sc, resp)
-        rows.append({"id": sc["id"], "expected_route": sc["expected_route"], "route": resp.get("route"), "source": resp.get("source"),
-                     "success": ok, "error_code": "" if ok else err, "latency_ms": round(lat, 2),
-                     "tokens_in": resp.get("tokens_in", 0) or 0, "tokens_out": resp.get("tokens_out", 0) or 0})
-    df = pd.DataFrame(rows)
+class LlmLogTail:
+    """Đọc các dòng MỚI của log LLMGateway (`runtime/logs/llm_calls.jsonl`) sau mỗi kịch bản → token và số lời gọi
+    Gemini thật của đúng kịch bản đó (kể cả lời gọi bên trong RAG, vốn không trả token qua /chat). Chạy tuần tự."""
+
+    def __init__(self, path: str):
+        self.path = Path(path)
+        self.pos = self.path.stat().st_size if self.path.exists() else 0
+
+    def read_new(self) -> list[dict]:
+        if not self.path.exists():
+            return []
+        with open(self.path, "rb") as f:
+            f.seek(self.pos)
+            data = f.read()
+        self.pos += len(data)
+        return [json.loads(l) for l in data.decode("utf-8").splitlines() if l.strip()]
+
+
+def summarize_llm(events: list[dict]) -> dict:
+    """Số lời gọi Gemini thật (kể cả lần thử lại bị lỗi), cache hit, token theo usageMetadata."""
+    calls = [e for e in events if e.get("event") == "call"]
+    errs = [e for e in events if e.get("event") == "error"]
+    return {"gemini_calls": len(calls) + sum((e.get("retries") or 0) + 1 for e in errs if e.get("status")),
+            "gemini_retries": sum(e.get("retries") or 0 for e in calls),  # lần thử lại (timeout/503) cũng tốn quota
+            "cache_hits": sum(e.get("event") in ("cache_hit", "semantic_hit") for e in events),
+            "llm_errors": "; ".join(str(e.get("error"))[:80] for e in errs),
+            "tokens_in": sum(e.get("tokens_in") or 0 for e in calls),
+            "tokens_out": sum(e.get("tokens_out") or 0 for e in calls),
+            "tokens_thinking": sum(e.get("tokens_thinking") or 0 for e in calls),
+            "llm_wait_ms": round(sum(e.get("wait_ms") or 0 for e in calls), 1)}
+
+
+def run_case(agent, sc: dict, llm_tail: "LlmLogTail | None" = None) -> dict:
+    img = str(ROOT / sc["image"]) if sc.get("image") else None
+    if llm_tail is not None:
+        llm_tail.read_new()  # bỏ dòng log không thuộc kịch bản này
+    t = time.perf_counter()
+    try:
+        kw = {"case_id": sc["id"]} if isinstance(agent, HttpAgent) else {}
+        resp = agent.handle(text=sc["text"], image=img, session={}, **kw)
+    except Exception as ex:  # ghi lỗi thật
+        resp = {"route": "exception", "error": f"{type(ex).__name__}: {ex}"}
+    lat = (time.perf_counter() - t) * 1000
+    ok, err = judge(sc, resp)
+    row = {"id": sc["id"], "expected_route": sc["expected_route"], "route": resp.get("route"), "source": resp.get("source"),
+           "success": ok, "error_code": "" if ok else err, "latency_ms": round(lat, 2),
+           "tokens_in": resp.get("tokens_in", 0) or 0, "tokens_out": resp.get("tokens_out", 0) or 0}
+    if llm_tail is not None:  # token lấy từ log gateway (đủ cả lời gọi trong RAG), thay cho số /chat trả về
+        row.update(summarize_llm(llm_tail.read_new()))
+    row["answer"] = str(resp.get("answer", ""))[:200].replace("\n", " ")
+    row["top_items"] = "|".join(str(it.get("product_id")) for it in (resp.get("items") or [])[:5])
+    row["n_citations"] = len(resp.get("citations") or [])
+    row["ts"] = time.strftime("%Y-%m-%dT%H:%M:%S")
+    return row
+
+
+def summarize(df: pd.DataFrame, price_in: float | None, price_out: float | None) -> dict:
     n = len(df)
     lat = df.latency_ms.tolist()
     summ = {"n": n, "task_success_rate": round(df.success.mean(), 4),
@@ -205,7 +253,44 @@ def run(agent, scenarios: list[dict], price_in: float | None, price_out: float |
         summ["cost_per_100_turns_usd"] = round((df.tokens_in.sum() * price_in + df.tokens_out.sum() * price_out) / 1e6 * 100 / n, 6)
     else:
         summ["cost_per_100_turns_usd"] = "CHƯA TÍNH – thiếu đơn giá [cần xác minh]"
-    return summ, df
+    return summ
+
+
+def run(agent, scenarios: list[dict], price_in: float | None, price_out: float | None) -> tuple[dict, pd.DataFrame]:
+    df = pd.DataFrame([run_case(agent, sc) for sc in scenarios])
+    return summarize(df, price_in, price_out), df
+
+
+def run_resumable(agent, scenarios: list[dict], cases_path: Path, llm_tail: "LlmLogTail | None",
+                  max_gemini_calls: int | None, pace_s: float) -> tuple[list[dict], str]:
+    """Chạy được qua nhiều đợt (quota Gemini free tier ~20 request/ngày/model): kịch bản nào xong thì ghi ngay một dòng
+    vào `cases_path`, kịch bản đã có thì bỏ qua. Đợt dừng khi đã dùng đủ `max_gemini_calls` lời gọi thật hoặc khi gateway
+    báo 429; kịch bản dính 429 KHÔNG được ghi (câu dự phòng do hết quota không phải kết quả của hệ thống) để chạy lại đợt sau."""
+    done = {}
+    if cases_path.exists():
+        for l in cases_path.read_text(encoding="utf-8").splitlines():
+            if l.strip():
+                r = json.loads(l); done[r["id"]] = r
+    used, stop = 0, ""
+    for sc in scenarios:
+        if sc["id"] in done:
+            continue
+        if max_gemini_calls is not None and used >= max_gemini_calls:
+            stop = f"đủ ngân sách đợt này ({used} lời gọi Gemini thật)"; break
+        row = run_case(agent, sc, llm_tail)
+        used += row.get("gemini_calls", 0)
+        if "429" in row.get("llm_errors", ""):
+            stop = f"Gemini 429 ở {sc['id']}: {row['llm_errors'][:160]}"; break
+        done[sc["id"]] = row
+        with open(cases_path, "a", encoding="utf-8") as f:
+            f.write(json.dumps(row, ensure_ascii=False) + "\n")
+        print(f"{row['id']} {row['expected_route']:>15} -> {str(row['route']):>15} {str(row['source']):>8} "
+              f"ok={row['success']} {row['latency_ms']:.0f} ms gemini={row.get('gemini_calls', 0)} "
+              f"cache={row.get('cache_hits', 0)} {row['error_code']}", flush=True)
+        if row.get("gemini_calls", 0) and pace_s > 0:
+            time.sleep(pace_s)  # giữ dưới 5 RPM để limiter của gateway không phải chờ (không lẫn thời gian chờ vào latency)
+    order = {sc["id"]: i for i, sc in enumerate(scenarios)}
+    return sorted(done.values(), key=lambda r: order.get(r["id"], 1e9)), stop
 
 
 def main():
@@ -214,10 +299,16 @@ def main():
     ap.add_argument("--index-dir", default=str(ROOT / "indexes" / "best"))
     ap.add_argument("--base-url", default="http://localhost:8000")
     ap.add_argument("--agent-cls", default="msa.agent.router:Agent")
+    ap.add_argument("--resume", action="store_true",
+                    help="chạy nhiều đợt: ghi từng kịch bản vào results/e2e_<agent>_cases.jsonl, bỏ qua kịch bản đã chạy")
+    ap.add_argument("--max-gemini-calls", type=int, default=None, help="dừng đợt khi đã dùng chừng này lời gọi Gemini thật")
+    ap.add_argument("--pace-s", type=float, default=0.0, help="nghỉ sau mỗi kịch bản có gọi Gemini thật (giữ dưới RPM)")
+    ap.add_argument("--llm-log", default=None, help="log LLMGateway của API (runtime/logs/llm_calls.jsonl) để đếm token/lời gọi")
+    ap.add_argument("--config-note", default="", help="mô tả cấu hình hệ thống được đo (ghi vào file kết quả)")
     a = ap.parse_args()
     sc = build_scenarios()
     (ROOT / "eval").mkdir(exist_ok=True)
-    with open(ROOT / "eval" / "e2e_scenarios.jsonl", "w", encoding="utf-8") as f:
+    with open(ROOT / "eval" / "e2e_scenarios.jsonl", "w", encoding="utf-8", newline="\n") as f:  # LF: giữ nguyên file trên Windows
         for s in sc:
             f.write(json.dumps(s, ensure_ascii=False) + "\n")
     if a.agent == "fake":
@@ -229,7 +320,37 @@ def main():
     else:
         mod, cls = a.agent_cls.split(":"); agent = getattr(importlib.import_module(mod), cls)()
     pi = os.environ.get("GEMINI_PRICE_IN_PER_M"); po = os.environ.get("GEMINI_PRICE_OUT_PER_M")
-    summ, df = run(agent, sc, float(pi) if pi else None, float(po) if po else None)
+    pi, po = (float(pi) if pi else None), (float(po) if po else None)
+    if a.resume:
+        (ROOT / "results").mkdir(exist_ok=True)
+        tail = LlmLogTail(a.llm_log) if a.llm_log else None
+        rows, stop = run_resumable(agent, sc, ROOT / "results" / f"e2e_{a.agent}_cases.jsonl", tail,
+                                   a.max_gemini_calls, a.pace_s)
+        if len(rows) < len(sc):
+            print(f"ĐỢT DỪNG: {stop or 'chưa xong'} – đã có {len(rows)}/{len(sc)} kịch bản; chạy lại cùng lệnh để tiếp.")
+            return
+        df = pd.DataFrame(rows)
+        summ = summarize(df, pi, po)
+        col = lambda c: df[c] if c in df else pd.Series([0] * len(df))  # noqa: E731
+        summ["gemini_api_calls_total"] = int(col("gemini_calls").sum())
+        summ["cache_hits_total"] = int(col("cache_hits").sum())
+        summ["gemini_retries_total"] = int(col("gemini_retries").fillna(0).sum())  # thử lại sau timeout/503 – cũng là request tới Gemini
+        summ["tokens_thinking_per_100_turns"] = round(float(col("tokens_thinking").sum()) * 100 / len(df), 1)
+        summ["run_dates"] = sorted({r["ts"][:10] for r in rows})
+        summ["config"] = a.config_note
+        lv, lt = df[df.expected_route == "visual"].latency_ms, df[df.expected_route != "visual"].latency_ms
+        summ["latency_ms_by_kind"] = {k: {"p50": round(float(v.median()), 2), "p95": round(float(np.percentile(v, 95)), 2)}
+                                      for k, v in (("visual", lv), ("text", lt)) if len(v)}
+        summ["by_route"] = {r: {"n": int(len(g)), "tsr": round(float(g.success.mean()), 4),
+                                "route_accuracy": round(float((g.route == r).mean()), 4),
+                                "latency_ms_p50": round(float(g.latency_ms.median()), 2),
+                                "latency_ms_p95": round(float(np.percentile(g.latency_ms, 95)), 2),
+                                "gemini_rate": round(float(g.source.isin(["gemini", "cache"]).mean()), 4),
+                                "gemini_calls": int(col("gemini_calls")[g.index].sum()),
+                                "tokens_in": int(g.tokens_in.sum()), "tokens_out": int(g.tokens_out.sum())}
+                            for r, g in df.groupby("expected_route")}
+    else:
+        summ, df = run(agent, sc, pi, po)
     summ["agent"] = a.agent
     summ["note"] = "fake = chỉ kiểm thử khung, KHÔNG phải số liệu" if a.agent == "fake" else ""
     if a.agent == "visual-only":

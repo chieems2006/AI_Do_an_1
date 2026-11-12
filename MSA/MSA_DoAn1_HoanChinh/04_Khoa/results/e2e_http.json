@@ -1,0 +1,152 @@
+{
+ "n": 60,
+ "task_success_rate": 0.65,
+ "tsr_by_route": {
+  "clarify": 1.0,
+  "compare": 0.0,
+  "gemini_chitchat": 0.8333,
+  "gemini_ood": 0.6667,
+  "qa": 0.0,
+  "search": 1.0,
+  "visual": 0.8889
+ },
+ "n_by_route": {
+  "visual": 18,
+  "search": 10,
+  "qa": 10,
+  "compare": 6,
+  "gemini_chitchat": 6,
+  "gemini_ood": 6,
+  "clarify": 4
+ },
+ "route_accuracy": 0.6667,
+ "latency_ms_p50": 29.12,
+ "latency_ms_p95": 12759.5,
+ "gemini_rate": 0.1833,
+ "tokens_per_100_turns": {
+  "in": 3023.3,
+  "out": 980.0
+ },
+ "top10_errors": [
+  [
+   "route_sai",
+   15
+  ],
+  [
+   "khong_chuyen_gemini",
+   3
+  ],
+  [
+   "error",
+   1
+  ],
+  [
+   "visual_gt_ngoai_top5",
+   1
+  ],
+  [
+   "compare_thieu_sp",
+   1
+  ]
+ ],
+ "cost_per_100_turns_usd": "CHƯA TÍNH – thiếu đơn giá [cần xác minh]",
+ "gemini_api_calls_total": 11,
+ "cache_hits_total": 0,
+ "gemini_retries_total": 2,
+ "tokens_thinking_per_100_turns": 0.0,
+ "run_dates": [
+  "2026-11-12"
+ ],
+ "config": "API ghép src/msa/api/main.py (uvicorn 127.0.0.1:8000, 1 worker, Windows 11, CPU 2 luồng cho embed); /search/image = VisualSearcher DINOv2-S (04_Khoa/indexes/dinov2_s, tau_v 0.5923 theo b_max_ood_val+0.01); /chat = Router+Agent (Trung); qa = RAGPipeline hybrid BM25+e5-small RRF, tau_r 0; Gemini gemini-3.5-flash-lite qua LLMGateway (cache SQLite bật, GEMINI_RPM 4); catalog shared_data v1 (FPI 4.593 SP); mỗi kịch bản 1 phiên mới, không product_id",
+ "latency_ms_by_kind": {
+  "visual": {
+   "p50": 195.32,
+   "p95": 214.97
+  },
+  "text": {
+   "p50": 9.94,
+   "p95": 13266.54
+  }
+ },
+ "by_route": {
+  "clarify": {
+   "n": 4,
+   "tsr": 1.0,
+   "route_accuracy": 1.0,
+   "latency_ms_p50": 3.39,
+   "latency_ms_p95": 4.73,
+   "gemini_rate": 0.0,
+   "gemini_calls": 0,
+   "tokens_in": 0,
+   "tokens_out": 0
+  },
+  "compare": {
+   "n": 6,
+   "tsr": 0.0,
+   "route_accuracy": 0.1667,
+   "latency_ms_p50": 4.78,
+   "latency_ms_p95": 4.95,
+   "gemini_rate": 0.0,
+   "gemini_calls": 0,
+   "tokens_in": 0,
+   "tokens_out": 0
+  },
+  "gemini_chitchat": {
+   "n": 6,
+   "tsr": 0.8333,
+   "route_accuracy": 0.5,
+   "latency_ms_p50": 7020.99,
+   "latency_ms_p95": 33805.11,
+   "gemini_rate": 0.8333,
+   "gemini_calls": 5,
+   "tokens_in": 822,
+   "tokens_out": 248
+  },
+  "gemini_ood": {
+   "n": 6,
+   "tsr": 0.6667,
+   "route_accuracy": 0.6667,
+   "latency_ms_p50": 7074.93,
+   "latency_ms_p95": 12043.9,
+   "gemini_rate": 0.6667,
+   "gemini_calls": 4,
+   "tokens_in": 658,
+   "tokens_out": 217
+  },
+  "qa": {
+   "n": 10,
+   "tsr": 0.0,
+   "route_accuracy": 0.0,
+   "latency_ms_p50": 9.23,
+   "latency_ms_p95": 24090.03,
+   "gemini_rate": 0.2,
+   "gemini_calls": 2,
+   "tokens_in": 334,
+   "tokens_out": 123
+  },
+  "search": {
+   "n": 10,
+   "tsr": 1.0,
+   "route_accuracy": 1.0,
+   "latency_ms_p50": 10.64,
+   "latency_ms_p95": 22.04,
+   "gemini_rate": 0.0,
+   "gemini_calls": 0,
+   "tokens_in": 0,
+   "tokens_out": 0
+  },
+  "visual": {
+   "n": 18,
+   "tsr": 0.8889,
+   "route_accuracy": 1.0,
+   "latency_ms_p50": 195.32,
+   "latency_ms_p95": 214.97,
+   "gemini_rate": 0.0,
+   "gemini_calls": 0,
+   "tokens_in": 0,
+   "tokens_out": 0
+  }
+ },
+ "agent": "http",
+ "note": ""
+}

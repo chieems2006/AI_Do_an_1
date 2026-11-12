@@ -50,7 +50,7 @@ PY=$(pwd)/.venv/Scripts/python.exe
 $PY 05_Hoang/repo_skeleton/scripts/check_env.py                    # kiểm môi trường
 for d in 01_Trung 02_TuanDat 03_Chien 04_Khoa 05_Hoang; do (cd $d && $PY -m pytest -q); done
 $PY -m pytest -q                                                    # test tích hợp 5 luồng (tests/integration)
-$PY 00_Chung/kiem_dinh/check_numbers.py --strict                    # đối chiếu số trong tài liệu với file kết quả (12/11: 211/211 KHỚP); ghi đè doi_chieu_so_lieu.md
+$PY 00_Chung/kiem_dinh/check_numbers.py --strict                    # đối chiếu số trong tài liệu với file kết quả (12/11: 224/224 KHỚP); ghi đè doi_chieu_so_lieu.md
 (cd 03_Chien && $PY -m pytest -q -m live)                           # test gọi Gemini thật – tốn quota, chỉ chạy khi được yêu cầu
 (cd 02_TuanDat && MSA_UI_MOCK=1 $PY app/app.py)                     # UI giả lập → http://localhost:7860
 $PY -m uvicorn msa.api.main:app --app-dir src --port 8000           # API thật (cần MSA_SHARED_DATA + index); GET /health xem backend
@@ -63,7 +63,7 @@ Kết quả pytest trên máy này (12/11/2026, sau khi hợp nhất `src/msa`, 
 | Trung | 53 passed, 1 skipped |
 | Tuấn Đạt | 21 passed, 3 skipped |
 | Chiến | 51 passed |
-| Khoa | 30 passed |
+| Khoa | 32 passed |
 | Hoàng | 78 passed |
 
 Mọi test bị skip đều do thiếu file dữ liệu nặng hoặc là test `live`.

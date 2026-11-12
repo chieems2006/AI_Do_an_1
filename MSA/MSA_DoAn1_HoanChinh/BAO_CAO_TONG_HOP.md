@@ -284,7 +284,7 @@ Người cầm số liệu quyết định phần visual: EDA, độ đo visual,
 | US_21 Hệ thống & bài báo | `docs/US_21_he_thong_va_bai_bao_tuong_tu.md` | **Đạt** | Trích dẫn cần xác minh lại |
 | US_22 Benchmark ≥ 5 model | `results/bench_image_embed.csv`, `docs/US_22_benchmark_embedding.md` | **Đạt** | 5 model, cùng tiền xử lý, FAISS Flat, latency 60 lần đo |
 | US_29 Build index | `src/scripts/build_index.py`, `docs/US_29_build_index.md` | **Đạt** | embed catalog 775,8 s < 30 phút; truy vấn median 168,8 ms |
-| US_44 Baseline e2e | `docs/US_44_baseline_e2e.md`, `eval/e2e_scenarios.jsonl` | Một phần | Chỉ phần visual đo được (TSR 15/18) |
+| US_44 Baseline e2e | `docs/US_44_baseline_e2e.md`, `eval/e2e_scenarios.jsonl`, `results/e2e_http.json` | Một phần | Đo đủ 60 kịch bản trên hệ thống ghép (12/11): TSR 39/60 = 0,650 (chấm tự động); visual-only cũ TSR 15/18. Còn thiếu: đơn giá (chi phí CHƯA TÍNH), người chấm lại |
 | US_45 Cải tiến trước/sau | `docs/US_45_cai_tien_va_do_truoc_sau.md`, `results/improvements_fashionclip.*` | Một phần | 4 cải tiến visual đo trên truy vấn tổng hợp; chưa có cải tiến nhóm Gemini |
 
 ## 6.3 Việc đã làm cụ thể
@@ -310,6 +310,27 @@ Nguồn: `04_Khoa/results/bench_image_embed.csv`. Vì mỗi nhóm có đúng 60 
 Ngưỡng τ_v (`04_Khoa/results/tau_v_analysis.json`): τ_v = 0,25 của thiết kế chung **loại 0 % ảnh OOD** với cả 5 model. Chọn trên val bằng "max cosine OOD val + 0,01": DINOv2-S 0,5923 (loại 97,2 % OOD, giữ 94,2 % truy vấn instance), FashionCLIP 0,7039 (100 %, 84,2 %), SigLIP 0,7531 (100 %, 96,3 %).
 
 Build index FashionCLIP (`results/build_index_fashionclip.json`): embed catalog 775,8 s (12,9 phút); search-only 1,9 ms; embed + gate + search median 168,8 ms / p95 674,6 ms. Baseline e2e visual-only: TSR **15/18 = 0,833** (3 lỗi do τ_v loại ảnh nền lạ); các route khác chưa ghép nên TSR toàn hệ thống trong file (0,25) **không có ý nghĩa**.
+
+**Baseline e2e trên hệ thống đã ghép (đo 12/11/2026, 22:52–22:58)** – `04_Khoa/results/e2e_http.json`, từng kịch bản ở `e2e_http_cases.jsonl` / `e2e_http_per_case.csv`, log Gemini của lượt đo ở `e2e_http_llm_calls.jsonl`. Đủ 60 kịch bản của `eval/e2e_scenarios.jsonl`, gọi API thật qua HTTP (`baseline_e2e.py --agent http --resume --max-gemini-calls 11 --pace-s 15`, 2 đợt trong cùng ngày để không vượt quota free tier).
+Cấu hình: API `src/msa/api/main.py` (uvicorn 1 worker, Windows 11, embed ảnh trên CPU 2 luồng); `/search/image` = VisualSearcher **DINOv2-S** (`04_Khoa/indexes/dinov2_s`, τ_v 0,5923); `/chat` = Router + Agent (Trung); qa = RAG hybrid BM25 + e5-small, τ_r 0; Gemini `gemini-3.5-flash-lite` qua LLMGateway (cache SQLite bật, RPM 4); catalog shared_data v1 (FPI 4.593 SP). Mỗi kịch bản là **1 lượt trong phiên mới, không kèm product_id**. Server đã nóng (không tính thời gian nạp RAG lúc khởi động). Chấm tự động theo `judge()` **[Chưa người duyệt]**; truy vấn ảnh là ảnh biến đổi **[Thật–tổng hợp]**.
+
+| Route mong đợi | n | TSR | Route đúng | Latency p50 / p95 (ms) | % chuyển Gemini | Lời gọi Gemini | Token in / out |
+|---|---|---|---|---|---|---|---|
+| visual | 18 | 16/18 = 0,889 | 18/18 | 195,3 / 215,0 | 0 % | 0 | 0 / 0 |
+| search | 10 | 10/10 | 10/10 | 10,6 / 22,0 | 0 % | 0 | 0 / 0 |
+| qa | 10 | 0/10 | 0/10 | 9,2 / 24.090,0 | 20 % | 2 | 334 / 123 |
+| compare | 6 | 0/6 | 1/6 | 4,8 / 5,0 | 0 % | 0 | 0 / 0 |
+| gemini_chitchat | 6 | 5/6 | 3/6 | 7.021,0 / 33.805,1 | 83 % | 5 | 822 / 248 |
+| gemini_ood | 6 | 4/6 | 4/6 | 7.074,9 / 12.043,9 | 67 % | 4 | 658 / 217 |
+| clarify | 4 | 4/4 | 4/4 | 3,4 / 4,7 | 0 % | 0 | 0 / 0 |
+| **Tổng** | **60** | **39/60 = 0,650** | 40/60 = 0,667 | **29,1 / 12.759,5** | **11/60 = 18,3 %** | 11 (+2 lần thử lại) | 1.814 / 588 |
+
+- **Token/100 lượt:** vào 3.023,3, ra 980,0, tổng 4.003,3 (thinking 0). Chi phí/100 lượt **CHƯA TÍNH** vì đơn giá Gemini chưa xác minh. Cache bật nhưng 0 hit (mọi câu đều mới), nên token và latency đều là của lời gọi thật.
+- **Latency tách theo loại:** ảnh p50 / p95 = 195,3 / 215,0 ms; văn bản 9,9 / 13.266,5 ms. p95 bị kéo bởi Gemini (mỗi lời gọi 1,9–13,3 s). Hai lời gọi (e2e_34, e2e_47) quá hạn ở lần đầu rồi thử lại, mất 38,4 s và 40,8 s.
+- **Lỗi:** route_sai 15 (qa → search 5, clarify 3, gemini_ood 2; compare → clarify 5); khong_chuyen_gemini 3 ("Phối áo sơ mi trắng…" → search; "Viết giúp mình bài thơ…", "Tỉ giá đô la…" → clarify); ảnh bị gate loại 1 (e2e_03); SP đúng ngoài top-5 1 (e2e_18); compare thiếu SP 1 ("So sánh mũ A và mũ B").
+- **Cách hiểu đúng:** TSR qa/compare = 0 chủ yếu do kịch bản một lượt nói "đôi giày này", "2 cái này" mà không có SP nào trong ngữ cảnh. Với compare, hỏi lại (clarify) là hành vi hợp lý. Đây chưa phải số đo năng lực RAG/so sánh (RAG đo riêng ở mục 4). Lỗi thật của router: 2 câu hỏi về SP bị đưa sang Gemini và 5 câu bị đưa sang search. Cần bộ kịch bản v1.1 có `product_id`/phiên (không sửa file gốc).
+- **Gemini [Tác nhân kiểm]:** 0/10 câu trả lời Gemini nêu giá/size/tồn kho theo regex của `judge()`. Tuy nhiên e2e_51 ("Thời tiết Hà Nội mai thế nào?") Gemini tự đưa dự báo thời tiết, tức bịa thông tin thời gian thực mà regex không bắt được.
+- DINOv2-S ở đây khác FashionCLIP ở lượt visual-only, nên 16/18 và 15/18 không so trực tiếp được (khác model).
 
 Cải tiến (FashionCLIP, split test, `04_Khoa/results/improvements_fashionclip.json`) **[Thật–tổng hợp]**:
 
@@ -415,8 +436,10 @@ Ngưỡng mục tiêu đặt từ baseline thật (`01_Trung/docs/US_18_chot_do_
 | Faithfulness / hallucination | 1,00 / 0,00 (Chiến); 0,939 / 0,111 (Đạt) **[LLM chấm]** | ≥ 0,85 / ≤ 0,10 | Đạt theo LLM chấm – chờ người chấm |
 | Refusal accuracy | 15/15 (sau sửa nhãn; trước 15/16) | ≥ 0,90 | Đạt trên mẫu nhỏ, không phải held-out |
 | Route accuracy (held-out, n=49) | 0,878 | ≥ 0,90 | **Chưa đạt** |
+| Agent TSR e2e (60 kịch bản, hệ thống ghép, 12/11) | 0,650 (39/60) [Chưa người duyệt] | 0,80 | **Chưa đạt** (qa/compare 0 vì kịch bản không kèm SP – xem §6.4) |
+| Token/100 lượt (e2e, 12/11) | 3.023,3 vào + 980,0 ra; 18,3 % lượt chuyển Gemini | ghi nhận | Chi phí CHƯA TÍNH (đơn giá cần xác minh) |
 | Unsupported-store-fact (Gemini) | giá/size/tồn kho 0/40 (Trung), 0/20 (Chiến); nhận bán hàng ngoài danh mục 2/40 | 0 | **Chưa đạt** |
-| Latency /search/image p95 | 1.106 ms (CLIP B/32) | < 1,5 s | Đạt (cần đo lại với model được chọn) |
+| Latency /search/image p95 | 1.106 ms (CLIP B/32); DINOv2-S qua API e2e 215,0 ms (18 ảnh, 12/11) | < 1,5 s | Đạt |
 
 ## 8.3 Yêu cầu 3 – Khảo sát phiên bản bằng số liệu
 - **Bảng A – embedding ảnh** (Khoa): 5 model đo thật, xem §6.4. Kết luận: DINOv2-S và SigLIP/FashionCLIP chênh nhau ≤ 1,7 điểm macro R@5; CLIP B/32 và ResNet-50 kém rõ (thấp hơn 3 model đầu ≥ 10 điểm).

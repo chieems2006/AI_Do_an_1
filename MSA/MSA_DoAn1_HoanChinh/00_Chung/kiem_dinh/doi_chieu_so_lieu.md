@@ -4,7 +4,7 @@ Sinh bởi `python 00_Chung/kiem_dinh/check_numbers.py` (Tác nhân 3). **Không
 Cột *Số trong tài liệu* là chuỗi tìm thấy trong các tài liệu ở cột kế; *Giá trị trong file* đọc trực tiếp từ file nguồn
 (một số dòng là phép tính từ file, ghi trong mô tả). KHỚP = chênh ≤ dung sai làm tròn của số đã viết.
 
-**Tổng: 211 khẳng định · KHỚP 211 · LỆCH 0 · lỗi đọc 0 · khớp nhưng thiếu chuỗi ở ≥ 1 tài liệu 0.**
+**Tổng: 224 khẳng định · KHỚP 224 · LỆCH 0 · lỗi đọc 0 · khớp nhưng thiếu chuỗi ở ≥ 1 tài liệu 0.**
 
 | Mã | Nội dung | Số trong tài liệu | Tài liệu chứa số | File nguồn | Giá trị trong file | Kết quả |
 |---|---|---|---|---|---|---|
@@ -91,6 +91,19 @@ Cột *Số trong tài liệu* là chuỗi tìm thấy trong các tài liệu �
 | BI-search | FashionCLIP search-only median (ms) | 1,9 ms | 04_Khoa/README.md | 04_Khoa/results/build_index_fashionclip.json | 1.885 | KHỚP |
 | BI-e2e | FashionCLIP embed+gate+search median (ms) | 168,8 | 04_Khoa/README.md | 04_Khoa/results/build_index_fashionclip.json | 168.84 | KHỚP |
 | E2E-tsr | TSR visual-only | 15/18 = 0,833 | 04_Khoa/README.md, BAO_CAO_TONG_HOP.md | 04_Khoa/results/e2e_visual-only.json | 0.8333 | KHỚP |
+| E2H-tsr | TSR e2e hệ thống ghép (60 kịch bản) | 39/60 = 0,650 | BAO_CAO_TONG_HOP.md, 04_Khoa/README.md, 04_Khoa/docs/US_44_baseline_e2e.md | 04_Khoa/results/e2e_http.json | 0.65 | KHỚP |
+| E2H-n | Số kịch bản e2e hệ thống ghép | 39/60 | BAO_CAO_TONG_HOP.md, 04_Khoa/README.md | 04_Khoa/results/e2e_http.json | 60 | KHỚP |
+| E2H-route | Route accuracy e2e | 40/60 = 0,667 | BAO_CAO_TONG_HOP.md, 04_Khoa/docs/US_44_baseline_e2e.md | 04_Khoa/results/e2e_http.json | 0.6667 | KHỚP |
+| E2H-p50 | Latency e2e p50 (ms) | 29,1 | BAO_CAO_TONG_HOP.md, 04_Khoa/README.md, 04_Khoa/docs/US_44_baseline_e2e.md | 04_Khoa/results/e2e_http.json | 29.12 | KHỚP |
+| E2H-p95 | Latency e2e p95 (ms) | 12.759,5 | BAO_CAO_TONG_HOP.md, 04_Khoa/README.md, 04_Khoa/docs/US_44_baseline_e2e.md | 04_Khoa/results/e2e_http.json | 12759.5 | KHỚP |
+| E2H-gem | Tỉ lệ chuyển Gemini e2e | 18,3 % | BAO_CAO_TONG_HOP.md, 04_Khoa/README.md, 04_Khoa/docs/US_44_baseline_e2e.md | 04_Khoa/results/e2e_http.json | 0.1833 | KHỚP |
+| E2H-tin | Token vào/100 lượt e2e | 3.023,3 | BAO_CAO_TONG_HOP.md, 04_Khoa/README.md, 04_Khoa/docs/US_44_baseline_e2e.md | 04_Khoa/results/e2e_http.json | 3023.3 | KHỚP |
+| E2H-tout | Token ra/100 lượt e2e | 980,0 | BAO_CAO_TONG_HOP.md, 04_Khoa/README.md, 04_Khoa/docs/US_44_baseline_e2e.md | 04_Khoa/results/e2e_http.json | 980 | KHỚP |
+| E2H-calls | Lời gọi Gemini thành công trong lượt e2e | 11 (+2 lần thử lại) | BAO_CAO_TONG_HOP.md, 04_Khoa/docs/US_44_baseline_e2e.md | 04_Khoa/results/e2e_http.json | 11 | KHỚP |
+| E2H-retry | Lần thử lại Gemini trong lượt e2e | +2 lần thử lại | BAO_CAO_TONG_HOP.md, 04_Khoa/docs/US_44_baseline_e2e.md | 04_Khoa/results/e2e_http.json | 2 | KHỚP |
+| E2H-vis | TSR visual trong e2e hệ thống ghép (DINOv2-S) | 16/18 = 0,889 | BAO_CAO_TONG_HOP.md, 04_Khoa/docs/US_44_baseline_e2e.md | 04_Khoa/results/e2e_http.json | 0.8889 | KHỚP |
+| E2H-vp95 | Latency p95 truy vấn ảnh e2e (ms) | 215,0 | BAO_CAO_TONG_HOP.md, 04_Khoa/docs/US_44_baseline_e2e.md | 04_Khoa/results/e2e_http.json | 214.97 | KHỚP |
+| E2H-tp95 | Latency p95 truy vấn văn bản e2e (ms) | 13.266,5 | BAO_CAO_TONG_HOP.md, 04_Khoa/docs/US_44_baseline_e2e.md | 04_Khoa/results/e2e_http.json | 13266.5 | KHỚP |
 | EV-n | Số truy vấn eval_visual | 600 | 04_Khoa/README.md | 04_Khoa/eval/eval_visual_stats.json | 600 | KHỚP |
 | EV-hard | hard_cross_type (test) | 96 hard_cross_type (53 | 04_Khoa/README.md | 04_Khoa/eval/eval_visual_stats.json | 53 | KHỚP |
 | R-v0 | Router v0 trên bộ Chiến (n=78) | 0,667 | 01_Trung/README.md, 01_Trung/docs/US_41_router_agent_va_gemini.md | 01_Trung/results/router_eval_v0.json | 0.6667 | KHỚP |
