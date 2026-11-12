@@ -1,0 +1,25 @@
+# Thống nhất xuống dòng LF cho mọi file text, trên mọi hệ điều hành
+# (ghi đè core.autocrlf; tránh git status báo "đã sửa" khi script ghi CRLF trên Windows).
+* text=auto eol=lf
+
+# Script Windows (nếu sau này có) giữ CRLF
+*.bat  text eol=crlf
+*.cmd  text eol=crlf
+*.ps1  text eol=crlf
+
+# Nhị phân – không bao giờ chuyển đổi
+*.jpg     binary
+*.jpeg    binary
+*.png     binary
+*.gif     binary
+*.webp    binary
+*.npz     binary
+*.npy     binary
+*.parquet binary
+*.faiss   binary
+*.sqlite  binary
+*.docx    binary
+*.xlsx    binary
+*.pptx    binary
+*.pdf     binary
+*.zip     binary
