@@ -34,7 +34,6 @@ Mỗi folder thành viên gồm `README.md` (bảng truy vết US → file → t
   - Cài thêm `jsonschema`, `requests`, `psutil`: code có import nhưng requirements chưa liệt kê.
 - **Encoding trên Windows:** mọi chỗ đọc/ghi file text trong code đã có `encoding="utf-8"` (sửa ngày 12/11/2026), nên pytest và `check_env.py` chạy được mà không cần `PYTHONUTF8`. Một số script vẫn `print` tiếng Việt, và sẽ lỗi `UnicodeEncodeError` nếu chuyển hướng stdout ra file (`> logs/x.log`); khi đó cần đặt `PYTHONUTF8=1`.
 - **Quy ước khi viết code mới:** luôn truyền `encoding="utf-8"` cho `open()`, `read_text()` và `write_text()` ở chế độ text.
-- `00_Chung/kiem_dinh/check_numbers.py` cần **Python ≥ 3.12** (f-string có `\`), nên chạy trên 3.11 sẽ báo `SyntaxError`.
 - Dữ liệu nặng (ảnh, `.parquet`, `.npy`, FAISS, SQLite) **không có trong repo**. Muốn sinh lại thì đặt `MSA_SHARED_DATA` và `MSA_RAW_DIR` (mặc định là đường dẫn Linux `/home/claude/...`), rồi chạy các script ở README §3.
 
 ## Lệnh thường dùng
@@ -43,6 +42,7 @@ PY=$(pwd)/.venv/Scripts/python.exe
 
 $PY 05_Hoang/repo_skeleton/scripts/check_env.py                    # kiểm môi trường
 for d in 01_Trung 02_TuanDat 03_Chien 04_Khoa 05_Hoang; do (cd $d && $PY -m pytest -q); done
+$PY 00_Chung/kiem_dinh/check_numbers.py --strict                    # đối chiếu số trong tài liệu với file kết quả (12/11: 211/211 KHỚP); ghi đè doi_chieu_so_lieu.md
 (cd 03_Chien && $PY -m pytest -q -m live)                           # test gọi Gemini thật – tốn quota, chỉ chạy khi được yêu cầu
 (cd 02_TuanDat && MSA_UI_MOCK=1 $PY app/app.py)                     # UI giả lập → http://localhost:7860
 (cd 05_Hoang/src && $PY -m uvicorn msa.api.main:app --port 8000)    # API thật, cần index + dữ liệu

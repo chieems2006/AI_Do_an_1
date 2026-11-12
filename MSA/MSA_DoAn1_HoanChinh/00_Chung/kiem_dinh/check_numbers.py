@@ -470,6 +470,9 @@ def fmt(v) -> str:
 
 
 def main() -> int:
+    # Windows: stdout chuyển hướng/pipe mặc định cp1252 → in tiếng Việt bị UnicodeEncodeError.
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
     rows, n_ok, n_bad, n_missing, n_err = [], 0, 0, 0, 0
     for cid, desc, shown, claimed, tol, docs, src, getter, note in C:
         try:
@@ -517,7 +520,8 @@ def main() -> int:
               "Mẫu: adapter 0,921 không ghi tổng hợp; token /100 lượt nhầm đơn vị; 7.575 ↔ 361; 0,923 gọi là held-out; faithfulness gọi là người chấm.", ""]
     if risks:
         lines += ["| File | Dòng | Vấn đề | Trích |", "|---|---|---|---|"]
-        lines += [f"| {a} | {b} | {c} | {d.replace('|', '\\|')} |" for a, b, c, d in risks]
+        # Python < 3.12 không cho phép "\" trong biểu thức f-string → escape ngoài f-string.
+        lines += ["| {} | {} | {} | {} |".format(a, b, c, d.replace("|", "\\|")) for a, b, c, d in risks]
     else:
         lines.append("Không có cảnh báo.")
     OUT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
