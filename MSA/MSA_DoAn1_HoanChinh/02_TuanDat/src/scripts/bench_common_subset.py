@@ -24,7 +24,7 @@ def main() -> dict:
             correctness=round(statistics.mean(float(j["correctness"]) for j in js), 3),
             correct_refusal_unanswerable=f"{sum(bool(judge[q][t].get('refused')) for q in un)}/{len(un)}",
             latency_s_median=round(statistics.median(lat), 1))
-    (RES / "bench_llm_common_subset.json").write_text(json.dumps(out, ensure_ascii=False, indent=1))
+    (RES / "bench_llm_common_subset.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     return out
 
 

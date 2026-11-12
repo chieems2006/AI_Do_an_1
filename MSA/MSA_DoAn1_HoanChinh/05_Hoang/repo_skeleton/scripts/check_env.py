@@ -28,7 +28,7 @@ def pinned() -> dict:
     req = ROOT / "requirements.txt"
     out = {}
     if req.exists():
-        for line in req.read_text().splitlines():
+        for line in req.read_text(encoding="utf-8").splitlines():
             if "==" in line and not line.startswith("#"):
                 k, v = line.strip().split("==")
                 out[k.lower()] = v
@@ -36,6 +36,9 @@ def pinned() -> dict:
 
 
 def main() -> int:
+    # Windows: stdout chuyển hướng/pipe mặc định cp1252 → in tiếng Việt bị UnicodeEncodeError.
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
     t0 = time.time()
     pins = pinned()
     rep = {"python": platform.python_version(), "platform": platform.platform(), "cpu": os.cpu_count(), "checks": []}
@@ -90,7 +93,7 @@ def main() -> int:
         print(f"[{flag}] {c['name']}: {c['detail']}")
     print(f"=> {'MÔI TRƯỜNG SẴN SÀNG' if rep['ok'] else 'CẦN SỬA CÁC MỤC LỖI'} ({rep['elapsed_s']} s)")
     if "--json" in sys.argv:
-        Path(sys.argv[sys.argv.index("--json") + 1]).write_text(json.dumps(rep, ensure_ascii=False, indent=1))
+        Path(sys.argv[sys.argv.index("--json") + 1]).write_text(json.dumps(rep, ensure_ascii=False, indent=1), encoding="utf-8")
     return 0 if rep["ok"] else 1
 
 

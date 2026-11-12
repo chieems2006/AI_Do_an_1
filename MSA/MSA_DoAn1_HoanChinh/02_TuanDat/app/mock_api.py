@@ -36,7 +36,7 @@ def _resp(route: str, answer: str, items: list[dict] | None = None, source: str 
 class MockAPI:
     def __init__(self, catalog: Path = CATALOG, summary: Path = SUMMARY, seed: int = 42):
         self.df = pd.read_parquet(catalog) if Path(catalog).exists() else pd.DataFrame()
-        self.summ = json.loads(Path(summary).read_text())["products"] if Path(summary).exists() else {}
+        self.summ = json.loads(Path(summary).read_text(encoding="utf-8"))["products"] if Path(summary).exists() else {}
         self.rng = random.Random(seed)
 
     def _item(self, r: pd.Series, score: float | None) -> dict:

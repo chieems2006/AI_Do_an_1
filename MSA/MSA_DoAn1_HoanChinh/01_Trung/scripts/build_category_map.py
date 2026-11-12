@@ -118,7 +118,7 @@ def main() -> None:
     os.makedirs(os.path.join(ROOT, "results"), exist_ok=True)
     cov["config"] = dict(data_version="shared_data v1 (prep_shared_data.py seed 42)", script="scripts/build_category_map.py",
                          fpi_articleTypes_in_table=len(FPI_ARTICLE))
-    json.dump(cov, open(os.path.join(ROOT, "results", "taxonomy_coverage.json"), "w"), ensure_ascii=False, indent=1)
+    json.dump(cov, open(os.path.join(ROOT, "results", "taxonomy_coverage.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(json.dumps({k: {kk: vv for kk, vv in v.items() if not isinstance(vv, dict)} for k, v in cov.items()}, ensure_ascii=False, indent=1))
     print("catalog changed:", json.dumps(cov["catalog_fpi_v1"]["changed_vs_tam"], ensure_ascii=False))
 

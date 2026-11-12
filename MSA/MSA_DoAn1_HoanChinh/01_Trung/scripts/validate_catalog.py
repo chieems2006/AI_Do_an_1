@@ -49,17 +49,17 @@ def main() -> None:
     os.makedirs(ex_dir, exist_ok=True)
     by_id = {r["product_id"]: r for r in recs2}
     for pt, pid in EXAMPLE_IDS.items():
-        json.dump(by_id[pid], open(os.path.join(ex_dir, f"fpi_{pt}.json"), "w"), ensure_ascii=False, indent=1)
+        json.dump(by_id[pid], open(os.path.join(ex_dir, f"fpi_{pt}.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     seen = set()
     for r in vin:
         if r["product_type"] not in seen and r["sub_category"] != "unknown":
             seen.add(r["product_type"])
             r2 = dict(r, reviews=r["reviews"][:2])  # rút gọn review trong ví dụ
-            json.dump(r2, open(os.path.join(ex_dir, f"vimrhp_{r['product_type']}.json"), "w"), ensure_ascii=False, indent=1)
+            json.dump(r2, open(os.path.join(ex_dir, f"vimrhp_{r['product_type']}.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     out["config"] = dict(schema="src/schema/product.schema.json (draft 2020-12)", validator="jsonschema Draft202012Validator",
                          data_version="shared_data v1 (prep_shared_data.py seed 42)")
     os.makedirs(os.path.join(ROOT, "results"), exist_ok=True)
-    json.dump(out, open(os.path.join(ROOT, "results", "schema_validation.json"), "w"), ensure_ascii=False, indent=1)
+    json.dump(out, open(os.path.join(ROOT, "results", "schema_validation.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(json.dumps({k: {kk: vv for kk, vv in v.items() if kk not in ("first_errors",)} for k, v in out.items()}, ensure_ascii=False, indent=1))
 
 

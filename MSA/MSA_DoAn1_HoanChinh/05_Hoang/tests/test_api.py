@@ -70,7 +70,7 @@ def test_search_image_same_type(client, synth):
     r = c.post("/search/image", files={"file": ("q.jpg", to_bytes(synth["images"][pid]))},
                data={"k": "5", "product_type": "accessory"})
     assert all(i["product_type"] == "accessory" for i in r.json()["items"])
-    log = (tmp / "logs" / "requests.jsonl").read_text().splitlines()
+    log = (tmp / "logs" / "requests.jsonl").read_text(encoding="utf-8").splitlines()
     assert json.loads(log[-1])["endpoint"] == "/search/image"
 
 

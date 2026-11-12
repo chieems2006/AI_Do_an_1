@@ -231,7 +231,7 @@ def build(n_inst: int = 100, n_cat: int = 50, val_frac: float = 0.4, seed: int =
         "category_gt_size_median": float(df[df.tier == "category"].gt_product_ids.str.count(r"\|").add(1).median()),
         "seed": seed, "data_version": "shared_data v1 (prep_shared_data.py seed 42)",
     }
-    (out_dir / "eval_visual_stats.json").write_text(json.dumps(stats, ensure_ascii=False, indent=1))
+    (out_dir / "eval_visual_stats.json").write_text(json.dumps(stats, ensure_ascii=False, indent=1), encoding="utf-8")
     print(json.dumps(stats, ensure_ascii=False, indent=1))
     return df
 

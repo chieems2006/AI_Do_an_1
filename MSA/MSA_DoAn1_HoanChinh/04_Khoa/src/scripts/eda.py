@@ -190,7 +190,7 @@ def main() -> dict:
     fig.suptitle("Ảnh mẫu FPI (60×80 px gốc) – seed 42")
     save(fig, "09_sample_images.png", charts)
     st["charts"] = charts
-    (OUT / "eda_stats.json").write_text(json.dumps(st, ensure_ascii=False, indent=1, default=str))
+    (OUT / "eda_stats.json").write_text(json.dumps(st, ensure_ascii=False, indent=1, default=str), encoding="utf-8")
     print(json.dumps(st, ensure_ascii=False, indent=1, default=str)[:6000])
     return st
 

@@ -64,7 +64,7 @@ def test_pipeline(tmp_path):
     assert out.set_index("product_id").at["fpi_11", "sub_category"] == "beanie"   # tinh chỉnh theo tiêu đề
     assert (out.product_type != "unknown").all()                  # 100% có category
     assert out.description.iloc[0] == "Mô tả tốt"                 # bỏ HTML + gộp khoảng trắng
-    assert json.loads((tmp_path / "out" / "clean_report.json").read_text())["after"]["n"] == len(out)
+    assert json.loads((tmp_path / "out" / "clean_report.json").read_text(encoding="utf-8"))["after"]["n"] == len(out)
     assert (tmp_path / "out" / "label_check_sample.csv").exists()
 
 

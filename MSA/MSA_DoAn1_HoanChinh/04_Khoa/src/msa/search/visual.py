@@ -70,7 +70,7 @@ class VisualSearcher:
     @classmethod
     def load(cls, index_dir: str | Path, embedder: ImageEmbedder | None = None, **kw) -> "VisualSearcher":
         d = Path(index_dir)
-        cfg = json.loads((d / "config.json").read_text())
+        cfg = json.loads((d / "config.json").read_text(encoding="utf-8"))
         emb = embedder or get_embedder(cfg["model"])
         X = np.load(d / "embeddings.npy")
         meta = pd.read_parquet(d / "meta.parquet")

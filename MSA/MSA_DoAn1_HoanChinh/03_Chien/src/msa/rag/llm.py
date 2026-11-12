@@ -159,7 +159,7 @@ class GeminiClient:
 def count_real_calls(log_path: Path | None = None) -> int:
     """Đếm số lời gọi HTTP thật đã thực hiện (để giữ ngân sách ≤ 250)."""
     p = log_path or ROOT / "logs" / "gemini_calls.jsonl"
-    return sum(1 for _ in p.open()) if p.exists() else 0
+    return sum(1 for _ in p.open(encoding="utf-8")) if p.exists() else 0
 
 
 def get_llm(**kw: Any):

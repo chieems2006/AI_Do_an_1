@@ -434,7 +434,7 @@ def run(catalog: Path, image_root: Path, out_dir: Path, category_map: Path, phas
     df = df.drop(columns=["status", "md5", "std"]).rename(columns={"phash": "image_phash"})
     df.to_parquet(out_dir / "catalog_clean.parquet", index=False, compression="zstd")
     report["runtime_s"] = round(time.time() - t_start, 1)
-    (out_dir / "clean_report.json").write_text(json.dumps(report, ensure_ascii=False, indent=1, default=str))
+    (out_dir / "clean_report.json").write_text(json.dumps(report, ensure_ascii=False, indent=1, default=str), encoding="utf-8")
     (out_dir / "clean_report.md").write_text(render_md(report), encoding="utf-8")
     return report
 

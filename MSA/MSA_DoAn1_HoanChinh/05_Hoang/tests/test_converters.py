@@ -30,7 +30,7 @@ def test_vimrhp_converter(tmp_path):
              "Comment": "tạm"},
             {"ProductId": 2, "ProductName": "Đồng hồ nam", "SubCategory": "DongHo", "CommentId": 12, "Rating": 5, "Comment": "x"}]
     p = tmp_path / "Fashion-train.json"
-    p.write_text(json.dumps(recs, ensure_ascii=False))
+    p.write_text(json.dumps(recs, ensure_ascii=False), encoding="utf-8")
     df = C.convert_vimrhp([str(p)])
     assert len(df) == 1 and df.iloc[0].product_type == "footwear" and df.iloc[0].rating == 3.0
     assert [r["review_id"] for r in df.iloc[0].reviews] == ["10", "11"] and df.iloc[0].source_url == "https://shopee.vn/x"
@@ -95,5 +95,5 @@ def test_real_data_v1_counts():
     p = ROOT / "data" / "counts_data_v1.json"
     if not p.exists():
         pytest.skip("chưa chạy scripts 01/01b/02")
-    rep = json.loads(p.read_text())
+    rep = json.loads(p.read_text(encoding="utf-8"))
     assert rep["schema_valid_100pct"] and rep["counts"]["by_type"]["footwear"] + rep["counts"]["by_type"]["accessory"] >= 1700

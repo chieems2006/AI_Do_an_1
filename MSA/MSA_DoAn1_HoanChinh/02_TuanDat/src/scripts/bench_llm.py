@@ -448,8 +448,8 @@ def summarize() -> dict:
             predicted_gemini_share=round(len(gem) / len(rows), 3),
             confusion=_confusion(rows), **cost_per_100(tin, tout, "gemini-3.5-flash"))
     if BUDGET_FILE.exists():
-        out["gemini_calls_used_total"] = json.loads(BUDGET_FILE.read_text())["calls"]
-    (RES / "bench_llm_summary.json").write_text(json.dumps(out, ensure_ascii=False, indent=1))
+        out["gemini_calls_used_total"] = json.loads(BUDGET_FILE.read_text(encoding="utf-8"))["calls"]
+    (RES / "bench_llm_summary.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     (RES / "bench_llm_summary.md").write_text(render_summary_md(out), encoding="utf-8")
     return out
 

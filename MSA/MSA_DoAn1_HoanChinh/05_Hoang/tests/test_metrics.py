@@ -88,7 +88,7 @@ def test_run_eval_cli(tmp_path):
          "latency_ms": 10},
         {"query_id": "q2", "query_type": "clothing", "relevant": ["z"],
          "retrieved": [{"product_id": "c", "product_type": "clothing"}, {"product_id": "z", "product_type": "clothing"}],
-         "latency_ms": 30}]))
+         "latency_ms": 30}]), encoding="utf-8")
     r = run_eval.main(["--task", "visual", "--pred", str(p), "--k", "1,2"])
     assert r["hit@1"] == 0.5 and r["mrr"] == pytest.approx(0.75)
     assert r["cross_type_error@2"] == pytest.approx(0.25)  # (1/2 + 0)/2
@@ -97,10 +97,10 @@ def test_run_eval_cli(tmp_path):
     q.write_text("\n".join(json.dumps(r) for r in [
         {"id": 1, "relevant": ["r1"], "retrieved": ["r1"], "pred_answer": "giao nhanh", "gold_answer": "giao hàng nhanh",
          "answerable": True, "refused": False},
-        {"id": 2, "answerable": False, "refused": True}]))
+        {"id": 2, "answerable": False, "refused": True}]), encoding="utf-8")
     r = run_eval.main(["--task", "qa", "--pred", str(q)])
     assert r["refusal_rate_unanswerable"] == 1.0 and r["f1_tokens"] == pytest.approx(0.8)  # P=1,R=2/3
     rt = tmp_path / "r.jsonl"
     rt.write_text("\n".join(json.dumps({"id": i, "gold_route": g, "pred_route": p}) for i, (g, p) in
-                            enumerate([("qa", "qa"), ("search", "qa")])))
+                            enumerate([("qa", "qa"), ("search", "qa")])), encoding="utf-8")
     assert run_eval.main(["--task", "router", "--pred", str(rt)])["accuracy"] == 0.5

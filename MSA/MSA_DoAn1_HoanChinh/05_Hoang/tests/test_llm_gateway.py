@@ -120,7 +120,7 @@ def test_key_never_logged(tmp_path):
         return httpx.Response(500, json={"error": {"message": f"echo {FAKE_KEY}"}})
     g = gw_with(h, tmp_path, max_retries=1)
     r = g.generate("Hi")
-    blob = json.dumps(r) + (tmp_path / "llm.jsonl").read_text() + repr(g)
+    blob = json.dumps(r) + (tmp_path / "llm.jsonl").read_text(encoding="utf-8") + repr(g)
     assert FAKE_KEY not in blob and "***" in r["error"]
 
 
@@ -174,7 +174,7 @@ def test_cost_formula():
 
 def test_load_env_file(tmp_path, monkeypatch):
     p = tmp_path / ".env"
-    p.write_text("# c\nexport MSA_X_TEST='abc'\nGEMINI_MODEL=m1\n")
+    p.write_text("# c\nexport MSA_X_TEST='abc'\nGEMINI_MODEL=m1\n", encoding="utf-8")
     monkeypatch.delenv("MSA_X_TEST", raising=False)
     monkeypatch.setenv("GEMINI_MODEL", "keep")
     assert "MSA_X_TEST" in load_env_file(p) and os.environ["MSA_X_TEST"] == "abc" and os.environ["GEMINI_MODEL"] == "keep"

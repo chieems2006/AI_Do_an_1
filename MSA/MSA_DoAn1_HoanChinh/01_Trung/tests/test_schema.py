@@ -34,7 +34,7 @@ def test_bad_record_rejected():
     rec = {"product_id": "fpi_1", "title": "x"}
     ok, bad, _ = validate_records([rec])
     assert bad == 1
-    good = json.load(open(sorted(glob.glob(os.path.join(ROOT, "src", "schema", "examples", "fpi_*.json")))[0])) if glob.glob(os.path.join(ROOT, "src", "schema", "examples", "fpi_*.json")) else None
+    good = json.load(open(sorted(glob.glob(os.path.join(ROOT, "src", "schema", "examples", "fpi_*.json")))[0], encoding="utf-8")) if glob.glob(os.path.join(ROOT, "src", "schema", "examples", "fpi_*.json")) else None
     if good:
         wrong = dict(good, product_type="footwear", sub_category="cap")  # lá không thuộc nhóm
         assert validate_records([wrong])[1] == 1

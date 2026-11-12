@@ -62,7 +62,7 @@ def peak_rss_mb() -> float:
 def hardware() -> dict:
     cpu = ""
     try:
-        for line in open("/proc/cpuinfo"):
+        for line in open("/proc/cpuinfo", encoding="utf-8"):
             if line.startswith("model name"):
                 cpu = line.split(":", 1)[1].strip(); break
     except OSError:
@@ -85,8 +85,8 @@ def cached_embed(emb, name: str, kind: str, paths: list[str], ids: list[str], ba
     f = ROOT / "cache" / f"{name}_{kind}.npy"
     fid = ROOT / "cache" / f"{name}_{kind}_ids.json"
     ftime = ROOT / "cache" / f"{name}_{kind}_timing.json"
-    if f.exists() and fid.exists() and json.loads(fid.read_text()) == ids:
-        tm = json.loads(ftime.read_text()) if ftime.exists() else {}
+    if f.exists() and fid.exists() and json.loads(fid.read_text(encoding="utf-8")) == ids:
+        tm = json.loads(ftime.read_text(encoding="utf-8")) if ftime.exists() else {}
         return np.load(f), float(tm.get("ms_per_img", float("nan")))
     # Embed theo khối 512 ảnh, lưu từng khối (part) để CHẠY TIẾP được nếu tiến trình bị ngắt/OOM
     total_s, n_done, parts = 0.0, 0, []
@@ -94,18 +94,18 @@ def cached_embed(emb, name: str, kind: str, paths: list[str], ids: list[str], ba
         fp = ROOT / "cache" / f"{name}_{kind}_part{pi:02d}.npy"
         fpt = ROOT / "cache" / f"{name}_{kind}_part{pi:02d}.json"
         meta = {"ids": ids[s : s + 512]}
-        if fp.exists() and fpt.exists() and json.loads(fpt.read_text()).get("ids") == meta["ids"]:
-            parts.append(np.load(fp)); total_s += json.loads(fpt.read_text())["seconds"]; n_done += len(meta["ids"]); continue
+        if fp.exists() and fpt.exists() and json.loads(fpt.read_text(encoding="utf-8")).get("ids") == meta["ids"]:
+            parts.append(np.load(fp)); total_s += json.loads(fpt.read_text(encoding="utf-8"))["seconds"]; n_done += len(meta["ids"]); continue
         t = time.perf_counter()
         Xp = emb.embed(paths[s : s + 512], batch_size=batch)
         meta["seconds"] = time.perf_counter() - t
-        np.save(fp, Xp.astype(np.float32)); fpt.write_text(json.dumps(meta))
+        np.save(fp, Xp.astype(np.float32)); fpt.write_text(json.dumps(meta), encoding="utf-8")
         parts.append(Xp); total_s += meta["seconds"]; n_done += len(meta["ids"])
         print(f"[{name}/{kind}] {n_done}/{len(paths)} ảnh, {total_s:.0f}s (tổng thời gian embed các khối)", flush=True)
     X = np.concatenate(parts) if parts else np.zeros((0, 1), np.float32)
     ms = total_s * 1000 / max(1, len(paths))
-    np.save(f, X.astype(np.float32)); fid.write_text(json.dumps(ids))
-    ftime.write_text(json.dumps({"ms_per_img": ms, "total_s": total_s, "n": len(paths)}))
+    np.save(f, X.astype(np.float32)); fid.write_text(json.dumps(ids), encoding="utf-8")
+    ftime.write_text(json.dumps({"ms_per_img": ms, "total_s": total_s, "n": len(paths)}), encoding="utf-8")
     for pi in range((len(paths) + 511) // 512):  # dọn các khối tạm
         for ext in (".npy", ".json"):
             (ROOT / "cache" / f"{name}_{kind}_part{pi:02d}{ext}").unlink(missing_ok=True)
@@ -311,7 +311,7 @@ def run_model(name: str, batch: int = 32, lat_n: int = 20, lat_rep: int = 3) -> 
         import traceback
 
         res["status"] = "error"; res["error"] = f"{type(ex).__name__}: {ex}"[:800]; res["trace"] = traceback.format_exc()[-2000:]
-    out_json.write_text(json.dumps(res, ensure_ascii=False, indent=1, default=float))
+    out_json.write_text(json.dumps(res, ensure_ascii=False, indent=1, default=float), encoding="utf-8")
     print(json.dumps({k: res.get(k) for k in ("model", "status", "error", "catalog_embed_total_s", "query_embed_ms_median")}, ensure_ascii=False))
     if res["status"] == "ok":
         print("TEST:", json.dumps(res["test"], ensure_ascii=False))
@@ -321,7 +321,7 @@ def run_model(name: str, batch: int = 32, lat_n: int = 20, lat_rep: int = 3) -> 
 def aggregate() -> pd.DataFrame:
     rows = []
     for f in sorted((ROOT / "results" / "bench").glob("*.json")):
-        r = json.loads(f.read_text())
+        r = json.loads(f.read_text(encoding="utf-8"))
         row = {"model": r["model"], "display": r.get("info_display"), "status": r["status"], "error": r.get("error", ""),
                "dim": r.get("info_dim"), "has_text": r.get("info_has_text"), "params_visual_M": round(r.get("info_n_params_visual", 0) / 1e6, 1) if r.get("info_n_params_visual") else None,
                "weights_fp32_visual_mb": r.get("weights_fp32_visual_mb"), "weights_fp32_total_mb": r.get("weights_fp32_total_mb"),
@@ -341,7 +341,7 @@ def aggregate() -> pd.DataFrame:
     if "test_macro_R@5" in df:
         df = df.sort_values("test_macro_R@5", ascending=False)
     df.to_csv(ROOT / "results" / "bench_image_embed.csv", index=False)
-    (ROOT / "results" / "bench_image_embed.json").write_text(df.to_json(orient="records", force_ascii=False, indent=1))
+    (ROOT / "results" / "bench_image_embed.json").write_text(df.to_json(orient="records", force_ascii=False, indent=1), encoding="utf-8")
     print(df[[c for c in ["model", "status", "test_R@1", "test_R@5", "test_R@10", "test_MRR@10", "test_macro_R@5", "test_CTE@5", "test_cat_P@5", "query_embed_ms_median_bs1"] if c in df]].to_string())
     return df
 

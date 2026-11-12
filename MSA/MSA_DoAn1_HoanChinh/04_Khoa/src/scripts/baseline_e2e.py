@@ -238,7 +238,7 @@ def main():
                                "latency_ms_p95": round(float(np.percentile(v.latency_ms, 95)), 2),
                                "errors": v[~v.success].error_code.value_counts().to_dict()}
     (ROOT / "results").mkdir(exist_ok=True)
-    (ROOT / "results" / f"e2e_{a.agent}.json").write_text(json.dumps(summ, ensure_ascii=False, indent=1))
+    (ROOT / "results" / f"e2e_{a.agent}.json").write_text(json.dumps(summ, ensure_ascii=False, indent=1), encoding="utf-8")
     df.to_csv(ROOT / "results" / f"e2e_{a.agent}_per_case.csv", index=False)
     print(json.dumps(summ, ensure_ascii=False, indent=1))
 

@@ -17,7 +17,7 @@ def e2e() -> str:
     p = ROOT / "results" / "e2e_visual-only.json"
     if not p.exists():
         return "CHƯA ĐO"
-    d = json.loads(p.read_text()); v = d["visual_only"]
+    d = json.loads(p.read_text(encoding="utf-8")); v = d["visual_only"]
     return ("Chạy THẬT `--agent visual-only` (index `indexes/best` → FashionCLIP, τ_v và gate như `config.json`), 18 kịch bản visual:\n\n"
             "| Chỉ số | Giá trị |\n|---|---|\n"
             f"| TSR phần visual | **{v['tsr']:.3f}** ({round(v['tsr'] * v['n'])}/{v['n']}) |\n| Latency p50 / p95 (ms, gồm đọc ảnh + embed + gate + search) | {v['latency_ms_p50']} / {v['latency_ms_p95']} |\n"

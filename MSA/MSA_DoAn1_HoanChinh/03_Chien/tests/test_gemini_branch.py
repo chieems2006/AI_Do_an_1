@@ -98,7 +98,7 @@ def test_gemini_client_retry_on_429(tmp_path, monkeypatch):
     assert r["answer"] == "ok" and r["tokens_in"] == 3
     r2 = c.generate("hi")
     assert r2["cached"] and r2["source"] == "cache"
-    assert "fake-key" not in (tmp_path / "l.jsonl").read_text()
+    assert "fake-key" not in (tmp_path / "l.jsonl").read_text(encoding="utf-8")
 
 
 def test_gemini_client_timeout_returns_fallback(tmp_path, monkeypatch):

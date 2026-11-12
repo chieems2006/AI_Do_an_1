@@ -111,7 +111,7 @@ class ClipFaissSearcher:
         cache = Path(cache_dir)
         cache.mkdir(parents=True, exist_ok=True)
         f_emb, f_ids = cache / "clip_b32_catalog.npy", cache / "clip_b32_catalog_ids.json"
-        if f_emb.exists() and f_ids.exists() and json.loads(f_ids.read_text()) == ids:
+        if f_emb.exists() and f_ids.exists() and json.loads(f_ids.read_text(encoding="utf-8")) == ids:
             emb = np.load(f_emb)
         else:
             embs = []
@@ -120,7 +120,7 @@ class ClipFaissSearcher:
                 embs.append(self.embed(ims))
             emb = np.concatenate(embs)
             np.save(f_emb, emb)
-            f_ids.write_text(json.dumps(ids))
+            f_ids.write_text(json.dumps(ids), encoding="utf-8")
         self.index = _FlatIndex(emb, ids, types)
         # vector văn bản cho type gate (trung bình các prompt mỗi nhóm)
         self.gate_types = list(PRODUCT_TYPE_PROMPTS)

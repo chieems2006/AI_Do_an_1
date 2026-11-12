@@ -29,7 +29,7 @@ def load():
     for m in ORDER:
         p = ROOT / "results" / "bench" / f"{m}.json"
         if p.exists():
-            out[m] = json.loads(p.read_text())
+            out[m] = json.loads(p.read_text(encoding="utf-8"))
     return out
 
 
@@ -91,7 +91,7 @@ def table_ood(R):
 def table_impr():
     out = []
     for p in sorted((ROOT / "results").glob("improvements_*.json")):
-        d = json.loads(p.read_text()); rows = d["rows"]; b = rows["baseline"]
+        d = json.loads(p.read_text(encoding="utf-8")); rows = d["rows"]; b = rows["baseline"]
         out.append(f"\n**Model: `{d['model']}`** – split test\n")
         out.append("| Biến thể | R@1 | R@5 | MRR@10 | Macro R@5 | CTE@5 | R@5 hard | cat Hit@5 | cat P@5 | ΔR@5 | ΔMacro R@5 | ΔMRR | Δcat P@5 | Ghi chú |")
         out.append("|---|" + "---|" * 13)
@@ -105,7 +105,7 @@ def table_impr():
 def table_build():
     out = ["| Model | Số SP | Dim | Embed catalog (s) | Từ cache? | Build tổng (s) | File index (MB) | Truy vấn e2e ms median / p95 (embed+gate+search) | Search-only ms median | Số lần đo |", "|---|---|---|---|---|---|---|---|---|---|"]
     for p in sorted((ROOT / "results").glob("build_index_*.json")):
-        r = json.loads(p.read_text())
+        r = json.loads(p.read_text(encoding="utf-8"))
         out.append(f"| {r['model']} | {r['n_items']} | {r['dim']} | {r['embed_s']} | {r['embed_from_cache']} | {r['build_total_s']} | {r['index_file_mb']} | {r['query_e2e_ms_median']} / {r['query_e2e_ms_p95']} | {r['search_only_ms_median']} | {r['n_latency_measurements']} |")
     return "\n".join(out)
 

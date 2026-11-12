@@ -42,7 +42,7 @@ def build(model: str, catalog: Path, image_root: Path, out: Path, tau_v: float, 
     cache = ROOT / "cache" / f"{model}_catalog.npy"; cache_ids = ROOT / "cache" / f"{model}_catalog_ids.json"
     used_cache = False
     t = time.perf_counter()
-    if reuse_cache and cache.exists() and json.loads(cache_ids.read_text()) == meta.product_id.tolist():
+    if reuse_cache and cache.exists() and json.loads(cache_ids.read_text(encoding="utf-8")) == meta.product_id.tolist():
         X = np.load(cache); used_cache = True
     else:
         X = emb.embed(meta.image.tolist(), batch_size=batch)
@@ -55,7 +55,7 @@ def build(model: str, catalog: Path, image_root: Path, out: Path, tau_v: float, 
     build_total_s = time.perf_counter() - t_all
     cfg = {"model": model, "n_items": int(len(X)), "dim": int(X.shape[1]), "index": "IndexFlatIP", "tau_v": tau_v,
            "gate_tau": gate_tau, "catalog": str(catalog), "data_version": "shared_data v1 (prep_shared_data.py seed 42)", "seed": 42}
-    (out / "config.json").write_text(json.dumps(cfg, ensure_ascii=False, indent=1))
+    (out / "config.json").write_text(json.dumps(cfg, ensure_ascii=False, indent=1), encoding="utf-8")
 
     # ---- latency truy vấn end-to-end (embed 1 ảnh + type gate + search), ảnh nạp sẵn
     vs = VisualSearcher(emb, X, meta, tau_v=tau_v, gate_tau=gate_tau)
@@ -78,7 +78,7 @@ def build(model: str, catalog: Path, image_root: Path, out: Path, tau_v: float, 
            "search_only_ms_median": round(statistics.median(lat_search), 4), "n_latency_measurements": len(lat)}
     (ROOT / "results").mkdir(exist_ok=True)
     if model != "dummy":
-        (ROOT / "results" / f"build_index_{model}.json").write_text(json.dumps(res, ensure_ascii=False, indent=1))
+        (ROOT / "results" / f"build_index_{model}.json").write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
     print(json.dumps(res, ensure_ascii=False, indent=1))
     return res
 

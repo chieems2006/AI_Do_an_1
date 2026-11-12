@@ -90,7 +90,7 @@ def main() -> None:
         if os.path.exists(path):
             res["sets"][name] = dict(path=path, **evaluate(router, load(path)))
     os.makedirs(os.path.dirname(a.out), exist_ok=True)
-    json.dump(res, open(a.out, "w"), ensure_ascii=False, indent=1)
+    json.dump(res, open(a.out, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     for name, r in res["sets"].items():
         print(f"{name}: n={r['n']} acc={r['route_accuracy']} acc_gemini_merged={r['route_accuracy_gemini_merged']} gemini_rate={r['predicted_gemini_rate']} in_domain->gemini={r['in_domain_pushed_to_gemini']}")
 

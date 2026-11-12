@@ -42,7 +42,7 @@ def main() -> None:
     out = c.generate(PROMPT)
     raw_dir = os.path.join(ROOT, "eval", "raw")
     os.makedirs(raw_dir, exist_ok=True)
-    json.dump({k: v for k, v in out.items()}, open(os.path.join(raw_dir, "router_testgen_gemini_raw.json"), "w"), ensure_ascii=False, indent=1)
+    json.dump({k: v for k, v in out.items()}, open(os.path.join(raw_dir, "router_testgen_gemini_raw.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     if out.get("error"):
         print("Lỗi:", out["error"])
         sys.exit(1)

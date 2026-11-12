@@ -17,5 +17,5 @@ for f in sorted((ROOT / "results" / "bench").glob("*.json")):
     out[m] = {k: {"tau": round(tau, 4), "test_instance_kept": round(float((t[t.tier == "instance"].top1_score >= tau).mean()), 4),
                   "test_category_kept": round(float((t[t.tier == "category"].top1_score >= tau).mean()), 4),
                   "test_ood_rejected": round(float((ot < tau).mean()), 4)} for k, tau in taus.items()}
-(ROOT / "results" / "tau_v_analysis.json").write_text(json.dumps(out, indent=1))
+(ROOT / "results" / "tau_v_analysis.json").write_text(json.dumps(out, indent=1), encoding="utf-8")
 for m, d in out.items(): print(m, json.dumps(d))

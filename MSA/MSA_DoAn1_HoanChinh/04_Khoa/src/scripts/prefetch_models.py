@@ -16,4 +16,4 @@ for n in names:
     except Exception as ex:
         out[n] = {"ok": False, "error": f"{type(ex).__name__}: {ex}"[:500], "trace": traceback.format_exc()[-1500:]}
     print(n, json.dumps({k: v for k, v in out[n].items() if k != "trace"}, ensure_ascii=False), flush=True)
-    (ROOT / "results" / "prefetch_models.json").write_text(json.dumps(out, ensure_ascii=False, indent=1))
+    (ROOT / "results" / "prefetch_models.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")

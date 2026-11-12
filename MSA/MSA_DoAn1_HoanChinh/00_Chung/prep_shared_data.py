@@ -57,19 +57,19 @@ def main():
     # ViMRHP Fashion
     rev = []
     for s in ["train", "dev", "test"]:
-        rev += json.load(open(f"{RAW}/vimrhp/Annotation/Fashion-{s}.json"))
+        rev += json.load(open(f"{RAW}/vimrhp/Annotation/Fashion-{s}.json", encoding="utf-8"))
     prods = {}
     for r in rev:
         p = prods.setdefault(r["ProductId"], dict(product_id=f"shopee_{r['ProductId']}", title=r["ProductName"], vimrhp_subcategory=r["SubCategory"],
             image_urls=r.get("ProductImage") or [], source_url=(r.get("ProductUrl") or "").split("?")[0], reviews=[]))
         p["reviews"].append(dict(comment_id=r["CommentId"], rating=r["Rating"], text=r["Comment"], detail_rating=r.get("DetailRating"),
             date=r.get("CommentDate"), helpfulness=r.get("Helpfulness_Score")))
-    with open(f"{OUT}/vimrhp_fashion_products.jsonl", "w") as f:
+    with open(f"{OUT}/vimrhp_fashion_products.jsonl", "w", encoding="utf-8") as f:
         for p in prods.values(): f.write(json.dumps(p, ensure_ascii=False) + "\n")
     stats = dict(fpi_by_type=out.product_type.value_counts().to_dict(), fpi_by_sub={f"{a}/{b}": int(n) for (a, b), n in out.groupby(["product_type", "sub_category"]).size().items()},
         fpi_total=len(out), fpi_source_rows_total=int(sum(pq.ParquetFile(f).metadata.num_rows for f in fs)),
         vimrhp_products=len(prods), vimrhp_reviews=len(rev), vimrhp_by_sub=collections.Counter(p["vimrhp_subcategory"] for p in prods.values()))
-    json.dump(stats, open(f"{OUT}/stats.json", "w"), ensure_ascii=False, indent=1, default=str); print(json.dumps(stats, ensure_ascii=False, indent=1, default=str))
+    json.dump(stats, open(f"{OUT}/stats.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1, default=str); print(json.dumps(stats, ensure_ascii=False, indent=1, default=str))
 
 if __name__ == "__main__":
     main()

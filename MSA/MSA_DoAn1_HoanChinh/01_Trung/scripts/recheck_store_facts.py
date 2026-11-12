@@ -24,5 +24,5 @@ out["kiem_tay_A"] = dict(
 )
 out["ghi_chu"] = ("regex v1: 1 cờ sai (r064) và bỏ sót 2 câu khẳng định cửa hàng có bán đồng hồ/khuyên tai. "
                   "regex v2: '$' phải đứng trước số + thêm mẫu 'danh_muc'. Unsupported-store-fact (kiểm tay) = 2/40 = 0.05 trên cấu hình A.")
-json.dump(out, open(os.path.join(ROOT, "results", "gemini_store_fact_recheck.json"), "w"), ensure_ascii=False, indent=1)
+json.dump(out, open(os.path.join(ROOT, "results", "gemini_store_fact_recheck.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print({k: (v["n"], v["flagged_regex_v2"]) for k, v in out.items() if isinstance(v, dict) and "n" in v})

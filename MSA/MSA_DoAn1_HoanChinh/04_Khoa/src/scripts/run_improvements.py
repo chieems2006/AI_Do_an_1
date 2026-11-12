@@ -96,7 +96,7 @@ def main(model: str, n_train: int = 800, with_crop: bool = False):
         rows["I1_bbox_crop_query_only"], _ = evaluate(Xcat, Qc, qdf, cat)
 
     # ---- I19: type gate (lấy từ bench, τ chọn trên val)
-    bj = json.loads((ROOT / "results" / "bench" / f"{model}.json").read_text())
+    bj = json.loads((ROOT / "results" / "bench" / f"{model}.json").read_text(encoding="utf-8"))
     for mode, g in bj.get("gate", {}).items():
         rows[f"I19_type_gate_{mode}"] = {**g["test"], "tau_chosen_on_val": g["tau_chosen_on_val"], "gate_acc_test": g["acc_test"]}
 
@@ -130,7 +130,7 @@ def main(model: str, n_train: int = 800, with_crop: bool = False):
     df.to_csv(ROOT / "results" / f"improvements_{model}.csv")
     out = {"model": model, "split": "test", "data_version": B.DATA_VERSION, "adapter_train": {"n": n_train, "seed": 7,
            "pool": "SP catalog không xuất hiện trong eval_visual (val+test)", "transforms": TRANSFORMS}, "rows": rows}
-    (ROOT / "results" / f"improvements_{model}.json").write_text(json.dumps(out, ensure_ascii=False, indent=1, default=float))
+    (ROOT / "results" / f"improvements_{model}.json").write_text(json.dumps(out, ensure_ascii=False, indent=1, default=float), encoding="utf-8")
     print(df[["R@1", "R@5", "MRR@10", "macro_R@5", "CTE@5", "cat_P@5", "ΔR@5", "Δmacro_R@5", "Δcat_P@5"]].to_string())
 
 

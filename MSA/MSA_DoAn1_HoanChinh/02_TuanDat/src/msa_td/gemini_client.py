@@ -101,14 +101,14 @@ class GeminiClient:
     def _calls_used(self) -> int:
         if not self.budget_file or not Path(self.budget_file).exists():
             return 0
-        return int(json.loads(Path(self.budget_file).read_text()).get("calls", 0))
+        return int(json.loads(Path(self.budget_file).read_text(encoding="utf-8")).get("calls", 0))
 
     def _inc_calls(self) -> None:
         if not self.budget_file:
             return
         Path(self.budget_file).parent.mkdir(parents=True, exist_ok=True)
         n = self._calls_used() + 1
-        Path(self.budget_file).write_text(json.dumps({"calls": n, "max_calls": self.max_calls}))
+        Path(self.budget_file).write_text(json.dumps({"calls": n, "max_calls": self.max_calls}), encoding="utf-8")
 
     # ---------- cache ----------
     @staticmethod

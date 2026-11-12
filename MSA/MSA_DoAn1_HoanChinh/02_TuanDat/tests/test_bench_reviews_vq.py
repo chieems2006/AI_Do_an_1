@@ -28,7 +28,7 @@ def test_heuristics_and_echo(tmp_path, monkeypatch):
     assert h2["refused"] and h2["invalid_citations"] == ["R9"]
     monkeypatch.setattr(BL, "RES", tmp_path)
     out = BL.run_qa(BL.EchoLLM(), "echo", limit=5)
-    rows = [json.loads(l) for l in out.open()]
+    rows = [json.loads(l) for l in out.open(encoding="utf-8")]
     assert len(rows) == 5 and all(r["temperature"] == 0.0 for r in rows)
     s = BL.summarize()
     assert s["qa"]["echo"]["n"] == 5
@@ -127,7 +127,7 @@ def test_summarize_product_grounded():
 
 @pytest.mark.skipif(not (ROOT / "results" / "product_review_summary.json").exists(), reason="chưa chạy baseline")
 def test_summary_file_real():
-    d = json.loads((ROOT / "results" / "product_review_summary.json").read_text())
+    d = json.loads((ROOT / "results" / "product_review_summary.json").read_text(encoding="utf-8"))
     assert d["_meta"]["n_products"] == 428 and "DongHo" in d["_meta"]["excluded_subcategories"]
 
 

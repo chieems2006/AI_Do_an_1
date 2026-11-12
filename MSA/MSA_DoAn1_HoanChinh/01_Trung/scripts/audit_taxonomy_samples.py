@@ -62,7 +62,7 @@ def main() -> None:
     summary["hard_cases"] = [dict(id=i, title=t, ket_qua=m, ghi_chu=n) for i, t, m, n in HARD_CASES]
     summary["ghi_chu"] = ("Kiểm bởi tác nhân AI (vai Trung) bằng tiêu đề + ảnh 60×80 cho FPI, chỉ tiêu đề cho ViMRHP; "
                           "seed 42; CHƯA phải 2 người thật – nhóm phải kiểm lại (cột nguoi_kiem_2).")
-    json.dump(summary, open(os.path.join(ROOT, "results", "taxonomy_audit.json"), "w"), ensure_ascii=False, indent=1)
+    json.dump(summary, open(os.path.join(ROOT, "results", "taxonomy_audit.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(json.dumps({k: v for k, v in summary.items() if k in ("fpi", "vimrhp")}, ensure_ascii=False, indent=1))
 
 

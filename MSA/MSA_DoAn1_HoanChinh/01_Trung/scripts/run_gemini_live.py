@@ -143,7 +143,7 @@ def main() -> None:
         api_calls_made=cA.calls_api + cB.calls_api,
         rows=rows_a + rows_b + rows_c,
     )
-    json.dump(res, open(os.path.join(ROOT, "results", "gemini_fallback_live.json"), "w"), ensure_ascii=False, indent=1)
+    json.dump(res, open(os.path.join(ROOT, "results", "gemini_fallback_live.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(json.dumps({k: v for k, v in res.items() if k != "rows"}, ensure_ascii=False, indent=1))
 
 
