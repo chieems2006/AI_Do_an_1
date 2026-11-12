@@ -94,3 +94,59 @@ def test_backend_falls_back_when_api_down():
     b = Backend(url="http://127.0.0.1:9", force_mock=False, timeout=0.5)
     r = b.handle("chào shop", None)
     assert r.get("mock") is True
+
+
+def _fake_api(monkeypatch, status=200, body=None, exc=None):
+    """Thay httpx.post bằng API giả; ghi lại path + payload mà Backend gửi."""
+    import httpx
+
+    import app as A
+    sent = []
+
+    def fake_post(url, timeout=None, **kw):
+        sent.append({"path": url.split("8000", 1)[-1], **kw})
+        if exc:
+            raise exc
+        b = body if body is not None else {"route": "search", "confidence": 1.0, "source": "internal", "answer": "ok",
+                                           "items": [], "citations": [], "latency_ms": 1, "request_id": "r"}
+        return httpx.Response(status, json=b)
+
+    monkeypatch.setattr(A.httpx, "post", fake_post)
+    return A, sent
+
+
+def test_backend_matches_api_contract(monkeypatch):
+    """Khớp src/msa/api/main.py: ảnh → `file` + session_id; chat → {message, session_id}; SP đang xem gửi kèm /chat."""
+    A, sent = _fake_api(monkeypatch)
+    b = A.Backend(url="http://api:8000", force_mock=False)
+    s = A.new_session()
+    b.handle("", b"\xff\xd8jpeg", s)
+    assert sent[-1]["path"] == "/search/image" and "file" in sent[-1]["files"]
+    assert sent[-1]["data"] == {"session_id": s["session_id"]}
+    b.handle("so sánh đôi vừa tìm với đôi thứ 2", None, s)
+    assert sent[-1]["path"] == "/chat" and sent[-1]["json"] == {"message": "so sánh đôi vừa tìm với đôi thứ 2",
+                                                                 "session_id": s["session_id"]}
+    b.handle("shopee_22736671626 dép này đi có êm không?", None, s)
+    assert sent[-1]["path"] == "/qa" and sent[-1]["json"]["product_id"] == "shopee_22736671626"
+    b.handle("giá bao nhiêu?", None, s)  # câu tiếp theo không có mã → /chat kèm SP đang xem
+    assert sent[-1]["json"] == {"message": "giá bao nhiêu?", "session_id": s["session_id"],
+                                "product_id": "shopee_22736671626"}
+    b.handle("so sánh fpi_1 fpi_2", None, s)
+    assert sent[-1]["path"] == "/compare" and sent[-1]["json"] == {"product_ids": ["fpi_1", "fpi_2"]}
+    assert A.new_session()["session_id"] != s["session_id"]
+
+
+def test_backend_api_error_is_system_message(monkeypatch):
+    """API báo lỗi → nhãn "Thông báo hệ thống" (source=fallback), không gắn nhầm "Từ dữ liệu cửa hàng"."""
+    A, _ = _fake_api(monkeypatch, status=422, body={"route": "chat", "source": "internal", "answer": "Yêu cầu không hợp lệ"})
+    r = A.Backend(url="http://api:8000", force_mock=False).handle("chào shop", None, A.new_session())
+    assert r["source"] == "fallback" and C.source_label(r) == C.LABEL_SYSTEM
+    assert "422" in r["answer"] and "Yêu cầu không hợp lệ" in r["answer"] and C.validate_response(r) == []
+
+
+def test_backend_timeout_is_system_message_not_mock(monkeypatch):
+    """API còn sống nhưng chậm (Gemini thử lại, nạp RAG) → báo hệ thống bận, KHÔNG thay bằng dữ liệu giả."""
+    import httpx
+    A, _ = _fake_api(monkeypatch, exc=httpx.ReadTimeout("chậm"))
+    r = A.Backend(url="http://api:8000", force_mock=False, timeout=5).handle("shopee_1 có êm không?", None)
+    assert r["source"] == "fallback" and not r.get("mock") and r["error"]["code"] == "timeout"

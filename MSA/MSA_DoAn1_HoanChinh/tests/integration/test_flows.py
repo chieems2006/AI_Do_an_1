@@ -162,6 +162,18 @@ def test_search_then_compare_in_one_chat_session(system):
     assert b["answer"].startswith("Bảng so sánh 2 sản phẩm")
 
 
+def test_image_search_then_compare_in_chat_session(system, catalog):
+    """Kịch bản 3 (US_47): tìm bằng ảnh có session_id → /chat 'so sánh đôi vừa tìm với đôi thứ 2' dùng kết quả ảnh."""
+    c, _, _ = system
+    img = (catalog["root"] / catalog["by_id"]["it_005"]["image_paths"][0]).read_bytes()
+    found = c.post("/search/image", files={"file": ("q.jpg", img, "image/jpeg")}, data={"session_id": "s-img"}).json()
+    assert found["session_id"] == "s-img"
+    ids = [i["product_id"] for i in found["items"]]
+    b = c.post("/chat", json={"message": "so sánh đôi vừa tìm với đôi thứ 2", "session_id": "s-img"}).json()
+    assert_contract(b)
+    assert b["route"] == "compare" and [i["product_id"] for i in b["items"]] == ids[:2]
+
+
 # ============================================================== (5) chitchat / ngoài phạm vi → Gemini
 def test_chitchat_goes_through_gateway_then_cache(system):
     c, _, gem = system

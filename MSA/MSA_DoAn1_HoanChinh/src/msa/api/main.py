@@ -304,7 +304,9 @@ def create_app(state: State | None = None) -> FastAPI:
         return JSONResponse(json.loads(json.dumps(rec, ensure_ascii=False, default=str)))
 
     @app.post("/search/image")
-    async def search_image(file: UploadFile = File(...), k: int = Form(10), product_type: str | None = Form(None)):
+    async def search_image(file: UploadFile = File(...), k: int = Form(10), product_type: str | None = Form(None),
+                           session_id: str | None = Form(None)):
+        """session_id (tuỳ chọn): lưu kết quả vào last_results của phiên /chat → 'so sánh đôi vừa tìm với đôi thứ 2'."""
         t0 = time.perf_counter()
         data = await file.read()
         chk = validate_image(data, file.filename, file.content_type)
@@ -335,8 +337,12 @@ def create_app(state: State | None = None) -> FastAPI:
                 title, sub, price, image = r.get("title"), r.get("sub_category"), None, r.get("image")
             items.append({"product_id": r["product_id"], "title": title, "price": price, "score": round(r["score"], 4),
                           "image": image, "product_type": r["product_type"], "sub_category": sub})
+        extra = {"tau_v": tau_v}
+        if session_id:
+            st.session(session_id)["last_results"] = [i["product_id"] for i in items]
+            extra["session_id"] = session_id
         body = _resp("visual", confidence=top1, answer=f"Tìm thấy {len(items)} sản phẩm tương tự.", items=items,
-                     extra={"tau_v": tau_v})
+                     extra=extra)
         return finish("/search/image", t0, body, 200, {"image_wh": [chk.width, chk.height]})
 
     @app.post("/search/text")
