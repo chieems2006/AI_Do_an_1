@@ -15,6 +15,9 @@
 **/indexes/
 **/cache/
 
+# Runtime output of the integrated API (logs, LLM cache)
+MSA/MSA_DoAn1_HoanChinh/runtime/
+
 # Python
 __pycache__/
 *.py[cod]

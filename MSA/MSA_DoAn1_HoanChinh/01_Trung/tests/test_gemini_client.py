@@ -3,7 +3,7 @@ import os
 
 import pytest
 
-from msa.agent.gemini_client import GeminiRestClient, _scrub
+from msa_trung.gemini_client import GeminiRestClient, _scrub
 
 
 def test_mock_and_cache(tmp_path, monkeypatch):

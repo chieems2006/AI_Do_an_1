@@ -18,10 +18,10 @@ from pathlib import Path
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT / "src"))
+sys.path.insert(0, str(ROOT / "src")); sys.path.insert(0, str(ROOT.parent / "src"))  # + package msa chung
 
 from msa.rag.fallback import GeminiFallback, check_text  # noqa: E402
-from msa.rag.llm import GeminiClient, count_real_calls  # noqa: E402
+from msa_chien.gemini_client import GeminiClient, count_real_calls  # noqa: E402
 
 TRAPS = [
     {"id": "trap1", "text": "đôi giày thể thao trắng bên shop giá bao nhiêu, còn size 42 không?", "route": "gemini_ood",

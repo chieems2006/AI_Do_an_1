@@ -15,6 +15,8 @@ MSA_DoAn1_HoanChinh/
 ├── KIEM_DINH_TAC_NHAN_3.md      # nhật ký kiểm định cuối (lỗi phát hiện, sửa, kết quả test)
 ├── TONG_HOP_TAC_NHAN_1.md       # ảnh chụp lúc Tác nhân 1 gom kết quả (lịch sử)
 ├── CHANGELOG_TAC_NHAN_2.md      # các chỉnh sửa của Tác nhân 2 (lịch sử)
+├── src/msa/                     # package chung chạy hệ thống (ghép code 5 thành viên theo dòng "# repo:")
+├── tests/integration/           # test tích hợp 5 luồng (Gemini mock) – chạy: python -m pytest -q ở thư mục này
 ├── 00_Chung/                    # dùng chung
 │   ├── 00_THIET_KE_CHUNG.md     # schema, định dạng response, quy tắc Gemini, quy tắc số liệu
 │   ├── QUYET_DINH_CAN_CHOT.md   # 6 quyết định A–F + mâu thuẫn G1–G7 chờ nhóm ký
@@ -28,6 +30,7 @@ MSA_DoAn1_HoanChinh/
 ├── 04_Khoa/     # EDA, eval_visual, benchmark 5 model ảnh, index FAISS, baseline e2e, cải tiến visual
 └── 05_Hoang/    # repo skeleton, tải dữ liệu public, metrics.py, API FastAPI, LLM gateway
 ```
+Từ 12/11/2026 code chạy hệ thống nằm ở `src/msa/` (một bản duy nhất; Gemini chỉ qua `msa.llm_gateway.LLMGateway`). Tài nguyên (prompt, schema, eval, index, kết quả) vẫn ở folder thành viên, đường dẫn tập trung trong `src/msa/paths.py`. Client Gemini cũ của Trung/Đạt/Chiến (`msa_trung`, `msa_td`, `msa_chien` trong `src/` của từng người) chỉ còn dùng cho các script đo đã sinh số liệu báo cáo.
 Mỗi folder thành viên có `README.md` (mục 0: bảng đối chiếu US → đầu ra → kết quả), `docs/` (tài liệu theo US), `src/` hoặc `scripts/`, `tests/`, `results/` (số đo thật dạng JSON/CSV/MD).
 
 ## 2. Cài đặt và chạy
@@ -37,12 +40,13 @@ Môi trường đã dùng: Python 3.13, 2 CPU, 7 GB RAM, không GPU. Danh sách 
 **Kiểm thử (không cần mạng, không gọi Gemini):**
 ```bash
 for d in 01_Trung 02_TuanDat 03_Chien 04_Khoa 05_Hoang; do (cd $d && python -m pytest -q); done
+python -m pytest -q                             # test tích hợp 5 luồng của src/msa (tests/integration)
 python 00_Chung/kiem_dinh/check_numbers.py      # đối chiếu số trong tài liệu với file kết quả
 ```
 Kết quả lần kiểm định cuối (05/11/2026): Trung **53 passed, 1 skipped**; Tuấn Đạt **21 passed, 3 skipped**; Chiến **51 passed**; Khoa **30 passed**; Hoàng **78 passed** (test gọi Gemini thật gắn nhãn `live`, bỏ qua mặc định; các test *skipped* cần file nặng không đóng gói – xem mục 3).
 
 **Demo giao diện (chế độ API giả lập):** `cd 02_TuanDat && MSA_UI_MOCK=1 python app/app.py` → http://localhost:7860.
-**API thật:** `cd 05_Hoang/src && uvicorn msa.api.main:app --port 8000` (cần dữ liệu và index sinh ở mục 3; API hiện nạp CLIP B/32 – xem `QUYET_DINH_CAN_CHOT.md` mục C, G4).
+**API thật:** `uvicorn msa.api.main:app --app-dir src --port 8000` (chạy ở thư mục này; cần dữ liệu và index sinh ở mục 3). /search/image dùng VisualSearcher của Khoa trên index DINOv2-S (`04_Khoa/indexes/dinov2_s`, đề xuất mục E), τ_v đọc từ `04_Khoa/results/tau_v_analysis.json` (mục C); /qa dùng RAGPipeline của Chiến; /chat dùng Router + Agent của Trung; mọi lời gọi Gemini qua LLMGateway của Hoàng. Trạng thái các backend: `GET /health`.
 **Gemini:** key **không** có trong folder (`grep -rn "AQ\.Ab8" .` rỗng). Đặt `GEMINI_API_KEY` hoặc trỏ `MSA_ENV_FILE` / `MSA_GEMINI_KEY_FILE` tới file `.env` riêng ngoài repo (mẫu: `05_Hoang/repo_skeleton/.env.example`). Free tier đo được: 5 request/phút, 20 request/ngày/model.
 
 **Biến môi trường đường dẫn** (thay cho đường dẫn tuyệt đối trong code; mặc định là đường dẫn của máy đã chạy):
@@ -53,6 +57,10 @@ Kết quả lần kiểm định cuối (05/11/2026): Trung **53 passed, 1 skipp
 | `MSA_RAW_DIR` | dữ liệu thô tải về (`fpi/data/*.parquet`, `vimrhp/Annotation/Fashion-*.json`) | `/home/claude/realdata` |
 | `MSA_CHIEN_EVAL_ROUTER` | eval_router dùng cho `01_Trung/scripts/eval_router.py` | `../03_Chien/eval/eval_router.jsonl` |
 | `MSA_IMAGE_ROOT` | gốc ảnh cho UI của Đạt | như `MSA_SHARED_DATA` |
+| `MSA_VISUAL_INDEX` | index ảnh cho /search/image (`MSA_VISUAL_BACKEND=clip` để dùng CLIP B/32 cũ) | `04_Khoa/indexes/dinov2_s` |
+| `MSA_QA_BACKEND`, `MSA_RAG_DENSE` | `rag` (RAG của Chiến) hoặc `stub`; `0` = chỉ BM25, không tải e5 | `rag`, `1` |
+| `MSA_CATALOG`, `MSA_IMAGES_ROOT` | catalog + gốc ảnh cho API | Data v1 của Hoàng nếu đã build, không thì `shared_data` |
+| `MSA_RUNTIME_DIR` | log request + cache LLM khi chạy API (không commit) | `runtime/` |
 | `GEMINI_API_KEY`, `MSA_ENV_FILE`, `MSA_GEMINI_KEY_FILE` | key Gemini (không commit) | – |
 
 ## 3. Dữ liệu đã dùng – nguồn, license, cách tái tạo file nặng

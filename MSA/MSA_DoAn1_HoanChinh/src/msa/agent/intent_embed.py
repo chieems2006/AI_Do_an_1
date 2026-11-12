@@ -9,8 +9,9 @@ import os
 
 import numpy as np
 
-DEFAULT_PROTOS = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))),
-                              "eval", "eval_router_seed.jsonl")
+from msa.paths import ROUTER_PROTOS
+
+DEFAULT_PROTOS = str(ROUTER_PROTOS)  # 01_Trung/eval/eval_router_seed.jsonl
 
 
 class PrototypeIntentEmbedder:

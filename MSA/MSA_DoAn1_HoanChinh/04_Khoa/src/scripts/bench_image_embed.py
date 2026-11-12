@@ -26,7 +26,7 @@ import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT / "src"))
+sys.path.insert(0, str(ROOT / "src")); sys.path.insert(0, str(ROOT.parent / "src"))  # + package msa chung
 from msa.eval import visual_metrics as M  # noqa: E402
 
 SHARED = Path(os.environ.get("MSA_SHARED_DATA", "/home/claude/work/shared_data"))
@@ -204,7 +204,7 @@ def gated_search(Xcat: np.ndarray, cat: pd.DataFrame, Q: np.ndarray, P: np.ndarr
 
 # ----------------------------------------------------------------------------- run one model
 def run_model(name: str, batch: int = 32, lat_n: int = 20, lat_rep: int = 3) -> dict:
-    sys.path.insert(0, str(ROOT / "src"))
+    sys.path.insert(0, str(ROOT / "src")); sys.path.insert(0, str(ROOT.parent / "src"))  # + package msa chung
     from msa.embed.image_embedders import get_embedder, set_threads
 
     set_threads(2)

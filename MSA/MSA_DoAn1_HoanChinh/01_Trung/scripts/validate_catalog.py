@@ -13,7 +13,7 @@ import sys
 import pandas as pd
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, os.path.join(ROOT, "src"))
+sys.path.insert(0, os.path.join(ROOT, "src")); sys.path.insert(0, os.path.join(os.path.dirname(ROOT), "src"))  # + package msa chung
 from msa.data.schema_adapters import fpi_row_to_record, validate_records, vimrhp_to_record  # noqa: E402
 
 SHARED = os.environ.get("MSA_SHARED_DATA", "/home/claude/work/shared_data")

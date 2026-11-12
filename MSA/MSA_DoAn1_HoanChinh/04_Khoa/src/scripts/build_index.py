@@ -22,7 +22,7 @@ import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT / "src"))
+sys.path.insert(0, str(ROOT / "src")); sys.path.insert(0, str(ROOT.parent / "src"))  # + package msa chung
 from msa.embed.image_embedders import get_embedder, load_image, set_threads  # noqa: E402
 from msa.search.visual import VisualSearcher, build_meta  # noqa: E402
 

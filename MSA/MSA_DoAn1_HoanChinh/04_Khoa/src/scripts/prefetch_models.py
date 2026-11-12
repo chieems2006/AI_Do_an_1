@@ -3,7 +3,7 @@
 import json, sys, time, traceback
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT / "src"))
+sys.path.insert(0, str(ROOT / "src")); sys.path.insert(0, str(ROOT.parent / "src"))  # + package msa chung
 from msa.embed.image_embedders import get_embedder, available_models  # noqa
 out = {}
 names = sys.argv[1:] or available_models()

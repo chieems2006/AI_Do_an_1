@@ -1,6 +1,6 @@
 import os
 import sys,time,glob,numpy as np
-sys.path.insert(0,os.path.join(os.path.dirname(os.path.abspath(__file__)),'..'))
+sys.path.insert(0,os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','..','..','src'))  # package msa chung
 from msa.embed.image_embedders import get_embedder
 fs=sorted(glob.glob((os.environ.get("MSA_SHARED_DATA", "/home/claude/work/shared_data") + "/fpi_images/*.jpg")))[:32]
 for prec in ['fp32','bf16']:

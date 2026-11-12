@@ -29,7 +29,7 @@ from pathlib import Path
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT / "src"))
+sys.path.insert(0, str(ROOT / "src")); sys.path.insert(0, str(ROOT.parent / "src"))  # + package msa chung
 from msa.eval.metrics import hit_at_k, latency_summary, mrr, ndcg_at_k  # noqa: E402
 
 SHARED = Path(os.environ.get("MSA_SHARED_DATA", "/home/claude/work/shared_data"))

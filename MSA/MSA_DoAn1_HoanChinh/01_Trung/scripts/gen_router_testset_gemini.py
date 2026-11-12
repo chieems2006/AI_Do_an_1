@@ -13,8 +13,8 @@ import re
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, os.path.join(ROOT, "src"))
-from msa.agent.gemini_client import GeminiRestClient  # noqa: E402
+sys.path.insert(0, os.path.join(ROOT, "src")); sys.path.insert(0, os.path.join(os.path.dirname(ROOT), "src"))  # + package msa chung
+from msa_trung.gemini_client import GeminiRestClient  # noqa: E402
 
 PROMPT = """Bạn giúp tạo bộ kiểm thử cho bộ định tuyến (router) của chatbot mua sắm thời trang tiếng Việt.
 Cửa hàng chỉ bán: giày dép (giày thể thao, giày da, sandal/dép, boot, giày cao gót/búp bê), quần áo (áo, quần/chân váy, váy liền/đầm, áo khoác),

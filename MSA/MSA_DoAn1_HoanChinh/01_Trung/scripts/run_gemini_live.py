@@ -17,10 +17,10 @@ import sys
 import time
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, os.path.join(ROOT, "src"))
+sys.path.insert(0, os.path.join(ROOT, "src")); sys.path.insert(0, os.path.join(os.path.dirname(ROOT), "src"))  # + package msa chung
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
 from eval_router import SETS, load, session_of  # noqa: E402
-from msa.agent.gemini_client import GeminiRestClient  # noqa: E402
+from msa_trung.gemini_client import GeminiRestClient  # noqa: E402
 from msa.agent.router import Agent, Router, find_store_facts  # noqa: E402
 
 GEMINI = {"gemini_chitchat", "gemini_ood"}

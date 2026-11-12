@@ -24,7 +24,7 @@ import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT / "src"))
+sys.path.insert(0, str(ROOT / "src")); sys.path.insert(0, str(ROOT.parent / "src"))  # + package msa chung
 os.environ.setdefault("MSA_LOG_DIR", str(ROOT / "results" / "logs" / "api_eval"))
 from fastapi.testclient import TestClient  # noqa: E402
 

@@ -24,7 +24,7 @@ from pathlib import Path
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT / "src"))
+sys.path.insert(0, str(ROOT / "src")); sys.path.insert(0, str(ROOT.parent / "src"))  # + package msa chung
 
 from msa.rag.data import DATA_VERSION, load_vimrhp  # noqa: E402
 from msa.rag.ingest import build_chunks  # noqa: E402
@@ -172,7 +172,7 @@ def summarize(rows: list[dict]) -> dict:
 
 
 def run_e2e(n: int, batch: int, models: list[str], retriever_name: str, tau_r: float) -> dict:
-    from msa.rag.llm import GeminiClient, count_real_calls
+    from msa_chien.gemini_client import GeminiClient, count_real_calls
     from msa.rag.pipeline import REFUSAL_RE, RAGPipeline
 
     products = load_vimrhp()

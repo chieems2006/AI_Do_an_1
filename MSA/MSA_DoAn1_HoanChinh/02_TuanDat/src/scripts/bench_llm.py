@@ -35,7 +35,7 @@ from pathlib import Path
 from typing import Any, Protocol
 
 ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT / "src"))
+sys.path.insert(0, str(ROOT / "src")); sys.path.insert(0, str(ROOT.parent / "src"))  # + package msa chung
 sys.path.insert(0, str(ROOT / "src" / "scripts"))
 
 from make_bench_contexts import context_text  # noqa: E402

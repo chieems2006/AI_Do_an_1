@@ -30,8 +30,8 @@ import sys
 import pandas as pd
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, os.path.join(ROOT, "src"))
-from scoring.weighted_scoring import DEFAULT_CRITERIA, Criterion, Metric, score_table, to_markdown  # noqa: E402
+sys.path.insert(0, os.path.join(ROOT, "src")); sys.path.insert(0, os.path.join(os.path.dirname(ROOT), "src"))  # + package msa chung
+from msa.eval.weighted_scoring import DEFAULT_CRITERIA, Criterion, Metric, score_table, to_markdown  # noqa: E402
 
 DEFAULT_CSV = os.path.normpath(os.path.join(ROOT, "..", "04_Khoa", "results", "bench_image_embed.csv"))
 GROUPS = ("footwear", "clothing", "headwear", "accessory")

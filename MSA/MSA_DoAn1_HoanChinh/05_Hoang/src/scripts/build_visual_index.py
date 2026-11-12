@@ -4,7 +4,7 @@ Lệnh: python src/scripts/build_visual_index.py   (≈ vài phút trên 2 CPU)"
 import sys, time
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT / "src"))
+sys.path.insert(0, str(ROOT / "src")); sys.path.insert(0, str(ROOT.parent / "src"))  # + package msa chung
 from msa.data.converters import read_catalog  # noqa: E402
 from msa.api.searchers import ClipFaissSearcher  # noqa: E402
 

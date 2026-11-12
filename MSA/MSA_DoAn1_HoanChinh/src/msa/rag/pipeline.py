@@ -15,8 +15,9 @@ import time
 from pathlib import Path
 from typing import Any
 
-ROOT = Path(__file__).resolve().parents[3]
-PROMPT_PATH = ROOT / "prompts" / "rag_grounded.md"
+from msa.paths import CHIEN as ROOT, RAG_PROMPT, rag_cache_dir, rag_kb
+
+PROMPT_PATH = RAG_PROMPT  # 03_Chien/prompts/rag_grounded.md
 REFUSAL_PREFIX = "Hiện cửa hàng chưa có thông tin về"
 REFUSAL_RE = re.compile(r"chưa có thông tin|không có thông tin|chưa có dữ liệu|không đủ thông tin", re.I)
 CITE_RE = re.compile(r"\[C(\d+)\]")
@@ -162,10 +163,10 @@ def build_default_pipeline(llm: Any = None, use_dense: bool = True, tau_r: float
     from msa.rag.llm import get_llm
     from msa.rag.retriever import BM25Retriever, DenseRetriever, HybridRetriever, STEmbedder
 
-    kb = kb_path or ROOT / "data" / "kb" / "chunks.jsonl"
+    kb = kb_path or rag_kb()
     products = load_vimrhp()
     chunks = load_chunks(kb) if kb.exists() else build_chunks(products)
     retr: Any = BM25Retriever(chunks)
     if use_dense:
-        retr = HybridRetriever([retr, DenseRetriever(chunks, STEmbedder(cache_dir=ROOT / "results" / "cache"))])
+        retr = HybridRetriever([retr, DenseRetriever(chunks, STEmbedder(cache_dir=rag_cache_dir()))])
     return RAGPipeline(retr, llm or get_llm(), tau_r=tau_r, k=5, titles={p["product_id"]: p["title"] for p in products})

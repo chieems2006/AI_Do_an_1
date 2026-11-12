@@ -6,7 +6,7 @@ import os
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, os.path.join(ROOT, "src"))
+sys.path.insert(0, os.path.join(ROOT, "src")); sys.path.insert(0, os.path.join(os.path.dirname(ROOT), "src"))  # + package msa chung
 from msa.agent.router import find_store_facts  # noqa: E402
 
 d = json.load(open(os.path.join(ROOT, "results", "gemini_fallback_live.json"), encoding="utf-8"))

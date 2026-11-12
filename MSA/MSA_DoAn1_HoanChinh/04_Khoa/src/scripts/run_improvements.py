@@ -18,7 +18,7 @@ import pandas as pd
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT / "src")); sys.path.insert(0, str(ROOT / "src" / "scripts"))
+sys.path.insert(0, str(ROOT / "src")); sys.path.insert(0, str(ROOT.parent / "src"))  # + package msa chung; sys.path.insert(0, str(ROOT / "src" / "scripts"))
 import bench_image_embed as B  # noqa: E402
 from build_eval_visual import TRANSFORMS, apply_transform  # noqa: E402
 from msa.embed.image_embedders import get_embedder, l2n, set_threads  # noqa: E402

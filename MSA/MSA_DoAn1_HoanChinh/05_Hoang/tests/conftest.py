@@ -13,6 +13,7 @@ from PIL import Image, ImageDraw
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 os.environ.setdefault("MSA_LLM_MOCK", "1")
+os.environ.setdefault("MSA_QA_BACKEND", "stub")  # test API của Hoàng kiểm ReviewQAStub; RAG thật có test tích hợp ở tests/
 os.environ.pop("GEMINI_API_KEY", None)
 
 TYPES = {"footwear": ["sneaker", "sandal", "leather_shoe"], "clothing": ["top", "bottom", "dress"],

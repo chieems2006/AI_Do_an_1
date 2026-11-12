@@ -26,7 +26,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT / "src"))
+sys.path.insert(0, str(ROOT / "src")); sys.path.insert(0, str(ROOT.parent / "src"))  # + package msa chung
 
 from msa.rag.data import load_vimrhp  # noqa: E402
 
@@ -116,7 +116,7 @@ def generate(batch_size: int = 7, per_sub: int = 12, max_calls: int = 8,
     Lịch sử lượt này: 6 lô đầu (3 SP/lô) sinh bằng gemini-3.5-flash (thinkingBudget=0) trước khi hết quota
     free tier 20 request/ngày/model; phần còn lại dùng gemini-3.5-flash-lite (cùng họ Flash, quota riêng).
     """
-    from msa.rag.llm import GeminiClient, count_real_calls
+    from msa_chien.gemini_client import GeminiClient, count_real_calls
 
     products = load_vimrhp()
     done = done_products()

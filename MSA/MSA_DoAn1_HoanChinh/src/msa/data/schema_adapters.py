@@ -9,7 +9,9 @@ from typing import Any, Iterable
 
 from msa.data.taxonomy import map_vimrhp
 
-SCHEMA_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "schema", "product.schema.json")
+from msa.paths import SCHEMA_PATH as _SCHEMA_PATH
+
+SCHEMA_PATH = str(_SCHEMA_PATH)  # 01_Trung/src/schema/product.schema.json
 
 
 def load_schema() -> dict:

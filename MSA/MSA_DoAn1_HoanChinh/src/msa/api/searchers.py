@@ -5,7 +5,8 @@
 - `ClipFaissSearcher`: CLIP ViT-B/32 (HF `openai/clip-vit-base-patch32`, chạy CPU) + FAISS IndexFlatIP trên catalog thật.
   Product-type gate zero-shot bằng prompt văn bản; lọc FAISS theo nhóm.
 - `DummyVisualSearcher`: embedding = histogram màu (cho test, không cần model).
-- `get_visual_searcher()`: ưu tiên module của Khoa nếu import được (MSA_VISUAL_BACKEND=khoa), mặc định clip.
+- `get_visual_searcher()`: mặc định VisualSearcher của Khoa trên index DINOv2-S, τ_v theo tau_v_analysis.json
+  (MSA_VISUAL_BACKEND=khoa); MSA_VISUAL_BACKEND=clip dùng ClipFaissSearcher cũ.
 """
 from __future__ import annotations
 
@@ -175,13 +176,44 @@ class ClipFaissSearcher:
         return self.index.search(v, k, pt)
 
 
-def get_visual_searcher(catalog_df, images_root, cache_dir) -> VisualSearcherProto:
-    """Chọn backend theo MSA_VISUAL_BACKEND: 'khoa' (msa.search.visual.VisualSearcher nếu có) | 'clip' (mặc định)."""
-    backend = os.environ.get("MSA_VISUAL_BACKEND", "clip")
-    if backend == "khoa":
-        try:
-            from msa.search.visual import VisualSearcher  # type: ignore
-            return VisualSearcher()
-        except Exception:  # pragma: no cover – chưa ghép module của Khoa
-            pass
-    return ClipFaissSearcher(catalog_df, images_root, cache_dir)
+def tau_v_from_analysis(model: str, analysis_path: str | os.PathLike | None = None, rule: str | None = None) -> float | None:
+    """τ_v của `model` theo `04_Khoa/results/tau_v_analysis.json`, quy tắc "max cosine top-1 OOD val + 0,01"
+    (QUYET_DINH_CAN_CHOT mục C). Trả None nếu file/model/quy tắc không có."""
+    from msa.paths import TAU_V_ANALYSIS, TAU_V_RULE
+    p = Path(analysis_path or TAU_V_ANALYSIS)
+    if not p.exists():
+        return None
+    entry = json.loads(p.read_text(encoding="utf-8")).get(model, {}).get(rule or TAU_V_RULE)
+    return float(entry["tau"]) if entry and "tau" in entry else None
+
+
+def index_settings(index_dir: str | os.PathLike) -> dict:
+    """Đọc model + τ_v của một index (không nạp model): τ_v ưu tiên tau_v_analysis.json, sau đó config.json."""
+    d = Path(index_dir)
+    cfg_path = d / "config.json"
+    if not cfg_path.exists():
+        raise FileNotFoundError(f"Chưa có index ảnh tại {d} – build bằng: cd 04_Khoa && python src/scripts/build_index.py "
+                                f"--model dinov2_s --out indexes/dinov2_s --tau-v 0.5923")
+    cfg = json.loads(cfg_path.read_text(encoding="utf-8"))
+    tau = tau_v_from_analysis(cfg["model"])
+    return {"model": cfg["model"], "tau_v": tau if tau is not None else float(cfg.get("tau_v", 0.25)),
+            "tau_v_source": "tau_v_analysis.json" if tau is not None else "config.json",
+            "gate_tau": float(cfg.get("gate_tau", 0.0)), "n_items": cfg.get("n_items"), "index_dir": str(d)}
+
+
+def load_visual_index(index_dir: str | os.PathLike, embedder=None):
+    """VisualSearcher của Khoa nạp từ index đã build (mặc định DINOv2-S) với τ_v theo `index_settings`."""
+    from msa.search.visual import VisualSearcher
+    s = index_settings(index_dir)
+    return VisualSearcher.load(index_dir, embedder=embedder, tau_v=s["tau_v"], gate_tau=s["gate_tau"])
+
+
+def get_visual_searcher(catalog_df, images_root, cache_dir, index_dir: str | os.PathLike | None = None) -> VisualSearcherProto:
+    """Chọn backend theo MSA_VISUAL_BACKEND:
+    - 'khoa' (mặc định): VisualSearcher của Khoa trên index `MSA_VISUAL_INDEX` (mặc định 04_Khoa/indexes/dinov2_s);
+    - 'clip': ClipFaissSearcher cũ của Hoàng (CLIP B/32, giữ để so sánh)."""
+    backend = os.environ.get("MSA_VISUAL_BACKEND", "khoa")
+    if backend == "clip":
+        return ClipFaissSearcher(catalog_df, images_root, cache_dir)
+    from msa.paths import visual_index_dir
+    return load_visual_index(index_dir or visual_index_dir())

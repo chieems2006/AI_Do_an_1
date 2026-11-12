@@ -2,7 +2,7 @@
 import pandas as pd
 import pytest
 
-from scoring.weighted_scoring import DEFAULT_CRITERIA, Criterion, Metric, minmax_score, score_table, to_markdown
+from msa.eval.weighted_scoring import DEFAULT_CRITERIA, Criterion, Metric, minmax_score, score_table, to_markdown
 
 
 def test_weights_sum_to_one():

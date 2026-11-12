@@ -6,7 +6,8 @@ import pytest
 
 from check_gemini_hallucination import check_text
 from msa.rag.fallback import LABEL, GeminiFallback, load_fallback_prompt, should_fallback
-from msa.rag.llm import GeminiClient, MockLLM
+from msa.rag.llm import MockLLM
+from msa_chien.gemini_client import GeminiClient
 
 ROOT = Path(__file__).resolve().parents[1]
 

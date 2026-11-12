@@ -1,12 +1,7 @@
-# repo: src/msa/rag/llm.py
-"""Lớp LLM tối thiểu cho RAG + Gemini fallback (Chiến).
-
-- Giao diện giống hợp đồng `LLMGateway.generate(...) -> dict` của Hoàng (mục 5.3) để thay thế 1-1
-  khi ghép repo: `get_llm()` ưu tiên `msa.llm_gateway.LLMGateway` nếu import được.
-- Đọc key từ biến môi trường `GEMINI_API_KEY` (hoặc file chỉ định bởi `MSA_ENV_FILE`); KHÔNG in/ghi key.
-- Cache exact-match SQLite; chế độ mock `MSA_LLM_MOCK=1`; log mỗi lời gọi THẬT (không chứa key)
-  vào `logs/gemini_calls.jsonl` để đếm ngân sách.
-"""
+# Client Gemini cũ của Chiến – CHỈ dùng cho các script đo đã sinh số liệu trong báo cáo
+# (build_eval_qa.py, eval_rag.py, run_gemini_fallback_check.py). Hệ thống chạy dùng msa.llm_gateway.LLMGateway.
+# Tách từ src/msa/rag/llm.py khi hợp nhất package (12/11/2026); nội dung không đổi.
+"""Client REST Gemini tối thiểu của Chiến (US_33/US_51): cache SQLite, retry 429/5xx, log lời gọi thật."""
 from __future__ import annotations
 
 import hashlib
@@ -15,9 +10,9 @@ import os
 import sqlite3
 import time
 from pathlib import Path
-from typing import Any, Callable
+from typing import Any
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[2]  # 03_Chien (log/cache giữ đúng chỗ cũ)
 DEFAULT_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.5-flash")
 API_URL = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 FALLBACK_MSG = "Xin lỗi, trợ lý đang bận hoặc mất kết nối. Bạn thử lại sau ít phút nhé."
@@ -34,20 +29,6 @@ def _load_key() -> str | None:
             if line.startswith("GEMINI_API_KEY="):
                 return line.split("=", 1)[1].strip().strip('"')
     return None
-
-
-class MockLLM:
-    """LLM giả cho test: trả lời theo hàm `responder(prompt, system)` hoặc chuỗi cố định."""
-
-    def __init__(self, responder: Callable[[str, str | None], str] | None = None):
-        self.responder = responder or (lambda p, s: "Đây là câu trả lời giả lập.")
-        self.calls: list[dict] = []
-
-    def generate(self, prompt: str, system: str | None = None, **kw: Any) -> dict:
-        self.calls.append({"prompt": prompt, "system": system, **kw})
-        ans = self.responder(prompt, system)
-        return {"answer": ans, "source": "gemini", "cached": False, "tokens_in": 0, "tokens_out": 0,
-                "tokens_thinking": 0, "latency_ms": 0, "error": None}
 
 
 class GeminiClient:
@@ -161,13 +142,3 @@ def count_real_calls(log_path: Path | None = None) -> int:
     p = log_path or ROOT / "logs" / "gemini_calls.jsonl"
     return sum(1 for _ in p.open(encoding="utf-8")) if p.exists() else 0
 
-
-def get_llm(**kw: Any):
-    """Trả về LLM: mock nếu MSA_LLM_MOCK=1; LLMGateway của Hoàng nếu có; ngược lại GeminiClient."""
-    if os.environ.get("MSA_LLM_MOCK") == "1":
-        return MockLLM()
-    try:  # khi ghép repo chung
-        from msa.llm_gateway import LLMGateway  # type: ignore
-        return LLMGateway()
-    except Exception:
-        return GeminiClient(**kw)

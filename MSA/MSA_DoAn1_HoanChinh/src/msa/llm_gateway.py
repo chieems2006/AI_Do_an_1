@@ -230,6 +230,8 @@ class LLMGateway:
         tl = kw.get("thinking_level", self.thinking_level)
         if tb is not None or tl is not None:
             cfg["thinkingConfig"] = {"thinkingBudget": int(tb)} if tb is not None else {"thinkingLevel": tl}
+        if kw.get("json_mode"):  # RAG chế độ lô (Chiến) yêu cầu trả JSON
+            cfg["responseMimeType"] = "application/json"
         return cfg
 
     def cache_key(self, prompt: str, system: str | None, kw: dict) -> str:
@@ -300,7 +302,8 @@ class LLMGateway:
 
     def _mock(self, prompt: str, system: str | None) -> dict:
         n_in = len(((system or "") + " " + prompt).split())
-        ans = f"[MOCK] Trả lời mẫu cho: {prompt[:80]}"
+        # Đổi [ ] trong đoạn nhại prompt: câu mock không được "giả" trích dẫn [C1] của prompt RAG (guard của Chiến).
+        ans = "[MOCK] Trả lời mẫu cho: " + prompt[:80].replace("[", "(").replace("]", ")")
         return {"answer": ans, "tokens_in": n_in, "tokens_out": len(ans.split()), "tokens_thinking": 0,
                 "finish_reason": "STOP", "block_reason": None, "model_version": "mock"}
 

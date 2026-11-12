@@ -38,7 +38,7 @@ def test_consistent_with_hoang_metrics_if_available():
 
     import pytest
 
-    p = Path(__file__).resolve().parents[2] / "05_Hoang" / "src" / "msa" / "eval" / "metrics.py"
+    p = Path(__file__).resolve().parents[2] / "src" / "msa" / "eval" / "metrics.py"  # package msa chung
     if not p.exists():
         pytest.skip("không có metrics.py của Hoàng")
     spec = importlib.util.spec_from_file_location("hoang_metrics", p)

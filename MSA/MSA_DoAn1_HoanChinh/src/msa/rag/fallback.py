@@ -17,15 +17,16 @@ import uuid
 from pathlib import Path
 from typing import Any
 
-ROOT = Path(__file__).resolve().parents[3]
-PROMPT_PATH = ROOT / "prompts" / "gemini_fallback.md"
+from msa.paths import CHIEN as ROOT, FALLBACK_PROMPT, HALLUCINATION_CHECKER
+
+PROMPT_PATH = FALLBACK_PROMPT  # 03_Chien/prompts/gemini_fallback.md
 GEMINI_ROUTES = {"gemini_chitchat", "gemini_ood"}
 LABEL = "Trả lời bởi Gemini – thông tin tham khảo chung"
 
 
 def _load_checker():
     spec = importlib.util.spec_from_file_location("check_gemini_hallucination",
-                                                  ROOT / "src" / "scripts" / "check_gemini_hallucination.py")
+                                                  HALLUCINATION_CHECKER)
     mod = importlib.util.module_from_spec(spec)
     assert spec and spec.loader
     spec.loader.exec_module(mod)

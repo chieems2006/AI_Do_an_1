@@ -88,7 +88,7 @@ Cảnh báo cần ghi trong báo cáo: tập OOD hiện chỉ là ảnh studio F
 
 **Vấn đề.** Khi Gemini lỗi 429/timeout, LLMGateway của Hoàng trả thông điệp dự phòng với `source="fallback"` – giá trị không có trong hợp đồng. Kiểm chéo cho thấy hậu quả thật:
 - UI của Đạt (`02_TuanDat/app/components.py`) coi mọi `source` lạ là **"Từ dữ liệu cửa hàng"** và `validate_response` báo lỗi.
-- Router của Trung (`01_Trung/src/msa/agent/router.py`) gắn `source="internal"` cho câu "phần trò chuyện đang bận" → UI cũng hiện "Từ dữ liệu cửa hàng". Cả hai đều **gắn nhãn sai nguồn**, trái quy tắc §5.4.
+- Router của Trung (`01_Trung/src/msa/agent/router.py`, từ 12/11/2026 chuyển sang `src/msa/agent/router.py`) gắn `source="internal"` cho câu "phần trò chuyện đang bận" → UI cũng hiện "Từ dữ liệu cửa hàng". Cả hai đều **gắn nhãn sai nguồn**, trái quy tắc §5.4.
 
 **Phương án.** (1) Ép về `gemini` (sai: Gemini không trả lời) · (2) Ép về `internal` (sai: không phải dữ liệu cửa hàng) · (3) **Thêm giá trị `fallback`** · (4) Giữ 3 giá trị + trường phụ `degraded=true`.
 
