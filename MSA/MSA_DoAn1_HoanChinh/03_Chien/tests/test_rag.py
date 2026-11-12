@@ -115,6 +115,20 @@ def test_invalid_citation_index_ignored():
     assert out["refused"] and out["guard_triggered"]
 
 
+def test_grouped_citations_are_parsed():
+    """Gemini thật đã trả '[C1, C3]' (demo 12/11) – trước đây bị coi là không trích nguồn và guard từ chối nhầm."""
+    from msa.rag.pipeline import cite_ids
+    chunks = [{"product_id": "p", "field": "review", "chunk_id": f"p::review::{i}"} for i in range(1, 6)]
+    for ans, want in [("Dép đi rất êm chân [C1, C3].", [1, 3]), ("Êm [C2], [C5].", [2, 5]), ("Êm [C1;C4]", [1, 4]),
+                      ("Êm [ C2 , 4 ]", [2, 4]), ("Êm [C1,C3,C9]", [1, 3])]:
+        out = postprocess(ans, chunks, "êm không")
+        assert not out["refused"] and not out["guard_triggered"], ans
+        assert [c["chunk_id"] for c in out["citations"]] == [f"p::review::{i}" for i in want], ans
+        assert out["answer"] == ans  # giữ nguyên câu trả lời của LLM
+    assert cite_ids("[C1, C3] và [C2]") == [1, 3, 2]
+    assert cite_ids("không trích [1, 2] hay [Cx]") == []
+
+
 def test_refusal_message_topic():
     assert "giá" in refusal_message("đôi này giá bao nhiêu")
     assert "còn hàng" in refusal_message("còn size 40 không")

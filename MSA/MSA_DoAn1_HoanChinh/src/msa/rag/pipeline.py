@@ -20,7 +20,13 @@ from msa.paths import CHIEN as ROOT, RAG_PROMPT, rag_cache_dir, rag_kb
 PROMPT_PATH = RAG_PROMPT  # 03_Chien/prompts/rag_grounded.md
 REFUSAL_PREFIX = "Hiện cửa hàng chưa có thông tin về"
 REFUSAL_RE = re.compile(r"chưa có thông tin|không có thông tin|chưa có dữ liệu|không đủ thông tin", re.I)
-CITE_RE = re.compile(r"\[C(\d+)\]")
+# Trích dẫn [C1]; Gemini đôi khi gộp nhiều nguồn trong một ngoặc: [C1, C3], [C1;C3], [C1, 3] → mỗi số là một nguồn.
+CITE_RE = re.compile(r"\[\s*(C\s*\d+(?:\s*[,;]\s*C?\s*\d+)*)\s*\]")
+
+
+def cite_ids(text: str) -> list[int]:
+    """Các số nguồn [Cx] xuất hiện trong câu trả lời, theo thứ tự, kể cả dạng gộp '[C1, C3]'."""
+    return [int(n) for grp in CITE_RE.findall(text or "") for n in re.findall(r"\d+", grp)]
 # Chủ đề mà dữ liệu cửa hàng hiện KHÔNG có trường cấu trúc (ViMRHP) – dùng để đặt tên chủ đề khi từ chối
 TOPIC_PATTERNS = [
     (r"giá|bao nhiêu tiền|bn tiền|nhiêu tiền", "giá bán hiện tại"),
@@ -57,7 +63,7 @@ def format_contexts(chunks: list[dict], max_chars: int = 350) -> str:
 def postprocess(raw_answer: str, chunks: list[dict], question: str) -> dict[str, Any]:
     """Tách trích dẫn [Cx] → citations; quyết định refused; guard: trả lời không có nguồn ⇒ từ chối."""
     ans = (raw_answer or "").strip()
-    idx = sorted({int(n) for n in CITE_RE.findall(ans) if 1 <= int(n) <= len(chunks)})
+    idx = sorted({n for n in cite_ids(ans) if 1 <= n <= len(chunks)})
     citations = [{"product_id": chunks[i - 1]["product_id"], "field": chunks[i - 1]["field"],
                   "chunk_id": chunks[i - 1]["chunk_id"]} for i in idx]
     refused = bool(REFUSAL_RE.search(ans)) and not citations

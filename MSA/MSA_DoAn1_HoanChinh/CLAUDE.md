@@ -62,7 +62,7 @@ Kết quả pytest trên máy này (12/11/2026, sau khi hợp nhất `src/msa`, 
 | Tích hợp (`tests/`) | 29 passed (chạy khi API không mở song song – 2 tiến trình cùng nạp torch có lúc làm `import torch` lỗi) |
 | Trung | 53 passed, 1 skipped |
 | Tuấn Đạt | 24 passed, 3 skipped |
-| Chiến | 51 passed |
+| Chiến | 52 passed |
 | Khoa | 32 passed |
 | Hoàng | 78 passed |
 
