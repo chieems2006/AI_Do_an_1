@@ -1,0 +1,21 @@
+{
+ "model": "dinov2_s",
+ "n_items": 4593,
+ "dim": 384,
+ "index": "IndexFlatIP",
+ "tau_v": 0.5923,
+ "gate_tau": 0.0,
+ "catalog": "D:\\DoAn1\\data\\shared_data\\catalog_fpi.parquet",
+ "data_version": "shared_data v1 (prep_shared_data.py seed 42)",
+ "seed": 42,
+ "embedder_load_s": 20.72,
+ "embed_s": 638.73,
+ "embed_from_cache": false,
+ "index_write_s": 0.021,
+ "build_total_s": 659.47,
+ "index_file_mb": 7.05,
+ "query_e2e_ms_median": 141.31,
+ "query_e2e_ms_p95": 164.3,
+ "search_only_ms_median": 1.7341,
+ "n_latency_measurements": 90
+}

@@ -1,0 +1,28 @@
+{
+ "muc_dich": "Tái tạo index FAISS trên máy Windows của nhóm (12/11/2026) – KHÔNG thay số build gốc của Khoa (04_Khoa/results/build_index_*.json, máy 2 CPU/7 GB Linux).",
+ "lenh": [
+  "cd 04_Khoa && python src/scripts/build_index.py --model dinov2_s --out indexes/dinov2_s --tau-v 0.5923 --gate-tau 0.0",
+  "cd 04_Khoa && python src/scripts/build_index.py --model clip_b32 --out indexes/clip_b32 --tau-v 0.8748 --gate-tau 0.9"
+ ],
+ "tau_v_nguon": {
+  "dinov2_s": "tau_v_analysis.json dinov2_s.b_max_ood_val+0.01 (QUYET_DINH mục C)",
+  "clip_b32": "giữ đúng cấu hình bản build gốc (build_index_clip_b32.json: tau_v 0.8748, gate_tau 0.9) để so sánh"
+ },
+ "wall_time_s": {
+  "dinov2_s": 693.855,
+  "clip_b32": 477.916
+ },
+ "may": {
+  "os": "Windows-10-10.0.26300-SP0",
+  "cpu": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD",
+  "cpu_cores_physical": 8,
+  "cpu_threads_logical": 16,
+  "ram_gb": 15.3,
+  "torch_threads_dung_khi_build": 2,
+  "device": "cpu (build_index.py cố định set_threads(2), không dùng GPU)",
+  "python": "3.11.9",
+  "torch": "2.15.0+cu132",
+  "faiss": "1.15.1"
+ },
+ "data_version": "shared_data v1 (prep_shared_data.py seed 42) – stats.json khớp 100%, catalog sha256 7b0dd3165ccca04c…"
+}

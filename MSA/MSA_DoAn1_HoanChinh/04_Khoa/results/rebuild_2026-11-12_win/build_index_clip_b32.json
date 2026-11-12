@@ -1,0 +1,21 @@
+{
+ "model": "clip_b32",
+ "n_items": 4593,
+ "dim": 512,
+ "index": "IndexFlatIP",
+ "tau_v": 0.8748,
+ "gate_tau": 0.9,
+ "catalog": "D:\\DoAn1\\data\\shared_data\\catalog_fpi.parquet",
+ "data_version": "shared_data v1 (prep_shared_data.py seed 42)",
+ "seed": 42,
+ "embedder_load_s": 41.39,
+ "embed_s": 403.78,
+ "embed_from_cache": false,
+ "index_write_s": 0.036,
+ "build_total_s": 445.21,
+ "index_file_mb": 9.41,
+ "query_e2e_ms_median": 136.58,
+ "query_e2e_ms_p95": 152.51,
+ "search_only_ms_median": 1.8741,
+ "n_latency_measurements": 90
+}
