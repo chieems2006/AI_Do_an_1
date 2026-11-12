@@ -1,0 +1,149 @@
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:  68%|██████▊   | 196/290 [00:00<00:00, 405.05it/s]Loading weights:  82%|████████▏ | 237/290 [00:03<00:00, 53.42it/s] Loading weights:  88%|████████▊ | 255/290 [00:05<00:00, 35.88it/s]Loading weights:  92%|█████████▏| 266/290 [00:07<00:01, 23.12it/s]Loading weights: 100%|██████████| 290/290 [00:07<00:00, 40.59it/s]
+q001 133786ms refused=False 'R1: 4cm  \nR2: 4cm  \nR3: 4cm  \nR4: 4cm  \nR5: 4cm  \nR6: 4cm'
+q002 24824ms refused=False 'Chất lượng: 5★ - Độ trơn: 3/10 - Có thể bị trơn khi mưa'
+q003 29475ms refused=False '[R1] Size 38 kg'
+q004 15175ms refused=False '[R1]'
+q005 13013ms refused=False '[R1] [R5]'
+q006 15908ms refused=False '[R1]'
+q007 73142ms refused=False 'Chất liệu:cao su, nhẹ, dẻo, đàn hồi tốt, đi êm chân, không bền.'
+q008 10133ms refused=False '[R1]'
+q009 18635ms refused=False '[Người dùng cảm thấy quai giày có vấn đề.]'
+q010 17961ms refused=False '[Máy tính]'
+q011 10074ms refused=False '[Ngọc]'
+q012 112057ms refused=False '[R1]  \n[Người dùng chọn size 37]  \n[R2]  \n[Người dùng chọn size 35]  \n[R3]  \n[Ng'
+q013 60192ms refused=False 'Chất liệu: da, Chất liệu:emi, Chất liệu:êm'
+q014 49455ms refused=False 'Chất liệu: da trơn'
+q015 94549ms refused=False 'Chất liệu: nỉ bông dày ấm'
+q016 59086ms refused=False 'Áo này mặc mùa đông không được.'
+q017 483509ms refused=False '[Tổng kết từ đánh giá]\n[R1] - Chất liệu tốt, vải dày dặn, màu sắc đẹp.\n[R2] - Ch'
+q018 69678ms refused=True '[Người dùng đã đặt vấn đề về việc giặt áo, nhưng không có thông tin cụ thể về th'
+{
+ "qa": {
+  "gemini35flashlite": {
+   "model": "gemini-3.5-flash-lite",
+   "n": 36,
+   "errors": 0,
+   "latency_s_p50": 14.5,
+   "latency_s_p95": 33.0,
+   "latency_s_mean": 17.07,
+   "n_latency_measured": 36,
+   "heur_support_overlap": 0.854,
+   "heur_citation_rate": 0.806,
+   "heur_invalid_citation_answers": 0,
+   "heur_refusal_on_unanswerable": 1.0,
+   "heur_false_refusal_on_answerable": 0.034,
+   "mean_tokens_thinking": 0,
+   "tokens_in_per_100": 60619,
+   "tokens_out_incl_thinking_per_100": 3631,
+   "usd_per_100": null,
+   "formula": "USD/100 = (tokens_in × giá_in + (tokens_out + tokens_thinking) × giá_out) / 1e6"
+  },
+  "gemma4_26b_api": {
+   "model": "gemma-4-26b-a4b-it",
+   "n": 32,
+   "errors": 0,
+   "latency_s_p50": 13.8,
+   "latency_s_p95": 21.1,
+   "latency_s_mean": 14.65,
+   "n_latency_measured": 32,
+   "heur_support_overlap": 0.833,
+   "heur_citation_rate": 0.812,
+   "heur_invalid_citation_answers": 0,
+   "heur_refusal_on_unanswerable": 1.0,
+   "heur_false_refusal_on_answerable": 0.0,
+   "mean_tokens_thinking": 600.2,
+   "tokens_in_per_100": 62075,
+   "tokens_out_incl_thinking_per_100": 63112,
+   "usd_per_100": null,
+   "formula": "USD/100 = (tokens_in × giá_in + (tokens_out + tokens_thinking) × giá_out) / 1e6"
+  },
+  "qwen25_05b": {
+   "model": "Qwen/Qwen2.5-0.5B-Instruct",
+   "n": 18,
+   "errors": 0,
+   "latency_s_p50": 39.5,
+   "latency_s_p95": 186.2,
+   "latency_s_mean": 71.7,
+   "n_latency_measured": 18,
+   "heur_support_overlap": 0.773,
+   "heur_citation_rate": 0.444,
+   "heur_invalid_citation_answers": 0,
+   "heur_refusal_on_unanswerable": 0.333,
+   "heur_false_refusal_on_answerable": 0.0,
+   "mean_tokens_thinking": 0,
+   "tokens_in_per_100": 68994,
+   "tokens_out_incl_thinking_per_100": 2417,
+   "usd_per_100": null,
+   "formula": "USD/100 = (tokens_in × giá_in + (tokens_out + tokens_thinking) × giá_out) / 1e6"
+  }
+ },
+ "router": {
+  "gemini35flashlite": {
+   "n": 14,
+   "errors": 0,
+   "route_accuracy": 0.857,
+   "per_route": {
+    "visual": {
+     "n": 2,
+     "acc": 1.0
+    },
+    "qa": {
+     "n": 2,
+     "acc": 1.0
+    },
+    "search": {
+     "n": 2,
+     "acc": 1.0
+    },
+    "compare": {
+     "n": 2,
+     "acc": 1.0
+    },
+    "gemini_chitchat": {
+     "n": 2,
+     "acc": 0.5
+    },
+    "gemini_ood": {
+     "n": 2,
+     "acc": 1.0
+    },
+    "clarify": {
+     "n": 2,
+     "acc": 0.5
+    }
+   },
+   "latency_s_p50": 0.7,
+   "latency_s_p95": 0.9,
+   "n_latency_measured": 14,
+   "n_replies": 4,
+   "store_fact_flagged": 0,
+   "predicted_gemini_share": 0.286,
+   "confusion": {
+    "visual": {
+     "visual": 2
+    },
+    "qa": {
+     "qa": 2
+    },
+    "search": {
+     "search": 2
+    },
+    "compare": {
+     "compare": 2
+    },
+    "gemini_chitchat": {
+     "gemini_chitchat": 1,
+     "gemini_ood": 1
+    },
+    "gemini_ood": {
+     "gemini_ood": 2
+    },
+    "clarify": {
+     "qa": 1,
+     "clarify": 1
+    }
+   },
+   "tokens_in_per_100": 31579,
+   "tokens_out_incl_thinking_per_100": 3271,
+   "usd_per_100": null,
+   "formula":

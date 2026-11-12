@@ -1,0 +1,44 @@
+source,source_label,product_type,sub_category,note
+fashion_product_images_small,Casual Shoes,footwear,sneaker,
+fashion_product_images_small,Sports Shoes,footwear,sneaker,
+fashion_product_images_small,Formal Shoes,footwear,leather_shoe,
+fashion_product_images_small,Heels,footwear,heel_flat,ngoài 4 lá trong hợp đồng 5.1 – chờ Trung chốt US_49 (đề xuất thêm lá heel_flat)
+fashion_product_images_small,Flats,footwear,heel_flat,ngoài 4 lá trong hợp đồng 5.1 – chờ Trung chốt US_49
+fashion_product_images_small,Sandals,footwear,sandal,
+fashion_product_images_small,Sports Sandals,footwear,sandal,
+fashion_product_images_small,Flip Flops,footwear,sandal,
+fashion_product_images_small,Tshirts,clothing,top,
+fashion_product_images_small,Shirts,clothing,top,
+fashion_product_images_small,Tops,clothing,top,
+fashion_product_images_small,Sweatshirts,clothing,top,
+fashion_product_images_small,Sweaters,clothing,top,
+fashion_product_images_small,Kurtas,clothing,top,
+fashion_product_images_small,Jackets,clothing,outerwear,
+fashion_product_images_small,Blazers,clothing,outerwear,
+fashion_product_images_small,Rain Jacket,clothing,outerwear,
+fashion_product_images_small,Jeans,clothing,bottom,
+fashion_product_images_small,Shorts,clothing,bottom,
+fashion_product_images_small,Trousers,clothing,bottom,
+fashion_product_images_small,Track Pants,clothing,bottom,
+fashion_product_images_small,Skirts,clothing,bottom,
+fashion_product_images_small,Capris,clothing,bottom,
+fashion_product_images_small,Leggings,clothing,bottom,
+fashion_product_images_small,Dresses,clothing,dress,
+fashion_product_images_small,Jumpsuit,clothing,dress,
+fashion_product_images_small,Caps,headwear,cap,
+fashion_product_images_small,Hat,headwear,wide_brim,chỉ 3 SP; ảnh cần kiểm tay xem có đúng mũ rộng vành
+fashion_product_images_small,Headband,unknown,unknown,băng đô không thuộc 4 lá mũ → loại khỏi index
+fashion_product_images_small,Handbags,accessory,bag,
+fashion_product_images_small,Backpacks,accessory,bag,
+fashion_product_images_small,Clutches,accessory,bag,
+fashion_product_images_small,Duffel Bag,accessory,bag,
+fashion_product_images_small,Laptop Bag,accessory,bag,
+fashion_product_images_small,Messenger Bag,accessory,bag,
+fashion_product_images_small,Belts,accessory,belt,
+fashion_product_images_small,Sunglasses,accessory,eyewear,
+vimrhp,GiayDepNam,footwear,unknown,sub_category gán theo từ khoá tên SP (xem summarize/clean)
+vimrhp,GiayDepNu,footwear,unknown,
+vimrhp,ThoiTrangNam,clothing,unknown,
+vimrhp,ThoiTrangNu,clothing,unknown,
+vimrhp,PhuKienNu,accessory,unknown,có thể lẫn mũ/kẹp tóc – kiểm tay
+vimrhp,DongHo,unknown,unknown,đồng hồ ngoài phạm vi 4 nhóm → loại

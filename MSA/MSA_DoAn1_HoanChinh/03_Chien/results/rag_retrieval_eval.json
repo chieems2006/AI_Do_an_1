@@ -1,0 +1,442 @@
+{
+ "data_version": "shared_data v1 (prep_shared_data.py seed 42)",
+ "n_chunks": 10173,
+ "n_products": 428,
+ "n_answerable": 209,
+ "n_unanswerable": 71,
+ "hardware": "x86_64 2 CPU (torch 2 threads)",
+ "index_build_s": {
+  "tfidf_char": 3.2,
+  "bm25": 0.4,
+  "bm25+rewrite": 0.4,
+  "dense:intfloat/multilingual-e5-small": 9.4,
+  "dense:sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2": 1.1,
+  "hybrid(bm25+dense:intfloat/multilingual-e5-small)": 3.6
+ },
+ "encode_corpus_lan_dau_s (lần chạy 05/11 00:0x, chưa có cache)": {
+  "dense:intfloat/multilingual-e5-small": 674.8,
+  "dense:sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2": 160.1
+ },
+ "results": {
+  "tfidf_char": {
+   "theo_product_id": {
+    "hit@1": 0.2488,
+    "hit@5": 0.8325,
+    "mrr@10": 0.4999,
+    "n": 209,
+    "latency_ms_p50": 0.68,
+    "val": {
+     "hit@1": 0.2,
+     "hit@5": 0.7789,
+     "mrr@10": 0.4506,
+     "n": 95
+    },
+    "test": {
+     "hit@1": 0.2895,
+     "hit@5": 0.8772,
+     "mrr@10": 0.541,
+     "n": 114
+    },
+    "origin_llm_gemini": {
+     "hit@1": 0.2526,
+     "hit@5": 0.8211,
+     "mrr@10": 0.4959,
+     "n": 190
+    },
+    "origin_viet_tay_tac_nhan": {
+     "hit@1": 0.2105,
+     "hit@5": 0.9474,
+     "mrr@10": 0.5395,
+     "n": 19
+    }
+   },
+   "toan_kho": {
+    "hit@1": 0.0239,
+    "hit@5": 0.1196,
+    "mrr@10": 0.0683,
+    "n": 209,
+    "latency_ms_p50": 22.24,
+    "val": {
+     "hit@1": 0.0105,
+     "hit@5": 0.1263,
+     "mrr@10": 0.062,
+     "n": 95
+    },
+    "test": {
+     "hit@1": 0.0351,
+     "hit@5": 0.114,
+     "mrr@10": 0.0736,
+     "n": 114
+    },
+    "origin_llm_gemini": {
+     "hit@1": 0.0158,
+     "hit@5": 0.1,
+     "mrr@10": 0.055,
+     "n": 190
+    },
+    "origin_viet_tay_tac_nhan": {
+     "hit@1": 0.1053,
+     "hit@5": 0.3158,
+     "mrr@10": 0.2015,
+     "n": 19
+    }
+   },
+   "top1_score_theo_product_id": {
+    "answerable_median": 0.3115,
+    "unanswerable_median": 0.2171,
+    "answerable_p10": 0.1974,
+    "auc_tach_answerable": 0.7171,
+    "ti_le_answerable_bi_chan_neu_tau_r_0.35": 0.6029
+   }
+  },
+  "bm25": {
+   "theo_product_id": {
+    "hit@1": 0.244,
+    "hit@5": 0.8373,
+    "mrr@10": 0.4965,
+    "n": 209,
+    "latency_ms_p50": 0.07,
+    "val": {
+     "hit@1": 0.2105,
+     "hit@5": 0.8,
+     "mrr@10": 0.4434,
+     "n": 95
+    },
+    "test": {
+     "hit@1": 0.2719,
+     "hit@5": 0.8684,
+     "mrr@10": 0.5408,
+     "n": 114
+    },
+    "origin_llm_gemini": {
+     "hit@1": 0.2474,
+     "hit@5": 0.8316,
+     "mrr@10": 0.491,
+     "n": 190
+    },
+    "origin_viet_tay_tac_nhan": {
+     "hit@1": 0.2105,
+     "hit@5": 0.8947,
+     "mrr@10": 0.5514,
+     "n": 19
+    }
+   },
+   "toan_kho": {
+    "hit@1": 0.0335,
+    "hit@5": 0.1627,
+    "mrr@10": 0.093,
+    "n": 209,
+    "latency_ms_p50": 27.31,
+    "val": {
+     "hit@1": 0.0421,
+     "hit@5": 0.1474,
+     "mrr@10": 0.0866,
+     "n": 95
+    },
+    "test": {
+     "hit@1": 0.0263,
+     "hit@5": 0.1754,
+     "mrr@10": 0.0983,
+     "n": 114
+    },
+    "origin_llm_gemini": {
+     "hit@1": 0.0316,
+     "hit@5": 0.1526,
+     "mrr@10": 0.0871,
+     "n": 190
+    },
+    "origin_viet_tay_tac_nhan": {
+     "hit@1": 0.0526,
+     "hit@5": 0.2632,
+     "mrr@10": 0.1523,
+     "n": 19
+    }
+   },
+   "top1_score_theo_product_id": {
+    "answerable_median": 16.8432,
+    "unanswerable_median": 10.4701,
+    "answerable_p10": 8.9401,
+    "auc_tach_answerable": 0.7331,
+    "ti_le_answerable_bi_chan_neu_tau_r_0.35": 0.0
+   }
+  },
+  "bm25+rewrite": {
+   "theo_product_id": {
+    "hit@1": 0.2488,
+    "hit@5": 0.8182,
+    "mrr@10": 0.4958,
+    "n": 209,
+    "latency_ms_p50": 0.07,
+    "val": {
+     "hit@1": 0.2105,
+     "hit@5": 0.7789,
+     "mrr@10": 0.4447,
+     "n": 95
+    },
+    "test": {
+     "hit@1": 0.2807,
+     "hit@5": 0.8509,
+     "mrr@10": 0.5384,
+     "n": 114
+    },
+    "origin_llm_gemini": {
+     "hit@1": 0.2526,
+     "hit@5": 0.8105,
+     "mrr@10": 0.491,
+     "n": 190
+    },
+    "origin_viet_tay_tac_nhan": {
+     "hit@1": 0.2105,
+     "hit@5": 0.8947,
+     "mrr@10": 0.5444,
+     "n": 19
+    }
+   },
+   "toan_kho": {
+    "hit@1": 0.0287,
+    "hit@5": 0.1627,
+    "mrr@10": 0.0875,
+    "n": 209,
+    "latency_ms_p50": 27.74,
+    "val": {
+     "hit@1": 0.0316,
+     "hit@5": 0.1684,
+     "mrr@10": 0.0855,
+     "n": 95
+    },
+    "test": {
+     "hit@1": 0.0263,
+     "hit@5": 0.1579,
+     "mrr@10": 0.0892,
+     "n": 114
+    },
+    "origin_llm_gemini": {
+     "hit@1": 0.0263,
+     "hit@5": 0.1474,
+     "mrr@10": 0.0784,
+     "n": 190
+    },
+    "origin_viet_tay_tac_nhan": {
+     "hit@1": 0.0526,
+     "hit@5": 0.3158,
+     "mrr@10": 0.1786,
+     "n": 19
+    }
+   },
+   "top1_score_theo_product_id": {
+    "answerable_median": 16.707,
+    "unanswerable_median": 10.4701,
+    "answerable_p10": 8.9789,
+    "auc_tach_answerable": 0.7384,
+    "ti_le_answerable_bi_chan_neu_tau_r_0.35": 0.0
+   }
+  },
+  "dense:intfloat/multilingual-e5-small": {
+   "theo_product_id": {
+    "hit@1": 0.2632,
+    "hit@5": 0.7943,
+    "mrr@10": 0.49,
+    "n": 209,
+    "latency_ms_p50": 226.92,
+    "val": {
+     "hit@1": 0.2211,
+     "hit@5": 0.7789,
+     "mrr@10": 0.4479,
+     "n": 95
+    },
+    "test": {
+     "hit@1": 0.2982,
+     "hit@5": 0.807,
+     "mrr@10": 0.5252,
+     "n": 114
+    },
+    "origin_llm_gemini": {
+     "hit@1": 0.2474,
+     "hit@5": 0.7789,
+     "mrr@10": 0.4736,
+     "n": 190
+    },
+    "origin_viet_tay_tac_nhan": {
+     "hit@1": 0.4211,
+     "hit@5": 0.9474,
+     "mrr@10": 0.655,
+     "n": 19
+    }
+   },
+   "toan_kho": {
+    "hit@1": 0.0431,
+    "hit@5": 0.1196,
+    "mrr@10": 0.082,
+    "n": 209,
+    "latency_ms_p50": 237.18,
+    "val": {
+     "hit@1": 0.0421,
+     "hit@5": 0.1368,
+     "mrr@10": 0.0841,
+     "n": 95
+    },
+    "test": {
+     "hit@1": 0.0439,
+     "hit@5": 0.1053,
+     "mrr@10": 0.0803,
+     "n": 114
+    },
+    "origin_llm_gemini": {
+     "hit@1": 0.0421,
+     "hit@5": 0.1158,
+     "mrr@10": 0.0772,
+     "n": 190
+    },
+    "origin_viet_tay_tac_nhan": {
+     "hit@1": 0.0526,
+     "hit@5": 0.1579,
+     "mrr@10": 0.1299,
+     "n": 19
+    }
+   },
+   "top1_score_theo_product_id": {
+    "answerable_median": 0.8734,
+    "unanswerable_median": 0.853,
+    "answerable_p10": 0.8483,
+    "auc_tach_answerable": 0.7624,
+    "ti_le_answerable_bi_chan_neu_tau_r_0.35": 0.0
+   }
+  },
+  "dense:sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2": {
+   "theo_product_id": {
+    "hit@1": 0.2775,
+    "hit@5": 0.756,
+    "mrr@10": 0.4912,
+    "n": 209,
+    "latency_ms_p50": 179.15,
+    "val": {
+     "hit@1": 0.2316,
+     "hit@5": 0.7474,
+     "mrr@10": 0.4673,
+     "n": 95
+    },
+    "test": {
+     "hit@1": 0.3158,
+     "hit@5": 0.7632,
+     "mrr@10": 0.5112,
+     "n": 114
+    },
+    "origin_llm_gemini": {
+     "hit@1": 0.2737,
+     "hit@5": 0.7474,
+     "mrr@10": 0.4846,
+     "n": 190
+    },
+    "origin_viet_tay_tac_nhan": {
+     "hit@1": 0.3158,
+     "hit@5": 0.8421,
+     "mrr@10": 0.5575,
+     "n": 19
+    }
+   },
+   "toan_kho": {
+    "hit@1": 0.0048,
+    "hit@5": 0.0239,
+    "mrr@10": 0.0203,
+    "n": 209,
+    "latency_ms_p50": 266.17,
+    "val": {
+     "hit@1": 0.0,
+     "hit@5": 0.0211,
+     "mrr@10": 0.0181,
+     "n": 95
+    },
+    "test": {
+     "hit@1": 0.0088,
+     "hit@5": 0.0263,
+     "mrr@10": 0.0222,
+     "n": 114
+    },
+    "origin_llm_gemini": {
+     "hit@1": 0.0053,
+     "hit@5": 0.0263,
+     "mrr@10": 0.0223,
+     "n": 190
+    },
+    "origin_viet_tay_tac_nhan": {
+     "hit@1": 0.0,
+     "hit@5": 0.0,
+     "mrr@10": 0.0,
+     "n": 19
+    }
+   },
+   "top1_score_theo_product_id": {
+    "answerable_median": 0.6306,
+    "unanswerable_median": 0.5414,
+    "answerable_p10": 0.485,
+    "auc_tach_answerable": 0.7669,
+    "ti_le_answerable_bi_chan_neu_tau_r_0.35": 0.0
+   }
+  },
+  "hybrid(bm25+dense:intfloat/multilingual-e5-small)": {
+   "theo_product_id": {
+    "hit@1": 0.3206,
+    "hit@5": 0.866,
+    "mrr@10": 0.5484,
+    "n": 209,
+    "latency_ms_p50": 221.22,
+    "val": {
+     "hit@1": 0.2526,
+     "hit@5": 0.8316,
+     "mrr@10": 0.4881,
+     "n": 95
+    },
+    "test": {
+     "hit@1": 0.3772,
+     "hit@5": 0.8947,
+     "mrr@10": 0.5987,
+     "n": 114
+    },
+    "origin_llm_gemini": {
+     "hit@1": 0.3105,
+     "hit@5": 0.8579,
+     "mrr@10": 0.5363,
+     "n": 190
+    },
+    "origin_viet_tay_tac_nhan": {
+     "hit@1": 0.4211,
+     "hit@5": 0.9474,
+     "mrr@10": 0.6689,
+     "n": 19
+    }
+   },
+   "toan_kho": {
+    "hit@1": 0.0383,
+    "hit@5": 0.177,
+    "mrr@10": 0.1033,
+    "n": 209,
+    "latency_ms_p50": 962.93,
+    "val": {
+     "hit@1": 0.0526,
+     "hit@5": 0.1684,
+     "mrr@10": 0.1074,
+     "n": 95
+    },
+    "test": {
+     "hit@1": 0.0263,
+     "hit@5": 0.1842,
+     "mrr@10": 0.1,
+     "n": 114
+    },
+    "origin_llm_gemini": {
+     "hit@1": 0.0316,
+     "hit@5": 0.1474,
+     "mrr@10": 0.0872,
+     "n": 190
+    },
+    "origin_viet_tay_tac_nhan": {
+     "hit@1": 0.1053,
+     "hit@5": 0.4737,
+     "mrr@10": 0.2649,
+     "n": 19
+    }
+   }
+  }
+ },
+ "lenh": "PYTHONPATH=src python src/scripts/eval_rag.py retrieval"
+}

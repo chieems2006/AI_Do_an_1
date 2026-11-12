@@ -1,0 +1,46 @@
+{
+ "qids": [
+  "q001",
+  "q002",
+  "q003",
+  "q004",
+  "q005",
+  "q006",
+  "q007",
+  "q008",
+  "q009",
+  "q010",
+  "q011",
+  "q012",
+  "q013",
+  "q014",
+  "q015",
+  "q016",
+  "q017",
+  "q018"
+ ],
+ "n": 18,
+ "models": {
+  "gemini35flashlite": {
+   "faithfulness": 0.925,
+   "hallucination_rate": 0.111,
+   "correctness": 0.889,
+   "correct_refusal_unanswerable": "3/3",
+   "latency_s_median": 16.7
+  },
+  "gemma4_26b_api": {
+   "faithfulness": 0.986,
+   "hallucination_rate": 0.056,
+   "correctness": 0.972,
+   "correct_refusal_unanswerable": "3/3",
+   "latency_s_median": 14.6
+  },
+  "qwen25_05b": {
+   "faithfulness": 0.255,
+   "hallucination_rate": 0.333,
+   "correctness": 0.139,
+   "correct_refusal_unanswerable": "1/3",
+   "latency_s_median": 39.5
+  }
+ }
+}

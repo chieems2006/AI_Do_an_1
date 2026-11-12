@@ -1,0 +1,36 @@
+{
+ "Fashion Product Images (small)": {
+  "name": "Fashion Product Images (small)",
+  "url": "https://huggingface.co/datasets/ashraq/fashion-product-images-small",
+  "origin": "Kaggle paramaggarwal/fashion-product-images-dataset (gốc Myntra)",
+  "license": "[cần xác minh] – HF card không ghi rõ; bản Kaggle gốc cần đọc Data Card",
+  "credibility": "Mức 2",
+  "used_for": "catalog + ảnh (visual search)",
+  "files_sha256": {
+   "train-00000-of-00002-6cff4c59f91661c3.parquet": "0f9b4042c6eea3c77aa0794630c956d1985de791c365abdb332f9d9cfa78d00a",
+   "train-00001-of-00002-bb459e5ac5f01e71.parquet": "57937f698f0bef26a2c3c3772134901ad9c42b97eeedfae9573d852cf72210c6"
+  }
+ },
+ "ViMRHP – Fashion (Shopee VN reviews)": {
+  "name": "ViMRHP – Fashion (Shopee VN reviews)",
+  "url": "https://huggingface.co/datasets/trucmtnguyen/ViMRHP",
+  "paper": "ViMRHP: A Vietnamese Benchmark Dataset for Multimodal Review Helpfulness Prediction (NLDB 2025, arXiv 2505.07416)",
+  "license": "CC BY-NC-ND 4.0 (theo dataset card) – chỉ dùng nội bộ học thuật, không phát hành lại bản đã chỉnh",
+  "credibility": "Mức 1",
+  "used_for": "review tiếng Việt (RAG/QA), tên SP",
+  "files_sha256": {
+   "Fashion-dev.json": "8aebdd0e8b4efeee40a78f347699f64d38f382f17b0e4d9a8cf2a9d021f8c11a",
+   "Fashion-test.json": "7f94440411dbf47dc5c7db9d55d71a1af940c2cd7daa265eef0e26c73a1a006a",
+   "Fashion-train.json": "37e56045f053be677c238f1d6ac92665b4dd85e38c7ec85a3d4ed30831202fbb"
+  }
+ },
+ "Amazon Reviews 2023 – meta Clothing_Shoes_and_Jewelry (McAuley Lab)": {
+  "name": "Amazon Reviews 2023 – meta Clothing_Shoes_and_Jewelry (McAuley Lab)",
+  "url": "https://huggingface.co/datasets/McAuley-Lab/Amazon-Reviews-2023",
+  "paper": "Hou et al., Bridging Language and Items for Retrieval and Recommendation (arXiv 2403.03952)",
+  "license": "[cần xác minh] – điều khoản dùng cho nghiên cứu theo trang dataset",
+  "credibility": "Mức 1",
+  "used_for": "probe mũ/quần áo (metadata-only)",
+  "lines_read": 20000
+ }
+}

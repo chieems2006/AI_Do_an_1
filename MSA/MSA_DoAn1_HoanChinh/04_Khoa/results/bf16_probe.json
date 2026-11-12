@@ -1,0 +1,5 @@
+{"model": "clip_b16", "n_images": 32, "batch": 32, "threads": 2,
+ "fp32_ms_per_img": 801.8, "bf16_autocast_ms_per_img": 1121.1,
+ "cos_fp32_vs_bf16_min": 0.9864, "cos_fp32_vs_bf16_mean": 0.9973,
+ "note": "Đo 05/11/2026 00:09 khi máy đang chạy song song 2 tiến trình nặng khác (nhiễu lớn). Kết luận: bf16 autocast KHÔNG nhanh hơn trong điều kiện này -> giữ fp32 cho mọi model.",
+ "reproduce": "python src/scripts/probe_precision.py clip_b16 (script: 32 ảnh đầu fpi_images, warmup 4 ảnh)"}

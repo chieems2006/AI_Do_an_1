@@ -1,0 +1,4 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+{"model": "clip_b32", "status": "ok", "error": null, "catalog_embed_total_s": 682.6, "query_embed_ms_median": 428.34}
+TEST: {"R@1": 0.6208, "R@5": 0.7208, "R@10": 0.7458, "MRR@10": 0.6599, "NDCG@10": 0.6805, "R@5_footwear": 0.6833, "R@5_clothing": 0.8167, "R@5_headwear": 0.7, "R@5_accessory": 0.6833, "macro_R@5": 0.7208, "CTE@5": 0.0758, "R@5_hard": 0.9057, "CTE@5_hard": 0.1094, "cat_Hit@5": 0.7, "cat_P@5": 0.3533, "cat_SubP@5": 0.9367, "cat_CTE@5": 0.015, "cat_P@5_footwear": 0.3467, "cat_P@5_clothing": 0.2533, "cat_P@5_headwear": 0.3067, "cat_P@5_accessory": 0.5067}

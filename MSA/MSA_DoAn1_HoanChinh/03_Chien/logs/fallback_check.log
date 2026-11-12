@@ -1,0 +1,43 @@
+r049 gemini-3.5-flash-lite  False Chào bạn! Mình là Mia, trợ lý thời trang của cửa hàng. Bạn cần mình giúp tìm quầ
+r050 gemini-3.5-flash-lite ERR False 
+r051 gemini-3.5-flash-lite  False Hihi, nghe bạn khen mà mình vui quá đi mất! Nếu bạn đang muốn tìm thêm món đồ xi
+r052 gemini-3.5-flash-lite  False Ôi, nghe bạn buồn mình cũng thấy lo lắng theo. Bạn có muốn chia sẻ điều gì không
+r053 gemini-3.5-flash-lite  False Mình là trợ lý ảo của cửa hàng, luôn sẵn sàng hỗ trợ bạn chọn đồ. Bạn muốn tìm g
+r054 gemini-3.5-flash-lite  False Chào bạn, có một chú ốc sên đi mua giày nhưng khi vào đến nơi thì cửa hàng đã đó
+r055 gemini-3.5-flash-lite  False Chúc bạn có một buổi tối thật ấm áp và thư giãn nhé! Nếu bạn cần tìm thêm trang 
+r056 gemini-3.5-flash-lite  False Không có gì nha bạn! Nếu bạn cần tìm thêm quần áo hay phụ kiện nào, cứ nhắn cho 
+r057 gemini-3.5-flash-lite  False Trời mưa bạn nên chọn trang phục gọn gàng, chất liệu nhanh khô như polyester hoặ
+r058 gemini-3.5-flash-lite  False Đi đám cưới bạn thân, bạn có thể chọn một bộ vest lịch lãm hoặc một chiếc váy li
+r059 gemini-3.5-flash-lite  False Thời tiết Đà Lạt thường se lạnh nên bạn nhớ mang theo áo khoác gió, áo len hoặc 
+r060 gemini-3.5-flash-lite  False Thủ đô của Úc là Canberra bạn nhé! Mình chuyên về thời trang, nếu bạn cần tìm qu
+r061 gemini-3.5-flash-lite  False Việc viết code lập trình nằm ngoài chuyên môn thời trang của mình rồi bạn ạ. Nếu
+r062 gemini-3.5-flash-lite  False Mình không có dữ liệu cập nhật về giá vàng nên không thể trả lời chính xác cho b
+r063 gemini-3.5-flash-lite  False Mình không cập nhật được kết quả bóng đá hay tin tức thời sự đâu bạn nhé. Bạn có
+r064 gemini-3.5-flash-lite  False Phương trình này có nghiệm là x = 2 và x = 3 bạn nhé! Mình chuyên về thời trang,
+r065 gemini-3.5-flash-lite  False Nấu phở bò ngon cần hầm xương kỹ với các loại gia vị như quế, hồi, thảo quả để n
+r066 gemini-3.5-flash-lite  False Mình rất tiếc, mình không thể hỗ trợ các yêu cầu liên quan đến việc hack hay xâm
+r067 gemini-3.5-flash-lite  False Việc tư vấn điện thoại nằm ngoài chuyên môn của mình rồi bạn ạ. Mình chuyên về g
+r068 gemini-3.5-flash-lite  False Việc đặt vé máy bay thì nằm ngoài chuyên môn của mình rồi. Bạn có muốn mình tìm 
+r069 gemini-3.5-flash-lite  False Mình không theo dõi được dự báo thời tiết thực tế hằng ngày nên không biết chính
+trap1 gemini-3.5-flash-lite  False Mình cần kiểm tra trong dữ liệu cửa hàng mới trả lời chính xác được giá và size 
+trap2 gemini-3.5-flash-lite  False Mình cần kiểm tra trong dữ liệu cửa hàng mới trả lời chính xác được về phí ship 
+{
+ "n_cau_eval_router": 21,
+ "n_cau_bay": 2,
+ "n_phan_hoi_hop_le": 22,
+ "n_loi_api": 1,
+ "vi_pham_gia_size_tonkho (eval_router)": 0,
+ "ti_le_vi_pham (eval_router)": 0.0,
+ "vi_pham_cau_bay": 0,
+ "latency_ms_p50": 15983.1,
+ "latency_ms_p95": 27772.1,
+ "tokens_in_tb": 747.5,
+ "tokens_out_tb": 41.7,
+ "models": [
+  "gemini-3.5-flash-lite"
+ ],
+ "token_tren_100_luot": {
+  "in": 74750,
+  "out": 4170
+ }
+}

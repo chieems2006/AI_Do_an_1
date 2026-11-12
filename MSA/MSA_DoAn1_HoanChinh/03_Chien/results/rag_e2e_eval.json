@@ -1,0 +1,1530 @@
+{
+ "data_version": "shared_data v1 (prep_shared_data.py seed 42)",
+ "retriever": "hybrid_rrf(bm25 + multilingual-e5-small)",
+ "tau_r": 0.0,
+ "k": 5,
+ "prompt": "prompts/rag_grounded.md v1.0 (chế độ lô user_batch)",
+ "llm_models_used": [
+  "gemini-3.5-flash-lite"
+ ],
+ "batch_size": 13,
+ "real_http_calls": 6,
+ "llm_calls_meta": [
+  {
+   "tokens_in": 4762,
+   "tokens_out": 682,
+   "tokens_thinking": 0,
+   "latency_ms": 3839.5,
+   "error": null,
+   "cached": false,
+   "model": "gemini-3.5-flash-lite",
+   "n": 13
+  },
+  {
+   "tokens_in": 5216,
+   "tokens_out": 635,
+   "tokens_thinking": 0,
+   "latency_ms": 4670.7,
+   "error": null,
+   "cached": false,
+   "model": "gemini-3.5-flash-lite",
+   "n": 13
+  },
+  {
+   "tokens_in": 4792,
+   "tokens_out": 667,
+   "tokens_thinking": 0,
+   "latency_ms": 2516.9,
+   "error": null,
+   "cached": false,
+   "model": "gemini-3.5-flash-lite",
+   "n": 13
+  },
+  {
+   "tokens_in": 4931,
+   "tokens_out": 417,
+   "tokens_thinking": 0,
+   "latency_ms": 1786.2,
+   "error": null,
+   "cached": false,
+   "model": "gemini-3.5-flash-lite",
+   "n": 13
+  },
+  {
+   "tokens_in": 8654,
+   "tokens_out": 1966,
+   "tokens_thinking": 0,
+   "latency_ms": 4879.7,
+   "error": null,
+   "cached": false,
+   "model": "gemini-3.5-flash-lite",
+   "role": "judge",
+   "n": 26
+  },
+  {
+   "tokens_in": 8326,
+   "tokens_out": 1851,
+   "tokens_thinking": 0,
+   "latency_ms": 4884.9,
+   "error": null,
+   "cached": false,
+   "model": "gemini-3.5-flash-lite",
+   "role": "judge",
+   "n": 26
+  }
+ ],
+ "token_answer_tren_moi_cau": {
+  "in": 378.9,
+  "out": 46.2
+ },
+ "summary": {
+  "n_cau": 52,
+  "n_loi_llm": 0,
+  "n_answerable": 37,
+  "n_khong_dap_an": 15,
+  "refusal_accuracy (answerable=false bị từ chối đúng)": 1.0,
+  "false_refusal_rate (answerable bị từ chối)": 0.0,
+  "citation_rate (câu trả lời có ≥1 trích dẫn hợp lệ)": 1.0,
+  "cited_gold_rate (answerable được trả lời, trích trúng review bằng chứng)": 0.8649,
+  "faithfulness_judge_mean": 1.0,
+  "hallucination_rate_judge (câu trả lời không từ chối có nhận định không có trong ngữ cảnh)": 0.0,
+  "answer_relevancy_judge": 1.0,
+  "n_duoc_cham": 52,
+  "guard_triggered": 0,
+  "refusal_regex_khop_tren_cau_tu_choi": 15
+ },
+ "rows": [
+  {
+   "qid": "qa201",
+   "product_id": "shopee_26401551878",
+   "type": "form",
+   "origin": "llm_gemini",
+   "answerable": true,
+   "question": "Áo thun Fear Of God form rộng mặc lên có xinh ko?",
+   "gold": "Theo đánh giá của khách, áo lên form rất xinh, mặc qua mông thoải mái đi đâu cũng tiện.",
+   "answer": "Theo đánh giá của khách, áo thun form rộng mặc lên rất xinh [C2], [C3], [C4].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_26401551878::review::15473654441",
+    "shopee_26401551878::review::15473719028",
+    "shopee_26401551878::review::15473673585"
+   ],
+   "cited_gold": true,
+   "retrieval_score": 38.74220607032027,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa201",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Câu trả lời đúng trọng tâm và được hỗ trợ hoàn toàn bởi ngữ cảnh."
+   }
+  },
+  {
+   "qid": "qa023",
+   "product_id": "shopee_22211160056",
+   "type": "giao_hang",
+   "origin": "llm_gemini",
+   "answerable": true,
+   "question": "Shop dong goi va giao hang dép cá sấu có nhanh ko?",
+   "gold": "Theo đánh giá của khách, shop giao hàng rất nhanh và gói hàng cẩn thận.",
+   "answer": "Theo đánh giá của khách, shop giao hàng rất nhanh [C1], [C2], [C3], [C4].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_22211160056::review::12714703598",
+    "shopee_22211160056::review::11276303264",
+    "shopee_22211160056::review::13296181559",
+    "shopee_22211160056::review::13285933025"
+   ],
+   "cited_gold": true,
+   "retrieval_score": 10.147282812247958,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa023",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Khách đánh giá shop giao hàng nhanh, thông tin hoàn toàn chính xác."
+   }
+  },
+  {
+   "qid": "qa005",
+   "product_id": "shopee_17498595412",
+   "type": "chat_lieu",
+   "origin": "llm_gemini",
+   "answerable": true,
+   "question": "Dép tông Thái Lan này làm bằng chất liệu gì vậy?",
+   "gold": "Theo đánh giá của khách, dép có đế làm bằng nhựa cứng hoặc xốp nhẹ, còn quai dép được làm bằng nhựa dẻo.",
+   "answer": "Dép có đế làm bằng nhựa cứng, quai làm bằng nhựa dẻo [C2].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_17498595412::review::13382976180"
+   ],
+   "cited_gold": true,
+   "retrieval_score": 19.250377801036137,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa005",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Thông tin chất liệu đế nhựa cứng, quai nhựa dẻo lấy chuẩn từ C2."
+   }
+  },
+  {
+   "qid": "qa241",
+   "product_id": "shopee_27352506582",
+   "type": "form",
+   "origin": "llm_gemini",
+   "answerable": true,
+   "question": "Áo bộ thể thao này form mặc có chuẩn và đứng form không zợ?",
+   "gold": "Theo đánh giá của khách, áo form chuẩn, mặc đứng form và rất thoải mái.",
+   "answer": "Theo đánh giá của khách, áo của bộ thể thao có form chuẩn, mặc đứng form và thoải mái [C1], [C2], [C3], [C5].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_27352506582::review::15865755575",
+    "shopee_27352506582::review::15835863623",
+    "shopee_27352506582::review::15865716651",
+    "shopee_27352506582::review::15833554275"
+   ],
+   "cited_gold": true,
+   "retrieval_score": 19.312897341108687,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa241",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Các ý form chuẩn, đứng form, thoải mái đều có trong ngữ cảnh."
+   }
+  },
+  {
+   "qid": "qa071",
+   "product_id": "shopee_22649688486",
+   "type": "so_sanh",
+   "origin": "llm_gemini",
+   "answerable": true,
+   "question": "Kính nhận về có giống mô tả và hình ảnh shop đăng không?",
+   "gold": "Theo đánh giá của khách, kính đẹp đúng như hình mẫu và đúng với mô tả của shop.",
+   "answer": "Theo đánh giá của khách, kính nhận được hoàn toàn giống với mô tả và hình ảnh trong shop [C3], [C4], [C5].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_22649688486::review::13808233121",
+    "shopee_22649688486::review::13079687900",
+    "shopee_22649688486::review::12813440080"
+   ],
+   "cited_gold": true,
+   "retrieval_score": 13.259976029331789,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa071",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Khách xác nhận kính giống mô tả và hình ảnh shop."
+   }
+  },
+  {
+   "qid": "qa066",
+   "product_id": "shopee_25115117355",
+   "type": "so_sanh",
+   "origin": "llm_gemini",
+   "answerable": true,
+   "question": "Vòng tay đeo có hợp túi tiền và giống ảnh quảng cáo ko?",
+   "gold": "Theo đánh giá của khách, sản phẩm rẻ, đáng tiền và đẹp đúng như ảnh, tuy nhiên cũng có ý kiến chê xấu và khác trên ảnh một trời một vực.",
+   "answer": "Theo đánh giá của khách, vòng tay có giá rất hợp lí [C4] và xinh, đeo sáng tay [C3], tuy nhiên có ý kiến cho rằng đeo mấy ngày là sắp rỉ [C1].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_25115117355::review::15629778124",
+    "shopee_25115117355::review::15892732241",
+    "shopee_25115117355::review::16014471005"
+   ],
+   "cited_gold": true,
+   "retrieval_score": 14.771601650892286,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa066",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Trả lời đầy đủ các ý giá hợp lý, xinh và nhanh rỉ dựa trên các review."
+   }
+  },
+  {
+   "qid": "qa062",
+   "product_id": "shopee_26501424006",
+   "type": "form",
+   "origin": "llm_gemini",
+   "answerable": true,
+   "question": "Form vòng tay này mang có vừa với tay nhỏ không?",
+   "gold": "Theo đánh giá của khách, vòng khá rộng và tay nhỏ nên lưu ý hoặc phải chỉnh lại một chút mới vừa.",
+   "answer": "Theo đánh giá của khách, vòng có thể điều chỉnh [C1] nhưng hơi rộng, người tay nhỏ nên để ý [C2].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_26501424006::review::15915870766",
+    "shopee_26501424006::review::15895683109"
+   ],
+   "cited_gold": true,
+   "retrieval_score": 18.713151122951597,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa062",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Trích dẫn chính xác ý kiến về tay nhỏ và vòng hơi rộng."
+   }
+  },
+  {
+   "qid": "qa039",
+   "product_id": "shopee_20287372743",
+   "type": "giao_hang",
+   "origin": "llm_gemini",
+   "answerable": true,
+   "question": "dep nay giao hang nhanh ko shop?",
+   "gold": "Theo đánh giá của khách, shop giao hàng rất nhanh chóng.",
+   "answer": "Theo đánh giá của khách, dép được giao hàng rất nhanh [C1], [C2], [C3], [C4], [C5].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_20287372743::review::14918259850",
+    "shopee_20287372743::review::15464929267",
+    "shopee_20287372743::review::14897888952",
+    "shopee_20287372743::review::14862212212",
+    "shopee_20287372743::review::15404202458"
+   ],
+   "cited_gold": true,
+   "retrieval_score": 6.012303355304706,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa039",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Khách đánh giá giao hàng nhanh được trích dẫn đúng từ ngữ cảnh."
+   }
+  },
+  {
+   "qid": "qa265",
+   "product_id": "shopee_11348401663",
+   "type": "size_giay",
+   "origin": "viet_tay_tac_nhan",
+   "answerable": true,
+   "question": "sandal 3 in 1 form có rộng không?",
+   "gold": "Theo đánh giá của khách, form hơi rộng với một số người: một bạn đi size 35 vẫn rộng chút, một bạn mua 2 đôi size 38 thì 1 đôi vừa 1 đôi rộng; khách khác đi size 38 vừa chân.",
+   "answer": "Theo đánh giá của khách, form sandal có khách mặc vừa chân nhưng cũng có khách đi bị rộng [C2], [C3].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_11348401663::review::9294590177",
+    "shopee_11348401663::review::9546679203"
+   ],
+   "cited_gold": true,
+   "retrieval_score": 22.281163169789856,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa265",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Phản ánh đúng việc có khách đi vừa, có khách bị rộng."
+   }
+  },
+  {
+   "qid": "qa022",
+   "product_id": "shopee_22211160056",
+   "type": "chat_lieu",
+   "origin": "llm_gemini",
+   "answerable": true,
+   "question": "Dep ca sau nay chat lieu gi, di co em khong?",
+   "gold": "Theo đánh giá của khách, dép làm bằng cao su hoặc nhựa xốp mềm nhẹ, mang vào rất êm chân.",
+   "answer": "Dép làm bằng chất liệu cao su [C4], nhựa [C5], mềm và đi êm chân [C2].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_22211160056::review::11413241914",
+    "shopee_22211160056::review::13285933025",
+    "shopee_22211160056::review::11510259274"
+   ],
+   "cited_gold": true,
+   "retrieval_score": 7.927363142596967,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa022",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Chất liệu cao su/nhựa và độ êm chân đều có trong ngữ cảnh."
+   }
+  },
+  {
+   "qid": "qa211",
+   "product_id": "shopee_26503827931",
+   "type": "so_sanh",
+   "origin": "llm_gemini",
+   "answerable": true,
+   "question": "Quần nhận được có đúng như mô tả và hình ảnh ko?",
+   "gold": "Theo đánh giá của khách, sản phẩm đẹp đúng mô tả và giá rẻ, tuy nhiên có khách nhận nhầm hàng hoặc phản ánh ống quần bị lệch nhau.",
+   "answer": "Theo đánh giá của khách, quần nhận được đúng như mô tả [C1], [C2], [C3].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_26503827931::review::16010788190",
+    "shopee_26503827931::review::15945745556",
+    "shopee_26503827931::review::15841096346"
+   ],
+   "cited_gold": false,
+   "retrieval_score": 8.275388604950475,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa211",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Xác nhận quần đúng mô tả dựa theo đánh giá khách hàng."
+   }
+  },
+  {
+   "qid": "qa258",
+   "product_id": "shopee_15693430346",
+   "type": "size_ao_quan",
+   "origin": "viet_tay_tac_nhan",
+   "answerable": true,
+   "question": "1m6 52kg mặc hoodie PEASE STAR size XL có dài quá không?",
+   "gold": "Theo đánh giá của khách, một bạn cao 1m6, nặng 52kg mặc size XL thì áo dài qua mông; áo dày, mặc khá ấm.",
+   "answer": "Theo đánh giá của khách cao 1m6 nặng 52kg mặc size XL qua mông [C1].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_15693430346::review::9746749979"
+   ],
+   "cited_gold": true,
+   "retrieval_score": 14.818815235860352,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa258",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Trích dẫn chính xác thông tin chiều cao cân nặng và size áo từ C1."
+   }
+  },
+  {
+   "qid": "qa169",
+   "product_id": "shopee_23853173021",
+   "type": "do_ben",
+   "origin": "llm_gemini",
+   "answerable": true,
+   "question": "Áo len caro lông xù mặc có hay bị xù lông không shop?",
+   "gold": "Theo đánh giá của khách, mặc được hơn tuần nhưng chất vải khá mềm và không bị xù.",
+   "answer": "Theo đánh giá của khách, áo mặc được hơn tuần rồi thấy chất vải khá mềm không bị xù [C5].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_23853173021::review::13499777204"
+   ],
+   "cited_gold": true,
+   "retrieval_score": 32.63158612265026,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa169",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Lấy đúng ý kiến khách hàng mặc tuần không bị xù lông từ C5."
+   }
+  },
+  {
+   "qid": "qa015",
+   "product_id": "shopee_23384426736",
+   "type": "so_sanh",
+   "origin": "llm_gemini",
+   "answerable": true,
+   "question": "Dép đi có êm chân và đúng như shop mô tả không?",
+   "gold": "Theo đánh giá của khách, dép đúng với mô tả, mang lên chân đẹp và đi rất êm ái, thoải mái.",
+   "answer": "Theo đánh giá của khách, dép đi êm chân [C3] và rất đúng với mô tả của shop [C2].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_23384426736::review::16037489055",
+    "shopee_23384426736::review::14549133368"
+   ],
+   "cited_gold": true,
+   "retrieval_score": 6.475219477023286,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa015",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Thông tin dép êm chân và đúng mô tả được hỗ trợ bởi ngữ cảnh."
+   }
+  },
+  {
+   "qid": "qa193",
+   "product_id": "shopee_19234756774",
+   "type": "chat_lieu",
+   "origin": "llm_gemini",
+   "answerable": true,
+   "question": "Áo khoác hoodie khủng long này mặc có ấm ko shop?",
+   "gold": "Theo đánh giá của khách, bên trong áo rất ấm, mặc vô thích lắm.",
+   "answer": "Theo đánh giá của khách, mặc áo rất ấm [C2], tuy nhiên cũng có ý kiến nhận xét vải nhận được không được dày lắm [C4].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_19234756774::review::12151500097",
+    "shopee_19234756774::review::12366254481"
+   ],
+   "cited_gold": true,
+   "retrieval_score": 24.366062520558682,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa193",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Đưa ra cả ý kiến áo ấm và ý kiến vải không dày lắm đúng ngữ cảnh."
+   }
+  },
+  {
+   "qid": "qa109",
+   "product_id": "shopee_8733115525",
+   "type": "chat_lieu",
+   "origin": "llm_gemini",
+   "answerable": true,
+   "question": "Dây chuyền này chất liệu đeo có bị gỉ hay ko vậy shop?",
+   "gold": "Theo đánh giá của khách, họ chưa biết chắc chắn đeo lâu có bị gỉ hay không do sản phẩm có giá rất rẻ.",
+   "answer": "Hiện cửa hàng chưa có thông tin về việc dây chuyền đeo có bị gỉ hay không [C1].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_8733115525::review::12289303363"
+   ],
+   "cited_gold": true,
+   "retrieval_score": 16.54640892460218,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa109",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Từ chối trả lời hợp lý vì ngữ cảnh chưa có thông tin gỉ sét."
+   }
+  },
+  {
+   "qid": "qa006",
+   "product_id": "shopee_17498595412",
+   "type": "size_giay",
+   "origin": "llm_gemini",
+   "answerable": true,
+   "question": "Chon size dep lao nay ntn vay shop, đi đúng size đc ko?",
+   "gold": "Theo đánh giá của khách, ý kiến về size còn trái chiều: có người nhận xét form to nên lùi 1 size, trong khi người khác lại thấy size hơi bé và khuyên nên đặt tăng 1 size.",
+   "answer": "Theo đánh giá của khách, form dép hơi to nên khách khuyên nên mua lùi lại 1 size [C3], nhưng cũng có khách cho rằng size shop đưa ra hơi bé và khuyên đặt to hơn bình thường 1 size [C1].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_17498595412::review::15148696677",
+    "shopee_17498595412::review::13165067951"
+   ],
+   "cited_gold": true,
+   "retrieval_score": 7.556198803201394,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa006",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Tổng hợp đầy đủ hai ý trái chiều về size từ C1 và C3."
+   }
+  },
+  {
+   "qid": "qa266",
+   "product_id": "shopee_13226297031",
+   "type": "size_giay",
+   "origin": "viet_tay_tac_nhan",
+   "answerable": true,
+   "question": "Dép Balen chân 38 nên mua 39 không?",
+   "gold": "Theo đánh giá của khách, một bạn chân 38 mua size 39 vẫn đi rất ưng, dép đi vừa chân và êm.",
+   "answer": "Theo đánh giá của khách, chân size 38 mua size 39 đi vừa chân và vẫn rất ưng [C1].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_13226297031::review::7007861526"
+   ],
+   "cited_gold": true,
+   "retrieval_score": 12.582085797435617,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa266",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Trích dẫn chính xác trải nghiệm chân 38 mua size 39 từ C1."
+   }
+  },
+  {
+   "qid": "qa248",
+   "product_id": "shopee_16686075502",
+   "type": "chat_lieu",
+   "origin": "llm_gemini",
+   "answerable": true,
+   "question": "Áo ba lỗ cotton này có sẵn mút đệm ngực luôn k b?",
+   "gold": "Theo đánh giá của khách, áo có sẵn mút đệm ngực bên trong rất tiện lợi, không cần mặc áo ngực.",
+   "answer": "Áo ba lỗ này có sẵn mút đệm ngực [C3].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_16686075502::review::12019661084"
+   ],
+   "cited_gold": true,
+   "retrieval_score": 40.968161858483704,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa248",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Xác nhận áo có sẵn mút đệm ngực dựa trên ngữ cảnh C3."
+   }
+  },
+  {
+   "qid": "qa061",
+   "product_id": "shopee_26501424006",
+   "type": "so_sanh",
+   "origin": "llm_gemini",
+   "answerable": true,
+   "question": "Vòng tay này đeo lên có giống hình và đúng mô tả không shop?",
+   "gold": "Theo đánh giá của khách, ý kiến về độ giống hình rất khác nhau: có khách khen vòng đẹp y như hình và đúng mẫu, nhưng cũng có đánh giá cho rằng chi tiết bông hoa không giống hình hay sản phẩm giao không đúng mô tả.",
+   "answer": "Theo đánh giá của khách, vòng tay đeo lên rất đẹp, sáng y như hình và đúng với mô tả [C4].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_26501424006::review::15654568657"
+   ],
+   "cited_gold": true,
+   "retrieval_score": 13.521763341562332,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa061",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Đánh giá vòng tay đẹp và sáng y hình được lấy từ C4."
+   }
+  },
+  {
+   "qid": "qa063",
+   "product_id": "shopee_26501424006",
+   "type": "giao_hang",
+   "origin": "llm_gemini",
+   "answerable": true,
+   "question": "Shop giao hàng vòng tay bướm này có nhanh ko?",
+   "gold": "Theo đánh giá của khách, đa số người mua phản hồi shop giao hàng nhanh, tuy nhiên vẫn có ý kiến phản ánh giao hơi chậm.",
+   "answer": "Theo đánh giá của khách, shop giao hàng rất nhanh [C3].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_26501424006::review::15714430349"
+   ],
+   "cited_gold": false,
+   "retrieval_score": 13.349207161160026,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa063",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Khách xác nhận shop giao hàng nhanh dựa theo C3."
+   }
+  },
+  {
+   "qid": "qa138",
+   "product_id": "shopee_20088433565",
+   "type": "do_ben",
+   "origin": "llm_gemini",
+   "answerable": true,
+   "question": "Khuyên tai kẹp đeo có bị đau hay dễ rớt không?",
+   "gold": "Theo đánh giá của khách, khuyên kẹp rất chắc chắn, bay nhảy thoải mái không sợ rớt; khi kẹp cố định thì không cấn nhiều nhưng nếu di chuyển vị trí khi đã kẹp thì sẽ khá đau.",
+   "answer": "Theo đánh giá của khách, khuyên tai kẹp đeo chắc chắn, không sợ rớt [C1] và khi kẹp đã cố định thì di chuyển có thể khá đau [C4].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_20088433565::review::15120069988",
+    "shopee_20088433565::review::12253271501"
+   ],
+   "cited_gold": true,
+   "retrieval_score": 25.298183570988797,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa138",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Thông tin kẹp chắc chắn và có thể đau khi di chuyển đúng ngữ cảnh."
+   }
+  },
+  {
+   "qid": "qa195",
+   "product_id": "shopee_19234756774",
+   "type": "so_sanh",
+   "origin": "llm_gemini",
+   "answerable": true,
+   "question": "Áo nhận về có giống hình mô tả không?",
+   "gold": "Theo đánh giá của khách, áo khá đẹp, hình in sắc nét không trôi đúng mô tả, nhưng có vài khách chê vải mỏng như áo thun hoặc giống nùi lao vải.",
+   "answer": "Theo đánh giá của khách, có ý kiến cho rằng sản phẩm không như trong hình [C5].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_19234756774::review::12685868482"
+   ],
+   "cited_gold": false,
+   "retrieval_score": 6.658183504257735,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa195",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Phản ánh đúng ý kiến khách hàng cho rằng sản phẩm không như hình."
+   }
+  },
+  {
+   "qid": "qa242",
+   "product_id": "shopee_27352506582",
+   "type": "so_sanh",
+   "origin": "llm_gemini",
+   "answerable": true,
+   "question": "Set đồ LV này nhận hàng có giống hình ảnh shop đăng k b?",
+   "gold": "Theo đánh giá của khách, áo giống trên ảnh shop đăng, thậm chí đẹp hơn hình.",
+   "answer": "Theo đánh giá của khách, set đồ nhận hàng hoàn toàn giống trên ảnh [C1].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_27352506582::review::15839603690"
+   ],
+   "cited_gold": true,
+   "retrieval_score": 11.463606617300032,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa242",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Xác nhận set đồ giống ảnh theo đánh giá C1."
+   }
+  },
+  {
+   "qid": "qa171",
+   "product_id": "shopee_23853173021",
+   "type": "so_sanh",
+   "origin": "llm_gemini",
+   "answerable": true,
+   "question": "Áo này có đẹp giống mẫu chụp không shop?",
+   "gold": "Theo đánh giá của khách, áo đẹp chuẩn ảnh và giống mẫu.",
+   "answer": "Theo đánh giá của khách, áo đẹp giống mẫu chụp [C3].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_23853173021::review::13499575825"
+   ],
+   "cited_gold": true,
+   "retrieval_score": 5.7263025807940515,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa171",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Áo đẹp giống mẫu chụp lấy chính xác từ C3."
+   }
+  },
+  {
+   "qid": "qa050",
+   "product_id": "shopee_25965500997",
+   "type": "form",
+   "origin": "llm_gemini",
+   "answerable": true,
+   "question": "Sandal 044 mang len chan co ton dang va xinh ko?",
+   "gold": "Theo đánh giá của khách, sandal đi lên tôn dáng, hack chân và rất xinh xắn.",
+   "answer": "Theo đánh giá của khách, sandal đi rất tôn dáng [C2].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_25965500997::review::15816410615"
+   ],
+   "cited_gold": true,
+   "retrieval_score": 17.519926468961202,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa050",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Đánh giá sandal tôn dáng được trích dẫn chuẩn từ C2."
+   }
+  },
+  {
+   "qid": "qa203",
+   "product_id": "shopee_26401551878",
+   "type": "so_sanh",
+   "origin": "llm_gemini",
+   "answerable": true,
+   "question": "Áo nhận về có giống với mô tả và hình ảnh ko?",
+   "gold": "Theo đánh giá của khách, áo đúng hình và rất ổn định đến từng chi tiết, tuy nhiên có khách phản ánh bị shop gửi sai hàng hoặc nhầm size.",
+   "answer": "Theo đánh giá của khách, áo nhận về đúng hình [C1].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_26401551878::review::15473598176"
+   ],
+   "cited_gold": true,
+   "retrieval_score": 9.318591207089648,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa203",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Khách đánh giá áo đúng hình [C1]."
+   }
+  },
+  {
+   "qid": "qa249",
+   "product_id": "shopee_16686075502",
+   "type": "form",
+   "origin": "llm_gemini",
+   "answerable": true,
+   "question": "Áo ba lỗ này mặc lên form có đẹp và tôn dáng k mn?",
+   "gold": "Theo đánh giá của khách, áo lên form đẹp và tôn dáng.",
+   "answer": "Theo đánh giá của khách, áo mặc lên form đẹp và tôn dáng [C1].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_16686075502::review::11931416043"
+   ],
+   "cited_gold": true,
+   "retrieval_score": 24.37194106820316,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa249",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Khách đánh giá áo form đẹp và tôn dáng [C1]."
+   }
+  },
+  {
+   "qid": "qa107",
+   "product_id": "shopee_23579085440",
+   "type": "so_sanh",
+   "origin": "llm_gemini",
+   "answerable": true,
+   "question": "Đôi guốc cao gót này bên ngoài có đẹp đúng như mô tả ko?",
+   "gold": "Theo đánh giá của khách, giày đẹp ngoài sức tưởng tượng, lên dáng xinh và rất đúng mô tả.",
+   "answer": "Theo đánh giá của khách, guốc bên ngoài mang đẹp và đúng như mô tả [C4], [C5].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_23579085440::review::13326593014",
+    "shopee_23579085440::review::15440274255"
+   ],
+   "cited_gold": false,
+   "retrieval_score": 16.70704326873662,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa107",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Guốc đẹp và đúng mô tả theo [C4], [C5]."
+   }
+  },
+  {
+   "qid": "qa260",
+   "product_id": "shopee_16683003980",
+   "type": "chat_lieu",
+   "origin": "viet_tay_tac_nhan",
+   "answerable": true,
+   "question": "Áo gradient này mặc mùa đông có ấm không?",
+   "gold": "Theo đánh giá của khách, chất vải không phải nỉ, áo hợp mặc mùa thu hơn, mặc mùa đông có thể bị lạnh.",
+   "answer": "Theo đánh giá của khách, áo vải vừa đủ ấm hoặc mặc hợp mùa thu, nên trời quá lạnh hoặc mùa đông thì không đủ ấm [C2], [C4].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_16683003980::review::10184494328",
+    "shopee_16683003980::review::13359216672"
+   ],
+   "cited_gold": true,
+   "retrieval_score": 14.788610460023738,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa260",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Đúng với thông tin mùa đông lạnh [C2], [C4]."
+   }
+  },
+  {
+   "qid": "qa125",
+   "product_id": "shopee_25151389964",
+   "type": "do_ben",
+   "origin": "llm_gemini",
+   "answerable": true,
+   "question": "Dây buộc tóc co giãn này dùng có bền hay bị đứt không?",
+   "gold": "Theo đánh giá của khách, dây thun co giãn rất tốt, cột rất chắc chắn và có thể dùng đi dùng lại nhiều lần.",
+   "answer": "Theo đánh giá của khách, dây buộc tóc co giãn rất tốt, cột chắc chắn, không bị đứt và có thể dùng đi dùng lại nhiều lần [C1], [C5].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_25151389964::review::15795175493",
+    "shopee_25151389964::review::15468139031"
+   ],
+   "cited_gold": true,
+   "retrieval_score": 33.75484089198082,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa125",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Đúng theo review [C1] và [C5]."
+   }
+  },
+  {
+   "qid": "qa246",
+   "product_id": "shopee_20051025686",
+   "type": "so_sanh",
+   "origin": "llm_gemini",
+   "answerable": true,
+   "question": "Áo khoác jeans này mua giá rẻ như vậy thì chất lượng có đáng tiền không?",
+   "gold": "Theo đánh giá của khách, áo rất đáng đồng tiền, chất lượng quá xịn với mức giá rẻ.",
+   "answer": "Theo đánh giá của khách, áo khoác jeans có chất lượng rất xứng đáng và quá xịn so với giá tiền [C2], [C4].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_20051025686::review::14298801479",
+    "shopee_20051025686::review::15635338198"
+   ],
+   "cited_gold": true,
+   "retrieval_score": 18.166621291363853,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa246",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Đúng theo review [C2] và [C4]."
+   }
+  },
+  {
+   "qid": "qa262",
+   "product_id": "shopee_10469084278",
+   "type": "size_giay",
+   "origin": "viet_tay_tac_nhan",
+   "answerable": true,
+   "question": "Sandal LNS42 có nên tăng size không? chân 23,5cm đi sz mấy",
+   "gold": "Theo đánh giá của khách, nên tăng size một chút; một bạn chân dài 23,5cm đi size 38 vừa, rộng chút sẽ đỡ đau chân.",
+   "answer": "Hiện cửa hàng chưa có thông tin về việc có nên tăng size hay không, nhưng có khách chân 23,5cm mang size 38 vừa phải [C2].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_10469084278::review::10231557439"
+   ],
+   "cited_gold": true,
+   "retrieval_score": 19.488598786711634,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa262",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Trích dẫn đúng thông tin từ [C2]."
+   }
+  },
+  {
+   "qid": "qa001",
+   "product_id": "shopee_21930029026",
+   "type": "giao_hang",
+   "origin": "llm_gemini",
+   "answerable": true,
+   "question": "Dép bánh mì Tikp này giao hàng có nhanh không shop?",
+   "gold": "Theo đánh giá của khách, hàng được giao rất nhanh dù là hàng quốc tế, nhận được sau khoảng 4-6 ngày.",
+   "answer": "Theo đánh giá của khách, shop giao hàng cực nhanh [C4].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_21930029026::review::14512497822"
+   ],
+   "cited_gold": false,
+   "retrieval_score": 24.352285533677122,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa001",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Trích dẫn đúng từ [C4]."
+   }
+  },
+  {
+   "qid": "qa043",
+   "product_id": "shopee_20379413337",
+   "type": "giao_hang",
+   "origin": "llm_gemini",
+   "answerable": true,
+   "question": "Thời gian giao hàng của shop cho đôi guốc này thế nào?",
+   "gold": "Theo đánh giá của khách, đa số nhận thấy shop giao hàng rất nhanh; tuy nhiên cũng có khách phản hồi shop chuẩn bị hàng quá lâu.",
+   "answer": "Theo đánh giá của khách, có ý kiến cho rằng giao hàng rất nhanh [C1], [C4], nhưng cũng có ý kiến phản ánh shop chuẩn bị hàng quá lâu [C3].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_20379413337::review::12183625609",
+    "shopee_20379413337::review::12845179005",
+    "shopee_20379413337::review::13618197201"
+   ],
+   "cited_gold": true,
+   "retrieval_score": 7.715911483009337,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa043",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Phản ánh đúng ý kiến trái chiều từ [C1], [C3], [C4]."
+   }
+  },
+  {
+   "qid": "qa245",
+   "product_id": "shopee_20051025686",
+   "type": "size_ao_quan",
+   "origin": "llm_gemini",
+   "answerable": true,
+   "question": "Mình cao 1m58 nặng 58kg mặc áo khoác jean này size nào vừa ạ?",
+   "gold": "Theo đánh giá của khách, bạn cao tầm 1m58 có thể mặc size XL sẽ vừa qua mông.",
+   "answer": "Hiện cửa hàng chưa có thông tin chính xác về size vừa cho người cao 1m58 nặng 58kg, nhưng theo review có khách cao 1m58 hoặc 1m59 mặc size XL vừa qua mông [C1], [C3].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_20051025686::review::14595806833",
+    "shopee_20051025686::review::15795424293"
+   ],
+   "cited_gold": true,
+   "retrieval_score": 23.9825460404936,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa245",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Thông tin dựa trên [C1] và [C3]."
+   }
+  },
+  {
+   "qid": "qa140",
+   "product_id": "shopee_20088433565",
+   "type": "ngoai_pham_vi",
+   "origin": "llm_gemini",
+   "answerable": false,
+   "question": "Bông tai này được sản xuất tại nhà máy nào?",
+   "gold": "Hiện cửa hàng chưa có thông tin về xuất xứ/nhà máy.",
+   "answer": "Hiện cửa hàng chưa có thông tin về nhà máy sản xuất bông tai này.",
+   "refused": true,
+   "refuse_reason": "llm",
+   "guard_triggered": false,
+   "citations": [],
+   "cited_gold": false,
+   "retrieval_score": 14.442978463091354,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa140",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": true,
+    "ly_do": "Từ chối do thiếu thông tin."
+   }
+  },
+  {
+   "qid": "qa108",
+   "product_id": "shopee_23579085440",
+   "type": "ngoai_pham_vi",
+   "origin": "llm_gemini",
+   "answerable": true,
+   "question": "Sản phẩm này gót cao đúng bao nhiêu cm vậy shop?",
+   "gold": "Theo tên sản phẩm và đánh giá của khách, gót cao 9cm (khách gọi là 9 phân).",
+   "answer": "Sản phẩm có gót cao 9cm [C3].",
+   "refused": false,
+   "refuse_reason": null,
+   "guard_triggered": false,
+   "citations": [
+    "shopee_23579085440::review::13217689629"
+   ],
+   "cited_gold": true,
+   "retrieval_score": 10.467874137347488,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa108",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": false,
+    "ly_do": "Đúng thông tin gót cao 9p từ [C3]."
+   }
+  },
+  {
+   "qid": "qa064",
+   "product_id": "shopee_26501424006",
+   "type": "ngoai_pham_vi",
+   "origin": "llm_gemini",
+   "answerable": false,
+   "question": "Chính sách bảo hành và đổi trả của vòng tay này như thế nào vậy shop?",
+   "gold": "Hiện cửa hàng chưa có thông tin về chính sách bảo hành và đổi trả của sản phẩm.",
+   "answer": "Hiện cửa hàng chưa có thông tin về chính sách bảo hành và đổi trả của vòng tay này.",
+   "refused": true,
+   "refuse_reason": "llm",
+   "guard_triggered": false,
+   "citations": [],
+   "cited_gold": false,
+   "retrieval_score": 15.69337451875551,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa064",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": true,
+    "ly_do": "Từ chối do thiếu thông tin bảo hành."
+   }
+  },
+  {
+   "qid": "qa084",
+   "product_id": "shopee_18177397403",
+   "type": "ngoai_pham_vi",
+   "origin": "llm_gemini",
+   "answerable": false,
+   "question": "Đôi dép này trọng lượng chính xác bao nhiêu gram vậy shop?",
+   "gold": "Hiện cửa hàng chưa có thông tin về trọng lượng chính xác bao nhiêu gram vậy shop.",
+   "answer": "Hiện cửa hàng chưa có thông tin về trọng lượng chính xác của dép.",
+   "refused": true,
+   "refuse_reason": "llm",
+   "guard_triggered": false,
+   "citations": [],
+   "cited_gold": false,
+   "retrieval_score": 6.083091146431962,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa084",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": true,
+    "ly_do": "Từ chối do không có trọng lượng chính xác."
+   }
+  },
+  {
+   "qid": "qa280",
+   "product_id": "shopee_16683003980",
+   "type": "chat_lieu",
+   "origin": "viet_tay_tac_nhan",
+   "answerable": false,
+   "question": "áo gradient này làm từ bao nhiêu % cotton",
+   "gold": "Hiện cửa hàng chưa có thông tin về tỉ lệ thành phần vải của sản phẩm.",
+   "answer": "Hiện cửa hàng chưa có thông tin về thành phần % cotton của áo gradient.",
+   "refused": true,
+   "refuse_reason": "llm",
+   "guard_triggered": false,
+   "citations": [],
+   "cited_gold": false,
+   "retrieval_score": 12.80222402172763,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa280",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": true,
+    "ly_do": "Từ chối do thiếu thông tin thành phần cotton."
+   }
+  },
+  {
+   "qid": "qa044",
+   "product_id": "shopee_20379413337",
+   "type": "gia",
+   "origin": "llm_gemini",
+   "answerable": false,
+   "question": "Đôi giày bít gót đúp 10cm này chính xác giá bao nhiêu tiền vậy shop?",
+   "gold": "Hiện cửa hàng chưa có thông tin về giá bán chính xác của sản phẩm này.",
+   "answer": "Hiện cửa hàng chưa có thông tin về giá bán hiện tại của đôi giày.",
+   "refused": true,
+   "refuse_reason": "llm",
+   "guard_triggered": false,
+   "citations": [],
+   "cited_gold": false,
+   "retrieval_score": 35.95440022389156,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa044",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": true,
+    "ly_do": "Từ chối do không có giá bán."
+   }
+  },
+  {
+   "qid": "qa040",
+   "product_id": "shopee_20287372743",
+   "type": "ngoai_pham_vi",
+   "origin": "llm_gemini",
+   "answerable": false,
+   "question": "Dép này xuất xứ từ đâu và bảo hành mấy tháng?",
+   "gold": "Hiện cửa hàng chưa có thông tin về xuất xứ và chính sách bảo hành của sản phẩm.",
+   "answer": "Hiện cửa hàng chưa có thông tin về xuất xứ và thời gian bảo hành của dép.",
+   "refused": true,
+   "refuse_reason": "llm",
+   "guard_triggered": false,
+   "citations": [],
+   "cited_gold": false,
+   "retrieval_score": 4.188118838897169,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa040",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": true,
+    "ly_do": "Từ chối do thiếu thông tin xuất xứ, bảo hành."
+   }
+  },
+  {
+   "qid": "qa188",
+   "product_id": "shopee_25115377961",
+   "type": "size_ao_quan",
+   "origin": "llm_gemini",
+   "answerable": false,
+   "question": "Shop có bán size 3XL cho người 90kg ko?",
+   "gold": "Hiện cửa hàng chưa có thông tin về size 3XL cho người 90kg.",
+   "answer": "Hiện cửa hàng chưa có thông tin về việc còn size 3XL hay không.",
+   "refused": true,
+   "refuse_reason": "llm",
+   "guard_triggered": false,
+   "citations": [],
+   "cited_gold": false,
+   "retrieval_score": 6.578731925478333,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa188",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": true,
+    "ly_do": "Từ chối do không có thông tin size 3XL."
+   }
+  },
+  {
+   "qid": "qa271",
+   "product_id": "shopee_11110297800",
+   "type": "size_ao_quan",
+   "origin": "viet_tay_tac_nhan",
+   "answerable": false,
+   "question": "Áo khoác COW màu kem còn size XL không shop?",
+   "gold": "Hiện cửa hàng chưa có thông tin về tình trạng còn hàng của màu kem size XL.",
+   "answer": "Hiện cửa hàng chưa có thông tin về tình trạng tồn kho size XL của áo màu kem.",
+   "refused": true,
+   "refuse_reason": "llm",
+   "guard_triggered": false,
+   "citations": [],
+   "cited_gold": false,
+   "retrieval_score": 25.203671626330436,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa271",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": true,
+    "ly_do": "Từ chối do thiếu thông tin tồn kho."
+   }
+  },
+  {
+   "qid": "qa072",
+   "product_id": "shopee_22649688486",
+   "type": "gia",
+   "origin": "llm_gemini",
+   "answerable": false,
+   "question": "Gọng kính này có giá bao nhiêu tiền vậy?",
+   "gold": "Hiện cửa hàng chưa có thông tin về giá bán chính xác của sản phẩm.",
+   "answer": "Hiện cửa hàng chưa có thông tin về giá bán hiện tại của gọng kính.",
+   "refused": true,
+   "refuse_reason": "llm",
+   "guard_triggered": false,
+   "citations": [],
+   "cited_gold": false,
+   "retrieval_score": 7.426625895894775,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa072",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": true,
+    "ly_do": "Từ chối do không có giá bán cụ thể."
+   }
+  },
+  {
+   "qid": "qa204",
+   "product_id": "shopee_26401551878",
+   "type": "ngoai_pham_vi",
+   "origin": "llm_gemini",
+   "answerable": false,
+   "question": "Shop có hỗ trợ freeship cho đơn hàng tỉnh không?",
+   "gold": "Hiện cửa hàng chưa có thông tin về chính sách freeship cho đơn hàng tỉnh.",
+   "answer": "Hiện cửa hàng chưa có thông tin về chính sách freeship cho đơn hàng tỉnh.",
+   "refused": true,
+   "refuse_reason": "llm",
+   "guard_triggered": false,
+   "citations": [],
+   "cited_gold": false,
+   "retrieval_score": 1.7027140504240692,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa204",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": true,
+    "ly_do": "Từ chối do không có thông tin freeship."
+   }
+  },
+  {
+   "qid": "qa239",
+   "product_id": "shopee_12544797855",
+   "type": "ngoai_pham_vi",
+   "origin": "llm_gemini",
+   "answerable": false,
+   "question": "Áo này còn hàng size S màu hồng không shop?",
+   "gold": "Hiện cửa hàng chưa có thông tin về tình trạng tồn kho cụ thể của size S màu hồng.",
+   "answer": "Hiện cửa hàng chưa có thông tin về việc còn hàng size S màu hồng hay không.",
+   "refused": true,
+   "refuse_reason": "llm",
+   "guard_triggered": false,
+   "citations": [],
+   "cited_gold": false,
+   "retrieval_score": 5.156247276378023,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa239",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": true,
+    "ly_do": "Từ chối do thiếu thông tin kho hàng."
+   }
+  },
+  {
+   "qid": "qa128",
+   "product_id": "shopee_25151389964",
+   "type": "ngoai_pham_vi",
+   "origin": "llm_gemini",
+   "answerable": false,
+   "question": "Đường kính chính xác của mỗi chiếc dây chun buộc tóc là bao nhiêu cm?",
+   "gold": "Hiện cửa hàng chưa có thông tin về đường kính chính xác của mỗi chiếc dây chun buộc tóc là bao nhiêu cm.",
+   "answer": "Hiện cửa hàng chưa có thông tin về đường kính chính xác của dây chun buộc tóc.",
+   "refused": true,
+   "refuse_reason": "llm",
+   "guard_triggered": false,
+   "citations": [],
+   "cited_gold": false,
+   "retrieval_score": 18.693109886230783,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa128",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": true,
+    "ly_do": "Từ chối do không có thông tin đường kính."
+   }
+  },
+  {
+   "qid": "qa052",
+   "product_id": "shopee_25965500997",
+   "type": "ngoai_pham_vi",
+   "origin": "llm_gemini",
+   "answerable": false,
+   "question": "Shop có chính sách bảo hành bong keo trong bao lâu vậy?",
+   "gold": "Hiện cửa hàng chưa có thông tin về chính sách bảo hành bong keo của sản phẩm.",
+   "answer": "Hiện cửa hàng chưa có thông tin về chính sách bảo hành bong keo.",
+   "refused": true,
+   "refuse_reason": "llm",
+   "guard_triggered": false,
+   "citations": [],
+   "cited_gold": false,
+   "retrieval_score": 9.467717533512127,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa052",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": true,
+    "ly_do": "Từ chối do thiếu thông tin bảo hành."
+   }
+  },
+  {
+   "qid": "qa196",
+   "product_id": "shopee_19234756774",
+   "type": "ngoai_pham_vi",
+   "origin": "llm_gemini",
+   "answerable": false,
+   "question": "Chính sách đổi trả hàng nếu không vừa size như thế nào?",
+   "gold": "Hiện cửa hàng chưa có thông tin về chính sách đổi trả hàng.",
+   "answer": "Hiện cửa hàng chưa có thông tin về chính sách đổi trả hàng.",
+   "refused": true,
+   "refuse_reason": "llm",
+   "guard_triggered": false,
+   "citations": [],
+   "cited_gold": false,
+   "retrieval_score": 5.36374926245778,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa196",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": true,
+    "ly_do": "Từ chối do thiếu chính sách đổi trả."
+   }
+  },
+  {
+   "qid": "qa008",
+   "product_id": "shopee_17498595412",
+   "type": "ngoai_pham_vi",
+   "origin": "llm_gemini",
+   "answerable": false,
+   "question": "Dép kẹp này có chính sách bảo hành đứt quai trong bao lâu?",
+   "gold": "Hiện cửa hàng chưa có thông tin về chính sách bảo hành.",
+   "answer": "Hiện cửa hàng chưa có thông tin về chính sách bảo hành đứt quai.",
+   "refused": true,
+   "refuse_reason": "llm",
+   "guard_triggered": false,
+   "citations": [],
+   "cited_gold": false,
+   "retrieval_score": 11.832733920043244,
+   "model": "gemini-3.5-flash-lite",
+   "judge": {
+    "qid": "qa008",
+    "faithfulness": 1.0,
+    "unsupported": false,
+    "relevant": true,
+    "refusal": true,
+    "ly_do": "Từ chối do thiếu thông tin bảo hành đứt quai."
+   }
+  }
+ ],
+ "luu_y": [
+  "Giám khảo là LLM cùng họ Gemini – có thiên lệch; cần người kiểm tay ≥ 50 mẫu (Bước 5 sheet Độ đo).",
+  "Sinh theo lô nhiều câu/lời gọi để tiết kiệm quota free tier (20 request/ngày/model); khi phục vụ thật dùng answer() từng câu.",
+  "Câu hỏi + bằng chứng do Gemini sinh, chưa có người duyệt."
+ ],
+ "lenh": "MSA_ENV_FILE=<.env> PYTHONPATH=src python src/scripts/eval_rag.py e2e --n 52 --batch 13",
+ "summary_truoc_sua_nhan": {
+  "n_cau": 52,
+  "n_loi_llm": 0,
+  "n_answerable": 36,
+  "n_khong_dap_an": 16,
+  "refusal_accuracy (answerable=false bị từ chối đúng)": 0.9375,
+  "false_refusal_rate (answerable bị từ chối)": 0.0,
+  "citation_rate (câu trả lời có ≥1 trích dẫn hợp lệ)": 1.0,
+  "cited_gold_rate (answerable được trả lời, trích trúng review bằng chứng)": 0.8611,
+  "faithfulness_judge_mean": 1.0,
+  "hallucination_rate_judge (câu trả lời không từ chối có nhận định không có trong ngữ cảnh)": 0.0,
+  "answer_relevancy_judge": 1.0,
+  "n_duoc_cham": 52,
+  "guard_triggered": 0,
+  "refusal_regex_khop_tren_cau_tu_choi": 15
+ },
+ "sua_nhan": [
+  "qa108"
+ ]
+}

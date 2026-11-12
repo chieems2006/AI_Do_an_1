@@ -1,0 +1,52 @@
+{
+ "n": 60,
+ "task_success_rate": 0.25,
+ "tsr_by_route": {
+  "clarify": 0.0,
+  "compare": 0.0,
+  "gemini_chitchat": 0.0,
+  "gemini_ood": 0.0,
+  "qa": 0.0,
+  "search": 0.0,
+  "visual": 0.8333
+ },
+ "n_by_route": {
+  "visual": 18,
+  "search": 10,
+  "qa": 10,
+  "compare": 6,
+  "gemini_chitchat": 6,
+  "gemini_ood": 6,
+  "clarify": 4
+ },
+ "route_accuracy": 0.3,
+ "latency_ms_p50": 0.0,
+ "latency_ms_p95": 332.73,
+ "gemini_rate": 0.0,
+ "tokens_per_100_turns": {
+  "in": 0.0,
+  "out": 0.0
+ },
+ "top10_errors": [
+  [
+   "error",
+   42
+  ],
+  [
+   "visual_no_match",
+   3
+  ]
+ ],
+ "cost_per_100_turns_usd": "CHƯA TÍNH – thiếu đơn giá [cần xác minh]",
+ "agent": "visual-only",
+ "note": "",
+ "visual_only": {
+  "n": 18,
+  "tsr": 0.8333,
+  "latency_ms_p50": 282.29,
+  "latency_ms_p95": 1118.05,
+  "errors": {
+   "visual_no_match": 3
+  }
+ }
+}

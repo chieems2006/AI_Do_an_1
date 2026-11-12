@@ -1,0 +1,41 @@
+{
+ "A_default": {
+  "n": 40,
+  "flagged_regex_v2": 2,
+  "flagged": [
+   {
+    "id": "trs_038",
+    "text": "dong ho casio nao dep",
+    "facts": [
+     "danh_muc"
+    ],
+    "answer": "Cửa hàng mình hiện có nhiều mẫu đồng hồ Casio phong cách từ trẻ trung đến lịch lãm rất dễ phối đồ nha bạn. Bạn thích kiểu dây da cổ điển hay dây kim loại cá tính hơn?"
+   },
+   {
+    "id": "r038",
+    "text": "khuyên tai nam châm không cần bấm lỗ",
+    "facts": [
+     "danh_muc"
+    ],
+    "answer": "Chào bạn, khuyên tai nam châm không cần bấm lỗ là một phụ kiện cực kỳ tiện lợi và thời trang để thay đổi phong cách mỗi ngày! Cửa hàng mình có rất nhiều mẫu mã cá tính và hiện đại đang chờ bạn khám phá. Bạn có muốn ghé qua xem thử các mẫu phụ kiện hot nhất hiện nay không?"
+   }
+  ]
+ },
+ "B_thinking1024": {
+  "n": 10,
+  "flagged_regex_v2": 0,
+  "flagged": []
+ },
+ "kiem_tay_A": {
+  "nguoi_kiem": "tác nhân AI (vai Trung) – nhóm cần kiểm lại",
+  "neu_gia_size_ton_kho_khuyen_mai": 0,
+  "khang_dinh_cua_hang_co_hang_ngoai_danh_muc": [
+   "trs_038 (đồng hồ Casio)",
+   "r038 (khuyên tai nam châm)"
+  ],
+  "regex_v1_bat_nham": [
+   "r064 (ký hiệu $ trong công thức toán)"
+  ]
+ },
+ "ghi_chu": "regex v1: 1 cờ sai (r064) và bỏ sót 2 câu khẳng định cửa hàng có bán đồng hồ/khuyên tai. regex v2: '$' phải đứng trước số + thêm mẫu 'danh_muc'. Unsupported-store-fact (kiểm tay) = 2/40 = 0.05 trên cấu hình A."
+}

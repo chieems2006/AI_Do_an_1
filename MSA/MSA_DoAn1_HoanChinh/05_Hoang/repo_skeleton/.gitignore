@@ -1,0 +1,21 @@
+# bí mật
+.env
+.env.*
+!.env.example
+*.secret
+# dữ liệu & artefact lớn (tái lập bằng scripts/01*, 02*, build_index)
+data/raw/
+data/images/
+data/processed/*.parquet
+data/cache/
+results/cache/
+*.npy
+*.faiss
+*.sqlite
+logs/
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+.ipynb_checkpoints/

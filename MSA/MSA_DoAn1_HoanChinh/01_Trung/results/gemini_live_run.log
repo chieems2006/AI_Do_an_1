@@ -1,0 +1,153 @@
+[A_default] trs_027 gemini_chitchat lat=13172.1 tok=160/35/0 err=None facts=[]
+[A_default] trs_028 gemini_chitchat lat=40799.8 tok=163/39/0 err=None facts=[]
+[A_default] trs_029 gemini_chitchat lat=15858.4 tok=167/48/0 err=None facts=[]
+[A_default] trs_030 gemini_chitchat lat=13384.4 tok=163/66/0 err=None facts=[]
+[A_default] trs_031 gemini_chitchat lat=20825.6 tok=164/40/0 err=None facts=[]
+[A_default] trs_032 gemini_chitchat lat=39424.4 tok=161/30/0 err=None facts=[]
+[A_default] trs_033 gemini_ood lat=9006.8 tok=165/52/0 err=None facts=[]
+[A_default] trs_034 gemini_ood lat=28206.8 tok=168/84/0 err=None facts=[]
+[A_default] trs_035 gemini_ood lat=16608.2 tok=166/85/0 err=None facts=[]
+[A_default] trs_036 gemini_ood lat=11121.2 tok=170/88/0 err=None facts=[]
+[A_default] trs_037 gemini_ood lat=12450.6 tok=164/56/0 err=None facts=[]
+[A_default] trs_038 gemini_ood lat=17155.8 tok=163/43/0 err=None facts=[]
+[A_default] trs_039 gemini_ood lat=14978.9 tok=167/78/0 err=None facts=[]
+[A_default] r038 gemini_ood lat=16520.5 tok=167/70/0 err=None facts=[]
+[A_default] r049 gemini_chitchat lat=21487.7 tok=160/36/0 err=None facts=[]
+[A_default] r050 gemini_chitchat lat=15368.1 tok=163/39/0 err=None facts=[]
+[A_default] r051 gemini_chitchat lat=20980.9 tok=167/32/0 err=None facts=[]
+[A_default] r052 gemini_chitchat lat=53434.7 tok=162/60/0 err=None facts=[]
+[A_default] r053 gemini_chitchat lat=46159.7 tok=165/50/0 err=None facts=[]
+[A_default] r054 gemini_chitchat lat=9495.8 tok=162/64/0 err=None facts=[]
+[A_default] r055 gemini_chitchat lat=17043.7 tok=164/47/0 err=None facts=[]
+[A_default] r056 gemini_chitchat lat=20647.7 tok=161/46/0 err=None facts=[]
+[A_default] r057 gemini_ood lat=9280.1 tok=168/71/0 err=None facts=[]
+[A_default] r058 gemini_ood lat=13475.8 tok=170/76/0 err=None facts=[]
+[A_default] r060 gemini_ood lat=14127.6 tok=165/43/0 err=None facts=[]
+[A_default] r061 gemini_ood lat=38913.5 tok=169/78/0 err=None facts=[]
+[A_default] r062 gemini_ood lat=12882.3 tok=164/54/0 err=None facts=[]
+[A_default] r063 gemini_ood lat=13739.8 tok=166/61/0 err=None facts=[]
+[A_default] r064 gemini_ood lat=13383.6 tok=174/67/0 err=None facts=['gia']
+[A_default] r065 gemini_ood lat=13267.8 tok=166/93/0 err=None facts=[]
+[A_default] r066 gemini_ood lat=14600.0 tok=165/61/0 err=None facts=[]
+[A_default] r067 gemini_ood lat=11151.4 tok=167/53/0 err=None facts=[]
+[A_default] r068 gemini_ood lat=40439.8 tok=166/57/0 err=None facts=[]
+[A_default] r069 gemini_ood lat=13109.9 tok=166/58/0 err=None facts=[]
+[A_default] trg_029 gemini_chitchat lat=12569.7 tok=166/38/0 err=None facts=[]
+[A_default] trg_030 gemini_chitchat lat=7074.4 tok=163/38/0 err=None facts=[]
+[A_default] trg_032 gemini_chitchat lat=15474.8 tok=164/43/0 err=None facts=[]
+[A_default] trg_033 gemini_chitchat lat=8329.7 tok=166/51/0 err=None facts=[]
+[A_default] trg_034 gemini_chitchat lat=7940.5 tok=163/40/0 err=None facts=[]
+[A_default] trg_035 gemini_chitchat lat=7926.7 tok=164/48/0 err=None facts=[]
+[B_thinking1024] trs_027 gemini_chitchat lat=49864.0 tok=160/37/337 err=None facts=[]
+[B_thinking1024] trs_028 gemini_chitchat lat=22918.4 tok=163/47/304 err=None facts=[]
+[B_thinking1024] trs_029 gemini_chitchat lat=87189.2 tok=167/60/402 err=None facts=[]
+[B_thinking1024] trs_030 gemini_chitchat lat=9186.2 tok=163/61/445 err=None facts=[]
+[B_thinking1024] trs_031 gemini_chitchat lat=7997.8 tok=164/46/296 err=None facts=[]
+[B_thinking1024] trs_032 gemini_chitchat lat=19438.0 tok=161/30/289 err=None facts=[]
+[B_thinking1024] trs_033 gemini_ood lat=47138.1 tok=165/0/0 err=None facts=[]
+[B_thinking1024] trs_034 gemini_ood lat=19386.4 tok=168/55/451 err=None facts=[]
+[B_thinking1024] trs_035 gemini_ood lat=14093.7 tok=166/18/490 err=None facts=[]
+[B_thinking1024] trs_036 gemini_ood lat=26734.3 tok=170/19/489 err=None facts=[]
+[C_cache] trs_027 gemini_chitchat lat=1.6 tok=160/36/0 err=None facts=[]
+[C_cache] trs_028 gemini_chitchat lat=0.4 tok=163/39/0 err=None facts=[]
+[C_cache] trs_029 gemini_chitchat lat=0.3 tok=167/48/0 err=None facts=[]
+[C_cache] trs_030 gemini_chitchat lat=0.3 tok=163/66/0 err=None facts=[]
+[C_cache] trs_031 gemini_chitchat lat=0.2 tok=164/40/0 err=None facts=[]
+[C_cache] trs_032 gemini_chitchat lat=0.2 tok=161/30/0 err=None facts=[]
+[C_cache] trs_033 gemini_ood lat=0.3 tok=165/52/0 err=None facts=[]
+[C_cache] trs_034 gemini_ood lat=0.3 tok=168/84/0 err=None facts=[]
+[C_cache] trs_035 gemini_ood lat=0.3 tok=166/85/0 err=None facts=[]
+[C_cache] trs_036 gemini_ood lat=0.3 tok=170/88/0 err=None facts=[]
+{
+ "config": {
+  "model": "gemini-3.5-flash-lite",
+  "router": "router_v1_rule (results/router_v1_frozen.py.txt)",
+  "prompt_version": "trung-v1",
+  "system_prompt": "GEMINI_SYSTEM_PROMPT trong src/msa/agent/router.py",
+  "max_output_tokens": 512,
+  "temperature": 0.4,
+  "sleep_s": 4.0,
+  "date": "2026-11-05 00:28",
+  "hardware": "2 CPU, 7 GB RAM (cloud sandbox) + mạng qua proxy",
+  "note": "gemini-3.5-flash bị 429 (free tier 20 request/ngày/model, đã hết trong ngày) -> đo trên gemini-3.5-flash-lite"
+ },
+ "routing": {
+  "per_set": {
+   "seed_trung": {
+    "n": 45,
+    "routed_gemini": 13,
+    "fallback_rate": 0.289,
+    "routed_clarify": 6
+   },
+   "chien_eval_router": {
+    "n": 78,
+    "routed_gemini": 21,
+    "fallback_rate": 0.269,
+    "routed_clarify": 11
+   },
+   "gemini_gen_heldout": {
+    "n": 49,
+    "routed_gemini": 13,
+    "fallback_rate": 0.265,
+    "routed_clarify": 10
+   }
+  },
+  "total_turns": 172,
+  "total_routed_gemini": 47,
+  "fallback_rate_all": 0.273
+ },
+ "A_default": {
+  "n_rows": 40,
+  "n_ok_api": 40,
+  "n_error": 0,
+  "n_cached": 0,
+  "latency_ms_p50": 14363.8,
+  "latency_ms_p95": 41067.8,
+  "latency_ms_mean": 18545.5,
+  "tokens_in_mean": 165.1,
+  "tokens_out_mean": 55.5,
+  "tokens_thinking_mean": 0,
+  "tokens_total_mean": 220.6,
+  "store_fact_raw": 1,
+  "store_fact_after_postcheck": 1,
+  "store_fact_raw_ids": [
+   "r064"
+  ],
+  "finish_reasons": {
+   "STOP": 40
+  }
+ },
+ "B_thinking": {
+  "n_rows": 10,
+  "n_ok_api": 10,
+  "n_error": 0,
+  "n_cached": 0,
+  "latency_ms_p50": 21178.2,
+  "latency_ms_p95": 70392.9,
+  "latency_ms_mean": 30394.6,
+  "tokens_in_mean": 164.7,
+  "tokens_out_mean": 37.3,
+  "tokens_thinking_mean": 350.3,
+  "tokens_total_mean": 552.3,
+  "store_fact_raw": 0,
+  "store_fact_after_postcheck": 0,
+  "store_fact_raw_ids": [],
+  "finish_reasons": {
+   "STOP": 7,
+   "MALFORMED_RESPONSE": 1,
+   "MAX_TOKENS": 2
+  }
+ },
+ "C_cache": {
+  "n": 10,
+  "hits": 10,
+  "latency_ms_p50": 0.3
+ },
+ "tokens_per_100_turns": {
+  "A_default": 6028.0,
+  "B_thinking": 15092.0,
+  "cong_thuc": "fallback_rate × 100 × token_tb_mỗi_lời_gọi (in+out+thinking); chưa trừ cache",
+  "don_gia": "[cần xác minh – điền theo bảng giá Google hiện hành] chi_phí = tokens_in×giá_in + (tokens_out+thinking)×giá_out"
+ },
+ "api_calls_made": 62
+}

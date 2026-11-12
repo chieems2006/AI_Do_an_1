@@ -1,0 +1,11 @@
+{
+ "muc_dich": "Đo ảnh hưởng của thinkingBudget lên token và độ trễ của gemini-3.5-flash (1 câu hỏi ngắn tiếng Việt, n=1 mỗi cấu hình – chỉ là đo thăm dò, không phải benchmark)",
+ "ngay": "2026-11-04",
+ "prompt": "Chào bạn, trả lời 1 câu ngắn: áo cotton có co khi giặt không?",
+ "ket_qua": [
+  {"thinkingBudget": 0, "tokens_in": 20, "tokens_out": 36, "tokens_thinking": 0, "latency_ms": 1340.3, "finish_reason": "STOP"},
+  {"thinkingBudget": "mặc định (không đặt)", "tokens_in": 20, "tokens_out": 20, "tokens_thinking": 388, "latency_ms": 15952.7, "finish_reason": "STOP"}
+ ],
+ "ket_luan": "generationConfig.thinkingConfig.thinkingBudget=0 được API chấp nhận và tắt thinking; mọi lời gọi còn lại trong lượt này dùng thinkingBudget=0.",
+ "lenh_tai_lap": "PYTHONPATH=src python -c \"from msa.rag.llm import GeminiClient; print(GeminiClient(thinking_budget=0).generate('...', use_cache=False))\""
+}

@@ -1,0 +1,29 @@
+[OK  ] python>=3.10: 3.13.18
+[OK  ] import numpy: 2.5.3 (ghim 2.5.3)
+[OK  ] import pandas: 3.0.5 (ghim 3.0.5)
+[OK  ] import pyarrow: 26.0.1 (ghim 26.0.1)
+[OK  ] import PIL: 12.3.0 (ghim 12.3.0)
+[OK  ] import imagehash: 4.3.2 (ghim 4.3.2)
+[OK  ] import sklearn: 1.9.1 (ghim 1.9.1)
+[OK  ] import faiss: 1.15.1 (ghim 1.15.1)
+[OK  ] import torch: 2.15.0 (ghim 2.15.0)
+[OK  ] import transformers: 5.22.1 (ghim 5.22.1)
+[OK  ] import sentence_transformers: 6.2.0 (ghim 6.2.0)
+[OK  ] import open_clip: 3.3.0 (ghim 3.3.0)
+[OK  ] import fastapi: 0.162.0 (ghim 0.162.0)
+[OK  ] import uvicorn: 0.54.0 (ghim 0.54.0)
+[OK  ] import httpx: 0.28.1 (ghim 0.28.1)
+[OK  ] import pydantic: 2.13.5 (ghim 2.13.5)
+[OK  ] import multipart: 0.0.32 (ghim 0.0.32)
+[OK  ] import pytest: 9.1.1 (ghim 9.1.1)
+[OK  ] import gradio: 6.31.0 (ghim 6.31.0)
+[OK  ] import matplotlib: 3.11.2 (ghim 3.11.2)
+[OK  ] import huggingface_hub: 2.4.0 (ghim 2.4.0)
+[OK  ] RAM >= 6 GB: 7.8 GB
+[OK  ] đĩa trống >= 5 GB: 13.4 GB
+[OK  ] cấu trúc thư mục: đủ
+[CẢNH BÁO] GEMINI_API_KEY đã đặt: không – đặt trong .env hoặc MSA_LLM_MOCK=1
+[OK  ] GEMINI_MODEL: gemini-3.5-flash (mặc định)
+[OK  ] faiss search: IndexFlatIP OK
+[OK  ] torch CPU matmul: threads=2
+=> MÔI TRƯỜNG SẴN SÀNG (17.45 s)

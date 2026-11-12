@@ -1,0 +1,1778 @@
+{
+ "config": {
+  "router": "router_v1_rule+e5small_proto",
+  "tau_intent": 0.6,
+  "embedder": "intfloat/multilingual-e5-small",
+  "data_version": "shared_data v1 (prep_shared_data.py seed 42)"
+ },
+ "sets": {
+  "seed_trung": {
+   "path": "/home/claude/work/stage1/01_Trung/eval/eval_router_seed.jsonl",
+   "n": 45,
+   "route_accuracy": 1.0,
+   "route_accuracy_gemini_merged": 1.0,
+   "per_route": {
+    "visual": {
+     "support": 6,
+     "recall": 1.0,
+     "precision": 1.0
+    },
+    "qa": {
+     "support": 7,
+     "recall": 1.0,
+     "precision": 1.0
+    },
+    "search": {
+     "support": 7,
+     "recall": 1.0,
+     "precision": 1.0
+    },
+    "compare": {
+     "support": 6,
+     "recall": 1.0,
+     "precision": 1.0
+    },
+    "gemini_chitchat": {
+     "support": 6,
+     "recall": 1.0,
+     "precision": 1.0
+    },
+    "gemini_ood": {
+     "support": 7,
+     "recall": 1.0,
+     "precision": 1.0
+    },
+    "clarify": {
+     "support": 6,
+     "recall": 1.0,
+     "precision": 1.0
+    }
+   },
+   "gemini_detection": {
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "predicted_gemini_rate": 0.289,
+   "predicted_clarify_rate": 0.133,
+   "in_domain_pushed_to_gemini": 0,
+   "confusion": {
+    "visual": {
+     "visual": 6
+    },
+    "qa": {
+     "qa": 7
+    },
+    "search": {
+     "search": 7
+    },
+    "compare": {
+     "compare": 6
+    },
+    "gemini_chitchat": {
+     "gemini_chitchat": 6
+    },
+    "gemini_ood": {
+     "gemini_ood": 7
+    },
+    "clarify": {
+     "clarify": 6
+    }
+   },
+   "latency_ms_p50": 245.43,
+   "latency_ms_p95": 726.882,
+   "errors": [],
+   "rows": [
+    {
+     "id": "trs_001",
+     "text": "",
+     "gold": "visual",
+     "pred": "visual",
+     "conf": 0.95,
+     "reason": "co_anh"
+    },
+    {
+     "id": "trs_002",
+     "text": "tìm đôi giống thế này",
+     "gold": "visual",
+     "pred": "visual",
+     "conf": 0.95,
+     "reason": "co_anh"
+    },
+    {
+     "id": "trs_003",
+     "text": "co mau nao giong cai mu nay ko",
+     "gold": "visual",
+     "pred": "visual",
+     "conf": 0.95,
+     "reason": "co_anh"
+    },
+    {
+     "id": "trs_004",
+     "text": "shop có cái túi như ảnh không ạ",
+     "gold": "visual",
+     "pred": "visual",
+     "conf": 0.95,
+     "reason": "co_anh"
+    },
+    {
+     "id": "trs_005",
+     "text": "ảnh này là áo gì vậy, tìm giúp mình mẫu tương tự",
+     "gold": "visual",
+     "pred": "visual",
+     "conf": 0.95,
+     "reason": "co_anh"
+    },
+    {
+     "id": "trs_006",
+     "text": "cai nay bao nhieu tien",
+     "gold": "visual",
+     "pred": "visual",
+     "conf": 0.95,
+     "reason": "co_anh"
+    },
+    {
+     "id": "trs_007",
+     "text": "Đôi này đi có êm chân không?",
+     "gold": "qa",
+     "pred": "qa",
+     "conf": 0.923,
+     "reason": "luat"
+    },
+    {
+     "id": "trs_008",
+     "text": "áo khoác này chất liệu gì vậy shop",
+     "gold": "qa",
+     "pred": "qa",
+     "conf": 0.923,
+     "reason": "luat"
+    },
+    {
+     "id": "trs_009",
+     "text": "dep nay di mua mua co tron khong",
+     "gold": "qa",
+     "pred": "qa",
+     "conf": 0.803,
+     "reason": "luat"
+    },
+    {
+     "id": "trs_010",
+     "text": "mũ này có bị phai màu khi giặt ko",
+     "gold": "qa",
+     "pred": "qa",
+     "conf": 0.902,
+     "reason": "luat"
+    },
+    {
+     "id": "trs_011",
+     "text": "mọi người đánh giá đôi dép YZ slide này thế nào?",
+     "gold": "qa",
+     "pred": "qa",
+     "conf": 0.918,
+     "reason": "luat"
+    },
+    {
+     "id": "trs_012",
+     "text": "size có chuẩn không hay phải lấy lên 1 size",
+     "gold": "qa",
+     "pred": "qa",
+     "conf": 0.857,
+     "reason": "luat"
+    },
+    {
+     "id": "trs_013",
+     "text": "giao hàng có nhanh không, đóng gói ổn không",
+     "gold": "qa",
+     "pred": "qa",
+     "conf": 0.879,
+     "reason": "luat"
+    },
+    {
+     "id": "trs_014",
+     "text": "tìm giày thể thao nam màu trắng dưới 1 triệu",
+     "gold": "search",
+     "pred": "search",
+     "conf": 0.893,
+     "reason": "luat"
+    },
+    {
+     "id": "trs_015",
+     "text": "co dep quai ngang nu ko shop",
+     "gold": "search",
+     "pred": "search",
+     "conf": 0.833,
+     "reason": "luat"
+    },
+    {
+     "id": "trs_016",
+     "text": "mình cần mua áo khoác chống nắng cho nữ",
+     "gold": "search",
+     "pred": "search",
+     "conf": 0.9,
+     "reason": "luat"
+    },
+    {
+     "id": "trs_017",
+     "text": "gợi ý mũ lưỡi trai unisex màu đen",
+     "gold": "search",
+     "pred": "search",
+     "conf": 0.9,
+     "reason": "luat"
+    },
+    {
+     "id": "trs_018",
+     "text": "tim tui deo cheo cho nam gia re",
+     "gold": "search",
+     "pred": "search",
+     "conf": 0.9,
+     "reason": "luat"
+    },
+    {
+     "id": "trs_019",
+     "text": "có giày cao gót 7 phân màu kem không",
+     "gold": "search",
+     "pred": "search",
+     "conf": 0.864,
+     "reason": "luat"
+    },
+    {
+     "id": "trs_020",
+     "text": "cho xem mấy mẫu kính râm nữ",
+     "gold": "search",
+     "pred": "search",
+     "conf": 0.863,
+     "reason": "luat"
+    },
+    {
+     "id": "trs_021",
+     "text": "so sánh 2 đôi đầu tiên giúp mình",
+     "gold": "compare",
+     "pred": "compare",
+     "conf": 0.857,
+     "reason": "luat"
+    },
+    {
+     "id": "trs_022",
+     "text": "đôi thứ 1 với đôi thứ 3 cái nào bền hơn",
+     "gold": "compare",
+     "pred": "compare",
+     "conf": 0.875,
+     "reason": "luat"
+    },
+    {
+     "id": "trs_023",
+     "text": "Vans slip-on và giày cao gót LCC4 khác nhau thế nào",
+     "gold": "compare",
+     "pred": "compare",
+     "conf": 0.88,
+     "reason": "luat"
+    },
+    {
+     "id": "trs_024",
+     "text": "ss giúp e áo khoác lông tai gấu vs áo khoác gió PEABOO",
+     "gold": "compare",
+     "pred": "compare",
+     "conf": 0.889,
+     "reason": "luat"
+    },
+    {
+     "id": "trs_025",
+     "text": "nên chọn dép YZ hay dép bánh mì NY?",
+     "gold": "compare",
+     "pred": "compare",
+     "conf": 0.889,
+     "reason": "luat"
+    },
+    {
+     "id": "trs_026",
+     "text": "so sanh 3 cai mu vua tim",
+     "gold": "compare",
+     "pred": "compare",
+     "conf": 0.8,
+     "reason": "luat"
+    },
+    {
+     "id": "trs_027",
+     "text": "chào shop",
+     "gold": "gemini_chitchat",
+     "pred": "gemini_chitchat",
+     "conf": 0.844,
+     "reason": "luat"
+    },
+    {
+     "id": "trs_028",
+     "text": "cảm ơn bạn nhiều nha",
+     "gold": "gemini_chitchat",
+     "pred": "gemini_chitchat",
+     "conf": 0.84,
+     "reason": "luat"
+    },
+    {
+     "id": "trs_029",
+     "text": "bạn là ai thế, người hay máy?",
+     "gold": "gemini_chitchat",
+     "pred": "gemini_chitchat",
+     "conf": 0.75,
+     "reason": "luat"
+    },
+    {
+     "id": "trs_030",
+     "text": "hôm nay mình buồn quá",
+     "gold": "gemini_chitchat",
+     "pred": "gemini_chitchat",
+     "conf": 0.818,
+     "reason": "luat"
+    },
+    {
+     "id": "trs_031",
+     "text": "hihi bot dễ thương ghê",
+     "gold": "gemini_chitchat",
+     "pred": "gemini_chitchat",
+     "conf": 0.805,
+     "reason": "luat"
+    },
+    {
+     "id": "trs_032",
+     "text": "tạm biệt nhé",
+     "gold": "gemini_chitchat",
+     "pred": "gemini_chitchat",
+     "conf": 0.841,
+     "reason": "luat"
+    },
+    {
+     "id": "trs_033",
+     "text": "thời tiết Hà Nội mai thế nào",
+     "gold": "gemini_ood",
+     "pred": "gemini_ood",
+     "conf": 0.857,
+     "reason": "luat"
+    },
+    {
+     "id": "trs_034",
+     "text": "viết giúp mình đoạn code python sắp xếp mảng",
+     "gold": "gemini_ood",
+     "pred": "gemini_ood",
+     "conf": 0.857,
+     "reason": "luat"
+    },
+    {
+     "id": "trs_035",
+     "text": "cách phối đồ đi đám cưới cho nam",
+     "gold": "gemini_ood",
+     "pred": "gemini_ood",
+     "conf": 0.671,
+     "reason": "luat"
+    },
+    {
+     "id": "trs_036",
+     "text": "làm sao để giặt giày trắng không bị ố vàng",
+     "gold": "gemini_ood",
+     "pred": "gemini_ood",
+     "conf": 0.833,
+     "reason": "luat"
+    },
+    {
+     "id": "trs_037",
+     "text": "kết quả bóng đá tối qua",
+     "gold": "gemini_ood",
+     "pred": "gemini_ood",
+     "conf": 0.857,
+     "reason": "luat"
+    },
+    {
+     "id": "trs_038",
+     "text": "dong ho casio nao dep",
+     "gold": "gemini_ood",
+     "pred": "gemini_ood",
+     "conf": 0.857,
+     "reason": "luat"
+    },
+    {
+     "id": "trs_039",
+     "text": "xu hướng thời trang thu đông năm nay là gì",
+     "gold": "gemini_ood",
+     "pred": "gemini_ood",
+     "conf": 0.833,
+     "reason": "luat"
+    },
+    {
+     "id": "trs_040",
+     "text": "cái này sao",
+     "gold": "clarify",
+     "pred": "clarify",
+     "conf": 0.3,
+     "reason": "mo_ho"
+    },
+    {
+     "id": "trs_041",
+     "text": "còn không shop",
+     "gold": "clarify",
+     "pred": "clarify",
+     "conf": 0.3,
+     "reason": "mo_ho"
+    },
+    {
+     "id": "trs_042",
+     "text": "tư vấn giúp mình với",
+     "gold": "clarify",
+     "pred": "clarify",
+     "conf": 0.3,
+     "reason": "mo_ho"
+    },
+    {
+     "id": "trs_043",
+     "text": "có bền không?",
+     "gold": "clarify",
+     "pred": "clarify",
+     "conf": 0.5,
+     "reason": "duoi_tau"
+    },
+    {
+     "id": "trs_044",
+     "text": "so sánh giúp mình",
+     "gold": "clarify",
+     "pred": "clarify",
+     "conf": 0.5,
+     "reason": "duoi_tau"
+    },
+    {
+     "id": "trs_045",
+     "text": "đôi thứ 2",
+     "gold": "clarify",
+     "pred": "clarify",
+     "conf": 0.517,
+     "reason": "duoi_tau"
+    }
+   ]
+  },
+  "chien_eval_router": {
+   "path": "/home/claude/work/stage1/03_Chien/eval/eval_router.jsonl",
+   "n": 78,
+   "route_accuracy": 0.8462,
+   "route_accuracy_gemini_merged": 0.8718,
+   "per_route": {
+    "visual": {
+     "support": 11,
+     "recall": 1.0,
+     "precision": 1.0
+    },
+    "qa": {
+     "support": 15,
+     "recall": 0.867,
+     "precision": 1.0
+    },
+    "search": {
+     "support": 13,
+     "recall": 0.692,
+     "precision": 1.0
+    },
+    "compare": {
+     "support": 9,
+     "recall": 0.889,
+     "precision": 1.0
+    },
+    "gemini_chitchat": {
+     "support": 11,
+     "recall": 0.727,
+     "precision": 1.0
+    },
+    "gemini_ood": {
+     "support": 10,
+     "recall": 0.8,
+     "precision": 0.727
+    },
+    "clarify": {
+     "support": 9,
+     "recall": 1.0,
+     "precision": 0.5
+    }
+   },
+   "gemini_detection": {
+    "recall": 0.857,
+    "precision": 0.947
+   },
+   "predicted_gemini_rate": 0.244,
+   "predicted_clarify_rate": 0.231,
+   "in_domain_pushed_to_gemini": 1,
+   "confusion": {
+    "visual": {
+     "visual": 11
+    },
+    "qa": {
+     "clarify": 2,
+     "qa": 13
+    },
+    "search": {
+     "search": 9,
+     "clarify": 3,
+     "gemini_ood": 1
+    },
+    "compare": {
+     "compare": 8,
+     "clarify": 1
+    },
+    "gemini_chitchat": {
+     "gemini_chitchat": 8,
+     "gemini_ood": 2,
+     "clarify": 1
+    },
+    "gemini_ood": {
+     "gemini_ood": 8,
+     "clarify": 2
+    },
+    "clarify": {
+     "clarify": 9
+    }
+   },
+   "latency_ms_p50": 146.28,
+   "latency_ms_p95": 495.472,
+   "errors": [
+    {
+     "id": "r012",
+     "text": "Áo Khoác Gió Nữ 2 Lớp Cao Cấp Hidoli có chống nước thật không?",
+     "gold": "qa",
+     "pred": "clarify",
+     "conf": 0.598,
+     "reason": "duoi_tau"
+    },
+    {
+     "id": "r020",
+     "text": "Tất cổ cao nữ trơn 3 màu có dày không ạ",
+     "gold": "qa",
+     "pred": "clarify",
+     "conf": 0.545,
+     "reason": "duoi_tau"
+    },
+    {
+     "id": "r033",
+     "text": "kính cận gọng trong suốt có sẵn độ",
+     "gold": "search",
+     "pred": "clarify",
+     "conf": 0.348,
+     "reason": "duoi_tau"
+    },
+    {
+     "id": "r034",
+     "text": "giày sandal nữ mũi vuông đế 7cm",
+     "gold": "search",
+     "pred": "clarify",
+     "conf": 0.352,
+     "reason": "duoi_tau"
+    },
+    {
+     "id": "r038",
+     "text": "khuyên tai nam châm không cần bấm lỗ",
+     "gold": "search",
+     "pred": "gemini_ood",
+     "conf": 0.745,
+     "reason": "luat"
+    },
+    {
+     "id": "r039",
+     "text": "mũ lưỡi trai đen đi phượt",
+     "gold": "search",
+     "pred": "clarify",
+     "conf": 0.468,
+     "reason": "duoi_tau"
+    },
+    {
+     "id": "r047",
+     "text": "dây chuyền Lovito với vòng cổ MAYEBE, cái nào ít bị đen hơn",
+     "gold": "compare",
+     "pred": "clarify",
+     "conf": 0.5,
+     "reason": "duoi_tau"
+    },
+    {
+     "id": "r057",
+     "text": "trời mưa thế này mặc gì cho hợp nhỉ?",
+     "gold": "gemini_chitchat",
+     "pred": "gemini_ood",
+     "conf": 0.627,
+     "reason": "luat"
+    },
+    {
+     "id": "r058",
+     "text": "đi đám cưới bạn thân nên phối đồ thế nào cho lịch sự",
+     "gold": "gemini_chitchat",
+     "pred": "gemini_ood",
+     "conf": 0.82,
+     "reason": "luat"
+    },
+    {
+     "id": "r059",
+     "text": "mai đi Đà Lạt nên mang áo gì",
+     "gold": "gemini_chitchat",
+     "pred": "clarify",
+     "conf": 0.375,
+     "reason": "duoi_tau"
+    },
+    {
+     "id": "r065",
+     "text": "làm sao để nấu phở bò ngon",
+     "gold": "gemini_ood",
+     "pred": "clarify",
+     "conf": 0.253,
+     "reason": "duoi_tau"
+    },
+    {
+     "id": "r066",
+     "text": "chỉ mình cách hack facebook người khác",
+     "gold": "gemini_ood",
+     "pred": "clarify",
+     "conf": 0.299,
+     "reason": "duoi_tau"
+    }
+   ],
+   "rows": [
+    {
+     "id": "r001",
+     "text": "tìm giúp mình đôi giày giống trong ảnh này",
+     "gold": "visual",
+     "pred": "visual",
+     "conf": 0.95,
+     "reason": "co_anh"
+    },
+    {
+     "id": "r002",
+     "text": "có mẫu nào giống cái áo này ko shop",
+     "gold": "visual",
+     "pred": "visual",
+     "conf": 0.95,
+     "reason": "co_anh"
+    },
+    {
+     "id": "r003",
+     "text": "tim ao giong hinh",
+     "gold": "visual",
+     "pred": "visual",
+     "conf": 0.95,
+     "reason": "co_anh"
+    },
+    {
+     "id": "r004",
+     "text": "Mình chụp được cái túi này ngoài đường, shop có bán không?",
+     "gold": "visual",
+     "pred": "visual",
+     "conf": 0.95,
+     "reason": "co_anh"
+    },
+    {
+     "id": "r005",
+     "text": "kiếm giùm mẫu dép tương tự ảnh, size 39",
+     "gold": "visual",
+     "pred": "visual",
+     "conf": 0.95,
+     "reason": "co_anh"
+    },
+    {
+     "id": "r006",
+     "text": "cái mũ trong hình mua ở đâu v",
+     "gold": "visual",
+     "pred": "visual",
+     "conf": 0.95,
+     "reason": "co_anh"
+    },
+    {
+     "id": "r007",
+     "text": "Tìm sản phẩm tương tự như ảnh nhưng màu đen",
+     "gold": "visual",
+     "pred": "visual",
+     "conf": 0.95,
+     "reason": "co_anh"
+    },
+    {
+     "id": "r008",
+     "text": "hàng giống ảnh này mà rẻ hơn có ko",
+     "gold": "visual",
+     "pred": "visual",
+     "conf": 0.95,
+     "reason": "co_anh"
+    },
+    {
+     "id": "r009",
+     "text": "",
+     "gold": "visual",
+     "pred": "visual",
+     "conf": 0.95,
+     "reason": "co_anh"
+    },
+    {
+     "id": "r010",
+     "text": "sp nay co mau tuong tu k",
+     "gold": "visual",
+     "pred": "visual",
+     "conf": 0.95,
+     "reason": "co_anh"
+    },
+    {
+     "id": "r011",
+     "text": "đôi sandal này là hãng gì, tìm mẫu y chang",
+     "gold": "visual",
+     "pred": "visual",
+     "conf": 0.95,
+     "reason": "co_anh"
+    },
+    {
+     "id": "r012",
+     "text": "Áo Khoác Gió Nữ 2 Lớp Cao Cấp Hidoli có chống nước thật không?",
+     "gold": "qa",
+     "pred": "clarify",
+     "conf": 0.598,
+     "reason": "duoi_tau"
+    },
+    {
+     "id": "r013",
+     "text": "Áo Babytee Y2K Cổ Ôm 100% Cotton giặt có bị co không?",
+     "gold": "qa",
+     "pred": "qa",
+     "conf": 0.667,
+     "reason": "luat"
+    },
+    {
+     "id": "r014",
+     "text": "dép bánh mì bản vân nhám đi có êm ko, có trơn ko",
+     "gold": "qa",
+     "pred": "qa",
+     "conf": 0.645,
+     "reason": "luat"
+    },
+    {
+     "id": "r015",
+     "text": "Giày cao gót đế vuông thắt nơ 7 phân Luvia đi lâu có đau chân không?",
+     "gold": "qa",
+     "pred": "qa",
+     "conf": 0.782,
+     "reason": "luat"
+    },
+    {
+     "id": "r016",
+     "text": "ao hoodie KANG form rong, cao 1m7 nang 65kg mac size gi",
+     "gold": "qa",
+     "pred": "qa",
+     "conf": 0.895,
+     "reason": "luat"
+    },
+    {
+     "id": "r017",
+     "text": "Áo Sơ Mi Kẻ Sọc Tay Dài Oxford form rộng có nhăn nhiều không?",
+     "gold": "qa",
+     "pred": "qa",
+     "conf": 0.661,
+     "reason": "luat"
+    },
+    {
+     "id": "r018",
+     "text": "kính cận gọng trong suốt có chống ánh sáng xanh thật k",
+     "gold": "qa",
+     "pred": "qa",
+     "conf": 0.608,
+     "reason": "luat"
+    },
+    {
+     "id": "r019",
+     "text": "Dây chuyền Lovito họa tiết hoa đeo lâu có bị đen không?",
+     "gold": "qa",
+     "pred": "qa",
+     "conf": 0.863,
+     "reason": "luat"
+    },
+    {
+     "id": "r020",
+     "text": "Tất cổ cao nữ trơn 3 màu có dày không ạ",
+     "gold": "qa",
+     "pred": "clarify",
+     "conf": 0.545,
+     "reason": "duoi_tau"
+    },
+    {
+     "id": "r021",
+     "text": "Dép YZ Slide Vân Nhám size có chuẩn không, chân 40 lấy size mấy",
+     "gold": "qa",
+     "pred": "qa",
+     "conf": 0.678,
+     "reason": "luat"
+    },
+    {
+     "id": "r022",
+     "text": "Áo cardigan nữ AK13 mặc lâu có xù lông không?",
+     "gold": "qa",
+     "pred": "qa",
+     "conf": 0.62,
+     "reason": "luat"
+    },
+    {
+     "id": "r023",
+     "text": "Giày búp bê Lolita đế 5 phân có bị đau gót không ạ",
+     "gold": "qa",
+     "pred": "qa",
+     "conf": 0.606,
+     "reason": "luat"
+    },
+    {
+     "id": "r024",
+     "text": "quần ống suông chữ X cạp cao freesize thì bn kg mặc vừa",
+     "gold": "qa",
+     "pred": "qa",
+     "conf": 0.898,
+     "reason": "luat"
+    },
+    {
+     "id": "r025",
+     "text": "áo này giặt máy được không?",
+     "gold": "qa",
+     "pred": "qa",
+     "conf": 0.853,
+     "reason": "luat"
+    },
+    {
+     "id": "r026",
+     "text": "còn size 40 không shop?",
+     "gold": "qa",
+     "pred": "qa",
+     "conf": 0.872,
+     "reason": "luat"
+    },
+    {
+     "id": "r027",
+     "text": "tìm áo khoác gió nữ chống nước dưới 200k",
+     "gold": "search",
+     "pred": "search",
+     "conf": 0.889,
+     "reason": "luat"
+    },
+    {
+     "id": "r028",
+     "text": "dep quai ngang nam size 42 mau den",
+     "gold": "search",
+     "pred": "search",
+     "conf": 0.83,
+     "reason": "luat"
+    },
+    {
+     "id": "r029",
+     "text": "có giày cao gót 5 phân màu trắng không",
+     "gold": "search",
+     "pred": "search",
+     "conf": 0.86,
+     "reason": "luat"
+    },
+    {
+     "id": "r030",
+     "text": "Cho mình xem mấy mẫu áo hoodie form rộng nam nữ",
+     "gold": "search",
+     "pred": "search",
+     "conf": 0.851,
+     "reason": "luat"
+    },
+    {
+     "id": "r031",
+     "text": "tim ao chong nang toan than",
+     "gold": "search",
+     "pred": "search",
+     "conf": 0.747,
+     "reason": "luat"
+    },
+    {
+     "id": "r032",
+     "text": "quần ống rộng nữ lưng cao, giá dưới 150 nghìn",
+     "gold": "search",
+     "pred": "search",
+     "conf": 0.821,
+     "reason": "luat"
+    },
+    {
+     "id": "r033",
+     "text": "kính cận gọng trong suốt có sẵn độ",
+     "gold": "search",
+     "pred": "clarify",
+     "conf": 0.348,
+     "reason": "duoi_tau"
+    },
+    {
+     "id": "r034",
+     "text": "giày sandal nữ mũi vuông đế 7cm",
+     "gold": "search",
+     "pred": "clarify",
+     "conf": 0.352,
+     "reason": "duoi_tau"
+    },
+    {
+     "id": "r035",
+     "text": "áo thun cotton cổ tròn unisex size L",
+     "gold": "search",
+     "pred": "search",
+     "conf": 0.826,
+     "reason": "luat"
+    },
+    {
+     "id": "r036",
+     "text": "shop có bán túi đeo chéo nữ ko",
+     "gold": "search",
+     "pred": "search",
+     "conf": 0.767,
+     "reason": "luat"
+    },
+    {
+     "id": "r037",
+     "text": "dép xỏ ngón nam rẻ rẻ thui",
+     "gold": "search",
+     "pred": "search",
+     "conf": 0.68,
+     "reason": "luat"
+    },
+    {
+     "id": "r038",
+     "text": "khuyên tai nam châm không cần bấm lỗ",
+     "gold": "search",
+     "pred": "gemini_ood",
+     "conf": 0.745,
+     "reason": "luat"
+    },
+    {
+     "id": "r039",
+     "text": "mũ lưỡi trai đen đi phượt",
+     "gold": "search",
+     "pred": "clarify",
+     "conf": 0.468,
+     "reason": "duoi_tau"
+    },
+    {
+     "id": "r040",
+     "text": "so sánh Áo Khoác Gió PEABOO BST01 với BST02 giúp mình",
+     "gold": "compare",
+     "pred": "compare",
+     "conf": 0.875,
+     "reason": "luat"
+    },
+    {
+     "id": "r041",
+     "text": "Dép bánh mì vân nhám và Dép YZ Slide vân nhám cái nào bền hơn",
+     "gold": "compare",
+     "pred": "compare",
+     "conf": 0.888,
+     "reason": "luat"
+    },
+    {
+     "id": "r042",
+     "text": "áo hoodie KANG vs áo hoodie MISTERHIZII, cái nào dày hơn",
+     "gold": "compare",
+     "pred": "compare",
+     "conf": 0.783,
+     "reason": "luat"
+    },
+    {
+     "id": "r043",
+     "text": "so sanh 2 doi cao got Luvia 75CG va G0060",
+     "gold": "compare",
+     "pred": "compare",
+     "conf": 0.869,
+     "reason": "luat"
+    },
+    {
+     "id": "r044",
+     "text": "giữa áo chống nắng UMI dáng dài và áo khoác chống nắng UPF 50+ nên lấy cái nào",
+     "gold": "compare",
+     "pred": "compare",
+     "conf": 0.753,
+     "reason": "luat"
+    },
+    {
+     "id": "r045",
+     "text": "Hai mẫu áo thun AM BE và AM 1 khác nhau chỗ nào?",
+     "gold": "compare",
+     "pred": "compare",
+     "conf": 0.864,
+     "reason": "luat"
+    },
+    {
+     "id": "r046",
+     "text": "so sánh 3 đôi dép này giúp em: bánh mì vân nhám, YZ slide, xỏ ngón Latoma",
+     "gold": "compare",
+     "pred": "compare",
+     "conf": 0.875,
+     "reason": "luat"
+    },
+    {
+     "id": "r047",
+     "text": "dây chuyền Lovito với vòng cổ MAYEBE, cái nào ít bị đen hơn",
+     "gold": "compare",
+     "pred": "clarify",
+     "conf": 0.5,
+     "reason": "duoi_tau"
+    },
+    {
+     "id": "r048",
+     "text": "cardigan AK13 hay hoodie zip DERROR ấm hơn",
+     "gold": "compare",
+     "pred": "compare",
+     "conf": 0.653,
+     "reason": "luat"
+    },
+    {
+     "id": "r049",
+     "text": "chào shop",
+     "gold": "gemini_chitchat",
+     "pred": "gemini_chitchat",
+     "conf": 0.844,
+     "reason": "luat"
+    },
+    {
+     "id": "r050",
+     "text": "hello bot, bạn tên gì",
+     "gold": "gemini_chitchat",
+     "pred": "gemini_chitchat",
+     "conf": 0.885,
+     "reason": "luat"
+    },
+    {
+     "id": "r051",
+     "text": "cảm ơn nha, bạn dễ thương ghê",
+     "gold": "gemini_chitchat",
+     "pred": "gemini_chitchat",
+     "conf": 0.891,
+     "reason": "luat"
+    },
+    {
+     "id": "r052",
+     "text": "hnay mình buồn quá",
+     "gold": "gemini_chitchat",
+     "pred": "gemini_chitchat",
+     "conf": 0.806,
+     "reason": "luat"
+    },
+    {
+     "id": "r053",
+     "text": "bạn là người hay máy vậy?",
+     "gold": "gemini_chitchat",
+     "pred": "gemini_chitchat",
+     "conf": 0.75,
+     "reason": "luat"
+    },
+    {
+     "id": "r054",
+     "text": "kể chuyện cười đi",
+     "gold": "gemini_chitchat",
+     "pred": "gemini_chitchat",
+     "conf": 0.788,
+     "reason": "luat"
+    },
+    {
+     "id": "r055",
+     "text": "chúc shop buổi tối vui vẻ",
+     "gold": "gemini_chitchat",
+     "pred": "gemini_chitchat",
+     "conf": 0.831,
+     "reason": "luat"
+    },
+    {
+     "id": "r056",
+     "text": "ok tks nhé",
+     "gold": "gemini_chitchat",
+     "pred": "gemini_chitchat",
+     "conf": 0.687,
+     "reason": "luat"
+    },
+    {
+     "id": "r057",
+     "text": "trời mưa thế này mặc gì cho hợp nhỉ?",
+     "gold": "gemini_chitchat",
+     "pred": "gemini_ood",
+     "conf": 0.627,
+     "reason": "luat"
+    },
+    {
+     "id": "r058",
+     "text": "đi đám cưới bạn thân nên phối đồ thế nào cho lịch sự",
+     "gold": "gemini_chitchat",
+     "pred": "gemini_ood",
+     "conf": 0.82,
+     "reason": "luat"
+    },
+    {
+     "id": "r059",
+     "text": "mai đi Đà Lạt nên mang áo gì",
+     "gold": "gemini_chitchat",
+     "pred": "clarify",
+     "conf": 0.375,
+     "reason": "duoi_tau"
+    },
+    {
+     "id": "r060",
+     "text": "thủ đô của Úc là gì",
+     "gold": "gemini_ood",
+     "pred": "gemini_ood",
+     "conf": 0.5,
+     "reason": "khong_khop_luat"
+    },
+    {
+     "id": "r061",
+     "text": "viết giùm tôi đoạn code python sắp xếp mảng",
+     "gold": "gemini_ood",
+     "pred": "gemini_ood",
+     "conf": 0.853,
+     "reason": "luat"
+    },
+    {
+     "id": "r062",
+     "text": "giá vàng hôm nay bao nhiêu",
+     "gold": "gemini_ood",
+     "pred": "gemini_ood",
+     "conf": 0.735,
+     "reason": "luat"
+    },
+    {
+     "id": "r063",
+     "text": "kết quả bóng đá tối qua thế nào",
+     "gold": "gemini_ood",
+     "pred": "gemini_ood",
+     "conf": 0.851,
+     "reason": "luat"
+    },
+    {
+     "id": "r064",
+     "text": "giải phương trình x^2 - 5x + 6 = 0",
+     "gold": "gemini_ood",
+     "pred": "gemini_ood",
+     "conf": 0.8,
+     "reason": "luat"
+    },
+    {
+     "id": "r065",
+     "text": "làm sao để nấu phở bò ngon",
+     "gold": "gemini_ood",
+     "pred": "clarify",
+     "conf": 0.253,
+     "reason": "duoi_tau"
+    },
+    {
+     "id": "r066",
+     "text": "chỉ mình cách hack facebook người khác",
+     "gold": "gemini_ood",
+     "pred": "clarify",
+     "conf": 0.299,
+     "reason": "duoi_tau"
+    },
+    {
+     "id": "r067",
+     "text": "tư vấn mua điện thoại dưới 5 triệu",
+     "gold": "gemini_ood",
+     "pred": "gemini_ood",
+     "conf": 0.8,
+     "reason": "luat"
+    },
+    {
+     "id": "r068",
+     "text": "đặt vé máy bay đi HCM giúp mình",
+     "gold": "gemini_ood",
+     "pred": "gemini_ood",
+     "conf": 0.8,
+     "reason": "luat"
+    },
+    {
+     "id": "r069",
+     "text": "thoi tiet ha noi ngay mai the nao",
+     "gold": "gemini_ood",
+     "pred": "gemini_ood",
+     "conf": 0.664,
+     "reason": "luat"
+    },
+    {
+     "id": "r070",
+     "text": "cái này còn không",
+     "gold": "clarify",
+     "pred": "clarify",
+     "conf": 0.3,
+     "reason": "mo_ho"
+    },
+    {
+     "id": "r071",
+     "text": "so sánh giúp mình",
+     "gold": "clarify",
+     "pred": "clarify",
+     "conf": 0.5,
+     "reason": "duoi_tau"
+    },
+    {
+     "id": "r072",
+     "text": "tư vấn đi",
+     "gold": "clarify",
+     "pred": "clarify",
+     "conf": 0.3,
+     "reason": "mo_ho"
+    },
+    {
+     "id": "r073",
+     "text": "size nào vừa?",
+     "gold": "clarify",
+     "pred": "clarify",
+     "conf": 0.5,
+     "reason": "duoi_tau"
+    },
+    {
+     "id": "r074",
+     "text": "có rẻ hơn không",
+     "gold": "clarify",
+     "pred": "clarify",
+     "conf": 0.3,
+     "reason": "mo_ho"
+    },
+    {
+     "id": "r075",
+     "text": "so sánh cái áo này với đôi giày kia",
+     "gold": "clarify",
+     "pred": "clarify",
+     "conf": 0.3,
+     "reason": "so_sanh_khac_nhom"
+    },
+    {
+     "id": "r076",
+     "text": "tìm cái giống vậy",
+     "gold": "clarify",
+     "pred": "clarify",
+     "conf": 0.3,
+     "reason": "mo_ho"
+    },
+    {
+     "id": "r077",
+     "text": "có màu khác k",
+     "gold": "clarify",
+     "pred": "clarify",
+     "conf": 0.429,
+     "reason": "duoi_tau"
+    },
+    {
+     "id": "r078",
+     "text": "mua",
+     "gold": "clarify",
+     "pred": "clarify",
+     "conf": 0.3,
+     "reason": "mo_ho"
+    }
+   ]
+  },
+  "gemini_gen_heldout": {
+   "path": "/home/claude/work/stage1/01_Trung/eval/eval_router_gemini_gen.jsonl",
+   "n": 49,
+   "route_accuracy": 0.8776,
+   "route_accuracy_gemini_merged": 0.8776,
+   "per_route": {
+    "visual": {
+     "support": 7,
+     "recall": 1.0,
+     "precision": 1.0
+    },
+    "qa": {
+     "support": 7,
+     "recall": 1.0,
+     "precision": 1.0
+    },
+    "search": {
+     "support": 7,
+     "recall": 1.0,
+     "precision": 0.875
+    },
+    "compare": {
+     "support": 7,
+     "recall": 0.571,
+     "precision": 1.0
+    },
+    "gemini_chitchat": {
+     "support": 7,
+     "recall": 0.857,
+     "precision": 1.0
+    },
+    "gemini_ood": {
+     "support": 7,
+     "recall": 0.857,
+     "precision": 0.857
+    },
+    "clarify": {
+     "support": 7,
+     "recall": 0.857,
+     "precision": 0.6
+    }
+   },
+   "gemini_detection": {
+    "recall": 0.857,
+    "precision": 0.923
+   },
+   "predicted_gemini_rate": 0.265,
+   "predicted_clarify_rate": 0.204,
+   "in_domain_pushed_to_gemini": 0,
+   "confusion": {
+    "visual": {
+     "visual": 7
+    },
+    "qa": {
+     "qa": 7
+    },
+    "search": {
+     "search": 7
+    },
+    "compare": {
+     "compare": 4,
+     "clarify": 2,
+     "search": 1
+    },
+    "gemini_chitchat": {
+     "gemini_chitchat": 6,
+     "clarify": 1
+    },
+    "gemini_ood": {
+     "gemini_ood": 6,
+     "clarify": 1
+    },
+    "clarify": {
+     "clarify": 6,
+     "gemini_ood": 1
+    }
+   },
+   "latency_ms_p50": 131.978,
+   "latency_ms_p95": 421.108,
+   "errors": [
+    {
+     "id": "trg_025",
+     "text": "so sanh giup tui chan vay nay vs cai vua xem",
+     "gold": "compare",
+     "pred": "clarify",
+     "conf": 0.3,
+     "reason": "so_sanh_khac_nhom"
+    },
+    {
+     "id": "trg_026",
+     "text": "Nên mua áo khoác phao hay áo dạ hơn shop?",
+     "gold": "compare",
+     "pred": "clarify",
+     "conf": 0.538,
+     "reason": "duoi_tau"
+    },
+    {
+     "id": "trg_028",
+     "text": "Phân vân giữa mũ bucket với mũ lưỡi trai quá, shop tư vấn dùm",
+     "gold": "compare",
+     "pred": "search",
+     "conf": 0.831,
+     "reason": "luat"
+    },
+    {
+     "id": "trg_031",
+     "text": "Shop ơi mình ngủ đây, mai tư vấn tiếp nhé",
+     "gold": "gemini_chitchat",
+     "pred": "clarify",
+     "conf": 0.464,
+     "reason": "duoi_tau"
+    },
+    {
+     "id": "trg_040",
+     "text": "Tư vấn giúp mình vòng cổ bạc hợp với mệnh gì",
+     "gold": "gemini_ood",
+     "pred": "clarify",
+     "conf": 0.3,
+     "reason": "mo_ho"
+    },
+    {
+     "id": "trg_047",
+     "text": "Lấy màu giống cái trước đó nha shop",
+     "gold": "clarify",
+     "pred": "gemini_ood",
+     "conf": 0.5,
+     "reason": "khong_khop_luat"
+    }
+   ],
+   "rows": [
+    {
+     "id": "trg_001",
+     "text": "Shop ơi, mình gửi ảnh đôi giày này check giùm còn sz 38 k",
+     "gold": "visual",
+     "pred": "visual",
+     "conf": 0.85,
+     "reason": "co_anh"
+    },
+    {
+     "id": "trg_002",
+     "text": "tim mau giong anh",
+     "gold": "visual",
+     "pred": "visual",
+     "conf": 0.95,
+     "reason": "co_anh"
+    },
+    {
+     "id": "trg_003",
+     "text": "Áo này mặc lên form y hình ko shop?",
+     "gold": "visual",
+     "pred": "visual",
+     "conf": 0.95,
+     "reason": "co_anh"
+    },
+    {
+     "id": "trg_004",
+     "text": "muon mua bo nay",
+     "gold": "visual",
+     "pred": "visual",
+     "conf": 0.95,
+     "reason": "co_anh"
+    },
+    {
+     "id": "trg_005",
+     "text": "Chiếc váy này dài bao nhiêu vậy b?",
+     "gold": "visual",
+     "pred": "visual",
+     "conf": 0.95,
+     "reason": "co_anh"
+    },
+    {
+     "id": "trg_006",
+     "text": "co tui nao giong vay ko",
+     "gold": "visual",
+     "pred": "visual",
+     "conf": 0.95,
+     "reason": "co_anh"
+    },
+    {
+     "id": "trg_007",
+     "text": "Tư vấn giúp mình chiếc túi trong hình với",
+     "gold": "visual",
+     "pred": "visual",
+     "conf": 0.95,
+     "reason": "co_anh"
+    },
+    {
+     "id": "trg_008",
+     "text": "Áo này chất cotton hay thun lạnh vậy shop?",
+     "gold": "qa",
+     "pred": "qa",
+     "conf": 0.861,
+     "reason": "luat"
+    },
+    {
+     "id": "trg_009",
+     "text": "giay nay cao bn cm v shop",
+     "gold": "qa",
+     "pred": "qa",
+     "conf": 0.715,
+     "reason": "luat"
+    },
+    {
+     "id": "trg_010",
+     "text": "Cái đầm này nặng khoảng bao nhiêu kí mặc vừa sz M?",
+     "gold": "qa",
+     "pred": "qa",
+     "conf": 0.909,
+     "reason": "luat"
+    },
+    {
+     "id": "trg_011",
+     "text": "quan nay co bi ra mau khi gic ko",
+     "gold": "qa",
+     "pred": "qa",
+     "conf": 0.812,
+     "reason": "luat"
+    },
+    {
+     "id": "trg_012",
+     "text": "Túi này đựng vừa laptop 14 inch ko bạn?",
+     "gold": "qa",
+     "pred": "qa",
+     "conf": 0.841,
+     "reason": "luat"
+    },
+    {
+     "id": "trg_013",
+     "text": "mu nay doi duoc mau khong b",
+     "gold": "qa",
+     "pred": "qa",
+     "conf": 0.73,
+     "reason": "luat"
+    },
+    {
+     "id": "trg_014",
+     "text": "Đế giày này đi trơn không shop ơi?",
+     "gold": "qa",
+     "pred": "qa",
+     "conf": 0.916,
+     "reason": "luat"
+    },
+    {
+     "id": "trg_015",
+     "text": "Tìm giúp mình áo sơ mi trắng nam size L",
+     "gold": "search",
+     "pred": "search",
+     "conf": 0.856,
+     "reason": "luat"
+    },
+    {
+     "id": "trg_016",
+     "text": "mu giay the thao nu mau hong duoi 500k",
+     "gold": "search",
+     "pred": "search",
+     "conf": 0.686,
+     "reason": "luat"
+    },
+    {
+     "id": "trg_017",
+     "text": "Shop có bán chân váy midi xếp ly màu đen ko",
+     "gold": "search",
+     "pred": "search",
+     "conf": 0.825,
+     "reason": "luat"
+    },
+    {
+     "id": "trg_018",
+     "text": "can tim ao khoac du nam form rong",
+     "gold": "search",
+     "pred": "search",
+     "conf": 0.846,
+     "reason": "luat"
+    },
+    {
+     "id": "trg_019",
+     "text": "Cho mình xem mấy mẫu sandal đi biển nữ nhé",
+     "gold": "search",
+     "pred": "search",
+     "conf": 0.853,
+     "reason": "luat"
+    },
+    {
+     "id": "trg_020",
+     "text": "tim balo laptop chong nuoc",
+     "gold": "search",
+     "pred": "search",
+     "conf": 0.738,
+     "reason": "luat"
+    },
+    {
+     "id": "trg_021",
+     "text": "Có đầm hoa nhí dáng dài nào xinh ko shop",
+     "gold": "search",
+     "pred": "search",
+     "conf": 0.784,
+     "reason": "luat"
+    },
+    {
+     "id": "trg_022",
+     "text": "So sánh giúp mình đôi giày sneaker thứ nhất và thứ hai đi",
+     "gold": "compare",
+     "pred": "compare",
+     "conf": 0.875,
+     "reason": "luat"
+    },
+    {
+     "id": "trg_023",
+     "text": "2 mau ao nay khac nhau the nao b",
+     "gold": "compare",
+     "pred": "compare",
+     "conf": 0.666,
+     "reason": "luat"
+    },
+    {
+     "id": "trg_024",
+     "text": "Giữa túi da A và túi da B cái nào rộng hơn?",
+     "gold": "compare",
+     "pred": "compare",
+     "conf": 0.882,
+     "reason": "luat"
+    },
+    {
+     "id": "trg_025",
+     "text": "so sanh giup tui chan vay nay vs cai vua xem",
+     "gold": "compare",
+     "pred": "clarify",
+     "conf": 0.3,
+     "reason": "so_sanh_khac_nhom"
+    },
+    {
+     "id": "trg_026",
+     "text": "Nên mua áo khoác phao hay áo dạ hơn shop?",
+     "gold": "compare",
+     "pred": "clarify",
+     "conf": 0.538,
+     "reason": "duoi_tau"
+    },
+    {
+     "id": "trg_027",
+     "text": "hai doi sandal nay doi nao ben hon",
+     "gold": "compare",
+     "pred": "compare",
+     "conf": 0.794,
+     "reason": "luat"
+    },
+    {
+     "id": "trg_028",
+     "text": "Phân vân giữa mũ bucket với mũ lưỡi trai quá, shop tư vấn dùm",
+     "gold": "compare",
+     "pred": "search",
+     "conf": 0.831,
+     "reason": "luat"
+    },
+    {
+     "id": "trg_029",
+     "text": "Hi shop, tư vấn giùm mình nha",
+     "gold": "gemini_chitchat",
+     "pred": "gemini_chitchat",
+     "conf": 0.8,
+     "reason": "luat"
+    },
+    {
+     "id": "trg_030",
+     "text": "cam on shop nhieu nha",
+     "gold": "gemini_chitchat",
+     "pred": "gemini_chitchat",
+     "conf": 0.684,
+     "reason": "luat"
+    },
+    {
+     "id": "trg_031",
+     "text": "Shop ơi mình ngủ đây, mai tư vấn tiếp nhé",
+     "gold": "gemini_chitchat",
+     "pred": "clarify",
+     "conf": 0.464,
+     "reason": "duoi_tau"
+    },
+    {
+     "id": "trg_032",
+     "text": "bot tra loi nhanh thiet do",
+     "gold": "gemini_chitchat",
+     "pred": "gemini_chitchat",
+     "conf": 0.79,
+     "reason": "luat"
+    },
+    {
+     "id": "trg_033",
+     "text": "Chào bạn, bên mình ở đâu vậy?",
+     "gold": "gemini_chitchat",
+     "pred": "gemini_chitchat",
+     "conf": 0.826,
+     "reason": "luat"
+    },
+    {
+     "id": "trg_034",
+     "text": "tam biet shop nhe",
+     "gold": "gemini_chitchat",
+     "pred": "gemini_chitchat",
+     "conf": 0.67,
+     "reason": "luat"
+    },
+    {
+     "id": "trg_035",
+     "text": "Hôm nay buồn quá bot ơi",
+     "gold": "gemini_chitchat",
+     "pred": "gemini_chitchat",
+     "conf": 0.808,
+     "reason": "luat"
+    },
+    {
+     "id": "trg_036",
+     "text": "Shop có bán đồng hồ thông minh không?",
+     "gold": "gemini_ood",
+     "pred": "gemini_ood",
+     "conf": 0.8,
+     "reason": "luat"
+    },
+    {
+     "id": "trg_037",
+     "text": "thoi tiet HN hom nay the nao b",
+     "gold": "gemini_ood",
+     "pred": "gemini_ood",
+     "conf": 0.689,
+     "reason": "luat"
+    },
+    {
+     "id": "trg_038",
+     "text": "Làm thế nào để phối đồ phong cách vintage?",
+     "gold": "gemini_ood",
+     "pred": "gemini_ood",
+     "conf": 0.783,
+     "reason": "luat"
+    },
+    {
+     "id": "trg_039",
+     "text": "shop ban tat vo hay giay dep",
+     "gold": "gemini_ood",
+     "pred": "gemini_ood",
+     "conf": 0.645,
+     "reason": "luat"
+    },
+    {
+     "id": "trg_040",
+     "text": "Tư vấn giúp mình vòng cổ bạc hợp với mệnh gì",
+     "gold": "gemini_ood",
+     "pred": "clarify",
+     "conf": 0.3,
+     "reason": "mo_ho"
+    },
+    {
+     "id": "trg_041",
+     "text": "chi em cach giat ao len ko bi xu long",
+     "gold": "gemini_ood",
+     "pred": "gemini_ood",
+     "conf": 0.611,
+     "reason": "luat"
+    },
+    {
+     "id": "trg_042",
+     "text": "Shop có nhận oder mỹ phẩm Hàn Quốc không?",
+     "gold": "gemini_ood",
+     "pred": "gemini_ood",
+     "conf": 0.8,
+     "reason": "luat"
+    },
+    {
+     "id": "trg_043",
+     "text": "Lấy cho mình cái này nhé",
+     "gold": "clarify",
+     "pred": "clarify",
+     "conf": 0.488,
+     "reason": "duoi_tau"
+    },
+    {
+     "id": "trg_044",
+     "text": "lay sz to nhat nha b",
+     "gold": "clarify",
+     "pred": "clarify",
+     "conf": 0.351,
+     "reason": "duoi_tau"
+    },
+    {
+     "id": "trg_045",
+     "text": "So sánh đôi giày thứ hai với cái váy vừa xem đi shop",
+     "gold": "clarify",
+     "pred": "clarify",
+     "conf": 0.3,
+     "reason": "so_sanh_khac_nhom"
+    },
+    {
+     "id": "trg_046",
+     "text": "cai do bao nhieu tien",
+     "gold": "clarify",
+     "pred": "clarify",
+     "conf": 0.396,
+     "reason": "duoi_tau"
+    },
+    {
+     "id": "trg_047",
+     "text": "Lấy màu giống cái trước đó nha shop",
+     "gold": "clarify",
+     "pred": "gemini_ood",
+     "conf": 0.5,
+     "reason": "khong_khop_luat"
+    },
+    {
+     "id": "trg_048",
+     "text": "co giam gia ko",
+     "gold": "clarify",
+     "pred": "clarify",
+     "conf": 0.493,
+     "reason": "duoi_tau"
+    },
+    {
+     "id": "trg_049",
+     "text": "Ship cho mình đôi thứ ba nhé",
+     "gold": "clarify",
+     "pred": "clarify",
+     "conf": 0.5,
+     "reason": "duoi_tau"
+    }
+   ]
+  }
+ }
+}

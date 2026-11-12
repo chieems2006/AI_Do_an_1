@@ -1,0 +1,256 @@
+# US_40 – API contract MSA (OpenAPI 3.1). Ví dụ dùng SP THẬT (FPI, ViMRHP); các số score/confidence/latency
+# trong ví dụ chỉ minh hoạ ĐỊNH DẠNG, không phải số đo. price = null vì nguồn hiện tại không có giá.
+openapi: 3.1.0
+info:
+  title: MSA – Trợ lý mua sắm thời trang (Đồ án 1)
+  version: 0.1.0
+  description: Mọi response dùng khung chung Response (route, confidence, source, answer, items, citations, latency_ms, request_id).
+servers:
+  - url: http://localhost:8000
+components:
+  schemas:
+    Item:
+      type: object
+      required: [product_id, title, score]
+      properties:
+        product_id: {type: string}
+        title: {type: string}
+        price: {type: [number, "null"]}
+        score: {type: number}
+        image: {type: [string, "null"]}
+        product_type: {type: string, enum: [footwear, clothing, headwear, accessory]}
+        sub_category: {type: string}
+    Citation:
+      type: object
+      properties:
+        product_id: {type: string}
+        field: {type: string, enum: [description, review, specs]}
+        chunk_id: {type: string}
+    Response:
+      type: object
+      required: [route, confidence, source, answer, items, citations, latency_ms, request_id]
+      properties:
+        route: {type: string, enum: [visual, qa, search, compare, gemini_chitchat, gemini_ood, clarify]}
+        confidence: {type: number, minimum: 0, maximum: 1}
+        source: {type: string, enum: [internal, gemini, cache, fallback], description: "internal=dữ liệu cửa hàng; gemini=Gemini trả lời; cache=câu Gemini lấy từ cache (kèm cached=true); fallback=thông điệp hệ thống khi Gemini lỗi 429/timeout/không cấu hình (QUYET_DINH_CAN_CHOT mục D – đề xuất, Trung chốt)"}
+        answer: {type: string}
+        items: {type: array, items: {$ref: "#/components/schemas/Item"}}
+        citations: {type: array, items: {$ref: "#/components/schemas/Citation"}}
+        latency_ms: {type: number}
+        request_id: {type: string, format: uuid}
+        error: {type: [string, "null"], description: "mã lỗi nội bộ (vd http_429) – không bao giờ chứa key"}
+    Error:
+      type: object
+      properties:
+        detail: {type: string}
+paths:
+  /search/image:
+    post:
+      summary: Tìm SP giống ảnh (type gate → FAISS). Ảnh KHÔNG gửi cho Gemini.
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required: [image]
+              properties:
+                image: {type: string, format: binary, description: "jpg/png/webp, ≤ 5 MB"}
+                k: {type: integer, default: 10, maximum: 50}
+                product_type: {type: string, enum: [footwear, clothing, headwear, accessory]}
+                session_id: {type: string}
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {$ref: "#/components/schemas/Response"}
+              example:
+                route: visual
+                confidence: 0.95
+                source: internal
+                answer: "Mình tìm được 3 sản phẩm giống ảnh."
+                type_gate: {product_type: footwear, conf: 0.91}
+                items:
+                  - {product_id: fpi_21744, title: "Vans Unisex Classic Slip-On Black Casual Shoe", price: null, score: 0.83, image: "fpi_images/21744.jpg", product_type: footwear, sub_category: sneaker}
+                  - {product_id: fpi_18405, title: "Skechers Men USA Brown Shoe", price: null, score: 0.71, image: "fpi_images/18405.jpg", product_type: footwear, sub_category: sneaker}
+                citations: []
+                latency_ms: 450
+                request_id: 3f1c2a9e-0000-4000-8000-000000000001
+        "413": {description: Ảnh quá lớn, content: {application/json: {schema: {$ref: "#/components/schemas/Error"}}}}
+        "415": {description: Định dạng ảnh không hỗ trợ}
+  /search/text:
+    post:
+      summary: Tìm SP bằng văn bản + bộ lọc
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [query]
+              properties:
+                query: {type: string}
+                filters:
+                  type: object
+                  properties:
+                    product_type: {type: string}
+                    sub_category: {type: string}
+                    color: {type: string}
+                    gender: {type: string}
+                    price_min: {type: number}
+                    price_max: {type: number}
+                    size: {type: string}
+                k: {type: integer, default: 10}
+            example: {query: "mũ lưỡi trai màu đen", filters: {product_type: headwear, color: Black}, k: 5}
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {$ref: "#/components/schemas/Response"}
+              example:
+                route: search
+                confidence: 0.86
+                source: internal
+                answer: "Có 2 sản phẩm phù hợp. (Hiện chưa có dữ liệu giá để lọc theo giá.)"
+                parsed_filters: {product_type: headwear, sub_category: cap, color: Black}
+                items:
+                  - {product_id: fpi_40767, title: "Quiksilver Men Grey Firsty Fishtails Cap", price: null, score: 0.62, product_type: headwear, sub_category: cap}
+                  - {product_id: shopee_5754524362, title: "Mũ lưỡi trai màu trơn chất liệu cotton kiểu dáng thời trang cao cấp", price: null, score: 0.58, product_type: headwear, sub_category: cap}
+                citations: []
+                latency_ms: 35
+                request_id: 3f1c2a9e-0000-4000-8000-000000000002
+  /qa:
+    post:
+      summary: Hỏi đáp về 1 SP (RAG trên mô tả/review). Thiếu dữ kiện → "chưa có thông tin", Gemini không bù.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [question, product_id]
+              properties:
+                question: {type: string}
+                product_id: {type: string}
+            example: {question: "Dép này đi có êm không?", product_id: shopee_22736671626}
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {$ref: "#/components/schemas/Response"}
+              examples:
+                co_thong_tin:
+                  value:
+                    route: qa
+                    confidence: 0.9
+                    source: internal
+                    answer: "Theo đánh giá của người mua, dép đi êm chân (trích review)."
+                    items: [{product_id: shopee_22736671626, title: "[ VÂN NHÁM ] Dép YZ Slide Vân Nhám bản giới hạn 2023", price: null, score: 1.0}]
+                    citations: [{product_id: shopee_22736671626, field: review, chunk_id: "shopee_22736671626#r0"}]
+                    retrieval_score: 0.62
+                    refused: false
+                    latency_ms: 2100
+                    request_id: 3f1c2a9e-0000-4000-8000-000000000003
+                thieu_thong_tin:
+                  value:
+                    route: qa
+                    confidence: 0.9
+                    source: internal
+                    answer: "Mình chưa có thông tin giá của sản phẩm này."
+                    items: []
+                    citations: []
+                    retrieval_score: 0.12
+                    refused: true
+                    latency_ms: 300
+                    request_id: 3f1c2a9e-0000-4000-8000-000000000004
+  /compare:
+    post:
+      summary: So sánh 2-3 SP CÙNG product_type; bảng lấy từ DB, LLM chỉ diễn giải bảng
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [product_ids]
+              properties:
+                product_ids: {type: array, minItems: 2, maxItems: 3, items: {type: string}}
+            example: {product_ids: [fpi_21744, fpi_18405]}
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {$ref: "#/components/schemas/Response"}
+              example:
+                route: compare
+                confidence: 1.0
+                source: internal
+                answer: "Cả hai đều là giày casual; Vans màu đen, unisex; Skechers màu nâu, cho nam."
+                table:
+                  columns: [fpi_21744, fpi_18405]
+                  rows:
+                    sub_category: [sneaker, sneaker]
+                    colors: [[Black], [Brown]]
+                    gender: [Unisex, Men]
+                    usage: [Casual, Casual]
+                    price: [null, null]
+                items: []
+                citations: []
+                latency_ms: 20
+                request_id: 3f1c2a9e-0000-4000-8000-000000000005
+        "422": {description: "Khác product_type (vd áo với giày) → yêu cầu chọn cùng nhóm"}
+  /chat:
+    post:
+      summary: Một khung chat – Agent tự route (ảnh base64 tuỳ chọn)
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [session_id]
+              properties:
+                session_id: {type: string}
+                text: {type: [string, "null"]}
+                image_b64: {type: [string, "null"]}
+            examples:
+              chitchat: {value: {session_id: s1, text: "chào shop"}}
+              tham_chieu: {value: {session_id: s1, text: "so sánh đôi vừa tìm với đôi thứ 2"}}
+              mo_ho: {value: {session_id: s2, text: "đôi thứ 2"}}
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {$ref: "#/components/schemas/Response"}
+              examples:
+                gemini:
+                  value:
+                    route: gemini_chitchat
+                    confidence: 0.8
+                    source: gemini
+                    answer: "Chào bạn! Rất vui được hỗ trợ bạn mua sắm quần áo, giày dép và phụ kiện hôm nay. Bạn đang tìm kiếm món đồ thời trang nào vậy?"
+                    items: []
+                    citations: []
+                    latency_ms: 14364
+                    request_id: 3f1c2a9e-0000-4000-8000-000000000006
+                clarify:
+                  value:
+                    route: clarify
+                    confidence: 0.3
+                    source: internal
+                    answer: "Bạn muốn mình làm gì ạ: tìm sản phẩm, hỏi về một sản phẩm cụ thể, so sánh 2-3 sản phẩm, hay gửi ảnh để tìm mẫu giống?"
+                    items: []
+                    citations: []
+                    latency_ms: 1
+                    request_id: 3f1c2a9e-0000-4000-8000-000000000007
+                loi_429:
+                  value:
+                    route: gemini_ood
+                    confidence: 0.8
+                    source: internal
+                    answer: "Xin lỗi, phần trò chuyện đang bận. Bạn thử lại sau hoặc tìm sản phẩm giúp mình nhé."
+                    error: http_429
+                    items: []
+                    citations: []
+                    latency_ms: 20000
+                    request_id: 3f1c2a9e-0000-4000-8000-000000000008

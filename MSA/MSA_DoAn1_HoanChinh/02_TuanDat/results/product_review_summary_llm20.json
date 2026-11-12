@@ -1,0 +1,2775 @@
+{
+ "_meta": {
+  "model": "gemini-3.5-flash-lite",
+  "n": 20,
+  "calls": [
+   {
+    "latency_ms": 3352.1,
+    "tokens_in": 3205,
+    "tokens_out": 1124,
+    "tokens_thinking": 0,
+    "error": null,
+    "model": "gemini-3.5-flash-lite"
+   },
+   {
+    "latency_ms": 14260.0,
+    "tokens_in": 3233,
+    "tokens_out": 1148,
+    "tokens_thinking": 0,
+    "error": null,
+    "model": "gemini-3.5-flash-lite"
+   },
+   {
+    "latency_ms": 2903.4,
+    "tokens_in": 3097,
+    "tokens_out": 1156,
+    "tokens_thinking": 0,
+    "error": null,
+    "model": "gemini-3.5-flash-lite"
+   },
+   {
+    "latency_ms": 2519.1,
+    "tokens_in": 3708,
+    "tokens_out": 931,
+    "tokens_thinking": 0,
+    "error": null,
+    "model": "gemini-3.5-flash-lite"
+   }
+  ],
+  "seed": 42,
+  "per_call": 5
+ },
+ "products": {
+  "shopee_25772362565": {
+   "title": "Dép bánh mì NY nam nữ - Dép đúc bản phối mới nhất hot trend 2024",
+   "vimrhp_subcategory": "GiayDepNam",
+   "pros": [
+    {
+     "point": "Dép dày dặn, đi êm chân và đúng form",
+     "reviews": [
+      0,
+      3,
+      4,
+      5,
+      9,
+      10
+     ],
+     "evidence": [
+      {
+       "idx": 0,
+       "comment_id": 15070214645,
+       "text": "Chất liệu:dep Màu sắc:xanh Đúng với mô tả:đúng Đúng với mô tả: dép dày dặn. nhận đk hàng khá là ưng. mk đi sz39 vừa chân. sẽ ủng hộ shop dài dài. video mang…"
+      },
+      {
+       "idx": 3,
+       "comment_id": 15732003877,
+       "text": "Chất liệu:đi êm chân Màu sắc:nâu trà sữa Đúng với mô tả:đúng với mô tả Giao hàng nhanh đóng gói kĩ có đủ tem mác đi rất êm và đẹp"
+      },
+      {
+       "idx": 4,
+       "comment_id": 15894177407,
+       "text": "Shop giao dép nhanh lắm nhé Mk đã mua lại lần 2 Dép dày dặn đi êm chân mà giá cả lại hợp lí Đeo nhìn rất thể thao năng động Cho shop năm sao nhé!!!!"
+      },
+      {
+       "idx": 5,
+       "comment_id": 15019113069,
+       "text": "Màu sắc:tra swxa Đúng với mô tả:ok Chất liệu:ok Sản phẩm tốt em trên đúng sai đúng form giao hàng nhanh đóng hộp kĩ càng 10 điểm"
+      },
+      {
+       "idx": 9,
+       "comment_id": 14935117679,
+       "text": "Mua đôi này là đôi thứ 4 bên shop rồi, giá hợp lý, chất lượng, form, màu siêu đẹp cskh 10đ 👍🏻"
+      },
+      {
+       "idx": 10,
+       "comment_id": 15764216321,
+       "text": "Chất liệu:nhua đúc Đúng với mô tả:đúng với mô tả Màu sắc:cam nâu Dép đẹp Hàng chất lượng mang bền lắm ý"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 1.0
+    },
+    {
+     "point": "Giao hàng nhanh và đóng gói kỹ càng",
+     "reviews": [
+      3,
+      5,
+      6,
+      8
+     ],
+     "evidence": [
+      {
+       "idx": 3,
+       "comment_id": 15732003877,
+       "text": "Chất liệu:đi êm chân Màu sắc:nâu trà sữa Đúng với mô tả:đúng với mô tả Giao hàng nhanh đóng gói kĩ có đủ tem mác đi rất êm và đẹp"
+      },
+      {
+       "idx": 5,
+       "comment_id": 15019113069,
+       "text": "Màu sắc:tra swxa Đúng với mô tả:ok Chất liệu:ok Sản phẩm tốt em trên đúng sai đúng form giao hàng nhanh đóng hộp kĩ càng 10 điểm"
+      },
+      {
+       "idx": 6,
+       "comment_id": 14864700156,
+       "text": "Màu sắc:ok Chất liệu:ok Đúng với mô tả:om Shop giao nhanh lắm mn ơiii. Shop tặng móc dán tường, lạc cả 1 chiếc khuyên tai vào =)))"
+      },
+      {
+       "idx": 8,
+       "comment_id": 15529318450,
+       "text": "Đúng với mô tả:đúng Màu sắc:như hình Chất liệu:nhựa Chất lượng khỏi bàn rất ưng ý . Giao hàng nhanh lúc lấy hàng hộp hơi méo xíu nhưng chất lượng thì vẫn ok sẽ…"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.875
+    },
+    {
+     "point": "Giá cả hợp lý, sản phẩm đẹp và chất lượng",
+     "reviews": [
+      1,
+      2,
+      4,
+      8,
+      9,
+      10,
+      11
+     ],
+     "evidence": [
+      {
+       "idx": 1,
+       "comment_id": 14792687919,
+       "text": "Chất liệu:kb Màu sắc:be nâu Đúng với mô tả:đúng Video mang tc nhận xu, nma dép đẹp lắmmm, ưng cái bụng hehee , nên mua nha cả nhà iu. Shop còn tặng thêm cho…"
+      },
+      {
+       "idx": 2,
+       "comment_id": 15273585176,
+       "text": "Đúng với mô tả:ddungs Màu sắc:trà sữa nâu Chất liệu:k bt Chỉ 1 từ thôi Đẹp, chân tui gầy nên là vừa khít còn bà nào chân hơi mập thì tăng size lên nha😚"
+      },
+      {
+       "idx": 4,
+       "comment_id": 15894177407,
+       "text": "Shop giao dép nhanh lắm nhé Mk đã mua lại lần 2 Dép dày dặn đi êm chân mà giá cả lại hợp lí Đeo nhìn rất thể thao năng động Cho shop năm sao nhé!!!!"
+      },
+      {
+       "idx": 8,
+       "comment_id": 15529318450,
+       "text": "Đúng với mô tả:đúng Màu sắc:như hình Chất liệu:nhựa Chất lượng khỏi bàn rất ưng ý . Giao hàng nhanh lúc lấy hàng hộp hơi méo xíu nhưng chất lượng thì vẫn ok sẽ…"
+      },
+      {
+       "idx": 9,
+       "comment_id": 14935117679,
+       "text": "Mua đôi này là đôi thứ 4 bên shop rồi, giá hợp lý, chất lượng, form, màu siêu đẹp cskh 10đ 👍🏻"
+      },
+      {
+       "idx": 10,
+       "comment_id": 15764216321,
+       "text": "Chất liệu:nhua đúc Đúng với mô tả:đúng với mô tả Màu sắc:cam nâu Dép đẹp Hàng chất lượng mang bền lắm ý"
+      },
+      {
+       "idx": 11,
+       "comment_id": 15078868565,
+       "text": "Màu sắc:dep Đúng với mô tả:dung mo ta Chất liệu:xốp Chất liệu ok. Đẹp hơn so với tưởng tượng. Nên mua ak"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.7
+    },
+    {
+     "point": "Shop nhiệt tình, tặng kèm quà",
+     "reviews": [
+      1,
+      6
+     ],
+     "evidence": [
+      {
+       "idx": 1,
+       "comment_id": 14792687919,
+       "text": "Chất liệu:kb Màu sắc:be nâu Đúng với mô tả:đúng Video mang tc nhận xu, nma dép đẹp lắmmm, ưng cái bụng hehee , nên mua nha cả nhà iu. Shop còn tặng thêm cho…"
+      },
+      {
+       "idx": 6,
+       "comment_id": 14864700156,
+       "text": "Màu sắc:ok Chất liệu:ok Đúng với mô tả:om Shop giao nhanh lắm mn ơiii. Shop tặng móc dán tường, lạc cả 1 chiếc khuyên tai vào =)))"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.333
+    }
+   ],
+   "cons": [
+    {
+     "point": "Hộp đựng hàng bị méo",
+     "reviews": [
+      8
+     ],
+     "evidence": [
+      {
+       "idx": 8,
+       "comment_id": 15529318450,
+       "text": "Đúng với mô tả:đúng Màu sắc:như hình Chất liệu:nhựa Chất lượng khỏi bàn rất ưng ý . Giao hàng nhanh lúc lấy hàng hộp hơi méo xíu nhưng chất lượng thì vẫn ok sẽ…"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.6
+    }
+   ],
+   "method": "llm:gemini-3.5-flash-lite",
+   "baseline": "Ưu điểm: giao hàng/đóng gói (6 đánh giá khen); êm/thoải mái (5 đánh giá khen); màu sắc/giống hình (5 đánh giá khen); giá (4 đánh giá khen). Lưu ý: size/form (3 đánh giá phàn nàn/nhắc). (Tổng hợp từ 22 đánh giá.)"
+  },
+  "shopee_22326560898": {
+   "title": "Keo Dán Giày Siêu Dính - Keo Dán Giày Dép Chuyên Dụng 1630 Aodegu 60 ml - Dính Siêu Chắc, Kèm Phụ Kiện",
+   "vimrhp_subcategory": "GiayDepNam",
+   "pros": [
+    {
+     "point": "Keo dán siêu dính, chắc chắn và đi nước không bong",
+     "reviews": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      9,
+      11
+     ],
+     "evidence": [
+      {
+       "idx": 0,
+       "comment_id": 10888788196,
+       "text": "chất lượng sản phảm tuyệt với, đóng gói sản phẩm chắc chắn, shop phục vụ rất tốt. Keo dính rất chặt, dính xong lộ nước lội bùn thoải mái không có dấu hiệu bị…"
+      },
+      {
+       "idx": 1,
+       "comment_id": 10887795555,
+       "text": "Chất liệu:tốt Màu sắc:tốt Đúng với mô tả:ok Shop bán hàng có tâm, sản phẩm chất lượng, hàng và quà đầy đủ. Keo dán siêu ưng, dán đâu chắc đó. Mình dán cả dép…"
+      },
+      {
+       "idx": 2,
+       "comment_id": 10888603269,
+       "text": "Màu sắc:tốt Đúng với mô tả:ok Chất liệu:tốt Đáng mua nhé mọi người, dính chắc chắn lắm luôn, mình dán cho cả giày và dép đều được, bôi keo xong phải cố định…"
+      },
+      {
+       "idx": 3,
+       "comment_id": 10886608227,
+       "text": "Đúng với mô tả:ok Chất liệu:tốt Màu sắc:tốt Ban đầu không tin lắm vì là hàng của tung của, nhưng dùng rồi lại thấy rất bất ngờ vì keo dán chắc đét luôn, muốn…"
+      },
+      {
+       "idx": 4,
+       "comment_id": 10926469819,
+       "text": "Chất liệu:tốt Màu sắc:? Đúng với mô tả:ok dán chắc quá bóc không ra luôn. Muốn bóc ra xin mẹ mua đôi mới mà không được. Huhuhuh. Sản phẩm chất lượng quá dùng…"
+      },
+      {
+       "idx": 5,
+       "comment_id": 10884737673,
+       "text": "Chất liệu:tốt Màu sắc:tốt Đúng với mô tả:đúng keo dán siêu dính luôn, dính xong đi vào nước cũng không bị bong luôn ấy. Mình có làm đổ 1 tí ra tay nhưng thấy…"
+      },
+      {
+       "idx": 7,
+       "comment_id": 10889264530,
+       "text": "sản phẩm chất lượng, dán rất chắc chắn, không bị bong tróc trở lại, không có vết keo gồ ghề, chỗ dán rất mỏng và phẳng, màu trong, đảm bảo được tính thẩm mỹ…"
+      },
+      {
+       "idx": 8,
+       "comment_id": 10889241112,
+       "text": "Đúng với mô tả:ok Chất liệu:tốt Màu sắc:tốt Đã dùng rất nhiều loại keo dán giày nhưng ưng nhất là loại này. Dán siêu dính luôn, lại còn không bị nức mũi vì mùi…"
+      },
+      {
+       "idx": 9,
+       "comment_id": 10886876265,
+       "text": "đỉnh của chóp, mình thích sản phẩm này của shop rồi nha, dán chắc chắn dã man, đỉnh thực sự ấy. Thích nhất là nó dính siêu chắc nhưng lại không hề ăn da tay…"
+      },
+      {
+       "idx": 11,
+       "comment_id": 10890772905,
+       "text": "Chất liệu:tốt Màu sắc:tốt Đúng với mô tả:ok Hàng chuẩn chất lượng, giá rẻ, dính chắc chắn như người yêu cũ của tôi cố dính lấy tôi vậy. Mối dán mềm mại mỏng…"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 1.0
+    },
+    {
+     "point": "Keo trong suốt, mối dán mỏng, phẳng và thẩm mỹ",
+     "reviews": [
+      0,
+      3,
+      7,
+      8,
+      11
+     ],
+     "evidence": [
+      {
+       "idx": 0,
+       "comment_id": 10888788196,
+       "text": "chất lượng sản phảm tuyệt với, đóng gói sản phẩm chắc chắn, shop phục vụ rất tốt. Keo dính rất chặt, dính xong lộ nước lội bùn thoải mái không có dấu hiệu bị…"
+      },
+      {
+       "idx": 3,
+       "comment_id": 10886608227,
+       "text": "Đúng với mô tả:ok Chất liệu:tốt Màu sắc:tốt Ban đầu không tin lắm vì là hàng của tung của, nhưng dùng rồi lại thấy rất bất ngờ vì keo dán chắc đét luôn, muốn…"
+      },
+      {
+       "idx": 7,
+       "comment_id": 10889264530,
+       "text": "sản phẩm chất lượng, dán rất chắc chắn, không bị bong tróc trở lại, không có vết keo gồ ghề, chỗ dán rất mỏng và phẳng, màu trong, đảm bảo được tính thẩm mỹ…"
+      },
+      {
+       "idx": 8,
+       "comment_id": 10889241112,
+       "text": "Đúng với mô tả:ok Chất liệu:tốt Màu sắc:tốt Đã dùng rất nhiều loại keo dán giày nhưng ưng nhất là loại này. Dán siêu dính luôn, lại còn không bị nức mũi vì mùi…"
+      },
+      {
+       "idx": 11,
+       "comment_id": 10890772905,
+       "text": "Chất liệu:tốt Màu sắc:tốt Đúng với mô tả:ok Hàng chuẩn chất lượng, giá rẻ, dính chắc chắn như người yêu cũ của tôi cố dính lấy tôi vậy. Mối dán mềm mại mỏng…"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 1.0
+    },
+    {
+     "point": "Không có mùi hóa học khó chịu, không ăn da tay",
+     "reviews": [
+      4,
+      5,
+      8,
+      9
+     ],
+     "evidence": [
+      {
+       "idx": 4,
+       "comment_id": 10926469819,
+       "text": "Chất liệu:tốt Màu sắc:? Đúng với mô tả:ok dán chắc quá bóc không ra luôn. Muốn bóc ra xin mẹ mua đôi mới mà không được. Huhuhuh. Sản phẩm chất lượng quá dùng…"
+      },
+      {
+       "idx": 5,
+       "comment_id": 10884737673,
+       "text": "Chất liệu:tốt Màu sắc:tốt Đúng với mô tả:đúng keo dán siêu dính luôn, dính xong đi vào nước cũng không bị bong luôn ấy. Mình có làm đổ 1 tí ra tay nhưng thấy…"
+      },
+      {
+       "idx": 8,
+       "comment_id": 10889241112,
+       "text": "Đúng với mô tả:ok Chất liệu:tốt Màu sắc:tốt Đã dùng rất nhiều loại keo dán giày nhưng ưng nhất là loại này. Dán siêu dính luôn, lại còn không bị nức mũi vì mùi…"
+      },
+      {
+       "idx": 9,
+       "comment_id": 10886876265,
+       "text": "đỉnh của chóp, mình thích sản phẩm này của shop rồi nha, dán chắc chắn dã man, đỉnh thực sự ấy. Thích nhất là nó dính siêu chắc nhưng lại không hề ăn da tay…"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.909
+    },
+    {
+     "point": "Đóng gói chắc chắn, giao hàng và phục vụ tốt",
+     "reviews": [
+      0,
+      1,
+      6
+     ],
+     "evidence": [
+      {
+       "idx": 0,
+       "comment_id": 10888788196,
+       "text": "chất lượng sản phảm tuyệt với, đóng gói sản phẩm chắc chắn, shop phục vụ rất tốt. Keo dính rất chặt, dính xong lộ nước lội bùn thoải mái không có dấu hiệu bị…"
+      },
+      {
+       "idx": 1,
+       "comment_id": 10887795555,
+       "text": "Chất liệu:tốt Màu sắc:tốt Đúng với mô tả:ok Shop bán hàng có tâm, sản phẩm chất lượng, hàng và quà đầy đủ. Keo dán siêu ưng, dán đâu chắc đó. Mình dán cả dép…"
+      },
+      {
+       "idx": 6,
+       "comment_id": 10894269654,
+       "text": "Sản phẩm hay hết sức , trước dăm bữa nửa tháng phải thay giày thể dục một lần giờ có keo dán này mãi nó không bong cho mà thay, không biết nên khóc hay nên…"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 1.0
+    }
+   ],
+   "cons": [],
+   "method": "llm:gemini-3.5-flash-lite",
+   "baseline": "Ưu điểm: độ bền (11 đánh giá khen); giao hàng/đóng gói (8 đánh giá khen); giá (4 đánh giá khen). Lưu ý: độ bền (4 đánh giá phàn nàn/nhắc); êm/thoải mái (3 đánh giá phàn nàn/nhắc); size/form (2 đánh giá phàn nàn/nhắc). (Tổng hợp từ 24 đánh giá.)"
+  },
+  "shopee_17498595412": {
+   "title": "Dép Lào, Tông Thái Lan, Dép kẹp nam nữ hình trơn, dép đi biển,dã ngoại  siêu bền | tông nam nữ",
+   "vimrhp_subcategory": "GiayDepNam",
+   "pros": [
+    {
+     "point": "Dép mang êm chân, nhẹ và bền",
+     "reviews": [
+      3,
+      8,
+      9,
+      11
+     ],
+     "evidence": [
+      {
+       "idx": 3,
+       "comment_id": 13165067951,
+       "text": "Đúng với mô tả:đúng Màu sắc:đúng Chất liệu:xốp nhẹ Dép nhé đẹp giá cả hợp lý giao hàng cực nhanh Sẽ mua hàng tiếp vào lần sau Fom hơi to mọi người mua lùi lại…"
+      },
+      {
+       "idx": 8,
+       "comment_id": 12851390671,
+       "text": "Dép đẹp, chắc chắn, tốt trong tầm giá. Thiết kế đẹp, nhưng mà không có màu xanh."
+      },
+      {
+       "idx": 9,
+       "comment_id": 15490065461,
+       "text": "Chất liệu:chất tốt Màu sắc:đen xám, 42 Đúng với mô tả:Đúng với mô tả Chất tốt mọi đi cũng êm chân Chất liệu tốt Mọi người nên mua hàng ủng hộ shop"
+      },
+      {
+       "idx": 11,
+       "comment_id": 12654127114,
+       "text": "Dép mang êm chân mà còn rẻ nữa,giao nhanh nữa,lần sau sẽ ủng hộ shop nữa."
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.714
+    },
+    {
+     "point": "Giá rẻ, hợp lý trong tầm giá",
+     "reviews": [
+      2,
+      3,
+      4,
+      7,
+      11
+     ],
+     "evidence": [
+      {
+       "idx": 2,
+       "comment_id": 12661521005,
+       "text": "Dép đẹp và rẻ. Mọi người yên tâm mua nhé. Cho shop 5☆☆☆☆☆ và sẽ quay lại ủng hộ shop nếu cần mua thêm j"
+      },
+      {
+       "idx": 3,
+       "comment_id": 13165067951,
+       "text": "Đúng với mô tả:đúng Màu sắc:đúng Chất liệu:xốp nhẹ Dép nhé đẹp giá cả hợp lý giao hàng cực nhanh Sẽ mua hàng tiếp vào lần sau Fom hơi to mọi người mua lùi lại…"
+      },
+      {
+       "idx": 4,
+       "comment_id": 14857120343,
+       "text": "Đúng với mô tả:dep 37 Màu sắc:đen đỏ + đen xám Chất liệu:ok Đã nhận hàng dép rẻ mà còn giao hàng nhanh nữa sẽ ủng hộ shop lần sau"
+      },
+      {
+       "idx": 7,
+       "comment_id": 12897036003,
+       "text": "Màu sắc:ok Chất liệu:ok Đúng với mô tả:ok Giao hàng sớm hơn dự kiến luôn,hàng ok so với giá nhe mọi người"
+      },
+      {
+       "idx": 11,
+       "comment_id": 12654127114,
+       "text": "Dép mang êm chân mà còn rẻ nữa,giao nhanh nữa,lần sau sẽ ủng hộ shop nữa."
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.714
+    },
+    {
+     "point": "Giao hàng nhanh chóng và nhiệt tình",
+     "reviews": [
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      11
+     ],
+     "evidence": [
+      {
+       "idx": 1,
+       "comment_id": 13404173251,
+       "text": "Mình đặt size 40 mà vừa quá trời luôn á Nói chung là hàng tốt giao hàng nhanh shipper nhiệt tình và lần sau sẽ ủng hộ shop"
+      },
+      {
+       "idx": 3,
+       "comment_id": 13165067951,
+       "text": "Đúng với mô tả:đúng Màu sắc:đúng Chất liệu:xốp nhẹ Dép nhé đẹp giá cả hợp lý giao hàng cực nhanh Sẽ mua hàng tiếp vào lần sau Fom hơi to mọi người mua lùi lại…"
+      },
+      {
+       "idx": 4,
+       "comment_id": 14857120343,
+       "text": "Đúng với mô tả:dep 37 Màu sắc:đen đỏ + đen xám Chất liệu:ok Đã nhận hàng dép rẻ mà còn giao hàng nhanh nữa sẽ ủng hộ shop lần sau"
+      },
+      {
+       "idx": 5,
+       "comment_id": 13294680781,
+       "text": "Chất liệu:ok Đúng với mô tả:dúng Màu sắc:xám đen Shop giao đúng mẫu y như hình dép đẹp giao đúng size đóng gói cẩn thận thời gian giao hàng nhanh cho shop 5 sao"
+      },
+      {
+       "idx": 6,
+       "comment_id": 13028443935,
+       "text": "Đúng với mô tả:ok Vừa với chân, màu sắc đúng, chất liệu ok, giao hàng nhanh, nói chung ok, sẽ ủng hộ lần sau"
+      },
+      {
+       "idx": 7,
+       "comment_id": 12897036003,
+       "text": "Màu sắc:ok Chất liệu:ok Đúng với mô tả:ok Giao hàng sớm hơn dự kiến luôn,hàng ok so với giá nhe mọi người"
+      },
+      {
+       "idx": 11,
+       "comment_id": 12654127114,
+       "text": "Dép mang êm chân mà còn rẻ nữa,giao nhanh nữa,lần sau sẽ ủng hộ shop nữa."
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.857
+    },
+    {
+     "point": "Đúng mẫu mã, đúng màu và đủ số lượng",
+     "reviews": [
+      0,
+      5,
+      6,
+      10
+     ],
+     "evidence": [
+      {
+       "idx": 0,
+       "comment_id": 13382976180,
+       "text": "Đúng với mô tả:Đúng như người bán giới thiệu Màu sắc:xám - đen, đỏ - đen Chất liệu:đế dép nhựa cứng, quai dép nhựa dẻo Tôi đã nhận được đơn hàng là 02 đôi dép…"
+      },
+      {
+       "idx": 5,
+       "comment_id": 13294680781,
+       "text": "Chất liệu:ok Đúng với mô tả:dúng Màu sắc:xám đen Shop giao đúng mẫu y như hình dép đẹp giao đúng size đóng gói cẩn thận thời gian giao hàng nhanh cho shop 5 sao"
+      },
+      {
+       "idx": 6,
+       "comment_id": 13028443935,
+       "text": "Đúng với mô tả:ok Vừa với chân, màu sắc đúng, chất liệu ok, giao hàng nhanh, nói chung ok, sẽ ủng hộ lần sau"
+      },
+      {
+       "idx": 10,
+       "comment_id": 13704140531,
+       "text": "Đúng với mô tả:đúng với mô tả của shop Màu sắc:giao đúng màu đã chọn (đen xám) Shop giao đủ số lượng đã đặt"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.889
+    }
+   ],
+   "cons": [
+    {
+     "point": "Form dép hơi to",
+     "reviews": [
+      3
+     ],
+     "evidence": [
+      {
+       "idx": 3,
+       "comment_id": 13165067951,
+       "text": "Đúng với mô tả:đúng Màu sắc:đúng Chất liệu:xốp nhẹ Dép nhé đẹp giá cả hợp lý giao hàng cực nhanh Sẽ mua hàng tiếp vào lần sau Fom hơi to mọi người mua lùi lại…"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.75
+    }
+   ],
+   "method": "llm:gemini-3.5-flash-lite",
+   "baseline": "Ưu điểm: giao hàng/đóng gói (8 đánh giá khen); êm/thoải mái (3 đánh giá khen); màu sắc/giống hình (3 đánh giá khen); giá (3 đánh giá khen). Lưu ý: êm/thoải mái (1 đánh giá phàn nàn/nhắc); size/form (1 đánh giá phàn nàn/nhắc). (Tổng hợp từ 22 đánh giá.)"
+  },
+  "shopee_24615286251": {
+   "title": "Tommy, BOY PHỐ Dép nam nữ  mẫu mới nhất hot tren,(BẢO HÀNH LỖI 1 ĐỔI 1), đế cao su non, mềm êm chân",
+   "vimrhp_subcategory": "GiayDepNam",
+   "pros": [
+    {
+     "point": "Dép mềm, nhẹ và mang rất êm chân",
+     "reviews": [
+      0,
+      1,
+      2,
+      4
+     ],
+     "evidence": [
+      {
+       "idx": 0,
+       "comment_id": 14813751817,
+       "text": "Đúng với mô tả:đúng SP như hình ảnh Màu sắc:tốt Chất liệu:êm Giao hàng nhanh,đúng sản phẩm size."
+      },
+      {
+       "idx": 1,
+       "comment_id": 15326314653,
+       "text": "Hình ảnh chỉ mang tính chất nhận xu, dép mềm nhẹ, mang khá êm, có điều ko có sz nhỏ của nữ nên hơi rộng"
+      },
+      {
+       "idx": 2,
+       "comment_id": 15364340134,
+       "text": "Giao hàng nhanh Đi êm chân lắm nha Mọi người nên đặt đúng size chân nha Mình 23.5 cm mang size 37 nè"
+      },
+      {
+       "idx": 4,
+       "comment_id": 15993487090,
+       "text": "Đúng với mô tả:đúng sp như hinh Màu sắc:tốt Chất liệu:êm Giao hàng nhanh đúng sản phẩm. Cho shop 5 sao"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.75
+    },
+    {
+     "point": "Giao hàng nhanh và đúng sản phẩm, đúng size",
+     "reviews": [
+      0,
+      2,
+      4
+     ],
+     "evidence": [
+      {
+       "idx": 0,
+       "comment_id": 14813751817,
+       "text": "Đúng với mô tả:đúng SP như hình ảnh Màu sắc:tốt Chất liệu:êm Giao hàng nhanh,đúng sản phẩm size."
+      },
+      {
+       "idx": 2,
+       "comment_id": 15364340134,
+       "text": "Giao hàng nhanh Đi êm chân lắm nha Mọi người nên đặt đúng size chân nha Mình 23.5 cm mang size 37 nè"
+      },
+      {
+       "idx": 4,
+       "comment_id": 15993487090,
+       "text": "Đúng với mô tả:đúng sp như hinh Màu sắc:tốt Chất liệu:êm Giao hàng nhanh đúng sản phẩm. Cho shop 5 sao"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.889
+    },
+    {
+     "point": "Chất liệu tốt, lội mưa nắng tốt và giá rẻ",
+     "reviews": [
+      3
+     ],
+     "evidence": [
+      {
+       "idx": 3,
+       "comment_id": 15936263801,
+       "text": "Màu sắc đúng với miêu tả, chất liệu OK, lội mưa lội nắng quá tốt! Giá rẻ đến không ngờ! Sẽ tiếp tục ủng hộ shop nha!"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.9
+    }
+   ],
+   "cons": [
+    {
+     "point": "Không có size nhỏ cho nữ nên hơi rộng",
+     "reviews": [
+      1
+     ],
+     "evidence": [
+      {
+       "idx": 1,
+       "comment_id": 15326314653,
+       "text": "Hình ảnh chỉ mang tính chất nhận xu, dép mềm nhẹ, mang khá êm, có điều ko có sz nhỏ của nữ nên hơi rộng"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.667
+    }
+   ],
+   "method": "llm:gemini-3.5-flash-lite",
+   "baseline": "Ưu điểm: êm/thoải mái (3 đánh giá khen); giao hàng/đóng gói (3 đánh giá khen). (Tổng hợp từ 4 đánh giá.)"
+  },
+  "shopee_24720036423": {
+   "title": "Giày cao gót 7 phân kim tuyến phối mika đính nơ, giày cưới cô dâu 7 phân N-BĐ95",
+   "vimrhp_subcategory": "GiayDepNu",
+   "pros": [
+    {
+     "point": "Giày xinh, lấp lánh, tôn dáng và sáng chân",
+     "reviews": [
+      2,
+      3,
+      4,
+      5,
+      8
+     ],
+     "evidence": [
+      {
+       "idx": 2,
+       "comment_id": 14974360536,
+       "text": "Màu sắc:lap lanh Đúng với mô tả:xinh Chất liệu:kim tuyen Xinh lắm, đeo lên nhìn chân sáng, giao hàng nhanh"
+      },
+      {
+       "idx": 3,
+       "comment_id": 15716286039,
+       "text": "Màu sắc:bạc nhũ Đúng với mô tả:đúng Chất liệu:kbt:) Má đẹp điên bay ơi nên mua nhaaa"
+      },
+      {
+       "idx": 4,
+       "comment_id": 15567028020,
+       "text": "Chất liệu:xinh Màu sắc:xinh lắm nha Đúng với mô tả:cinh lắm nha Hết nước chấm luôn xinh thật sưh"
+      },
+      {
+       "idx": 5,
+       "comment_id": 15934166367,
+       "text": "Chất liệu:nhu bac Màu sắc:nhu bạc Đúng với mô tả:đung giao hàng nhanh đóng gói cận thân lên fom chân chuẩn"
+      },
+      {
+       "idx": 8,
+       "comment_id": 15014337821,
+       "text": "Hàng đẹp lắm nha mọi người ơi giao hàng nhanh nữa nên mua nhé mọi người sẽ ủng hộ shop nhiều ajneennjha bên mua"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.333
+    },
+    {
+     "point": "Giao hàng nhanh và đóng gói cẩn thận",
+     "reviews": [
+      2,
+      5,
+      8
+     ],
+     "evidence": [
+      {
+       "idx": 2,
+       "comment_id": 14974360536,
+       "text": "Màu sắc:lap lanh Đúng với mô tả:xinh Chất liệu:kim tuyen Xinh lắm, đeo lên nhìn chân sáng, giao hàng nhanh"
+      },
+      {
+       "idx": 5,
+       "comment_id": 15934166367,
+       "text": "Chất liệu:nhu bac Màu sắc:nhu bạc Đúng với mô tả:đung giao hàng nhanh đóng gói cận thân lên fom chân chuẩn"
+      },
+      {
+       "idx": 8,
+       "comment_id": 15014337821,
+       "text": "Hàng đẹp lắm nha mọi người ơi giao hàng nhanh nữa nên mua nhé mọi người sẽ ủng hộ shop nhiều ajneennjha bên mua"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.625
+    },
+    {
+     "point": "Giá cả ổn áp, phù hợp với số tiền",
+     "reviews": [
+      0,
+      10
+     ],
+     "evidence": [
+      {
+       "idx": 0,
+       "comment_id": 15618956077,
+       "text": "Đúng với mô tả:70% Màu sắc:nhũ bạc Tớ thấy đôi này cũng được so với giá tiền . Nhưng nếu bạn nào muốn đi lâu dài thì nên cân nhắc nhé"
+      },
+      {
+       "idx": 10,
+       "comment_id": 16049102910,
+       "text": "Guốc xịn nha . ……………z Với giá này thì ổn áp rồi . Nên mua………………."
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.556
+    }
+   ],
+   "cons": [
+    {
+     "point": "Form hai bên giày bị mất form nên mang hơi rộng",
+     "reviews": [
+      7
+     ],
+     "evidence": [
+      {
+       "idx": 7,
+       "comment_id": 15870294006,
+       "text": "Giày đẹp lắm shop mũi giày có giữ from mà hai bên thì mất from nên mang nó hơi rộng á"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.727
+    },
+    {
+     "point": "Sợ mang lâu bị rớt hạt hoặc không hợp đi lâu dài",
+     "reviews": [
+      0,
+      6
+     ],
+     "evidence": [
+      {
+       "idx": 0,
+       "comment_id": 15618956077,
+       "text": "Đúng với mô tả:70% Màu sắc:nhũ bạc Tớ thấy đôi này cũng được so với giá tiền . Nhưng nếu bạn nào muốn đi lâu dài thì nên cân nhắc nhé"
+      },
+      {
+       "idx": 6,
+       "comment_id": 15070795877,
+       "text": "Giày xinh sợ mang lâu bị rớt hột 🥲 chung gnx fab gnxb fbg green gbxf"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.667
+    }
+   ],
+   "method": "llm:gemini-3.5-flash-lite",
+   "baseline": "Ưu điểm: giao hàng/đóng gói (3 đánh giá khen). Lưu ý: size/form (2 đánh giá phàn nàn/nhắc). (Tổng hợp từ 12 đánh giá.)"
+  },
+  "shopee_25809019455": {
+   "title": "Giày Cao Gót 7 Phân Nữ Nơ Cạnh Hàng Chuẩn Phom Soze 35 - 39",
+   "vimrhp_subcategory": "GiayDepNu",
+   "pros": [
+    {
+     "point": "Giày đi êm chân và chất lượng tốt",
+     "reviews": [
+      3,
+      11
+     ],
+     "evidence": [
+      {
+       "idx": 3,
+       "comment_id": 15059082642,
+       "text": "Màu sắc:đen Ui giày rẻ mà chất lượng lắm ạ Đi siêu êm chân mà còn bền nữa Giao hàng nhanh"
+      },
+      {
+       "idx": 11,
+       "comment_id": 15985674020,
+       "text": "Ui giày xinh mà đi êm chân lắm, không đau chân tí nào nha mng. Không tin được giày đẹp ntn mà săn sale còn có 85k à. Quá ưng ý luôn. Mua bth tầm 130k vẫn là rẻ…"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.75
+    },
+    {
+     "point": "Phom dáng đẹp, chuẩn hình",
+     "reviews": [
+      2,
+      5,
+      10
+     ],
+     "evidence": [
+      {
+       "idx": 2,
+       "comment_id": 15892024085,
+       "text": "Màu sắc:den Đúng với mô tả:đúng Chất liệu:tốt Giày rất đẹp phom rất chuẩn lun ạ. Đóng gói chắc chắn ko bị gãy giày"
+      },
+      {
+       "idx": 5,
+       "comment_id": 14945163300,
+       "text": "Hàng chuẩn hình, giao hàng nhanh , nói chung lên form chắc chắn, dễ đi"
+      },
+      {
+       "idx": 10,
+       "comment_id": 15217660513,
+       "text": "Giày da mềm, form chuẩn vừa chân, gót trụ lớn đi chắc chân, quai nơ lúc xỏ vào rút ra hơi khó, keo dán phía mũi chưa dc đẹp lắm"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.8
+    },
+    {
+     "point": "Giao hàng nhanh và đóng gói chắc chắn",
+     "reviews": [
+      2,
+      3,
+      8
+     ],
+     "evidence": [
+      {
+       "idx": 2,
+       "comment_id": 15892024085,
+       "text": "Màu sắc:den Đúng với mô tả:đúng Chất liệu:tốt Giày rất đẹp phom rất chuẩn lun ạ. Đóng gói chắc chắn ko bị gãy giày"
+      },
+      {
+       "idx": 3,
+       "comment_id": 15059082642,
+       "text": "Màu sắc:đen Ui giày rẻ mà chất lượng lắm ạ Đi siêu êm chân mà còn bền nữa Giao hàng nhanh"
+      },
+      {
+       "idx": 8,
+       "comment_id": 15055803795,
+       "text": "Giày đẹp, ưng ý, shop đóng gói cẩn thận. Nói chung là duyệt oke"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.875
+    },
+    {
+     "point": "Giá cả hợp lý, rẻ",
+     "reviews": [
+      3,
+      6,
+      9,
+      11
+     ],
+     "evidence": [
+      {
+       "idx": 3,
+       "comment_id": 15059082642,
+       "text": "Màu sắc:đen Ui giày rẻ mà chất lượng lắm ạ Đi siêu êm chân mà còn bền nữa Giao hàng nhanh"
+      },
+      {
+       "idx": 6,
+       "comment_id": 14869438385,
+       "text": "Giày siêu xinh, giao hàng nhanh. Giá quá rẻ mà cực chất lượng luôn"
+      },
+      {
+       "idx": 9,
+       "comment_id": 15109175743,
+       "text": "Đúng với mô tả:Chuẩn Chất liệu:Da bóng Màu sắc:Kem Chất da bóng, đế nhựa nên cảm giác không êm. Chân mình hơi ngắn nên đi hơi rộng. Ai size chân chuẩn thì đi…"
+      },
+      {
+       "idx": 11,
+       "comment_id": 15985674020,
+       "text": "Ui giày xinh mà đi êm chân lắm, không đau chân tí nào nha mng. Không tin được giày đẹp ntn mà săn sale còn có 85k à. Quá ưng ý luôn. Mua bth tầm 130k vẫn là rẻ…"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.8
+    }
+   ],
+   "cons": [
+    {
+     "point": "Đế nhựa cảm giác không êm",
+     "reviews": [
+      9
+     ],
+     "evidence": [
+      {
+       "idx": 9,
+       "comment_id": 15109175743,
+       "text": "Đúng với mô tả:Chuẩn Chất liệu:Da bóng Màu sắc:Kem Chất da bóng, đế nhựa nên cảm giác không êm. Chân mình hơi ngắn nên đi hơi rộng. Ai size chân chuẩn thì đi…"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 1.0
+    },
+    {
+     "point": "Quai nơ khó rút ra khi xỏ và keo dán mũi chưa đẹp",
+     "reviews": [
+      10
+     ],
+     "evidence": [
+      {
+       "idx": 10,
+       "comment_id": 15217660513,
+       "text": "Giày da mềm, form chuẩn vừa chân, gót trụ lớn đi chắc chân, quai nơ lúc xỏ vào rút ra hơi khó, keo dán phía mũi chưa dc đẹp lắm"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.846
+    }
+   ],
+   "method": "llm:gemini-3.5-flash-lite",
+   "baseline": "Ưu điểm: giao hàng/đóng gói (7 đánh giá khen); giá (4 đánh giá khen); độ bền (3 đánh giá khen); êm/thoải mái (3 đánh giá khen). Lưu ý: size/form (4 đánh giá phàn nàn/nhắc); êm/thoải mái (2 đánh giá phàn nàn/nhắc); độ bền (1 đánh giá phàn nàn/nhắc). (Tổng hợp từ 18 đánh giá.)"
+  },
+  "shopee_2140323126": {
+   "title": "Giày búp bê Lolita dây cài đế 5 phân ôm chân cao cấp - giày nữ đế độn da mềm thời trang",
+   "vimrhp_subcategory": "GiayDepNu",
+   "pros": [
+    {
+     "point": "Giày xinh, đi êm chân và nhẹ",
+     "reviews": [
+      1,
+      2,
+      9
+     ],
+     "evidence": [
+      {
+       "idx": 1,
+       "comment_id": 7297327294,
+       "text": "Dày siêu xinh mn ơi , nên mua lắm ạ , đóng gói cx kĩ lắm nha , giao hàng nhanh, dày vừa tiền, ko dày lắm , nhẹ lên phom xinh , mình thấy ai chân 37 thì cứ mua…"
+      },
+      {
+       "idx": 2,
+       "comment_id": 7238232601,
+       "text": "Giày quá là xinh luôn đi cực êm chân mình 24cm mang size 38 vừa như in cực kỳ hài lòng shop phục vụ tốt hàng giao rất nhanh mn nên mua nhé"
+      },
+      {
+       "idx": 9,
+       "comment_id": 7771323673,
+       "text": "Giày đẹp lắm ạ, giao hàng siêu nhanh luôn, giày bên trong shop có nhét giấy và que giữ form nên form chuẩn lắm luôn, đi êm chân, chất lượng vô cùng đáng mua"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 1.0
+    },
+    {
+     "point": "Giao hàng nhanh chóng",
+     "reviews": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      9,
+      10,
+      11
+     ],
+     "evidence": [
+      {
+       "idx": 0,
+       "comment_id": 8684488901,
+       "text": "hàng về nhanh lắm luôn. đế cao khoảng 5phân có mút để cố định giày mình nghĩ là mọi người nên chọn zise rộng hơn một cỡ. Nói chung là shop tuyệt zời!!!"
+      },
+      {
+       "idx": 1,
+       "comment_id": 7297327294,
+       "text": "Dày siêu xinh mn ơi , nên mua lắm ạ , đóng gói cx kĩ lắm nha , giao hàng nhanh, dày vừa tiền, ko dày lắm , nhẹ lên phom xinh , mình thấy ai chân 37 thì cứ mua…"
+      },
+      {
+       "idx": 2,
+       "comment_id": 7238232601,
+       "text": "Giày quá là xinh luôn đi cực êm chân mình 24cm mang size 38 vừa như in cực kỳ hài lòng shop phục vụ tốt hàng giao rất nhanh mn nên mua nhé"
+      },
+      {
+       "idx": 4,
+       "comment_id": 7492513388,
+       "text": "Ui giao hàng nhanh quá tr đặt hôm 11 mà 12 đã nhận đc r chất giày ổn ko bị mất form ưng quá trời lun á 10 điểm lun"
+      },
+      {
+       "idx": 5,
+       "comment_id": 7148358502,
+       "text": "giày đẹp lắm ạ, shop giao hàng nhanh, có xốp giữ form nên mọi người không sợ bị gãy, méo móp gì đâu, đôi này dễ phối đồ lắm ạ"
+      },
+      {
+       "idx": 6,
+       "comment_id": 11404626876,
+       "text": "Chất liệu:xing Màu sắc:xing Đúng với mô tả:xinggg Giao hàng siu nhanh 2 hôm là tới goiii. Giày xinh như hình, không bị móp hay xước gi đâu á💗💗💗siu ưng…"
+      },
+      {
+       "idx": 9,
+       "comment_id": 7771323673,
+       "text": "Giày đẹp lắm ạ, giao hàng siêu nhanh luôn, giày bên trong shop có nhét giấy và que giữ form nên form chuẩn lắm luôn, đi êm chân, chất lượng vô cùng đáng mua"
+      },
+      {
+       "idx": 10,
+       "comment_id": 9134303552,
+       "text": "Đúng với mô tả:đúng Chất liệu:bÓng Màu sắc:đen Giày khá ổn, đúng với phần mô tả, giao hàng nhanh shippee thân thiện+ đẹp trai 🙈🙈"
+      },
+      {
+       "idx": 11,
+       "comment_id": 8524494380,
+       "text": "Sản phẩm y hình, giao nhanh. Đóng gói vẫn giữ đc form nên siu ưng. Giày nên tăg 1 size đi cho đỡ đau chân"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.75
+    },
+    {
+     "point": "Đóng gói kỹ, giữ form tốt",
+     "reviews": [
+      1,
+      5,
+      9,
+      11
+     ],
+     "evidence": [
+      {
+       "idx": 1,
+       "comment_id": 7297327294,
+       "text": "Dày siêu xinh mn ơi , nên mua lắm ạ , đóng gói cx kĩ lắm nha , giao hàng nhanh, dày vừa tiền, ko dày lắm , nhẹ lên phom xinh , mình thấy ai chân 37 thì cứ mua…"
+      },
+      {
+       "idx": 5,
+       "comment_id": 7148358502,
+       "text": "giày đẹp lắm ạ, shop giao hàng nhanh, có xốp giữ form nên mọi người không sợ bị gãy, méo móp gì đâu, đôi này dễ phối đồ lắm ạ"
+      },
+      {
+       "idx": 9,
+       "comment_id": 7771323673,
+       "text": "Giày đẹp lắm ạ, giao hàng siêu nhanh luôn, giày bên trong shop có nhét giấy và que giữ form nên form chuẩn lắm luôn, đi êm chân, chất lượng vô cùng đáng mua"
+      },
+      {
+       "idx": 11,
+       "comment_id": 8524494380,
+       "text": "Sản phẩm y hình, giao nhanh. Đóng gói vẫn giữ đc form nên siu ưng. Giày nên tăg 1 size đi cho đỡ đau chân"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.667
+    },
+    {
+     "point": "Giá cả hợp lý và phải chăng",
+     "reviews": [
+      1,
+      3,
+      7,
+      8
+     ],
+     "evidence": [
+      {
+       "idx": 1,
+       "comment_id": 7297327294,
+       "text": "Dày siêu xinh mn ơi , nên mua lắm ạ , đóng gói cx kĩ lắm nha , giao hàng nhanh, dày vừa tiền, ko dày lắm , nhẹ lên phom xinh , mình thấy ai chân 37 thì cứ mua…"
+      },
+      {
+       "idx": 3,
+       "comment_id": 7540558753,
+       "text": "Shop giao hàng nhanh Sản phẩm y hình Mức giá 120 tiền nào của đó Sản phẩm ổn, mang lên chân nhìn cưng Size chuẩn"
+      },
+      {
+       "idx": 7,
+       "comment_id": 13219792965,
+       "text": "Màu sắc:den Chất liệu:da bong Đúng với mô tả:đúng đẹp nha mn! nên mua săn sale nên dx giá rẻ mà nhận hàng rất ưng ý!"
+      },
+      {
+       "idx": 8,
+       "comment_id": 13627987943,
+       "text": "Đúng với mô tả:giống Màu sắc:đen Chất liệu:tốt Giống trg hình giá hợp lí chất liệu chắc đế cao nên cảm giác mang vô rất thoải mái"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.286
+    }
+   ],
+   "cons": [],
+   "method": "llm:gemini-3.5-flash-lite",
+   "baseline": "Ưu điểm: giao hàng/đóng gói (11 đánh giá khen); êm/thoải mái (6 đánh giá khen); giá (6 đánh giá khen); màu sắc/giống hình (5 đánh giá khen). Lưu ý: êm/thoải mái (2 đánh giá phàn nàn/nhắc); size/form (2 đánh giá phàn nàn/nhắc); độ bền (1 đánh giá phàn nàn/nhắc). (Tổng hợp từ 24 đánh giá.)"
+  },
+  "shopee_24961147751": {
+   "title": "FANAN Giày Cao Gót giày búp bê giày nữ Mary jane Giày Lười Da Thời Trang vintage giày nữ High quality Trẻ trung Thể thao và thời trang Năng động Chống bám bụi B25G08V 4Z240127",
+   "vimrhp_subcategory": "GiayDepNu",
+   "pros": [
+    {
+     "point": "Giày đi êm chân, không đau",
+     "reviews": [
+      0,
+      1,
+      4,
+      5
+     ],
+     "evidence": [
+      {
+       "idx": 0,
+       "comment_id": 14405199650,
+       "text": "Giày rất dễ mang và tạo cảm giác êm ái. Chất liệu chọn lọc rất tốt, giày rất tinh tế và đẹp. Điều này làm tôi cảm thấy tự tin hơn khi đi ra ngoài. Tôi sẽ giới…"
+      },
+      {
+       "idx": 1,
+       "comment_id": 14313335163,
+       "text": "Màu sắc:đen Chất liệu:da Đúng với mô tả:chuẩn Đẹp rẻ mà qte giao cx nhanh. đi êm chân chuẩn fom lắm. nên mua shop này nha"
+      },
+      {
+       "idx": 4,
+       "comment_id": 14096601481,
+       "text": "Shop giao hàng nhanh và đóng gói cẩn thận nữa. Đi êm chân lắm. Ko hề đau đâu nha. Mang size nào mua y size đó là mang đẹp lắm."
+      },
+      {
+       "idx": 5,
+       "comment_id": 14045588076,
+       "text": "Giày đẹp lắm nha mang êm chân mà giá quá ôk luôn Giao nhanh đóng gói cẩn thận mừ điểm nha shop💕"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.833
+    },
+    {
+     "point": "Form giày đẹp, sang và dễ phối đồ",
+     "reviews": [
+      1,
+      3,
+      9
+     ],
+     "evidence": [
+      {
+       "idx": 1,
+       "comment_id": 14313335163,
+       "text": "Màu sắc:đen Chất liệu:da Đúng với mô tả:chuẩn Đẹp rẻ mà qte giao cx nhanh. đi êm chân chuẩn fom lắm. nên mua shop này nha"
+      },
+      {
+       "idx": 3,
+       "comment_id": 15053830551,
+       "text": "Quá okeeeeeelaaaaa from đẹp mà sang lắm ạ bác nào thích phối đồ sang choảnh thì ưu tiên nên chọn em này nha lên chân đẹp mà dễ phối đồ lắm giá cả lại hạt dẻ"
+      },
+      {
+       "idx": 9,
+       "comment_id": 16076781468,
+       "text": "Chất liệu:ok Đúng với mô tả:ok Màu sắc:ok Đọc đánh giá mà thấy lo hàng siêu đẹp chả chê cái gì luôn đeo hơi nhấc gót tí còn lại 10 điểm chê kh nổi haha làm đọc…"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.625
+    },
+    {
+     "point": "Giao hàng nhanh và đóng gói cẩn thận",
+     "reviews": [
+      1,
+      4,
+      5
+     ],
+     "evidence": [
+      {
+       "idx": 1,
+       "comment_id": 14313335163,
+       "text": "Màu sắc:đen Chất liệu:da Đúng với mô tả:chuẩn Đẹp rẻ mà qte giao cx nhanh. đi êm chân chuẩn fom lắm. nên mua shop này nha"
+      },
+      {
+       "idx": 4,
+       "comment_id": 14096601481,
+       "text": "Shop giao hàng nhanh và đóng gói cẩn thận nữa. Đi êm chân lắm. Ko hề đau đâu nha. Mang size nào mua y size đó là mang đẹp lắm."
+      },
+      {
+       "idx": 5,
+       "comment_id": 14045588076,
+       "text": "Giày đẹp lắm nha mang êm chân mà giá quá ôk luôn Giao nhanh đóng gói cẩn thận mừ điểm nha shop💕"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 1.0
+    },
+    {
+     "point": "Giá cả hợp lý, giá rẻ",
+     "reviews": [
+      3,
+      5,
+      8
+     ],
+     "evidence": [
+      {
+       "idx": 3,
+       "comment_id": 15053830551,
+       "text": "Quá okeeeeeelaaaaa from đẹp mà sang lắm ạ bác nào thích phối đồ sang choảnh thì ưu tiên nên chọn em này nha lên chân đẹp mà dễ phối đồ lắm giá cả lại hạt dẻ"
+      },
+      {
+       "idx": 5,
+       "comment_id": 14045588076,
+       "text": "Giày đẹp lắm nha mang êm chân mà giá quá ôk luôn Giao nhanh đóng gói cẩn thận mừ điểm nha shop💕"
+      },
+      {
+       "idx": 8,
+       "comment_id": 14444537700,
+       "text": "Đi cảm giác hơi nhẹ nhẹ k đc chắc gót nma lót giày êm. Hơi mùi nhưng giá rẻ nên chấp nhận được"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.667
+    }
+   ],
+   "cons": [
+    {
+     "point": "Chờ giao hàng lâu",
+     "reviews": [
+      7,
+      11
+     ],
+     "evidence": [
+      {
+       "idx": 7,
+       "comment_id": 15760311286,
+       "text": "Đúng với mô tả:đúng Chất liệu:da bóng Màu sắc:đen bạc Chờ đúng 2 tuần mới giao ... nhưng mà hàng chất lượng nha mọi người 💯 9cm á nhưng mà nó chắc chắn lắm 🌷…"
+      },
+      {
+       "idx": 11,
+       "comment_id": 15819953553,
+       "text": "Giày chất lượng khá ổn đợi ship hàng hơi lâu thui ai chân thon nhỏ đi đẹp hơn nè"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 1.0
+    },
+    {
+     "point": "Gót chân đi cảm giác hơi nhẹ không chắc và có mùi",
+     "reviews": [
+      8
+     ],
+     "evidence": [
+      {
+       "idx": 8,
+       "comment_id": 14444537700,
+       "text": "Đi cảm giác hơi nhẹ nhẹ k đc chắc gót nma lót giày êm. Hơi mùi nhưng giá rẻ nên chấp nhận được"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.667
+    }
+   ],
+   "method": "llm:gemini-3.5-flash-lite",
+   "baseline": "Ưu điểm: êm/thoải mái (8 đánh giá khen); giá (4 đánh giá khen); màu sắc/giống hình (3 đánh giá khen); giao hàng/đóng gói (3 đánh giá khen). Lưu ý: giao hàng/đóng gói (2 đánh giá phàn nàn/nhắc); size/form (1 đánh giá phàn nàn/nhắc). (Tổng hợp từ 21 đánh giá.)"
+  },
+  "shopee_21790856532": {
+   "title": "Dù Gấp Tự Động Chống Tia UV Kích Thước Lớn Bảo Vệ Tuyệt Vời",
+   "vimrhp_subcategory": "PhuKienNu",
+   "pros": [
+    {
+     "point": "Dù tự động tiện lợi, dễ mở và đóng",
+     "reviews": [
+      2,
+      3,
+      5,
+      11
+     ],
+     "evidence": [
+      {
+       "idx": 2,
+       "comment_id": 12663045076,
+       "text": "Dù đẹp với ok lắm nha Dù tự động nên rất tiện lợi Rcm mọi người nên mua nha"
+      },
+      {
+       "idx": 3,
+       "comment_id": 12641116288,
+       "text": "Rất tốt nên mua che đc 1 đến 2 người vải ô đẹp ô tự bung rất dễ mở và đóng gấp gọn rất tiện nên mua nha mọi người ơi"
+      },
+      {
+       "idx": 5,
+       "comment_id": 15677972241,
+       "text": "Dù màu hồng nhạt, màu thì bình thường. Bấm 1 lần mở dù, bấm thêm 1 lần dù tự gập lại, rất tiện, không biết có được lâu không, mình nghĩ dùng cẩn thận sẽ được 1…"
+      },
+      {
+       "idx": 11,
+       "comment_id": 15967051603,
+       "text": "Hàng quốc tế giao cũng nhanh.dù bật đóng tự động .khá là ok.đối với mình dù khá nhỏ"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 1.0
+    },
+    {
+     "point": "Thiết kế nhẹ, rộng rãi và chắc chắn",
+     "reviews": [
+      1,
+      6,
+      9,
+      10
+     ],
+     "evidence": [
+      {
+       "idx": 1,
+       "comment_id": 15761625890,
+       "text": "Sản phẩm nhẹ tay, bung ra và gấp lại cũng dễ. Để dành đưa đón con đi mùa mưa và mùa nắng! Cảm ơn shop đã mang sản phẩm đến cho chúng tôi. Cảm ơn bạn shipper!!"
+      },
+      {
+       "idx": 6,
+       "comment_id": 13403934845,
+       "text": "Sản phẩm đóng gói cẩn thận. Hợp với giá tiền. Dù rộng giúng với hình ảnh. Rất đáng mua nha mọi người. Sẽ ủng hộ shop lần sau"
+      },
+      {
+       "idx": 9,
+       "comment_id": 12822869819,
+       "text": "Giao hàng nhanh mà dù còn đẹp và khá rộng đặc biệt còn cực kì rẻ mà khung cũng chắc chắn nhaaa"
+      },
+      {
+       "idx": 10,
+       "comment_id": 12696728062,
+       "text": "Cảm nhận chắc chắc, lò xo khỏe, bật nhanh. Chưa dùng thử đi mưa xem có bị thấm ướt không. Đánh giá tạm 5 sao. Nếu có vấn đề gì sẽ đánh giá lại, nhân viên giao…"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.625
+    },
+    {
+     "point": "Giao hàng nhanh chóng",
+     "reviews": [
+      8,
+      9,
+      11
+     ],
+     "evidence": [
+      {
+       "idx": 8,
+       "comment_id": 13477571428,
+       "text": "Giao Hàng Nhanh chóng. Shipper nhiệt tình và dễ thương............... Hàng đúng mô tả. Giờ c cũng đc c ơi em cũng không thể phủ nhận là nó sẽ là một được là…"
+      },
+      {
+       "idx": 9,
+       "comment_id": 12822869819,
+       "text": "Giao hàng nhanh mà dù còn đẹp và khá rộng đặc biệt còn cực kì rẻ mà khung cũng chắc chắn nhaaa"
+      },
+      {
+       "idx": 11,
+       "comment_id": 15967051603,
+       "text": "Hàng quốc tế giao cũng nhanh.dù bật đóng tự động .khá là ok.đối với mình dù khá nhỏ"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 1.0
+    },
+    {
+     "point": "Giá rẻ, phù hợp với túi tiền",
+     "reviews": [
+      0,
+      5,
+      6,
+      7,
+      9
+     ],
+     "evidence": [
+      {
+       "idx": 0,
+       "comment_id": 13156355143,
+       "text": "Rất ổn nhaaa,phù hợp với giá tiền,thủ công thì cán dài hơn tự động màu cuungx xinh lắmmmmmmmmmmm mua i mnnng"
+      },
+      {
+       "idx": 5,
+       "comment_id": 15677972241,
+       "text": "Dù màu hồng nhạt, màu thì bình thường. Bấm 1 lần mở dù, bấm thêm 1 lần dù tự gập lại, rất tiện, không biết có được lâu không, mình nghĩ dùng cẩn thận sẽ được 1…"
+      },
+      {
+       "idx": 6,
+       "comment_id": 13403934845,
+       "text": "Sản phẩm đóng gói cẩn thận. Hợp với giá tiền. Dù rộng giúng với hình ảnh. Rất đáng mua nha mọi người. Sẽ ủng hộ shop lần sau"
+      },
+      {
+       "idx": 7,
+       "comment_id": 16044361385,
+       "text": "Đã nhận được hàng phù hợp giá cả với giá như này là ô kê rồi"
+      },
+      {
+       "idx": 9,
+       "comment_id": 12822869819,
+       "text": "Giao hàng nhanh mà dù còn đẹp và khá rộng đặc biệt còn cực kì rẻ mà khung cũng chắc chắn nhaaa"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.857
+    }
+   ],
+   "cons": [],
+   "method": "llm:gemini-3.5-flash-lite",
+   "baseline": "Ưu điểm: giao hàng/đóng gói (6 đánh giá khen); giá (6 đánh giá khen); màu sắc/giống hình (4 đánh giá khen); độ bền (3 đánh giá khen). Lưu ý: size/form (4 đánh giá phàn nàn/nhắc). (Tổng hợp từ 24 đánh giá.)"
+  },
+  "shopee_18888927612": {
+   "title": "Mũ chống nắng nửa đầu Hàn Quốc, nón vành rộng có móc đeo khẩu trang, mũ chống nắng buộc tóc đuôi ngựa.",
+   "vimrhp_subcategory": "PhuKienNu",
+   "pros": [
+    {
+     "point": "Mũ đẹp, form dáng đẹp và che phủ tốt",
+     "reviews": [
+      0,
+      1,
+      4,
+      6,
+      10
+     ],
+     "evidence": [
+      {
+       "idx": 0,
+       "comment_id": 14959985675,
+       "text": "sản phẩm quá đẹp a, mọi người mua nhé, quá ngon bổ rẻ quá bất ngờ với chất lượng luôn a"
+      },
+      {
+       "idx": 1,
+       "comment_id": 11610251515,
+       "text": "Lần đầu tiên mua hàng của shop , hàng rất đẹp mẫu mã đa dạng giao hàng nhanh mũ hơi mềm nhưng đẹp lắm nói chung là với giá này là quá rẻ sẽ ủng hộ shop nhiều…"
+      },
+      {
+       "idx": 4,
+       "comment_id": 14868738126,
+       "text": "Giao hàng nhanh, mũ đẹp lên phom ko có chỉ thừa đường may cẩn thận. Nên mua nha mn"
+      },
+      {
+       "idx": 6,
+       "comment_id": 12267601746,
+       "text": "Hơi mỏng so với tưởng tượng Nhma form khá đẹp Che phủ khá ok Màu dth Tầm 7.5/10 thui tại đóng gói hơi sơ sài"
+      },
+      {
+       "idx": 10,
+       "comment_id": 11952344857,
+       "text": "Hàng đẹp, cực kỳ ưng. Chất liệu và màu sắc như quảng cáo. Mình mua 2 mũ màu hồng nhạt và đen; chất đẹp và màu đẹp, mát, dễ gấp gọn tiện cho đi du lịch. Rất…"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.778
+    },
+    {
+     "point": "Giao hàng nhanh và shipper nhiệt tình",
+     "reviews": [
+      1,
+      4,
+      7,
+      8
+     ],
+     "evidence": [
+      {
+       "idx": 1,
+       "comment_id": 11610251515,
+       "text": "Lần đầu tiên mua hàng của shop , hàng rất đẹp mẫu mã đa dạng giao hàng nhanh mũ hơi mềm nhưng đẹp lắm nói chung là với giá này là quá rẻ sẽ ủng hộ shop nhiều…"
+      },
+      {
+       "idx": 4,
+       "comment_id": 14868738126,
+       "text": "Giao hàng nhanh, mũ đẹp lên phom ko có chỉ thừa đường may cẩn thận. Nên mua nha mn"
+      },
+      {
+       "idx": 7,
+       "comment_id": 11792612336,
+       "text": "Mũ ok vừa giá nên mua mn nhé. Giao hàng nhanh ship nhịet tình nữa [QC] Mừng sinh nhật Viettel++, đổi 4.000 điểm Viettel++ nhận voucher giảm giá 2.500.000đ khi…"
+      },
+      {
+       "idx": 8,
+       "comment_id": 11921639752,
+       "text": "Mũ đội sướng, vải đẹp, mũ mềm đáng mua. Giao hàng nhanh. Sẽ ủng hộ lần sau. Đang sử dụng hiệu quả . Shop đóng gói cẩn thận"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.571
+    },
+    {
+     "point": "Đội sướng, chất liệu tốt, mát và dễ gấp gọn",
+     "reviews": [
+      8,
+      9,
+      10
+     ],
+     "evidence": [
+      {
+       "idx": 8,
+       "comment_id": 11921639752,
+       "text": "Mũ đội sướng, vải đẹp, mũ mềm đáng mua. Giao hàng nhanh. Sẽ ủng hộ lần sau. Đang sử dụng hiệu quả . Shop đóng gói cẩn thận"
+      },
+      {
+       "idx": 9,
+       "comment_id": 13735419075,
+       "text": "Chất liệu tốt. Sản phẩm giá tốt ưng ý nha. Sẽ ủng hộ lần sau nhé! Cám ơn shop nhiều. Hi"
+      },
+      {
+       "idx": 10,
+       "comment_id": 11952344857,
+       "text": "Hàng đẹp, cực kỳ ưng. Chất liệu và màu sắc như quảng cáo. Mình mua 2 mũ màu hồng nhạt và đen; chất đẹp và màu đẹp, mát, dễ gấp gọn tiện cho đi du lịch. Rất…"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 1.0
+    },
+    {
+     "point": "Giá rẻ, vừa vặn với tiền",
+     "reviews": [
+      0,
+      1,
+      2,
+      7,
+      9,
+      11
+     ],
+     "evidence": [
+      {
+       "idx": 0,
+       "comment_id": 14959985675,
+       "text": "sản phẩm quá đẹp a, mọi người mua nhé, quá ngon bổ rẻ quá bất ngờ với chất lượng luôn a"
+      },
+      {
+       "idx": 1,
+       "comment_id": 11610251515,
+       "text": "Lần đầu tiên mua hàng của shop , hàng rất đẹp mẫu mã đa dạng giao hàng nhanh mũ hơi mềm nhưng đẹp lắm nói chung là với giá này là quá rẻ sẽ ủng hộ shop nhiều…"
+      },
+      {
+       "idx": 2,
+       "comment_id": 15404396500,
+       "text": "Mũ mỏng lét, không biết có chống được nắng không nữa. Mang lên vừa vặn, có nút điều chỉnh kích cỡ. Đóng gói không ok để mất form mũ, nhận về nhăn nheo. Mà với…"
+      },
+      {
+       "idx": 7,
+       "comment_id": 11792612336,
+       "text": "Mũ ok vừa giá nên mua mn nhé. Giao hàng nhanh ship nhịet tình nữa [QC] Mừng sinh nhật Viettel++, đổi 4.000 điểm Viettel++ nhận voucher giảm giá 2.500.000đ khi…"
+      },
+      {
+       "idx": 9,
+       "comment_id": 13735419075,
+       "text": "Chất liệu tốt. Sản phẩm giá tốt ưng ý nha. Sẽ ủng hộ lần sau nhé! Cám ơn shop nhiều. Hi"
+      },
+      {
+       "idx": 11,
+       "comment_id": 11662100459,
+       "text": "Đẹp , vừa với giá tiền, nhưng kg chất lượng thế nào, nhưng đáng mua nhé mọi người"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 1.0
+    }
+   ],
+   "cons": [
+    {
+     "point": "Mũ mỏng và đóng gói sơ sài làm mất form",
+     "reviews": [
+      2,
+      6
+     ],
+     "evidence": [
+      {
+       "idx": 2,
+       "comment_id": 15404396500,
+       "text": "Mũ mỏng lét, không biết có chống được nắng không nữa. Mang lên vừa vặn, có nút điều chỉnh kích cỡ. Đóng gói không ok để mất form mũ, nhận về nhăn nheo. Mà với…"
+      },
+      {
+       "idx": 6,
+       "comment_id": 12267601746,
+       "text": "Hơi mỏng so với tưởng tượng Nhma form khá đẹp Che phủ khá ok Màu dth Tầm 7.5/10 thui tại đóng gói hơi sơ sài"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.8
+    }
+   ],
+   "method": "llm:gemini-3.5-flash-lite",
+   "baseline": "Ưu điểm: giao hàng/đóng gói (9 đánh giá khen); giá (6 đánh giá khen); chất liệu/vải (4 đánh giá khen); êm/thoải mái (4 đánh giá khen). Lưu ý: size/form (4 đánh giá phàn nàn/nhắc). (Tổng hợp từ 22 đánh giá.)"
+  },
+  "shopee_24906480108": {
+   "title": "Nhẫn Hở Hình 26 Chữ Cái A-Z Màu Bạc Thời Trang Hàn Quốc Cho Nam Và Nữ",
+   "vimrhp_subcategory": "PhuKienNu",
+   "pros": [
+    {
+     "point": "Hàng đẹp và chất lượng tốt",
+     "reviews": [
+      1,
+      2,
+      8
+     ],
+     "evidence": [
+      {
+       "idx": 1,
+       "comment_id": 15147050817,
+       "text": "Rất ưng lun hàng đẹp chất lượng"
+      },
+      {
+       "idx": 2,
+       "comment_id": 15207778264,
+       "text": "nói chug đẹp vs rõ chữ nha nên muaaaaaaa nhooaaaaaaa"
+      },
+      {
+       "idx": 8,
+       "comment_id": 14464632737,
+       "text": "Chất liệu:chất liệu thì rất tốt bề ngoài cũng rất đẹp Màu sắc:màu thì là màu bạc nhưng vẫn rất đẹp"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.833
+    },
+    {
+     "point": "Đeo vừa vặn, bền chắc chắn",
+     "reviews": [
+      4
+     ],
+     "evidence": [
+      {
+       "idx": 4,
+       "comment_id": 15942836733,
+       "text": "Khá là ổn áp nha , bền chắc chắn lắm đeo vào khá vừa vặn , hạt dẻ nữa ạ"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 1.0
+    },
+    {
+     "point": "Giá rẻ, hạt dẻ",
+     "reviews": [
+      4,
+      7,
+      9
+     ],
+     "evidence": [
+      {
+       "idx": 4,
+       "comment_id": 15942836733,
+       "text": "Khá là ổn áp nha , bền chắc chắn lắm đeo vào khá vừa vặn , hạt dẻ nữa ạ"
+      },
+      {
+       "idx": 7,
+       "comment_id": 14237775524,
+       "text": "Nói chung là sp rẻ nên kém chất lượng thôi kh đòi hỏi gi nhiều"
+      },
+      {
+       "idx": 9,
+       "comment_id": 15914160884,
+       "text": "Hàng bị sét một ít ở sau chữ k nhưng cug đc 8k thoai nha"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.75
+    },
+    {
+     "point": "Giao hàng nhanh chóng",
+     "reviews": [
+      5,
+      6
+     ],
+     "evidence": [
+      {
+       "idx": 5,
+       "comment_id": 15851201418,
+       "text": "Khung nhẫn đẹp Giao hàng nhanh 4 ngày là về rồi Nhưng chữ hơi xấu nhìn ko giống hình đâu"
+      },
+      {
+       "idx": 6,
+       "comment_id": 14322321094,
+       "text": "Shipper thân thiện Shop giao hàng nhanh Hình ảnh chỉ mang tính chất minh họa 😁"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.75
+    }
+   ],
+   "cons": [
+    {
+     "point": "Chữ hơi xấu, không giống hình",
+     "reviews": [
+      5
+     ],
+     "evidence": [
+      {
+       "idx": 5,
+       "comment_id": 15851201418,
+       "text": "Khung nhẫn đẹp Giao hàng nhanh 4 ngày là về rồi Nhưng chữ hơi xấu nhìn ko giống hình đâu"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.833
+    },
+    {
+     "point": "Hàng bị sét một ít ở sau chữ",
+     "reviews": [
+      9
+     ],
+     "evidence": [
+      {
+       "idx": 9,
+       "comment_id": 15914160884,
+       "text": "Hàng bị sét một ít ở sau chữ k nhưng cug đc 8k thoai nha"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 1.0
+    }
+   ],
+   "method": "llm:gemini-3.5-flash-lite",
+   "baseline": "Ưu điểm: giao hàng/đóng gói (2 đánh giá khen); giá (2 đánh giá khen). Lưu ý: size/form (1 đánh giá phàn nàn/nhắc); màu sắc/giống hình (1 đánh giá phàn nàn/nhắc). (Tổng hợp từ 20 đánh giá.)"
+  },
+  "shopee_16973326316": {
+   "title": "Tất cổ cao Nữ trơn cao cấp 3 màu loại đẹp dầy dặn, Vớ Cao cổ nữ chất vải mềm mịn",
+   "vimrhp_subcategory": "PhuKienNu",
+   "pros": [
+    {
+     "point": "Tất đẹp, đi ấm chân",
+     "reviews": [
+      0,
+      10
+     ],
+     "evidence": [
+      {
+       "idx": 0,
+       "comment_id": 13862717596,
+       "text": "tất đẹp mà không mỏng đi ấm chân ưng lắm nha nma mn đừng giặt máy nha dễ xù lông lên lắm lên giặt tay:)"
+      },
+      {
+       "idx": 10,
+       "comment_id": 13898383097,
+       "text": "Tất đẹp không bị mỏnggg Đi ấm chân ưng lắm nhaaaaaa hàng chất lượng mà giá cũng rẻee nên muaaa"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 1.0
+    },
+    {
+     "point": "Co giãn tốt, đi thoải mái",
+     "reviews": [
+      2,
+      6,
+      9
+     ],
+     "evidence": [
+      {
+       "idx": 2,
+       "comment_id": 13947619681,
+       "text": "Đúng số lượng đặt hàng, độ co giãn tốt lắm nha chân to cx đi đc, tất ko quá dày cx ko quá mỏng, đi thoải mái, ưng lắm nhaaa"
+      },
+      {
+       "idx": 6,
+       "comment_id": 12216459028,
+       "text": "Mặc dù không biết chất vải của vớ là gì nhưng vớ đẹp mang okii lắm ạ, chất vải co giãn nên không sợ là chật nha, có hình ảnh í nhưng video tui đăng lên hơi vô…"
+      },
+      {
+       "idx": 9,
+       "comment_id": 14087790449,
+       "text": "tất đẹp cx khá dày dặn tất cao cổ đẹp co dãn khá tốt giá rẻ giao hàng nhanh lắmm"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 1.0
+    },
+    {
+     "point": "Chất vải mềm mịn, mỏng thoáng",
+     "reviews": [
+      3,
+      7,
+      11
+     ],
+     "evidence": [
+      {
+       "idx": 3,
+       "comment_id": 12539193358,
+       "text": "Sản phẩm cũng ổn áp nha mn này hợp cho mang với giày học thể dục í nó mỏng nên cx k nóng chân lắm đâu nói chung nên mua nha"
+      },
+      {
+       "idx": 7,
+       "comment_id": 13307230623,
+       "text": "Giao hàng nhanh, chất mềm mịn mỏng, đeo vào thoải mái. Tất không dài như tất mình hay đeo nhưng cũng vừa và ổn. Thấy đang sale rẻ nên đặt 6, tưởng 3 đôi nma là…"
+      },
+      {
+       "idx": 11,
+       "comment_id": 12943189042,
+       "text": "Giao hàng nhanh, chất liệu mỏng, thoáng. Màu sắc sáng. Hợp với gu của mình. Mình sẽ ủng hộ nhiều nhé"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.833
+    },
+    {
+     "point": "Giá rẻ, giao hàng nhanh",
+     "reviews": [
+      7,
+      9
+     ],
+     "evidence": [
+      {
+       "idx": 7,
+       "comment_id": 13307230623,
+       "text": "Giao hàng nhanh, chất mềm mịn mỏng, đeo vào thoải mái. Tất không dài như tất mình hay đeo nhưng cũng vừa và ổn. Thấy đang sale rẻ nên đặt 6, tưởng 3 đôi nma là…"
+      },
+      {
+       "idx": 9,
+       "comment_id": 14087790449,
+       "text": "tất đẹp cx khá dày dặn tất cao cổ đẹp co dãn khá tốt giá rẻ giao hàng nhanh lắmm"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 1.0
+    }
+   ],
+   "cons": [
+    {
+     "point": "Dễ bị xù lông khi giặt máy",
+     "reviews": [
+      0
+     ],
+     "evidence": [
+      {
+       "idx": 0,
+       "comment_id": 13862717596,
+       "text": "tất đẹp mà không mỏng đi ấm chân ưng lắm nha nma mn đừng giặt máy nha dễ xù lông lên lắm lên giặt tay:)"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.714
+    }
+   ],
+   "method": "llm:gemini-3.5-flash-lite",
+   "baseline": "Ưu điểm: giao hàng/đóng gói (10 đánh giá khen); giá (7 đánh giá khen); êm/thoải mái (5 đánh giá khen); chất liệu/vải (3 đánh giá khen). Lưu ý: chất liệu/vải (1 đánh giá phàn nàn/nhắc); size/form (1 đánh giá phàn nàn/nhắc). (Tổng hợp từ 24 đánh giá.)"
+  },
+  "shopee_28053135586": {
+   "title": "Bộ Quần Áo Nam Nữ BBR Phối Cổ Kẻ Vàng Cực Nét - Bộ Đồ Nam Nữ BBR Phối Caro Ở Cổ Hothit Hè 2024",
+   "vimrhp_subcategory": "ThoiTrangNam",
+   "pros": [
+    {
+     "point": "Áo rất đẹp, form siêu đẹp",
+     "reviews": [
+      0,
+      1,
+      7
+     ],
+     "evidence": [
+      {
+       "idx": 0,
+       "comment_id": 15943879697,
+       "text": "Áo rất đẹp, chất rất okii lên from siu đẹp, đường kim mũi chỉ rất chắc chắn luôn á, mình săn sale nên giá rất hạt dẻ, 10đ k có nhưng nhaa, mình m45, 48kg mặc…"
+      },
+      {
+       "idx": 1,
+       "comment_id": 15843374036,
+       "text": "Chất liệu:Oke Đúng với mô tả:Đúng mô tả Thấy nhiều người chê nhưng tui khen nha, khen mạnh. Đơn về nhanh, đồ rẻ mà đẹp phù hợp tầm giá nha. Mua về mặc rất…"
+      },
+      {
+       "idx": 7,
+       "comment_id": 15843397594,
+       "text": "Áo này trên sàn thấy loạn hết cả lên, chọn shop này nhận hàng thấy ok. Lúc mua hỏi shop thì được kiểm hàng thoải mái, thấy là ok rồi. Chất vải, đường may, in…"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.667
+    },
+    {
+     "point": "Đường kim mũi chỉ chắc chắn, ít chỉ thừa",
+     "reviews": [
+      0,
+      2
+     ],
+     "evidence": [
+      {
+       "idx": 0,
+       "comment_id": 15943879697,
+       "text": "Áo rất đẹp, chất rất okii lên from siu đẹp, đường kim mũi chỉ rất chắc chắn luôn á, mình săn sale nên giá rất hạt dẻ, 10đ k có nhưng nhaa, mình m45, 48kg mặc…"
+      },
+      {
+       "idx": 2,
+       "comment_id": 15820396274,
+       "text": "Sp như hình. Chất liệu oke. Đường may, gia công tốt, ít chỉ thừa. Đáng tiền lắm nha. Mn có thể mua thử và trải nghiệm."
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 1.0
+    },
+    {
+     "point": "Chất vải tốt, đứng form",
+     "reviews": [
+      2,
+      3,
+      7
+     ],
+     "evidence": [
+      {
+       "idx": 2,
+       "comment_id": 15820396274,
+       "text": "Sp như hình. Chất liệu oke. Đường may, gia công tốt, ít chỉ thừa. Đáng tiền lắm nha. Mn có thể mua thử và trải nghiệm."
+      },
+      {
+       "idx": 3,
+       "comment_id": 15820256921,
+       "text": "Chất liệu:Chất cotton Đúng với mô tả:Đúng mt Màu sắc:Trắng Mua hôm trước giá rẻ tưởng ko đẹp mà mặc thích nha, Vải đứng forrm chất cầm nặng tay mặc oke nha.…"
+      },
+      {
+       "idx": 7,
+       "comment_id": 15843397594,
+       "text": "Áo này trên sàn thấy loạn hết cả lên, chọn shop này nhận hàng thấy ok. Lúc mua hỏi shop thì được kiểm hàng thoải mái, thấy là ok rồi. Chất vải, đường may, in…"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.8
+    },
+    {
+     "point": "Giá rẻ, giao hàng nhanh",
+     "reviews": [
+      1,
+      5,
+      6
+     ],
+     "evidence": [
+      {
+       "idx": 1,
+       "comment_id": 15843374036,
+       "text": "Chất liệu:Oke Đúng với mô tả:Đúng mô tả Thấy nhiều người chê nhưng tui khen nha, khen mạnh. Đơn về nhanh, đồ rẻ mà đẹp phù hợp tầm giá nha. Mua về mặc rất…"
+      },
+      {
+       "idx": 5,
+       "comment_id": 15964906721,
+       "text": "Chất lượng sản phẩm tốt hợp với giá tiền Đóng gói sản phẩm rất đẹp và chắc chắn Shop phục vụ rất tốt Thời gian giao hàng nhanh Sẽ ủng hộ shop lâu dài"
+      },
+      {
+       "idx": 6,
+       "comment_id": 15927741327,
+       "text": "Màu sắc:Oke vải xịn cực, giao hàng nhanh, shop rep inb nhanh với dễ thươnggg lắm ạaaa. mãi ủng hộ sốppp:\"))"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 1.0
+    }
+   ],
+   "cons": [],
+   "method": "llm:gemini-3.5-flash-lite",
+   "baseline": "Ưu điểm: êm/thoải mái (7 đánh giá khen); màu sắc/giống hình (7 đánh giá khen); giá (6 đánh giá khen); độ bền (4 đánh giá khen). Lưu ý: size/form (2 đánh giá phàn nàn/nhắc); đường may/hoàn thiện (1 đánh giá phàn nàn/nhắc). (Tổng hợp từ 21 đánh giá.)"
+  },
+  "shopee_25980881072": {
+   "title": "Gift Sticker Áo Sơ Mi Kẻ Sọc Tay Dài Nam Nữ Hàn Quốc Local Brand Chất Liệu Oxford Form Rộng 3 Màu Xám, Hồng, Xanh [SM3]",
+   "vimrhp_subcategory": "ThoiTrangNam",
+   "pros": [
+    {
+     "point": "Vải đẹp, mát tay, mềm mịn",
+     "reviews": [
+      0,
+      4,
+      10
+     ],
+     "evidence": [
+      {
+       "idx": 0,
+       "comment_id": 15509323420,
+       "text": "Màu sắc:9/10 Chất liệu:9/10 Đúng với mô tả:9/10 Áo đẹp lắm nha mọi người mình đặt ở đây lần đầu tiên luôn Vải thật sự đẹp rờ vào thấy mát tay nha Giá tiền như…"
+      },
+      {
+       "idx": 4,
+       "comment_id": 15971689253,
+       "text": "Mình đã nhận được hàng rồi, chất vải mềm mịn, mặc rất thoải mái. Màu sắc giống hệt trong hình, không bị phai màu khi giặt. Rất hài lòng với sản phẩm này"
+      },
+      {
+       "idx": 10,
+       "comment_id": 15784958251,
+       "text": "Nhận được hàng áo vải đẹp kiểu sờ vào mát tay , áo dày. Áo thơm lần đầu mua ở shop. Cảm ơn shop nhiều , sẽ quay lại ạ"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 1.0
+    },
+    {
+     "point": "Áo xinh, chuẩn hình, màu sắc đẹp",
+     "reviews": [
+      4,
+      5,
+      8
+     ],
+     "evidence": [
+      {
+       "idx": 4,
+       "comment_id": 15971689253,
+       "text": "Mình đã nhận được hàng rồi, chất vải mềm mịn, mặc rất thoải mái. Màu sắc giống hệt trong hình, không bị phai màu khi giặt. Rất hài lòng với sản phẩm này"
+      },
+      {
+       "idx": 5,
+       "comment_id": 15931471102,
+       "text": "Mặc xinh lắm, vải xịn lắm ạ, mọi người nên mua nha"
+      },
+      {
+       "idx": 8,
+       "comment_id": 15492345780,
+       "text": "hời gian giao hàng nhanh 🚚 Shop đóng gói rất kỹ lưỡng, giao đủ và đúng sản phẩm❤️Áo đẹp cực kỳ luôn áaa"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.857
+    },
+    {
+     "point": "Giá cả hợp lý, phải chăng",
+     "reviews": [
+      1,
+      2,
+      7
+     ],
+     "evidence": [
+      {
+       "idx": 1,
+       "comment_id": 15860136075,
+       "text": "Shop có tâm thực sự đồ thì đẹp, giá cả phải chăng rất phù hợp với 1 brand chứ k hề đắt, mn nên mua ủng hộ sốp🐝"
+      },
+      {
+       "idx": 2,
+       "comment_id": 15971563294,
+       "text": "Áo đẹp và chất lượng lắm. Shop giao hàng nhanh chỉ mất 2 ngày là nhận được hàng. Đóng gói chu đáo, giá cả hợp lý."
+      },
+      {
+       "idx": 7,
+       "comment_id": 15789677328,
+       "text": "Lần đầu mua trên live của shop, giá hợp lí , đóng gói và giao hàng rất nhanh"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 1.0
+    },
+    {
+     "point": "Giao hàng nhanh và đóng gói kỹ",
+     "reviews": [
+      2,
+      8,
+      11
+     ],
+     "evidence": [
+      {
+       "idx": 2,
+       "comment_id": 15971563294,
+       "text": "Áo đẹp và chất lượng lắm. Shop giao hàng nhanh chỉ mất 2 ngày là nhận được hàng. Đóng gói chu đáo, giá cả hợp lý."
+      },
+      {
+       "idx": 8,
+       "comment_id": 15492345780,
+       "text": "hời gian giao hàng nhanh 🚚 Shop đóng gói rất kỹ lưỡng, giao đủ và đúng sản phẩm❤️Áo đẹp cực kỳ luôn áaa"
+      },
+      {
+       "idx": 11,
+       "comment_id": 15870993875,
+       "text": "Giao hàng nhanh đong gói cẩn thận, vải khá ổn và mềm, áo mặc lên nhìn cũng xinh"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 1.0
+    }
+   ],
+   "cons": [],
+   "method": "llm:gemini-3.5-flash-lite",
+   "baseline": "Ưu điểm: giao hàng/đóng gói (6 đánh giá khen); chất liệu/vải (5 đánh giá khen); êm/thoải mái (5 đánh giá khen); màu sắc/giống hình (2 đánh giá khen). Lưu ý: độ bền (1 đánh giá phàn nàn/nhắc); size/form (1 đánh giá phàn nàn/nhắc); màu sắc/giống hình (1 đánh giá phàn nàn/nhắc). (Tổng hợp từ 23 đánh giá.)"
+  },
+  "shopee_24114331713": {
+   "title": "Quần KAKI ỐNG RỘNG unisex BIGSIZE 100kg, quần dài form rộng phù hợp cả nam nữ 45-100kg - BUN22 mã mã store",
+   "vimrhp_subcategory": "ThoiTrangNam",
+   "pros": [
+    {
+     "point": "Quần đẹp, form dáng ok",
+     "reviews": [
+      0,
+      1,
+      3
+     ],
+     "evidence": [
+      {
+       "idx": 0,
+       "comment_id": 14730719102,
+       "text": "Quần đúng với mô tả, giá cả phải chăng phù hợp hssv nha mấy bà, form áo okila quá nè, ship cũm nhanh, nói chung tuyệt á, đáng để thử nhennnnnnnn"
+      },
+      {
+       "idx": 1,
+       "comment_id": 14874442996,
+       "text": "Chất liệu:vải dù okkk nhaaa Đúng với mô tả:yess Màu sắc:đen Hàng giao nhanh. Shop bọc gói cẩn thận. Quần mặc lên đẹp lắm luôn á chắc lần sau phải mua thêm màu…"
+      },
+      {
+       "idx": 3,
+       "comment_id": 15306094895,
+       "text": "Quần giá rẻ chất đẹp from lên dáng cũng ok nha mỗi tội sợ bẩn lắm e"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 1.0
+    },
+    {
+     "point": "Chất vải kaki, vải dù đẹp mát",
+     "reviews": [
+      1,
+      2,
+      6
+     ],
+     "evidence": [
+      {
+       "idx": 1,
+       "comment_id": 14874442996,
+       "text": "Chất liệu:vải dù okkk nhaaa Đúng với mô tả:yess Màu sắc:đen Hàng giao nhanh. Shop bọc gói cẩn thận. Quần mặc lên đẹp lắm luôn á chắc lần sau phải mua thêm màu…"
+      },
+      {
+       "idx": 2,
+       "comment_id": 14822135232,
+       "text": "Chất liệu:vải Đúng với mô tả:đúng Màu sắc:xám Quần rất ok lun giao hàng cũng nhanh nữa t săn live có chưa đến 100k mà được cái quần nvay là quá oki rùi chưa…"
+      },
+      {
+       "idx": 6,
+       "comment_id": 15752779739,
+       "text": "Chất liệu:vải dù Đúng với mô tả:🤔 Màu sắc:xám Cũng ổn, mặc mát, nhưng mà bị đứt nguyên hàng chỉ, chỉ thừa nhiều. Khó chiệu vô cùng. P/s: sốp dễ thuw lắm ạ"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.857
+    },
+    {
+     "point": "Giá rẻ, phù hợp học sinh sinh viên",
+     "reviews": [
+      0,
+      7,
+      9
+     ],
+     "evidence": [
+      {
+       "idx": 0,
+       "comment_id": 14730719102,
+       "text": "Quần đúng với mô tả, giá cả phải chăng phù hợp hssv nha mấy bà, form áo okila quá nè, ship cũm nhanh, nói chung tuyệt á, đáng để thử nhennnnnnnn"
+      },
+      {
+       "idx": 7,
+       "comment_id": 14879885728,
+       "text": "Chất liệu:trắng Màu sắc:vải kaki Đúng với mô tả:đẹp, rẻ nên mua nha, vải đẹp, giá ổn, nói chung là oke nên mua nha"
+      },
+      {
+       "idx": 9,
+       "comment_id": 14878931127,
+       "text": "Chất liệu:kaki Đúng với mô tả:chuẩn Màu sắc:trắng Trời ơi quần siu đẹp giá lại còn hạt dẻ nhẵ mua liền nha mấy bà mặc tôn dáng 💯đ cho shopp nhaa"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.5
+    },
+    {
+     "point": "Giao hàng nhanh chóng",
+     "reviews": [
+      0,
+      1,
+      2
+     ],
+     "evidence": [
+      {
+       "idx": 0,
+       "comment_id": 14730719102,
+       "text": "Quần đúng với mô tả, giá cả phải chăng phù hợp hssv nha mấy bà, form áo okila quá nè, ship cũm nhanh, nói chung tuyệt á, đáng để thử nhennnnnnnn"
+      },
+      {
+       "idx": 1,
+       "comment_id": 14874442996,
+       "text": "Chất liệu:vải dù okkk nhaaa Đúng với mô tả:yess Màu sắc:đen Hàng giao nhanh. Shop bọc gói cẩn thận. Quần mặc lên đẹp lắm luôn á chắc lần sau phải mua thêm màu…"
+      },
+      {
+       "idx": 2,
+       "comment_id": 14822135232,
+       "text": "Chất liệu:vải Đúng với mô tả:đúng Màu sắc:xám Quần rất ok lun giao hàng cũng nhanh nữa t săn live có chưa đến 100k mà được cái quần nvay là quá oki rùi chưa…"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.75
+    }
+   ],
+   "cons": [
+    {
+     "point": "Nhiều chỉ thừa",
+     "reviews": [
+      6
+     ],
+     "evidence": [
+      {
+       "idx": 6,
+       "comment_id": 15752779739,
+       "text": "Chất liệu:vải dù Đúng với mô tả:🤔 Màu sắc:xám Cũng ổn, mặc mát, nhưng mà bị đứt nguyên hàng chỉ, chỉ thừa nhiều. Khó chiệu vô cùng. P/s: sốp dễ thuw lắm ạ"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 1.0
+    },
+    {
+     "point": "Quần hơi dài và chun quần không chặt",
+     "reviews": [
+      8
+     ],
+     "evidence": [
+      {
+       "idx": 8,
+       "comment_id": 14965874377,
+       "text": "Màu sắc:xams Chất liệu:kali Đúng với mô tả:90% Quần hơi dài sao với mình ạ, tại mình bé. Nhưng chun quần khá dởm nó sẽ không chặt lắm đâu nên là k để dec dồ gì…"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.875
+    }
+   ],
+   "method": "llm:gemini-3.5-flash-lite",
+   "baseline": "Ưu điểm: giá (5 đánh giá khen); chất liệu/vải (4 đánh giá khen); êm/thoải mái (4 đánh giá khen); màu sắc/giống hình (2 đánh giá khen). Lưu ý: size/form (3 đánh giá phàn nàn/nhắc). (Tổng hợp từ 22 đánh giá.)"
+  },
+  "shopee_25876453771": {
+   "title": "Áo Thun Nam Trơn Ngắn Tay Cổ Chữ V  Vải Thun Gân  ATINO Thoáng Mát Ít Nhăn Form Regular L.2.2860",
+   "vimrhp_subcategory": "ThoiTrangNam",
+   "pros": [
+    {
+     "point": "Vải áo thun mỏng mát, co giãn thoải mái",
+     "reviews": [
+      0,
+      4,
+      7
+     ],
+     "evidence": [
+      {
+       "idx": 0,
+       "comment_id": 15750931437,
+       "text": "Màu sắc:trắng Vải khá mỏng mát, mình thấy vải khá mỏng nên ai có da thịt tí mặc fit vào người sẽ đẹp hơn, em trai mình gầy quá mặc vào càng thấy gầy. Nói thật…"
+      },
+      {
+       "idx": 4,
+       "comment_id": 15938903490,
+       "text": "Chất liệu:ddungs Đúng với mô tả:đúng Màu sắc:đúng Ái đẹp nha, co dãn thoải mái, ít dính bụi, mặc đc cho cả nam và nữ"
+      },
+      {
+       "idx": 7,
+       "comment_id": 15577597701,
+       "text": "Màu sắc:den Chất liệu:cotton Đúng với mô tả:ok Ao rat ok, tuy mong nhung dung gia tien, phu hop. Mac co gian chat ao côttton mat me thoai mai"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.667
+    },
+    {
+     "point": "Giá rẻ, chất lượng sản phẩm tốt",
+     "reviews": [
+      0,
+      1,
+      9
+     ],
+     "evidence": [
+      {
+       "idx": 0,
+       "comment_id": 15750931437,
+       "text": "Màu sắc:trắng Vải khá mỏng mát, mình thấy vải khá mỏng nên ai có da thịt tí mặc fit vào người sẽ đẹp hơn, em trai mình gầy quá mặc vào càng thấy gầy. Nói thật…"
+      },
+      {
+       "idx": 1,
+       "comment_id": 15832571638,
+       "text": "Chất liệu:vai Đúng với mô tả:đúng Màu sắc:trắng Cũng được nhưng k quá dày vừa giá tiền, shipper cũng okok"
+      },
+      {
+       "idx": 9,
+       "comment_id": 15958714496,
+       "text": "Đúng với mô tả:Đúng Màu sắc:Trắng Chất liệu:Thun Áo ổn hơn cả kỳ vọng, giá thì rẻ, mẫu mã đẹp, mua mặc đi du lịch quá hợp lý. Sẽ ủng hộ shop bán nhiều sản phẩm…"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.714
+    },
+    {
+     "point": "Form áo đẹp, ít nhăn và đứng form",
+     "reviews": [
+      5,
+      6,
+      8
+     ],
+     "evidence": [
+      {
+       "idx": 5,
+       "comment_id": 15673110208,
+       "text": "Đúng với mô tả:ok Màu sắc:ok Chất liệu:ok Giao hàng nhanh, áo đẹp , mát nha, from ok lắm ạ , mà sợ anh nhà mình mặc to hơn ạ"
+      },
+      {
+       "idx": 6,
+       "comment_id": 15684555414,
+       "text": "Áo phông cổ V chỉ 79K - Mang đến nguồn năng lượng từ sự \"cool ngầu\" thể hiện qua từng chi tiết nhỏ của áo. - Form Regular thoải mái, mát mẻ trong ngày hè này.…"
+      },
+      {
+       "idx": 8,
+       "comment_id": 15887102412,
+       "text": "Đúng với mô tả:gần đúng Chất liệu:thun tăm Màu sắc:đen Áo mặc rất mát, đứng form, có độ co dãn rất thoải mái. Tóm lại rất ưng sản phẩm này, nên mua nha mọi…"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.625
+    },
+    {
+     "point": "Shop giao hàng nhanh chóng, đóng gói cẩn thận",
+     "reviews": [
+      3,
+      10,
+      11
+     ],
+     "evidence": [
+      {
+       "idx": 3,
+       "comment_id": 15427021529,
+       "text": "Chất liệu:tốt Đúng với mô tả:đúng Màu sắc:trắng sản phẩm chất lượng, giao hàng nhanh đầy đủ, đã mua nhiều lần ở shop bên ngoài và trên nền tảng shoppe rất ok."
+      },
+      {
+       "idx": 10,
+       "comment_id": 15883058054,
+       "text": "Đúng với mô tả:dung Màu sắc:đen, trắng Chất liệu:thun Áo đẹp, chất vải mặc mát, giao hàng nhanh, nên mua"
+      },
+      {
+       "idx": 11,
+       "comment_id": 15801213633,
+       "text": "Chất liệu:cotton Màu sắc:đen trắng Đúng với mô tả:đúng Giao hàng nhanh đóng gói cẩn thận kĩ càng rất ok"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.889
+    }
+   ],
+   "cons": [],
+   "method": "llm:gemini-3.5-flash-lite",
+   "baseline": "Ưu điểm: êm/thoải mái (10 đánh giá khen); giao hàng/đóng gói (6 đánh giá khen); giá (5 đánh giá khen). Lưu ý: êm/thoải mái (2 đánh giá phàn nàn/nhắc); chất liệu/vải (1 đánh giá phàn nàn/nhắc). (Tổng hợp từ 21 đánh giá.)"
+  },
+  "shopee_19278428529": {
+   "title": "Áo Khoác cardigan Mỏng Tay Dài Chống Nắng Thoáng Khí Thời Trang Mùa Hè Cho Nữ",
+   "vimrhp_subcategory": "ThoiTrangNu",
+   "pros": [
+    {
+     "point": "Áo cardigan mỏng nhẹ, mặc mát và mềm mại",
+     "reviews": [
+      2,
+      3,
+      6
+     ],
+     "evidence": [
+      {
+       "idx": 2,
+       "comment_id": 11330919747,
+       "text": "Đúng với mô tả:xinh lắm Màu sắc:xinh lâm Eo ôi, ĐẸP CHƯA NÈ, hối hận vì bjo mới biết shop này. Đồ gì đâu mà đẹp mà cưng đồ này nọ, mẫu nào cũng muốn mua huhu😭…"
+      },
+      {
+       "idx": 3,
+       "comment_id": 11271291048,
+       "text": "Chất liệu:xuất sắc Đúng với mô tả:xuất sắc Nhận hàng ưng í , shop giao nhanh, áo cardigan mỏng nhẹ, form lên chuẩn y ảnh . Tay dài. Dễ mix đồ ❤️ giá rẻ . Vote…"
+      },
+      {
+       "idx": 6,
+       "comment_id": 11923528426,
+       "text": "Chất liệu:dep Đúng với mô tả:đẹp Màu sắc:đẹp Áo siêu xinh luôn ạ 🥰 giá 70k mà mua đượ e này quad hời lun á😍 Cảm ơn shop nha. Chúc shop mua may bán đắt Áo chất…"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.778
+    },
+    {
+     "point": "Đường may chuẩn, không có chỉ thừa",
+     "reviews": [
+      1,
+      4
+     ],
+     "evidence": [
+      {
+       "idx": 1,
+       "comment_id": 11327331644,
+       "text": "Hàng nhận siêu đẹp. Đã mua rất nhiều lần đồ của shop. Chưa bao giờ làm mình thất vọng. Đường may chuẩn đến từng đường kim mũi chỉ❤️ ko có miếng chỉ thừa nào…"
+      },
+      {
+       "idx": 4,
+       "comment_id": 12125152615,
+       "text": "Chất liệu:thun Đúng với mô tả:đúng Màu sắc:nâu Đầm thun khá dày dặn luôn nha, đường may thẳng thớm, lên form ổn, ít lộ bụng"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.857
+    },
+    {
+     "point": "Form dáng đẹp, tôn dáng, che bắp tay to",
+     "reviews": [
+      1,
+      8,
+      10
+     ],
+     "evidence": [
+      {
+       "idx": 1,
+       "comment_id": 11327331644,
+       "text": "Hàng nhận siêu đẹp. Đã mua rất nhiều lần đồ của shop. Chưa bao giờ làm mình thất vọng. Đường may chuẩn đến từng đường kim mũi chỉ❤️ ko có miếng chỉ thừa nào…"
+      },
+      {
+       "idx": 8,
+       "comment_id": 14624377756,
+       "text": "Màu sắc:đen, kem Chất liệu:thun lạnh Đúng với mô tả:đúng Áo mặc mát rượi luôn. Mặc che được bắp tay to. Thun co giãn size nào vô cũng vừa. Ủa mà mình nhớ mình…"
+      },
+      {
+       "idx": 10,
+       "comment_id": 14756582643,
+       "text": "Màu sắc:màu đen Chất liệu:vải len tăm Đúng với mô tả:đúng Sản phẩm đẹp mặc lên tôn dáng nhận hàng ưng ý nên mua nha mọi người"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 1.0
+    },
+    {
+     "point": "Shop tư vấn nhiệt tình, giao hàng nhanh",
+     "reviews": [
+      0,
+      3,
+      5
+     ],
+     "evidence": [
+      {
+       "idx": 0,
+       "comment_id": 11267027454,
+       "text": "Hihi , Áo Đẹp Lắm nha 😝 đã mua nhiều ở shop từ hồi ở page xong qua shopee. Chất lượng lúc nào cũng đảm bảo. Nhân viên nhiệt tình, được trải nghiệm đúng từ cskh…"
+      },
+      {
+       "idx": 3,
+       "comment_id": 11271291048,
+       "text": "Chất liệu:xuất sắc Đúng với mô tả:xuất sắc Nhận hàng ưng í , shop giao nhanh, áo cardigan mỏng nhẹ, form lên chuẩn y ảnh . Tay dài. Dễ mix đồ ❤️ giá rẻ . Vote…"
+      },
+      {
+       "idx": 5,
+       "comment_id": 11272326529,
+       "text": "Ôi aoa xinh lắm shop💖. Nhận được hàng sock luôn vì nó lên đúng ảnh và đúng kiểu m thích. Dáng y ảnh mặc thoải mái, mua 2 cái 2 màu luôn . Nên lấy chuẩn size là…"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 1.0
+    }
+   ],
+   "cons": [],
+   "method": "llm:gemini-3.5-flash-lite",
+   "baseline": "Ưu điểm: êm/thoải mái (8 đánh giá khen); giao hàng/đóng gói (8 đánh giá khen); chất liệu/vải (6 đánh giá khen); giá (5 đánh giá khen). Lưu ý: độ bền (1 đánh giá phàn nàn/nhắc); size/form (1 đánh giá phàn nàn/nhắc). (Tổng hợp từ 22 đánh giá.)"
+  },
+  "shopee_22478587795": {
+   "title": "Áo khoác ủ kem Cổ Lọ có túi 38-70kg",
+   "vimrhp_subcategory": "ThoiTrangNu",
+   "pros": [
+    {
+     "point": "Chất thun gân mỏng mát, co giãn tốt",
+     "reviews": [
+      0,
+      1,
+      4
+     ],
+     "evidence": [
+      {
+       "idx": 0,
+       "comment_id": 15186299108,
+       "text": "Màu sắc:xanh Chất liệu:thun gân Đúng với mô tả:đúng Chất thun gân mỏng mát phù hợp mặc che nắng trong nhà, dây kéo xịn, đường chỉ may đẹp, với giá này thì quá…"
+      },
+      {
+       "idx": 1,
+       "comment_id": 15906029405,
+       "text": "Mình đã nhận được hàng. Khá đẹp và chất lượng, giá lại rẻ ạ. Shop giao hàng nhanh. Vải co giản mạnh như mô tả lắm ạ. Nếu bạn nào muốn mặc ôm hút thì nên mua…"
+      },
+      {
+       "idx": 4,
+       "comment_id": 13311752668,
+       "text": "Chất liệu:thun gân co giản tốt . Đúng với mô tả:đúng giống ảnh . Màu sắc:rêu Khoát nhẹ thi ok lắm lun nha"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.875
+    },
+    {
+     "point": "Dây kéo xịn, đường chỉ may đẹp",
+     "reviews": [
+      0
+     ],
+     "evidence": [
+      {
+       "idx": 0,
+       "comment_id": 15186299108,
+       "text": "Màu sắc:xanh Chất liệu:thun gân Đúng với mô tả:đúng Chất thun gân mỏng mát phù hợp mặc che nắng trong nhà, dây kéo xịn, đường chỉ may đẹp, với giá này thì quá…"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 1.0
+    },
+    {
+     "point": "Giá rẻ, phù hợp để mặc ủ kem hoặc che nắng",
+     "reviews": [
+      0,
+      5,
+      11
+     ],
+     "evidence": [
+      {
+       "idx": 0,
+       "comment_id": 15186299108,
+       "text": "Màu sắc:xanh Chất liệu:thun gân Đúng với mô tả:đúng Chất thun gân mỏng mát phù hợp mặc che nắng trong nhà, dây kéo xịn, đường chỉ may đẹp, với giá này thì quá…"
+      },
+      {
+       "idx": 5,
+       "comment_id": 16167338598,
+       "text": "Màu sắc:naau Đúng với mô tả:đúng Chất liệu:ko biết Hàng giao nhanh lắm. , chất mịn tay , nhìn đẹp á , ưng vì rẻ , mua về để ủ kem , mn nên mua nha 😍😍😍😍"
+      },
+      {
+       "idx": 11,
+       "comment_id": 15582600885,
+       "text": "Màu sắc:dep Vải đẹp lắm. Mặc phía trong ủ kem là ik bài luôn nha mọi người. Sẽ ủng hộ shop thêm. ❤️"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.9
+    },
+    {
+     "point": "Shop giao hàng nhanh và đóng gói cẩn thận",
+     "reviews": [
+      1,
+      6
+     ],
+     "evidence": [
+      {
+       "idx": 1,
+       "comment_id": 15906029405,
+       "text": "Mình đã nhận được hàng. Khá đẹp và chất lượng, giá lại rẻ ạ. Shop giao hàng nhanh. Vải co giản mạnh như mô tả lắm ạ. Nếu bạn nào muốn mặc ôm hút thì nên mua…"
+      },
+      {
+       "idx": 6,
+       "comment_id": 13626769729,
+       "text": "Tata cả sản phẩm đều rất ok. Mua nhiều lần đầu mà ưng lắm. Đóng gói giao hàng cẩn thận đầy đủ. Sẽ quay lại lần sau. Mn nên mua nhé. Hình ảnh video nhận xu"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 1.0
+    }
+   ],
+   "cons": [],
+   "method": "llm:gemini-3.5-flash-lite",
+   "baseline": "Ưu điểm: màu sắc/giống hình (7 đánh giá khen); chất liệu/vải (5 đánh giá khen); giao hàng/đóng gói (5 đánh giá khen); êm/thoải mái (4 đánh giá khen). Lưu ý: size/form (2 đánh giá phàn nàn/nhắc); êm/thoải mái (1 đánh giá phàn nàn/nhắc); đường may/hoàn thiện (1 đánh giá phàn nàn/nhắc). (Tổng hợp từ 19 đánh giá.)"
+  },
+  "shopee_2278639024": {
+   "title": "(Bigsize 4670kg)Áo khoác chống nắng 6 túi",
+   "vimrhp_subcategory": "ThoiTrangNu",
+   "pros": [
+    {
+     "point": "Chất vải thun dày dặn, mềm mại và không xù lông",
+     "reviews": [
+      0,
+      2,
+      9
+     ],
+     "evidence": [
+      {
+       "idx": 0,
+       "comment_id": 12509356212,
+       "text": "Đúng với mô tả:áo khoác dày, thun mịn đẹp, không xù lông Chất liệu:thun da cá Màu sắc:màu gạch ngói đỏ Màu tối sẫm chứ không phải màu cam sữa nha. Túi rất to,…"
+      },
+      {
+       "idx": 2,
+       "comment_id": 7662284580,
+       "text": "Sản phẩm rất tuyệt. Vải áo mềm mại. Có 6 túi rộng. Màu cam sữa bận rất tôn nha. Mình cao 1m55 cân nặng 50kg bận vừa luôn ạ"
+      },
+      {
+       "idx": 9,
+       "comment_id": 12773018550,
+       "text": "Đúng với mô tả:y hình Màu sắc:xanh Chất liệu:vãi cotton mềm 50kg .m nhé. Rất ok .vãi mềm mại. Dễ chịu. Vãi tốt đó mấy bạn...... Ưng là các túi có khóa ,khóa…"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.818
+    },
+    {
+     "point": "Form áo đẹp, màu sắc giống hình",
+     "reviews": [
+      1,
+      5,
+      8
+     ],
+     "evidence": [
+      {
+       "idx": 1,
+       "comment_id": 7245886004,
+       "text": "Áo khoát đẹp lắm nha mọi người áo cầm rất nặng tay.màu thì đúng như trong hình luôn.form áo mặt lên đẹp nữa shop giao hàng nhanh và đóng gói cẩn thận nữa.lần…"
+      },
+      {
+       "idx": 5,
+       "comment_id": 7268383226,
+       "text": "Mình 49kg, đặt size M vừa in luôn, áo màu đẹp giống hình, vải tốt, thích cái có dây kéo ở túi và nón rộng, nên mua nhe mọi người. Giao hàng nhanh, đặt hàng 2…"
+      },
+      {
+       "idx": 8,
+       "comment_id": 15542042450,
+       "text": "Màu sắc:vàng nghệ Đúng với mô tả:giống hình shop đăng Áo màu vàng nghệ, màu ở ngoài tối hơn trên ảnh tui chụp 1 xíu nha, nhưng màu đẹp nha. Form cũng đẹp, tui…"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 1.0
+    },
+    {
+     "point": "Thiết kế nhiều túi rộng có khóa kéo tốt",
+     "reviews": [
+      0,
+      5,
+      9
+     ],
+     "evidence": [
+      {
+       "idx": 0,
+       "comment_id": 12509356212,
+       "text": "Đúng với mô tả:áo khoác dày, thun mịn đẹp, không xù lông Chất liệu:thun da cá Màu sắc:màu gạch ngói đỏ Màu tối sẫm chứ không phải màu cam sữa nha. Túi rất to,…"
+      },
+      {
+       "idx": 5,
+       "comment_id": 7268383226,
+       "text": "Mình 49kg, đặt size M vừa in luôn, áo màu đẹp giống hình, vải tốt, thích cái có dây kéo ở túi và nón rộng, nên mua nhe mọi người. Giao hàng nhanh, đặt hàng 2…"
+      },
+      {
+       "idx": 9,
+       "comment_id": 12773018550,
+       "text": "Đúng với mô tả:y hình Màu sắc:xanh Chất liệu:vãi cotton mềm 50kg .m nhé. Rất ok .vãi mềm mại. Dễ chịu. Vãi tốt đó mấy bạn...... Ưng là các túi có khóa ,khóa…"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.667
+    },
+    {
+     "point": "Shop giao hàng cực kỳ nhanh chóng",
+     "reviews": [
+      5,
+      6,
+      7
+     ],
+     "evidence": [
+      {
+       "idx": 5,
+       "comment_id": 7268383226,
+       "text": "Mình 49kg, đặt size M vừa in luôn, áo màu đẹp giống hình, vải tốt, thích cái có dây kéo ở túi và nón rộng, nên mua nhe mọi người. Giao hàng nhanh, đặt hàng 2…"
+      },
+      {
+       "idx": 6,
+       "comment_id": 6462327246,
+       "text": "Sản phẩm giống hình quảng cáo. Chất vải dày dặn lắm nhe mọi người nên mua. Hàng giao rất nhanh luôn dù đang trong mùa dịch. Sẽ ủng hộ shop nữa nhe"
+      },
+      {
+       "idx": 7,
+       "comment_id": 6516378222,
+       "text": "Hàng giao nhanh cực kì luôn ạ. Chất vải dày dặn , form áo rất ok. Nói chung đáng đồng tiền. Mn nên mua nha"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.714
+    }
+   ],
+   "cons": [],
+   "method": "llm:gemini-3.5-flash-lite",
+   "baseline": "Ưu điểm: chất liệu/vải (12 đánh giá khen); màu sắc/giống hình (11 đánh giá khen); giao hàng/đóng gói (9 đánh giá khen); êm/thoải mái (4 đánh giá khen). Lưu ý: size/form (6 đánh giá phàn nàn/nhắc). (Tổng hợp từ 23 đánh giá.)"
+  },
+  "shopee_26753819157": {
+   "title": "Áo Khoác ren lưới Mỏng mùa hè KHOÁC NGOÀI siêu xinh Hót 2024",
+   "vimrhp_subcategory": "ThoiTrangNu",
+   "pros": [
+    {
+     "point": "Áo khoác ren lưới mỏng mặc mát mẻ mùa hè",
+     "reviews": [
+      2,
+      9
+     ],
+     "evidence": [
+      {
+       "idx": 2,
+       "comment_id": 15863843506,
+       "text": "Bộ đồ có thêm cái áo khoac này thêm xinh ạ. Khoác mỏng ren nên mùa hè mặc vô tư. Ship giao nhanh. Nhiệt tình"
+      },
+      {
+       "idx": 9,
+       "comment_id": 15868191996,
+       "text": "Áo siêu xinh mặc mặc lên trông bánh bèo nữ tính hẳn áo chất mặc mát nha mặc mùa hè này siu ưng"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.8
+    },
+    {
+     "point": "Thiết kế xinh xắn, mặc lên trông nữ tính",
+     "reviews": [
+      4,
+      9
+     ],
+     "evidence": [
+      {
+       "idx": 4,
+       "comment_id": 16156648320,
+       "text": "Chất liệu:100đ Màu sắc:be Đúng với mô tả:tuỵet Mua đi Mặc đẹp lắm , đứa nào nách đen tay to tay lông nhiều thì mua mà mặc che được hết Tao không biết nói đi…"
+      },
+      {
+       "idx": 9,
+       "comment_id": 15868191996,
+       "text": "Áo siêu xinh mặc mặc lên trông bánh bèo nữ tính hẳn áo chất mặc mát nha mặc mùa hè này siu ưng"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.667
+    },
+    {
+     "point": "Shop tư vấn nhiệt tình, giao hàng nhanh",
+     "reviews": [
+      0,
+      5,
+      11
+     ],
+     "evidence": [
+      {
+       "idx": 0,
+       "comment_id": 15935779541,
+       "text": "Sản phẩm rất tốt, đóng gói chắc chắn giao hàng nhanh. Shop tư vấn hỗ trợ nhiệt tình, nói chung là thấy ưng về chất lượng và cách phục vụ.5*"
+      },
+      {
+       "idx": 5,
+       "comment_id": 16107024112,
+       "text": "Mở ra thấy áo đẹp điên lun í. Vải oke lắm nhaa. Trùi uii tui đặt hoả tốc nên tối qua đặt nay ng ta giao rùi. Mê quá shop ơii 10đ"
+      },
+      {
+       "idx": 11,
+       "comment_id": 15935967624,
+       "text": "Shop rep ib cute , gói khá cẩn thận, ship nhanh , shipper thân thiện, quần vải mỏng vừa , ko chỉ thừa, khoá dễ kéo , siêu đẹp phù hợp giá , nên mua mmg ơi"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 1.0
+    },
+    {
+     "point": "Đóng gói cẩn thận, sản phẩm chất lượng",
+     "reviews": [
+      0,
+      1,
+      3
+     ],
+     "evidence": [
+      {
+       "idx": 0,
+       "comment_id": 15935779541,
+       "text": "Sản phẩm rất tốt, đóng gói chắc chắn giao hàng nhanh. Shop tư vấn hỗ trợ nhiệt tình, nói chung là thấy ưng về chất lượng và cách phục vụ.5*"
+      },
+      {
+       "idx": 1,
+       "comment_id": 15873169007,
+       "text": "Giao hàng nhanh thân thiện , đóng gói sản phẩm kĩ lưỡng . Đúng vs mô tả , giao đúng số lượng . Sẽ quay lại ủng hộ thêm lần nữa ."
+      },
+      {
+       "idx": 3,
+       "comment_id": 15865068268,
+       "text": "shop bán toàn đồ chất lượng,Dịch vụ chăm sóc khách hàng ở shop này rất tốt luôn mọi người ạ, sản phẩm lại còn ổn áp nữa chứ"
+      }
+     ],
+     "invalid_refs": [],
+     "auto_overlap": 0.75
+    }
+   ],
+   "cons": [],
+   "method": "llm:gemini-3.5-flash-lite",
+   "baseline": "Ưu điểm: giao hàng/đóng gói (13 đánh giá khen); êm/thoải mái (9 đánh giá khen); chất liệu/vải (2 đánh giá khen); màu sắc/giống hình (2 đánh giá khen). (Tổng hợp từ 19 đánh giá.)"
+  }
+ }
+}

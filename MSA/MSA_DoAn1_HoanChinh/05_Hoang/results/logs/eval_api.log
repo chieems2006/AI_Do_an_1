@@ -1,0 +1,103 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 14650.85it/s]
+{
+ "image": {
+  "n": 80,
+  "latency_ms_client": {
+   "n": 80,
+   "mean": 546.8637134749968,
+   "p50": 393.48144450002565,
+   "p95": 1106.4309573000396,
+   "p99": 1834.0332752399747,
+   "max": 2031.3643290000982
+  },
+  "latency_ms_server": {
+   "n": 80,
+   "mean": 530.78975,
+   "p50": 377.51,
+   "p95": 1080.3299999999995,
+   "p99": 1814.7763999999984,
+   "max": 2022.42
+  },
+  "cross_type_error@5": 0.015,
+  "cross_type_error@5_no_gate": 0.005,
+  "subcategory_precision@5": 0.925,
+  "type_gate_accuracy": 0.975,
+  "top1_score_mean": 0.9585975,
+  "n_below_tau_v": 0,
+  "pct_under_1500ms": 0.975
+ },
+ "image_by_type": {
+  "accessory": {
+   "n": 20,
+   "cross_type_error@5": 0.0,
+   "cross_type_error@5_no_gate": 0.0,
+   "subcategory_precision@5": 0.99,
+   "type_gate_accuracy": 1.0,
+   "top1_score_mean": 0.9464699999999999,
+   "n_below_tau_v": 0,
+   "pct_under_1500ms": 0.95
+  },
+  "clothing": {
+   "n": 20,
+   "cross_type_error@5": 0.0,
+   "cross_type_error@5_no_gate": 0.0,
+   "subcategory_precision@5": 0.9099999999999999,
+   "type_gate_accuracy": 1.0,
+   "top1_score_mean": 0.9473,
+   "n_below_tau_v": 0,
+   "pct_under_1500ms": 1.0
+  },
+  "footwear": {
+   "n": 20,
+   "cross_type_error@5": 0.0,
+   "cross_type_error@5_no_gate": 0.0,
+   "subcategory_precision@5": 0.9100000000000001,
+   "type_gate_accuracy": 1.0,
+   "top1_score_mean": 0.9469200000000001,
+   "n_below_tau_v": 0,
+   "pct_under_1500ms": 0.95
+  },
+  "headwear": {
+   "n": 20,
+   "cross_type_error@5": 0.06,
+   "cross_type_error@5_no_gate": 0.02,
+   "subcategory_precision@5": 0.8899999999999999,
+   "type_gate_accuracy": 0.9,
+   "top1_score_mean": 0.9937000000000001,
+   "n_below_tau_v": 0,
+   "pct_under_1500ms": 1.0
+  }
+ },
+ "text": {
+  "n_queries": 15,
+  "queries_all_correct": 15,
+  "queries_with_results": 15,
+  "total_items": 300,
+  "total_violations": 0,
+  "latency_ms_client": {
+   "n": 15,
+   "mean": 20.80917946665674,
+   "p50": 20.389459999933024,
+   "p95": 29.00134440005785,
+   "p99": 34.40396007990784,
+   "max": 35.754613999870344
+  },
+  "note": "Catalog thật chưa có giá/size → không đo được bộ lọc giá/size trên dữ liệu thật (đã test trên dữ liệu tổng hợp)."
+ },
+ "compare": {
+  "n_groups": 20,
+  "n_cells_checked": 370,
+  "n_cells_match": 370,
+  "match_rate": 1.0,
+  "groups_100pct": 20,
+  "latency_ms_client": {
+   "n": 20,
+   "mean": 5.7343248499933,
+   "p50": 3.365454499999032,
+   "p95": 15.08402069998738,
+   "p99": 18.792724939930842,
+   "max": 19.719900999916717
+  }
+ }
+}

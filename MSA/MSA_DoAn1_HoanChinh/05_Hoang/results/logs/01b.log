@@ -1,0 +1,102 @@
+{
+ "counts": {
+  "total": 2686,
+  "by_type": {
+   "clothing": 2388,
+   "headwear": 298
+  },
+  "by_sub": {
+   "clothing/bottom": 374,
+   "clothing/dress": 73,
+   "clothing/outerwear": 110,
+   "clothing/top": 1817,
+   "clothing/unknown": 14,
+   "headwear/cap": 286,
+   "headwear/unknown": 9,
+   "headwear/wide_brim*": 3
+  },
+  "by_source": {
+   "fashion_product_images_small": 2493,
+   "vimrhp_shopee": 193
+  },
+  "quota_check": {
+   "clothing": {
+    "min": 2000,
+    "have": 2388,
+    "ok": true
+   },
+   "headwear": {
+    "min": 300,
+    "have": 298,
+    "ok": false
+   }
+  }
+ },
+ "schema_errors": [],
+ "catalog_sha256": "9e105186f79058be0ced90e80fab16540f3796b33ab683b403861c0ad2fe5d64",
+ "n_images": 2493,
+ "elapsed_s": 41.1,
+ "repro_check": {
+  "run2_catalog_sha256": "9e105186f79058be0ced90e80fab16540f3796b33ab683b403861c0ad2fe5d64",
+  "run2_images_sha256": "890ba2ea93f4858f69eea2db7646e42009190676fedfed651f210647de0660da",
+  "same_catalog": true,
+  "same_images": true,
+  "parquet_roundtrip_same": true
+ },
+ "amazon_probe": {
+  "file": "https://huggingface.co/datasets/McAuley-Lab/Amazon-Reviews-2023/resolve/main/raw/meta_categories/meta_Clothing_Shoes_and_Jewelry.jsonl",
+  "lines_read": 20000,
+  "mapped_products": 11437,
+  "by_type": {
+   "clothing": 5164,
+   "footwear": 4864,
+   "accessory": 1037,
+   "headwear": 372
+  },
+  "by_sub": {
+   "accessory/bag": 662,
+   "accessory/belt": 134,
+   "accessory/eyewear": 241,
+   "clothing/bottom": 1345,
+   "clothing/dress": 895,
+   "clothing/outerwear": 241,
+   "clothing/top": 2683,
+   "footwear/boot": 525,
+   "footwear/heel_flat*": 451,
+   "footwear/leather_shoe": 432,
+   "footwear/sandal": 1210,
+   "footwear/sneaker": 1582,
+   "footwear/unknown": 664,
+   "headwear/beanie": 68,
+   "headwear/bucket": 7,
+   "headwear/cap": 106,
+   "headwear/unknown": 138,
+   "headwear/wide_brim": 53
+  },
+  "headwear_products": 372,
+  "headwear_with_price": 217,
+  "headwear_with_image_url": 372,
+  "main_category_top": {
+   "AMAZON FASHION": 19161,
+   "null": 288,
+   "Sports & Outdoors": 191,
+   "Amazon Home": 86,
+   "Tools & Home Improvement": 57,
+   "All Beauty": 49,
+   "Toys & Games": 40,
+   "Health & Personal Care": 27
+  },
+  "skipped": {
+   "no_map_or_excluded": 8563
+  },
+  "headwear_examples": [
+   "Hipsy Women's Stretchy Xflex Hairband Headbands Multi Packs (Basic Navy & Taupe Xflex Multi 2pk)",
+   "C.C Hatsandscarf Exclusives Unisex Solid Ribbed Beanie with Pom (HAT-43)",
+   "Hand Knit Sherpa Wool Hat with Micro Fleece Lining, Toque, Beanie",
+   "Famz tee Afghani Handmade Hat Chitrali Pakol Cap Peshawari Gift 100% Wool",
+   "Zion Judaica Deluxe Linen Kippot Single Bulk Optional Custom Imprinting for Any Even"
+  ],
+  "elapsed_s": 4.5,
+  "note": "Ảnh Amazon (m.media-amazon.com) bị proxy chặn trong môi trường này → chưa có ảnh local; chỉ dùng được cho text search/QA hoặc tải ảnh trên máy thật."
+ }
+}

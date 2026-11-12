@@ -1,0 +1,36 @@
+{
+ "fpi_by_type": {
+  "clothing": 2200,
+  "footwear": 1400,
+  "accessory": 700,
+  "headwear": 293
+ },
+ "fpi_by_sub": {
+  "accessory/bag": 465,
+  "accessory/belt": 100,
+  "accessory/eyewear": 135,
+  "clothing/bottom": 355,
+  "clothing/dress": 72,
+  "clothing/outerwear": 52,
+  "clothing/top": 1721,
+  "footwear/heel_flat*": 270,
+  "footwear/leather_shoe": 95,
+  "footwear/sandal": 306,
+  "footwear/sneaker": 729,
+  "headwear/cap": 283,
+  "headwear/unknown": 7,
+  "headwear/wide_brim*": 3
+ },
+ "fpi_total": 4593,
+ "fpi_source_rows_total": 44072,
+ "vimrhp_products": 509,
+ "vimrhp_reviews": 11009,
+ "vimrhp_by_sub": {
+  "ThoiTrangNu": 94,
+  "DongHo": 81,
+  "PhuKienNu": 76,
+  "GiayDepNam": 79,
+  "GiayDepNu": 92,
+  "ThoiTrangNam": 87
+ }
+}

@@ -1,0 +1,41 @@
+id_a,id_b,dist,same_type_brand,same_color,title_a,title_b,title_jaccard,md5_equal,action
+fpi_17356,fpi_11862,2,False,False,Puma Men Arizona Black Flip Flops,Playboy Men Red & Blue Flip Flops,0.3,False,keep_both_diff_group
+fpi_23679,fpi_39973,2,False,False,Red Tape Men Mocassins Black Casual Shoes,Gas Men Brown Lear Shoes,0.2,False,keep_both_diff_group
+fpi_47547,fpi_47088,2,False,False,Portia Women Silver Flats,Kids Ville Boys Blue Flip Flops,0.0,False,keep_both_diff_group
+fpi_13130,fpi_24690,2,False,True,Provogue Men Brown Casual Shoes,Lee Cooper Men Casual Brown Shoes,0.571,False,keep_both_diff_group
+fpi_7379,fpi_24690,2,False,False,Red Tape Men's Blk Casual Black Shoe,Lee Cooper Men Casual Brown Shoes,0.182,False,keep_both_diff_group
+fpi_29869,fpi_51730,2,False,False,Mayhem Men Aviator Sunglasses 1023-205d,Allen Solly Women Purple Sunglass,0.0,False,keep_both_diff_group
+fpi_36433,fpi_26537,2,False,False,Spinn Men Conniver Black Shoes,ID Men Blue Shoes,0.286,False,keep_both_diff_group
+fpi_11900,fpi_22882,2,False,False,Franco Leone Men Formal Black Formal Shoes,Woodland Men Olive Casual Sandals,0.1,False,keep_both_diff_group
+fpi_7365,fpi_45616,2,False,True,Red Tape Men's Black Casual Shoe,Arrow Men Black Formal Shoes,0.222,False,keep_both_diff_group
+fpi_41247,fpi_18018,2,False,False,Arrow Men Brown Belt,Lino Perros Women Solid Black Belt,0.111,False,keep_both_diff_group
+fpi_28394,fpi_51730,2,False,False,Idee Women Black Sunglasses,Allen Solly Women Purple Sunglass,0.125,False,keep_both_diff_group
+fpi_19369,fpi_35681,2,False,False,Redtape Men Stone Wall Blue Casual Shoes,U.S. Polo Assn. Men Brown Shoes,0.182,False,keep_both_diff_group
+fpi_42275,fpi_45622,2,False,False,Vans Men Brown Michoacan Shoes,Red Tape Men Black Shoes,0.25,False,keep_both_diff_group
+fpi_5898,fpi_7218,2,False,False,Puma Men Tekkies Jam Blue Shoe,Rockport Men's Carnforth Soft Brown Shoe,0.2,False,keep_both_diff_group
+fpi_9033,fpi_45574,2,False,False,Buckaroo Men Diana Red Shoes,Arrow Men Black Formal Shoes,0.25,False,keep_both_diff_group
+fpi_10156,fpi_24714,2,False,True,Rockport Men Sc Slip On Brown Casual Shoes,Puma Men Volley HP Brown Casual Shoes,0.364,False,keep_both_diff_group
+fpi_9130,fpi_5699,2,False,False,Puma Men Osu NM Grey Casual Shoes,Skechers Men's Striking Black Shoe,0.091,False,keep_both_diff_group
+fpi_21282,fpi_16846,2,False,True,Allen Solly Unisex Aviator Sunglasses AS201-C1,Idee Men Funky Eyewear Brown Sunglasses,0.091,False,keep_both_diff_group
+fpi_24482,fpi_12878,2,False,True,Red Tape Men Black Casual Shoes,Provogue Men Formal Black Formal Shoes,0.375,False,keep_both_diff_group
+fpi_22887,fpi_35681,2,False,False,Woodland Men Olive Casual Sandals,U.S. Polo Assn. Men Brown Shoes,0.1,False,keep_both_diff_group
+fpi_37243,fpi_50279,2,False,False,United Colors of Benetton Men Brown Shoes,Arrow Men Navy Blue Shoes,0.2,False,keep_both_diff_group
+fpi_42275,fpi_19369,2,False,False,Vans Men Brown Michoacan Shoes,Redtape Men Stone Wall Blue Casual Shoes,0.2,False,keep_both_diff_group
+fpi_49594,fpi_44942,2,False,False,Catwalk Women Black Flats,Franco Leone Men Brown Sandals,0.0,False,keep_both_diff_group
+fpi_35237,fpi_20816,2,False,True,Fortune Men Black Casual Shoes,Red Tape Men Formal Black Shoes,0.375,False,keep_both_diff_group
+fpi_47564,fpi_10618,2,False,False,Portia Women Brown Sandals,Carlton London Women Casual Black Slippers,0.111,False,keep_both_diff_group
+fpi_11897,fpi_12880,2,False,False,Franco Leone Men Formal Brown Formal Shoes,Provogue Men Casual Black Shoes,0.222,False,keep_both_diff_group
+fpi_6421,fpi_3997,2,False,False,Lotto Men's Bavarian Black Flip Flop,Spalding Men Grey & Orange Flip Flops,0.182,False,keep_both_diff_group
+fpi_7330,fpi_37242,2,False,True,Red Tape Men Strappy Black Floater,United Colors of Benetton Men Black Shoes,0.182,False,keep_both_diff_group
+fpi_50279,fpi_26537,2,False,True,Arrow Men Navy Blue Shoes,ID Men Blue Shoes,0.5,False,keep_both_diff_group
+fpi_28182,fpi_49674,2,False,False,Ray-Ban Men Aviator Copper Sunglasses,United Colors of Benetton Men Sunglass,0.1,False,keep_both_diff_group
+fpi_12867,fpi_22882,2,False,False,Lee Cooper Men Casual Black Shoes,Woodland Men Olive Casual Sandals,0.222,False,keep_both_diff_group
+fpi_15726,fpi_4469,2,False,False,Nike Men Air Max+ 2011 Grey Sports Shoes,Puma Men's Vibrant Navy White Silver Shoe,0.071,False,keep_both_diff_group
+fpi_35465,fpi_33702,2,False,False,Franco Leone Men Blue Shoes,Cobblerz Men Black Semiformal Shoes,0.25,False,keep_both_diff_group
+fpi_37243,fpi_44429,2,False,False,United Colors of Benetton Men Brown Shoes,Gliders Men Black Formal Shoes,0.2,False,keep_both_diff_group
+fpi_10306,fpi_10154,2,False,False,Clarks Men Rocco Fuse Leather Grey Casual Shoes,Rockport Men Bal Brown Casual Shoes,0.273,False,keep_both_diff_group
+fpi_44421,fpi_20816,2,True,True,Red Tape Men Leather Black Shoes,Red Tape Men Formal Black Shoes,0.714,False,review
+fpi_22495,fpi_5322,2,True,False,ADIDAS Men Adistar Ride 3 White Sports Shoes,ADIDAS Men's Adistar Black Shoe,0.3,False,variant
+fpi_13536,fpi_5609,2,True,False,ADIDAS Men Black Receptor Sports Sandal,ADIDAS Men Receptor Navy Sports Sandals,0.5,False,variant
+fpi_57231,fpi_57230,2,True,False,Murcia Women Black Handbag,Murcia Women Purple Handbag,0.6,False,variant
+fpi_14483,fpi_14496,2,True,False,Flying Machine Men Casual Green Casual Shoes,Flying Machine Men Casual Grey Casual Shoes,0.714,False,variant

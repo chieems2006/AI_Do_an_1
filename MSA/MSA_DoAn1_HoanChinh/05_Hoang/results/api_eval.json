@@ -1,0 +1,589 @@
+{
+ "data_version": "Data v1 (scripts 01/01b/02, seed 42)",
+ "catalog_size": 5021,
+ "visual_index_size": 4593,
+ "visual_model": "openai/clip-vit-base-patch32",
+ "tau_v": 0.25,
+ "torch_threads": 2,
+ "cpu": 2,
+ "note": "Latency đo trong tiến trình (TestClient) trên máy 2 CPU dùng chung với tác nhân khác.",
+ "search_image": {
+  "overall": {
+   "n": 80,
+   "latency_ms_client": {
+    "n": 80,
+    "mean": 546.8637134749968,
+    "p50": 393.48144450002565,
+    "p95": 1106.4309573000396,
+    "p99": 1834.0332752399747,
+    "max": 2031.3643290000982
+   },
+   "latency_ms_server": {
+    "n": 80,
+    "mean": 530.78975,
+    "p50": 377.51,
+    "p95": 1080.3299999999995,
+    "p99": 1814.7763999999984,
+    "max": 2022.42
+   },
+   "cross_type_error@5": 0.015,
+   "cross_type_error@5_no_gate": 0.005,
+   "subcategory_precision@5": 0.925,
+   "type_gate_accuracy": 0.975,
+   "top1_score_mean": 0.9585975,
+   "n_below_tau_v": 0,
+   "pct_under_1500ms": 0.975
+  },
+  "by_type": {
+   "accessory": {
+    "n": 20,
+    "latency_ms_client": {
+     "n": 20,
+     "mean": 501.17656060001536,
+     "p50": 322.5510465000525,
+     "p95": 1463.4673458998127,
+     "p99": 1917.7849323800403,
+     "max": 2031.3643290000982
+    },
+    "latency_ms_server": {
+     "n": 20,
+     "mean": 484.48849999999993,
+     "p50": 311.945,
+     "p95": 1441.0485000000006,
+     "p99": 1906.1456999999994,
+     "max": 2022.42
+    },
+    "cross_type_error@5": 0.0,
+    "cross_type_error@5_no_gate": 0.0,
+    "subcategory_precision@5": 0.99,
+    "type_gate_accuracy": 1.0,
+    "top1_score_mean": 0.9464699999999999,
+    "n_below_tau_v": 0,
+    "pct_under_1500ms": 0.95
+   },
+   "clothing": {
+    "n": 20,
+    "latency_ms_client": {
+     "n": 20,
+     "mean": 536.8696658999966,
+     "p50": 447.0784990000993,
+     "p95": 894.1134964000184,
+     "p99": 915.6714040799261,
+     "max": 921.060880999903
+    },
+    "latency_ms_server": {
+     "n": 20,
+     "mean": 522.1715,
+     "p50": 431.905,
+     "p95": 864.806,
+     "p99": 905.3292,
+     "max": 915.46
+    },
+    "cross_type_error@5": 0.0,
+    "cross_type_error@5_no_gate": 0.0,
+    "subcategory_precision@5": 0.9099999999999999,
+    "type_gate_accuracy": 1.0,
+    "top1_score_mean": 0.9473,
+    "n_below_tau_v": 0,
+    "pct_under_1500ms": 1.0
+   },
+   "footwear": {
+    "n": 20,
+    "latency_ms_client": {
+     "n": 20,
+     "mean": 616.273478800008,
+     "p50": 505.13636350001434,
+     "p95": 1131.4119334000457,
+     "p99": 1651.5449346799633,
+     "max": 1781.578184999944
+    },
+    "latency_ms_server": {
+     "n": 20,
+     "mean": 599.146,
+     "p50": 484.29,
+     "p95": 1105.3435000000006,
+     "p99": 1628.732699999999,
+     "max": 1759.58
+    },
+    "cross_type_error@5": 0.0,
+    "cross_type_error@5_no_gate": 0.0,
+    "subcategory_precision@5": 0.9100000000000001,
+    "type_gate_accuracy": 1.0,
+    "top1_score_mean": 0.9469200000000001,
+    "n_below_tau_v": 0,
+    "pct_under_1500ms": 0.95
+   },
+   "headwear": {
+    "n": 20,
+    "latency_ms_client": {
+     "n": 20,
+     "mean": 533.1351485999676,
+     "p50": 457.92283049991056,
+     "p95": 972.8379863000102,
+     "p99": 1220.1345276598745,
+     "max": 1281.9586629998412
+    },
+    "latency_ms_server": {
+     "n": 20,
+     "mean": 517.353,
+     "p50": 441.265,
+     "p95": 952.3365000000002,
+     "p99": 1197.9152999999994,
+     "max": 1259.31
+    },
+    "cross_type_error@5": 0.06,
+    "cross_type_error@5_no_gate": 0.02,
+    "subcategory_precision@5": 0.8899999999999999,
+    "type_gate_accuracy": 0.9,
+    "top1_score_mean": 0.9937000000000001,
+    "n_below_tau_v": 0,
+    "pct_under_1500ms": 1.0
+   }
+  },
+  "heldout_vs_loo": "footwear/clothing/accessory = ảnh held-out (không trong catalog); headwear = leave-one-out"
+ },
+ "search_text": {
+  "n_queries": 15,
+  "queries_all_correct": 15,
+  "queries_with_results": 15,
+  "total_items": 300,
+  "total_violations": 0,
+  "latency_ms_client": {
+   "n": 15,
+   "mean": 20.80917946665674,
+   "p50": 20.389459999933024,
+   "p95": 29.00134440005785,
+   "p99": 34.40396007990784,
+   "max": 35.754613999870344
+  },
+  "per_query": [
+   {
+    "query": "giày thể thao",
+    "filters": {
+     "product_type": "footwear"
+    },
+    "n_items": 20,
+    "violations": 0,
+    "latency_ms": 35.754613999870344,
+    "server_latency_ms": 9.65,
+    "top3": [
+     "Lotto Men Black Shoes",
+     "Lotto Men White Shoes",
+     "Catwalk Women Black Casual Shoes"
+    ]
+   },
+   {
+    "query": "sneaker",
+    "filters": {
+     "sub_category": "sneaker",
+     "colors": [
+      "trắng"
+     ]
+    },
+    "n_items": 20,
+    "violations": 0,
+    "latency_ms": 20.207325999990644,
+    "server_latency_ms": 13.58,
+    "top3": [
+     "Lotto Men White Shoes",
+     "Lotto Men White Casual Shoes",
+     "Catwalk Women White Shoes"
+    ]
+   },
+   {
+    "query": "giày nữ",
+    "filters": {
+     "product_type": "footwear",
+     "gender": "Women"
+    },
+    "n_items": 20,
+    "violations": 0,
+    "latency_ms": 22.39396800018767,
+    "server_latency_ms": 16.37,
+    "top3": [
+     "FANAN Giày Cao Gót giày búp bê giày nữ Mary jane Giày Lười Da Thời Trang vintage giày nữ High quality Trẻ trung Thể thao và thời trang Năng động Chống bám bụi B25G08V 4Z240127",
+     "Giày nữ giày cao gót nữ gót trụ cao 7cm da đẹp mềm êm PN01",
+     "SANDAL CAO GÓT LOVIIECORNER - GIÀY THỜI TRANG BÍT MŨI ĐÚP CAO - GIÀY NỮ BÍT HẬU GẮN NƠ G231145"
+    ]
+   },
+   {
+    "query": "dép",
+    "filters": {
+     "sub_category": "sandal",
+     "colors": [
+      "đen"
+     ]
+    },
+    "n_items": 20,
+    "violations": 0,
+    "latency_ms": 21.669758000143702,
+    "server_latency_ms": 9.24,
+    "top3": [
+     "Arrow Men Black Sandals",
+     "Puma Men Black Floater",
+     "Coolers Men Black Sandals"
+    ]
+   },
+   {
+    "query": "giày da công sở",
+    "filters": {
+     "sub_category": "leather_shoe",
+     "colors": [
+      "nâu"
+     ]
+    },
+    "n_items": 20,
+    "violations": 0,
+    "latency_ms": 26.107086000138224,
+    "server_latency_ms": 9.44,
+    "top3": [
+     "Ganuchi Men Brown Shoes",
+     "Arrow Men Brown Formal Shoes",
+     "Arrow Men Brown Formal Shoes"
+    ]
+   },
+   {
+    "query": "áo thun nam",
+    "filters": {
+     "sub_category": "top",
+     "gender": "Men",
+     "include_unisex": false
+    },
+    "n_items": 20,
+    "violations": 0,
+    "latency_ms": 19.935717999942426,
+    "server_latency_ms": 14.14,
+    "top3": [
+     "Áo thun nam nữ 𝙇𝑨𝘿𝒔𝙀𝑳𝙀𝑽𝙀𝑵 - /𝙉𝒐𝙩 𝙥𝒆𝙧𝒇𝙚𝒄𝙩 𝙗𝒖𝙩 𝙤𝒏𝙡𝒚 𝒐𝙣𝒆/ cotton 260gsm",
+     "Áo Thun Nam Trơn Ngắn Tay Cổ Chữ V  Vải Thun Gân  ATINO Thoáng Mát Ít Nhăn Form Regular L.2.2860",
+     "Áo Thun Nam Nữ Unisex Chuẩn Logo Mlb LA, NY Siêu Nét 100% Chất Cotton Co Dãn Thoáng Mát Style Fashion Giới Trẻ"
+    ]
+   },
+   {
+    "query": "quần jean",
+    "filters": {
+     "sub_category": "bottom",
+     "colors": [
+      "xanh dương"
+     ]
+    },
+    "n_items": 20,
+    "violations": 0,
+    "latency_ms": 20.389459999933024,
+    "server_latency_ms": 9.67,
+    "top3": [
+     "Spykar Women Blue Jeans",
+     "Elle Blue Jeans",
+     "Proline Men Blue Shorts"
+    ]
+   },
+   {
+    "query": "váy",
+    "filters": {
+     "sub_category": "dress",
+     "gender": "Women"
+    },
+    "n_items": 20,
+    "violations": 0,
+    "latency_ms": 19.490429999905245,
+    "server_latency_ms": 17.5,
+    "top3": [
+     "váy chống nắng cột dây freesize-được chọn mẫu",
+     "Femella Women Black Dress",
+     "Jealous 21 Women Black Dress"
+    ]
+   },
+   {
+    "query": "áo khoác",
+    "filters": {
+     "sub_category": "outerwear"
+    },
+    "n_items": 20,
+    "violations": 0,
+    "latency_ms": 22.791216999848984,
+    "server_latency_ms": 8.94,
+    "top3": [
+     "(Bigsize 4670kg)Áo khoác chống nắng 6 túi",
+     "Áo Khoác Jeans Xanh Đen Trơn Dành Cho Nam Nữ JEAGOVN",
+     "Áo khoác jean nữ dáng ngắn, áo khoác jean lửng, quần short và áo jean có bán lẻ_G7"
+    ]
+   },
+   {
+    "query": "mũ lưỡi trai",
+    "filters": {
+     "product_type": "headwear",
+     "colors": [
+      "đen"
+     ]
+    },
+    "n_items": 20,
+    "violations": 0,
+    "latency_ms": 18.870900999900186,
+    "server_latency_ms": 13.36,
+    "top3": [
+     "Nike Men Black Cap",
+     "Puma Men Black Cap",
+     "Puma Men Black Cap"
+    ]
+   },
+   {
+    "query": "mũ",
+    "filters": {
+     "product_type": "headwear",
+     "gender": "Men"
+    },
+    "n_items": 20,
+    "violations": 0,
+    "latency_ms": 21.809098000176164,
+    "server_latency_ms": 12.5,
+    "top3": [
+     "Nike Men Black Cap",
+     "Puma Men Black Cap",
+     "Puma Men Black Cap"
+    ]
+   },
+   {
+    "query": "túi xách",
+    "filters": {
+     "sub_category": "bag",
+     "gender": "Women",
+     "colors": [
+      "hồng"
+     ]
+    },
+    "n_items": 20,
+    "violations": 0,
+    "latency_ms": 22.079443999928117,
+    "server_latency_ms": 16.31,
+    "top3": [
+     "ADIDAS Women Pink Handbag",
+     "Stoln Women Pink Handbag",
+     "Wildcraft Women Pink Backpack"
+    ]
+   },
+   {
+    "query": "thắt lưng",
+    "filters": {
+     "sub_category": "belt",
+     "colors": [
+      "đen",
+      "nâu"
+     ]
+    },
+    "n_items": 20,
+    "violations": 0,
+    "latency_ms": 18.684485999983735,
+    "server_latency_ms": 15.22,
+    "top3": [
+     "Wrangler Women Black Belt",
+     "Arrow Men Black Belt",
+     "Fastrack Men Black Belt"
+    ]
+   },
+   {
+    "query": "kính râm",
+    "filters": {
+     "sub_category": "eyewear",
+     "gender": "Unisex",
+     "include_unisex": true
+    },
+    "n_items": 20,
+    "violations": 0,
+    "latency_ms": 15.197644999943805,
+    "server_latency_ms": 4.67,
+    "top3": [
+     "Polaroid Unisex Sunglasses",
+     "Polaroid Unisex Sunglasses",
+     "Polaroid Unisex Sunglasses"
+    ]
+   },
+   {
+    "query": "balo",
+    "filters": {
+     "product_type": "accessory",
+     "colors": [
+      "xám"
+     ]
+    },
+    "n_items": 20,
+    "violations": 0,
+    "latency_ms": 6.7565409999588155,
+    "server_latency_ms": 4.95,
+    "top3": [
+     "Kiara Women Grey Handbag",
+     "Kiara Women Grey Handbag",
+     "Kiara Women Grey Handbag"
+    ]
+   }
+  ],
+  "note": "Catalog thật chưa có giá/size → không đo được bộ lọc giá/size trên dữ liệu thật (đã test trên dữ liệu tổng hợp)."
+ },
+ "compare": {
+  "n_groups": 20,
+  "n_cells_checked": 370,
+  "n_cells_match": 370,
+  "match_rate": 1.0,
+  "groups_100pct": 20,
+  "latency_ms_client": {
+   "n": 20,
+   "mean": 5.7343248499933,
+   "p50": 3.365454499999032,
+   "p95": 15.08402069998738,
+   "p99": 18.792724939930842,
+   "max": 19.719900999916717
+  },
+  "per_group": [
+   {
+    "ids": [
+     "fpi_7614",
+     "fpi_20487"
+    ],
+    "mismatches": []
+   },
+   {
+    "ids": [
+     "fpi_11550",
+     "fpi_32499",
+     "fpi_30314"
+    ],
+    "mismatches": []
+   },
+   {
+    "ids": [
+     "fpi_25410",
+     "fpi_19365"
+    ],
+    "mismatches": []
+   },
+   {
+    "ids": [
+     "fpi_17956",
+     "fpi_7617",
+     "fpi_17642"
+    ],
+    "mismatches": []
+   },
+   {
+    "ids": [
+     "fpi_53941",
+     "fpi_39874"
+    ],
+    "mismatches": []
+   },
+   {
+    "ids": [
+     "fpi_12094",
+     "fpi_11997",
+     "fpi_16351"
+    ],
+    "mismatches": []
+   },
+   {
+    "ids": [
+     "fpi_24690",
+     "fpi_26325"
+    ],
+    "mismatches": []
+   },
+   {
+    "ids": [
+     "fpi_49788",
+     "fpi_12680",
+     "fpi_9379"
+    ],
+    "mismatches": []
+   },
+   {
+    "ids": [
+     "fpi_25751",
+     "fpi_8262"
+    ],
+    "mismatches": []
+   },
+   {
+    "ids": [
+     "fpi_5002",
+     "fpi_27642",
+     "fpi_56734"
+    ],
+    "mismatches": []
+   },
+   {
+    "ids": [
+     "fpi_56997",
+     "fpi_32184"
+    ],
+    "mismatches": []
+   },
+   {
+    "ids": [
+     "fpi_10604",
+     "fpi_19885",
+     "fpi_41508"
+    ],
+    "mismatches": []
+   },
+   {
+    "ids": [
+     "fpi_36038",
+     "fpi_30190"
+    ],
+    "mismatches": []
+   },
+   {
+    "ids": [
+     "fpi_21416",
+     "fpi_27191",
+     "fpi_39344"
+    ],
+    "mismatches": []
+   },
+   {
+    "ids": [
+     "fpi_16157",
+     "fpi_15719"
+    ],
+    "mismatches": []
+   },
+   {
+    "ids": [
+     "fpi_40063",
+     "fpi_17953",
+     "fpi_38564"
+    ],
+    "mismatches": []
+   },
+   {
+    "ids": [
+     "shopee_24918279332",
+     "shopee_24015956888"
+    ],
+    "mismatches": []
+   },
+   {
+    "ids": [
+     "shopee_14926712628",
+     "shopee_9228563286",
+     "shopee_24523943319"
+    ],
+    "mismatches": []
+   },
+   {
+    "ids": [
+     "shopee_25567531962",
+     "shopee_19881838757"
+    ],
+    "mismatches": []
+   },
+   {
+    "ids": [
+     "shopee_25703385119",
+     "shopee_18780511843",
+     "shopee_25626610175"
+    ],
+    "mismatches": []
+   }
+  ]
+ },
+ "elapsed_s": 459.9
+}

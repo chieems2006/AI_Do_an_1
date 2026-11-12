@@ -1,0 +1,15 @@
+Loading weights:   0%|          | 0/223 [00:00<?, ?it/s]Loading weights:   5%|▌         | 12/223 [00:00<00:07, 27.37it/s]Loading weights:   8%|▊         | 18/223 [00:00<00:06, 32.61it/s]Loading weights:  13%|█▎        | 28/223 [00:00<00:04, 44.49it/s]Loading weights:  15%|█▌        | 34/223 [00:01<00:06, 29.38it/s]Loading weights:  19%|█▉        | 42/223 [00:01<00:05, 36.09it/s]Loading weights:  22%|██▏       | 50/223 [00:01<00:06, 28.28it/s]Loading weights:  30%|███       | 68/223 [00:02<00:04, 33.92it/s]Loading weights:  38%|███▊      | 84/223 [00:02<00:03, 43.40it/s]Loading weights:  40%|████      | 90/223 [00:02<00:04, 32.69it/s]Loading weights:  46%|████▌     | 102/223 [00:02<00:03, 34.14it/s]Loading weights:  53%|█████▎    | 118/223 [00:03<00:03, 34.98it/s]Loading weights:  57%|█████▋    | 128/223 [00:03<00:03, 30.41it/s]Loading weights:  68%|██████▊   | 152/223 [00:04<00:01, 43.42it/s]Loading weights:  76%|███████▌  | 170/223 [00:04<00:00, 57.74it/s]Loading weights:  80%|████████  | 179/223 [00:04<00:00, 45.66it/s]Loading weights:  83%|████████▎ | 186/223 [00:05<00:01, 36.50it/s]Loading weights:  87%|████████▋ | 194/223 [00:05<00:00, 40.84it/s]Loading weights:  93%|█████████▎| 208/223 [00:05<00:00, 45.11it/s]Loading weights: 100%|██████████| 223/223 [00:05<00:00, 41.50it/s]
+[dinov2_s/catalog] 512/4593 ảnh, 114s (tổng thời gian embed các khối)
+[dinov2_s/catalog] 1024/4593 ảnh, 220s (tổng thời gian embed các khối)
+[dinov2_s/catalog] 1536/4593 ảnh, 320s (tổng thời gian embed các khối)
+[dinov2_s/catalog] 2048/4593 ảnh, 412s (tổng thời gian embed các khối)
+[dinov2_s/catalog] 2560/4593 ảnh, 487s (tổng thời gian embed các khối)
+[dinov2_s/catalog] 3072/4593 ảnh, 564s (tổng thời gian embed các khối)
+[dinov2_s/catalog] 3584/4593 ảnh, 641s (tổng thời gian embed các khối)
+[dinov2_s/catalog] 4096/4593 ảnh, 717s (tổng thời gian embed các khối)
+[dinov2_s/catalog] 4593/4593 ảnh, 791s (tổng thời gian embed các khối)
+[dinov2_s/queries] 512/600 ảnh, 76s (tổng thời gian embed các khối)
+[dinov2_s/queries] 600/600 ảnh, 89s (tổng thời gian embed các khối)
+[dinov2_s/ood] 60/60 ảnh, 9s (tổng thời gian embed các khối)
+{"model": "dinov2_s", "status": "ok", "error": null, "catalog_embed_total_s": 790.8, "query_embed_ms_median": 288.75}
+TEST: {"R@1": 0.75, "R@5": 0.8458, "R@10": 0.8833, "MRR@10": 0.7909, "NDCG@10": 0.8129, "R@5_footwear": 0.8333, "R@5_clothing": 0.8667, "R@5_headwear": 0.8333, "R@5_accessory": 0.85, "macro_R@5": 0.8458, "CTE@5": 0.0425, "R@5_hard": 0.9434, "CTE@5_hard": 0.0604, "cat_Hit@5": 0.6917, "cat_P@5": 0.3067, "cat_SubP@5": 0.9483, "cat_CTE@5": 0.005, "cat_P@5_footwear": 0.3467, "cat_P@5_clothing": 0.1733, "cat_P@5_headwear": 0.3533, "cat_P@5_accessory": 0.3533}

@@ -1,0 +1,330 @@
+# repo: src/msa/agent/router.py
+"""US_41 – Router ý định + Agent gọi công cụ (nội bộ trước, Gemini sau).
+
+7 route: visual, qa, search, compare, gemini_chitchat, gemini_ood, clarify.
+- Router v0 = luật từ khoá trên văn bản đã chuẩn hoá (bỏ dấu, teencode) + ngữ cảnh phiên (SP đang xem, kết quả vừa tìm).
+- Tuỳ chọn: bộ phân loại embedding (prototype k-NN, multilingual-e5-small) chỉ dùng khi luật không chắc.
+- Hỏi lại tối đa 1 lần (clarify) rồi chuyển Gemini.
+"""
+from __future__ import annotations
+
+import re
+import time
+import uuid
+from dataclasses import dataclass, field
+from typing import Any, Callable, Protocol
+
+from msa.textnorm import normalize
+
+ROUTES = ["visual", "qa", "search", "compare", "gemini_chitchat", "gemini_ood", "clarify"]
+TAU_INTENT = 0.6   # τ_intent mặc định (mục 5.3) – hiệu chỉnh ở I17
+TAU_V = 0.25       # τ_v cosine top-1 visual
+TAU_R = 0.35       # τ_r retrieval QA
+
+# ------------------------------------------------------------------ từ vựng (KHÔNG dấu)
+PRODUCT_NOUN = (r"giay|dep|sandal|sandan|xang dan|sneaker|boot|bot|cao got|bup be|guoc|tong|"
+                r"\bao\b|quan|vay|\bdam\b(?! cuoi)|chan vay|khoac|hoodie|so mi|polo|thun|jean|short|"
+                r"\bmu\b|\bnon\b|luoi trai|beanie|bucket|tui|balo|ba lo|that lung|day lung|\bkinh\b|kinh ram|kinh mat")
+DEICTIC = r"\b(nay|kia|ay)\b|\b(cai|doi|chiec|mau|sp|san pham|em) do\b|\bno\b|vua (tim|xem|roi)|o tren|ben tren"
+ORDINAL = r"(doi|cai|chiec|mau|sp|san pham|so)\s*(thu)?\s*(\d|nhat|hai|ba|dau|cuoi)|\b(\d) (doi|cai|chiec|mau) (dau|vua)|\bthu (\d|nhat|hai|ba)\b"
+
+CUES: dict[str, list[tuple[str, float]]] = {
+    "compare": [
+        (r"so sanh|\bss\b|khac nhau|khac gi|khac biet|diem khac", 2.0),
+        (r"\bvs\b|\bversus\b", 1.5),
+        (r"nen (chon|mua|lay) .*\bhay\b|\bhay\b.*(tot|ben|re|dep|em|hop) hon|(cai|doi|chiec|mau) nao (tot|ben|re|dep|em|hop|dang mua) hon", 2.0),
+        (r"\bhon\b", 0.5),
+    ],
+    "qa": [
+        (r"chat lieu|vai gi|lam bang|chat vai|chat (co )?(tot|day|mong|mat|nong)|form|dang ao|\bsize\b|co chuan|len (1 )?size|"
+         r"em chan|di (co )?(em|dau|tron|nong)|tron|chong nuoc|tham nuoc|mua mua|co ben|ben khong|bi phai|phai mau|ra mau|co dan|co co|thoang|nong khong|"
+         r"danh gia|review|nhan xet|nguoi mua|khach (noi|khen|che)|giao hang|dong goi|ship|chat luong|giong hinh|"
+         r"mau (co )?that|co (tot|on|dang mua|nen mua)|mac (co )?(dep|mat|nong)|deo (co )?(dau|em)|bao hanh|doi tra", 1.5),
+    ],
+    "search": [
+        (r"(?<!vua )\btim\b|\bkiem\b|can mua|muon mua|(?<!mua )\bmua\b(?! (mua|he|dong|thu|xuan|nay|lanh|nong))|goi y|de xuat|cho (minh|em|toi|tui)? ?xem|xem (may|vai|cac)? ?mau|show|liet ke|danh sach|co ban|ban co", 1.5),
+        (r"\bco\b.*\bkhong\b|\bco\b.*\bko\b", 0.5),
+        (r"duoi \d|tren \d|tu \d|khoang \d|\d+ (nghin|trieu)|gia re|\bre\b|mau (den|trang|do|xanh|vang|hong|nau|be|kem|xam|tim|cam)|"
+         r"cho (nam|nu|be|tre em)|unisex|\bsize \d|\bsz\b|phan\b", 1.0),
+    ],
+    "gemini_chitchat": [
+        (r"^(xin )?chao\b|^chao (shop|ban|ad|admin|em|anh|chi)|^hi\b|^hello|^alo|cam on|tam biet|\bbye\b|hen gap lai|chuc .* ngay", 2.0),
+        (r"ban la ai|ban ten (la )?gi|ban (la )?nguoi hay may|ban co the lam gi|ban lam duoc gi|\bbot\b|tro ly ao|ke chuyen|"
+         r"buon qua|chan qua|met qua|vui qua|co don|haha|hihi|hehe|ahihi|de thuong|dang yeu|yeu ban|khoe khong|an (com )?chua", 1.5),
+    ],
+    "gemini_ood": [
+        (r"thoi tiet|bong da|tran dau|ty so|code|python|java|lap trinh|nau an|mon an|cong thuc|chinh tri|bau cu|"
+         r"phuong trinh|\btoan\b|lich su|dich (sang|giup)|tieng anh la|bitcoin|chung khoan|co phieu|dien thoai|iphone|laptop(?! bag)|"
+         r"may tinh|xe may|o to|\bphim\b|bai hat|ca si|ve may bay|khach san|benh|thuoc|bac si|"
+         r"dong ho|trang suc|khuyen tai|nhan cuoi|vong tay|my pham|son moi|nuoc hoa|kem chong nang|tat\b|\bvo\b", 2.0),
+        (r"cach phoi|phoi do|mix do|xu huong|\btrend\b|cach giat|giat (giay|ao|quan)|bao quan|ve sinh (giay|tui|ao)|"
+         r"mac gi (di|cho|khi)|hop voi (dang|mau da|tone)|dang nguoi|tone da|phong cach .* la gi|lich su (cua )?(giay|ao)", 1.5),
+    ],
+}
+_CUES_C = {k: [(re.compile(p), w) for p, w in v] for k, v in CUES.items()}
+_PRODUCT_C = re.compile(PRODUCT_NOUN)
+_DEICTIC_C = re.compile(DEICTIC)
+_ORDINAL_C = re.compile(ORDINAL)
+_SEARCH_VERB_C = re.compile(r"(?<!vua )\btim\b|\bkiem\b|can mua|muon mua|(?<!mua )\bmua\b(?! (mua|he|dong|thu|xuan|nay|lanh|nong))|goi y|de xuat|xem (may|vai|cac)? ?mau|co ban|ban co")
+_HELP_C = re.compile(r"tu van|giup (minh|em|toi|tui)|hoi (chut|ti|xiu)|can giup|^(shop|ad|admin) oi$")
+
+
+@dataclass
+class RouteResult:
+    route: str
+    confidence: float
+    needs_clarification: bool
+    scores: dict[str, float] = field(default_factory=dict)
+    reason: str = ""
+
+    def as_dict(self) -> dict:
+        return dict(route=self.route, confidence=round(self.confidence, 3), needs_clarification=self.needs_clarification,
+                    scores={k: round(v, 2) for k, v in self.scores.items()}, reason=self.reason)
+
+
+class IntentEmbedder(Protocol):
+    def predict(self, text: str) -> tuple[str, float]: ...
+
+
+class Router:
+    """Router(text, image, session) -> {route, confidence, needs_clarification}.
+
+    session (dict, tuỳ chọn): current_product_id, last_results (list product_id), clarify_count (int).
+    """
+
+    def __init__(self, tau_intent: float = TAU_INTENT, embedder: IntentEmbedder | None = None, emb_weight: float = 1.0):
+        self.tau = tau_intent
+        self.embedder = embedder
+        self.emb_weight = emb_weight
+
+    # ---------------------------------------------------------- tính điểm
+    def score(self, norm: str, session: dict) -> tuple[dict[str, float], dict[str, Any]]:
+        s = {k: 0.0 for k in ROUTES if k not in ("visual", "clarify")}
+        for intent, cues in _CUES_C.items():
+            for rx, w in cues:
+                if rx.search(norm):
+                    s[intent] += w
+        has_noun = bool(_PRODUCT_C.search(norm))
+        deictic = bool(_DEICTIC_C.search(norm))
+        ordinal = bool(_ORDINAL_C.search(norm))
+        has_cur = bool(session.get("current_product_id"))
+        n_last = len(session.get("last_results") or [])
+        search_verb = bool(_SEARCH_VERB_C.search(norm))
+        feats = dict(has_noun=has_noun, search_verb=search_verb, deictic=deictic, ordinal=ordinal, has_cur=has_cur, n_last=n_last, ntok=len(norm.split()))
+        # Ngữ cảnh: QA cần 1 SP cụ thể (SP đang xem, hoặc 'đôi thứ 2' trỏ vào kết quả vừa tìm); compare cần >= 2 SP
+        ref_one = has_cur or (ordinal and n_last >= 1 and not s["compare"])
+        if s["qa"] > 0 and ref_one and (deictic or ordinal or not s["search"]):
+            s["qa"] += 1.0
+        if ref_one and (deictic or ordinal) and not s["compare"]:
+            s["qa"] += 1.0
+        if s["qa"] > 0 and not ref_one:
+            # hỏi thuộc tính mà không có SP: nếu có danh từ SP + động từ tìm -> search, ngược lại cần hỏi lại
+            s["qa"] -= 1.0
+        if s["compare"] > 0:
+            referents = n_last >= 2 or len(re.findall(r"\bvs\b|\bva\b|\bvoi\b|\bhay\b", norm)) >= 1 and has_noun
+            s["compare"] += 1.0 if (referents or (ordinal and n_last >= 2)) else -1.5
+        if not has_noun and not search_verb:
+            s["search"] = 0.0  # bộ lọc (màu/giá/'cho nam') mà không có danh từ SP hay động từ tìm -> không phải search
+        if has_noun and (s["search"] > 0) and not (has_cur and deictic):
+            s["search"] += 1.0
+        if has_noun and s["gemini_ood"] > 0 and (search_verb or (has_cur and deictic)):
+            s["gemini_ood"] -= 1.5  # "tìm áo hợp dáng người gầy" là search; "áo này giặt sao" là qa
+        if has_noun and s["gemini_chitchat"] > 0 and (s["search"] > 0 or s["qa"] > 0):
+            s["gemini_chitchat"] -= 1.0
+        return s, feats
+
+    def route(self, text: str | None, image: bytes | None = None, session: dict | None = None) -> dict:
+        return self.route_obj(text, image, session).as_dict()
+
+    def route_obj(self, text: str | None, image: bytes | None = None, session: dict | None = None) -> RouteResult:
+        session = session or {}
+        norm = normalize(text)
+        if image:
+            # Có ảnh => luôn qua visual trước (Gemini không nhận ảnh – mục 5.4); câu kèm theo dùng làm bộ lọc.
+            return RouteResult("visual", 0.95 if len(norm.split()) <= 12 else 0.85, False, {}, "co_anh")
+        if not norm:
+            return self._low("clarify", 0.0, {}, session, "rong")
+        s, f = self.score(norm, session)
+        if self.embedder is not None:
+            lab, sim = self.embedder.predict(text or "")
+            if lab in s:
+                s[lab] += self.emb_weight * max(sim, 0.0)
+        ranked = sorted(s.items(), key=lambda kv: kv[1], reverse=True)
+        (best, b), (_, b2) = ranked[0], ranked[1]
+        if b <= 0:
+            # không khớp gì: câu ngắn -> hỏi lại; có danh từ SP -> search; còn lại -> Gemini ood
+            if f["has_noun"] and f["ntok"] >= 2 and not (f["ordinal"] and f["n_last"] < 2):
+                return RouteResult("search", 0.55, False, s, "chi_co_danh_tu_sp")
+            if f["ntok"] <= 4 or f["deictic"] or f["ordinal"] or _HELP_C.search(norm):
+                return self._low("gemini_ood", 0.3, s, session, "mo_ho")
+            return RouteResult("gemini_ood", 0.5, False, s, "khong_khop_luat")
+        conf = b / (b + max(b2, 0.0) + 0.5)
+        if conf < self.tau:
+            return self._low(best, conf, s, session, "duoi_tau")
+        return RouteResult(best, conf, False, s, "luat")
+
+    def _low(self, best: str, conf: float, s: dict, session: dict, why: str) -> RouteResult:
+        """Không chắc: hỏi lại 1 lần; nếu đã hỏi lại rồi thì chuyển Gemini (hoặc giữ route nội bộ nếu là best)."""
+        if int(session.get("clarify_count", 0)) >= 1:
+            target = best if best.startswith("gemini_") else "gemini_ood"
+            return RouteResult(target, conf, False, s, why + "+da_hoi_lai")
+        return RouteResult("clarify", conf, True, s, why)
+
+
+# ====================================================================== Agent
+class LLMGateway(Protocol):
+    """Tương thích mục 5.3 (llm_gateway của Hoàng)."""
+
+    def generate(self, prompt: str, system: str | None = None, **kw: Any) -> dict: ...
+
+
+GEMINI_SYSTEM_PROMPT = (
+    "Bạn là trợ lý mua sắm thời trang (giày dép, quần áo, mũ, phụ kiện túi/thắt lưng/kính) của một cửa hàng demo. "
+    "Trả lời tiếng Việt, thân thiện, ngắn gọn (tối đa 3 câu). "
+    "QUY TẮC: không nêu giá, size cụ thể, tồn kho, khuyến mãi, phí vận chuyển hay chính sách đổi trả của cửa hàng; "
+    "nếu người dùng hỏi những điều đó thì nói bạn chưa có thông tin và gợi ý họ tìm sản phẩm trong cửa hàng. "
+    "Với câu ngoài chủ đề thời trang, trả lời ngắn gọn ở mức kiến thức chung (nếu phù hợp) rồi nhẹ nhàng đưa về việc mua sắm. "
+    "Không bịa thông tin về sản phẩm cụ thể."
+)
+PROMPT_VERSION = "trung-v1"
+CLARIFY_TEXT = ("Bạn muốn mình làm gì ạ: tìm sản phẩm (ví dụ 'tìm giày thể thao trắng'), hỏi về một sản phẩm cụ thể, "
+                "so sánh 2-3 sản phẩm, hay gửi ảnh để tìm mẫu giống?")
+
+STORE_FACT_PATTERNS = {
+    "gia": r"\d[\d.,]*\s*(k\b|nghìn|ngàn|đ\b|đồng|vnd|vnđ|triệu|usd|\$)|giá (chỉ|từ|khoảng|là)\s*\d",
+    "size": r"\bsize\s*(\d{2}|xs|s|m|l|xl|xxl)\b|\bcỡ\s*\d{2}\b",
+    "ton_kho": r"còn hàng|hết hàng|tồn kho|sẵn hàng|còn \d+ (đôi|cái|chiếc|sản phẩm)",
+    "khuyen_mai": r"giảm giá|khuyến mãi|freeship|miễn phí vận chuyển|mã giảm|voucher|sale \d",
+    "chinh_sach": r"đổi trả trong \d|bảo hành \d+ (tháng|năm)|hoàn tiền",
+}
+_STORE_C = {k: re.compile(p, re.I) for k, p in STORE_FACT_PATTERNS.items()}
+SAFE_REPLACEMENT = "Mình chưa có thông tin giá/size/tồn kho cho câu này; bạn có thể tìm sản phẩm cụ thể trong cửa hàng để xem dữ liệu chính xác nhé."
+
+
+def find_store_facts(text: str) -> list[str]:
+    """I18 – hậu kiểm: trả danh sách loại dữ kiện cửa hàng (giá/size/tồn kho/khuyến mãi/chính sách) xuất hiện trong câu trả lời."""
+    return [k for k, rx in _STORE_C.items() if rx.search(text or "")]
+
+
+@dataclass
+class Tools:
+    """Công cụ nội bộ (tiêm phụ thuộc để ghép code của Khoa/Chiến/Hoàng)."""
+    visual: Callable[..., list[dict]] | None = None          # VisualSearcher.search(image, k, product_type)
+    qa: Callable[..., dict] | None = None                    # RAGPipeline.answer(question, product_id)
+    search: Callable[..., list[dict]] | None = None          # search_text(query, filters) -> items
+    compare: Callable[..., dict] | None = None               # compare(product_ids) -> {answer, items}
+
+
+class Agent:
+    """Agent.handle: route -> công cụ nội bộ trước -> Gemini khi chitchat/ood/điểm < τ. Trả định dạng response chung (mục 5.2)."""
+
+    def __init__(self, router: Router | None = None, tools: Tools | None = None, llm: LLMGateway | None = None,
+                 tau_v: float = TAU_V, tau_r: float = TAU_R, postcheck: bool = True):
+        self.router = router or Router()
+        self.tools = tools or Tools()
+        self.llm = llm
+        self.tau_v, self.tau_r, self.postcheck = tau_v, tau_r, postcheck
+
+    def handle(self, text: str | None = None, image: bytes | None = None, session: dict | None = None) -> dict:
+        t0 = time.perf_counter()
+        session = session if session is not None else {}
+        rr = self.router.route_obj(text, image, session)
+        resp: dict[str, Any] = dict(route=rr.route, confidence=round(rr.confidence, 3), source="internal", answer="",
+                                    items=[], citations=[], latency_ms=0, request_id=str(uuid.uuid4()))
+        if rr.route == "clarify":
+            session["clarify_count"] = int(session.get("clarify_count", 0)) + 1
+            resp["answer"] = CLARIFY_TEXT
+        elif rr.route.startswith("gemini_"):
+            self._gemini(text or "", resp)
+        else:
+            session["clarify_count"] = 0
+            self._internal(rr.route, text or "", image, session, resp)
+        resp["latency_ms"] = round((time.perf_counter() - t0) * 1000, 1)
+        return resp
+
+    # ------------------------------------------------------------------
+    def _internal(self, route: str, text: str, image: bytes | None, session: dict, resp: dict) -> None:
+        last = list(session.get("last_results") or [])
+        if route == "visual" and self.tools.visual:
+            items = self.tools.visual(image, k=10)
+            if not items or items[0].get("score", 0) < self.tau_v:
+                resp["answer"] = "Mình chưa thấy sản phẩm đủ giống trong cửa hàng. Bạn mô tả bằng chữ (loại, màu, kiểu) giúp mình nhé."
+            else:
+                resp["items"] = items
+                resp["answer"] = f"Mình tìm được {len(items)} sản phẩm giống ảnh."
+                session["last_results"] = [i["product_id"] for i in items]
+        elif route == "search" and self.tools.search:
+            items = self.tools.search(text)
+            resp["items"] = items
+            resp["answer"] = f"Có {len(items)} sản phẩm phù hợp." if items else "Mình chưa tìm thấy sản phẩm phù hợp."
+            if items:
+                session["last_results"] = [i["product_id"] for i in items]
+        elif route == "qa" and self.tools.qa:
+            pid = resolve_product_ref(text, session) or session.get("current_product_id")
+            out = self.tools.qa(text, pid)
+            resp["answer"], resp["citations"] = out.get("answer", ""), out.get("citations", [])
+            if out.get("refused") or out.get("retrieval_score", 1.0) < self.tau_r:
+                # Quy tắc 5.4: thiếu dữ kiện SP thì giữ "chưa có thông tin" – Gemini KHÔNG bù.
+                resp["answer"] = out.get("answer") or "Mình chưa có thông tin này cho sản phẩm bạn đang xem."
+        elif route == "compare" and self.tools.compare:
+            ids = resolve_compare_refs(text, session) or last[:2]
+            out = self.tools.compare(ids)
+            resp["answer"], resp["items"] = out.get("answer", ""), out.get("items", [])
+        else:
+            resp["answer"] = f"(Công cụ '{route}' chưa được nối.)"
+
+    def _gemini(self, text: str, resp: dict) -> None:
+        if self.llm is None:
+            resp.update(source="internal", answer="Hiện mình chỉ hỗ trợ tìm và hỏi đáp sản phẩm thời trang.")
+            return
+        out = self.llm.generate(text, system=GEMINI_SYSTEM_PROMPT)
+        ans = out.get("answer") or ""
+        if out.get("error"):
+            resp.update(source="internal", answer="Xin lỗi, phần trò chuyện đang bận. Bạn thử lại sau hoặc tìm sản phẩm giúp mình nhé.")
+            resp["error"] = out["error"]
+            return
+        facts = find_store_facts(ans) if self.postcheck else []
+        if facts:
+            ans = SAFE_REPLACEMENT
+        resp.update(source="cache" if out.get("cached") else "gemini", answer=ans, store_fact_flags=facts,
+                    tokens_in=out.get("tokens_in"), tokens_out=out.get("tokens_out"))
+
+
+# ---------------------------------------------------------------------- tham chiếu trong phiên
+_ORD_WORDS = {"nhat": 1, "dau": 1, "dau tien": 1, "hai": 2, "ba": 3, "cuoi": -1}
+
+
+def _ordinals(norm: str) -> list[int]:
+    out: list[int] = []
+    for m in re.finditer(r"thu\s*(\d|nhat|hai|ba)|(\d)\s*(?:doi|cai|chiec|mau)?\s*dau(?: tien)?|\b(cuoi)\b", norm):
+        g = m.group(1) or m.group(3)
+        if m.group(2):  # "2 đôi đầu" -> 1..n
+            out.extend(range(1, int(m.group(2)) + 1))
+        elif g:
+            out.append(int(g) if g.isdigit() else _ORD_WORDS[g])
+    return out
+
+
+def resolve_product_ref(text: str, session: dict) -> str | None:
+    """'đôi thứ 2' -> product_id thứ 2 trong last_results; 'cái vừa tìm' -> phần tử đầu."""
+    last = list(session.get("last_results") or [])
+    if not last:
+        return None
+    o = _ordinals(normalize(text))
+    if o:
+        i = o[0]
+        return last[i - 1] if 0 < i <= len(last) else (last[-1] if i == -1 else None)
+    if re.search(r"vua (tim|xem)", normalize(text)):
+        return last[0]
+    return None
+
+
+def resolve_compare_refs(text: str, session: dict) -> list[str]:
+    last = list(session.get("last_results") or [])
+    norm = normalize(text)
+    o = _ordinals(norm)
+    m = re.search(r"(\d)\s*(doi|cai|chiec|mau)\s*(vua|dau|tren)", norm)
+    if m and not o:
+        o = list(range(1, int(m.group(1)) + 1))
+    ids = [last[i - 1] if i > 0 else last[-1] for i in o if (0 < i <= len(last)) or (i == -1 and last)]
+    return list(dict.fromkeys(ids))[:3]

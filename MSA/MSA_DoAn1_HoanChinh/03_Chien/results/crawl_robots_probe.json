@@ -1,0 +1,23 @@
+{
+ "checked": 2,
+ "allowed": 0,
+ "disallowed": 2,
+ "fetched": 0,
+ "parsed": 0,
+ "stopped_reason": null,
+ "dry_run": true,
+ "robots_evidence": {
+  "https://tiki.vn": {
+   "robots_url": "https://tiki.vn/robots.txt",
+   "status": 403,
+   "ts": "2026-11-05T00:09:24",
+   "excerpt": ""
+  },
+  "https://shopee.vn": {
+   "robots_url": "https://shopee.vn/robots.txt",
+   "status": -1,
+   "ts": "2026-11-05T00:09:24",
+   "excerpt": ""
+  }
+ }
+}

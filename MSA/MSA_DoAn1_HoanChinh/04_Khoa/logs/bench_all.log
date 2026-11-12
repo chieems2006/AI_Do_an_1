@@ -1,0 +1,7 @@
+=== clip_b32 2026-11-04T23:56:08+07:00
+--- khởi động lại sau khi máy reboot 2026-11-05T06:37:22+07:00
+=== resnet50 2026-11-05T06:37:22+07:00
+{"model": "resnet50", "status": "ok", "error": null, "catalog_embed_total_s": 1299.6, "query_embed_ms_median": 1602.9}
+TEST: {"R@1": 0.6042, "R@5": 0.7042, "R@10": 0.7375, "MRR@10": 0.6437, "NDCG@10": 0.6661, "R@5_footwear": 0.6167, "R@5_clothing": 0.6833, "R@5_headwear": 0.7333, "R@5_accessory": 0.7833, "macro_R@5": 0.7042, "CTE@5": 0.1383, "R@5_hard": 0.9057, "CTE@5_hard": 0.1774, "cat_Hit@5": 0.6667, "cat_P@5": 0.3317, "cat_SubP@5": 0.925, "cat_CTE@5": 0.01, "cat_P@5_footwear": 0.2867, "cat_P@5_clothing": 0.24, "cat_P@5_headwear": 0.3933, "cat_P@5_accessory": 0.4067}
+=== fashionclip 2026-11-05T07:06:42+07:00
+--- hàng đợi tuần tự 2026-11-05T07:07:13+07:00

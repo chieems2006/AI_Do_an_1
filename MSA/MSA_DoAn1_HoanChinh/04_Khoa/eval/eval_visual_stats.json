@@ -1,0 +1,45 @@
+{
+ "n_queries": 600,
+ "by_tier": {
+  "instance": 400,
+  "category": 200
+ },
+ "by_split_tier_type": {
+  "category/test/accessory": 30,
+  "category/test/clothing": 30,
+  "category/test/footwear": 30,
+  "category/test/headwear": 30,
+  "category/val/accessory": 20,
+  "category/val/clothing": 20,
+  "category/val/footwear": 20,
+  "category/val/headwear": 20,
+  "instance/test/accessory": 60,
+  "instance/test/clothing": 60,
+  "instance/test/footwear": 60,
+  "instance/test/headwear": 60,
+  "instance/val/accessory": 40,
+  "instance/val/clothing": 40,
+  "instance/val/footwear": 40,
+  "instance/val/headwear": 40
+ },
+ "hard_cross_type": 96,
+ "hard_cross_type_test": 53,
+ "catalog_hard_flag_rate_by_type": {
+  "accessory": 0.0443,
+  "clothing": 0.0241,
+  "footwear": 0.015,
+  "headwear": 0.1775
+ },
+ "transform_counts": {
+  "crop_offset": 60,
+  "rotate": 60,
+  "color_jitter": 56,
+  "hflip_scale": 56,
+  "background": 56,
+  "lowres_jpeg": 56,
+  "combo": 56
+ },
+ "category_gt_size_median": 31.0,
+ "seed": 42,
+ "data_version": "shared_data v1 (prep_shared_data.py seed 42)"
+}

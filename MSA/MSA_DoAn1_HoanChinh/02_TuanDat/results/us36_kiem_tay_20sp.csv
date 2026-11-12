@@ -1,0 +1,94 @@
+sid,product_id,side,point,cited,invalid_refs,auto_overlap,verdict,note,checked_by
+S01,shopee_25772362565,pros,"Dép dày dặn, đi êm chân và đúng form",6,0,1.0,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S01,shopee_25772362565,pros,Giao hàng nhanh và đóng gói kỹ càng,4,0,0.875,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S01,shopee_25772362565,pros,"Giá cả hợp lý, sản phẩm đẹp và chất lượng",7,0,0.7,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S01,shopee_25772362565,pros,"Shop nhiệt tình, tặng kèm quà",2,0,0.333,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S01,shopee_25772362565,cons,Hộp đựng hàng bị méo,1,0,0.6,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S02,shopee_22326560898,pros,"Keo dán siêu dính, chắc chắn và đi nước không bong",10,0,1.0,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S02,shopee_22326560898,pros,"Keo trong suốt, mối dán mỏng, phẳng và thẩm mỹ",5,0,1.0,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S02,shopee_22326560898,pros,"Không có mùi hóa học khó chịu, không ăn da tay",4,0,0.909,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S02,shopee_22326560898,pros,"Đóng gói chắc chắn, giao hàng và phục vụ tốt",3,0,1.0,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S03,shopee_17498595412,pros,"Dép mang êm chân, nhẹ và bền",4,0,0.714,khong_co_trong_review,"""bền"" không có trong review minh chứng (chỉ có ""chắc chắn"") – suy diễn nhẹ",tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S03,shopee_17498595412,pros,"Giá rẻ, hợp lý trong tầm giá",5,0,0.714,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S03,shopee_17498595412,pros,Giao hàng nhanh chóng và nhiệt tình,7,0,0.857,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S03,shopee_17498595412,pros,"Đúng mẫu mã, đúng màu và đủ số lượng",4,0,0.889,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S03,shopee_17498595412,cons,Form dép hơi to,1,0,0.75,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S04,shopee_24615286251,pros,"Dép mềm, nhẹ và mang rất êm chân",4,0,0.75,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S04,shopee_24615286251,pros,"Giao hàng nhanh và đúng sản phẩm, đúng size",3,0,0.889,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S04,shopee_24615286251,pros,"Chất liệu tốt, lội mưa nắng tốt và giá rẻ",1,0,0.9,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S04,shopee_24615286251,cons,Không có size nhỏ cho nữ nên hơi rộng,1,0,0.667,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S05,shopee_24720036423,pros,"Giày xinh, lấp lánh, tôn dáng và sáng chân",5,0,0.333,khong_co_trong_review,"""tôn dáng"" không có trong review minh chứng",tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S05,shopee_24720036423,pros,Giao hàng nhanh và đóng gói cẩn thận,3,0,0.625,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S05,shopee_24720036423,pros,"Giá cả ổn áp, phù hợp với số tiền",2,0,0.556,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S05,shopee_24720036423,cons,Form hai bên giày bị mất form nên mang hơi rộng,1,0,0.727,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S05,shopee_24720036423,cons,Sợ mang lâu bị rớt hạt hoặc không hợp đi lâu dài,2,0,0.667,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S06,shopee_25809019455,pros,Giày đi êm chân và chất lượng tốt,2,0,0.75,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S06,shopee_25809019455,pros,"Phom dáng đẹp, chuẩn hình",3,0,0.8,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S06,shopee_25809019455,pros,Giao hàng nhanh và đóng gói chắc chắn,3,0,0.875,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S06,shopee_25809019455,pros,"Giá cả hợp lý, rẻ",4,0,0.8,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S06,shopee_25809019455,cons,Đế nhựa cảm giác không êm,1,0,1.0,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S06,shopee_25809019455,cons,Quai nơ khó rút ra khi xỏ và keo dán mũi chưa đẹp,1,0,0.846,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S07,shopee_2140323126,pros,"Giày xinh, đi êm chân và nhẹ",3,0,1.0,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S07,shopee_2140323126,pros,Giao hàng nhanh chóng,9,0,0.75,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S07,shopee_2140323126,pros,"Đóng gói kỹ, giữ form tốt",4,0,0.667,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S07,shopee_2140323126,pros,Giá cả hợp lý và phải chăng,4,0,0.286,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S08,shopee_24961147751,pros,"Giày đi êm chân, không đau",4,0,0.833,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S08,shopee_24961147751,pros,"Form giày đẹp, sang và dễ phối đồ",3,0,0.625,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S08,shopee_24961147751,pros,Giao hàng nhanh và đóng gói cẩn thận,3,0,1.0,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S08,shopee_24961147751,pros,"Giá cả hợp lý, giá rẻ",3,0,0.667,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S08,shopee_24961147751,cons,Chờ giao hàng lâu,2,0,1.0,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S08,shopee_24961147751,cons,Gót chân đi cảm giác hơi nhẹ không chắc và có mùi,1,0,0.667,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S09,shopee_21790856532,pros,"Dù tự động tiện lợi, dễ mở và đóng",4,0,1.0,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S09,shopee_21790856532,pros,"Thiết kế nhẹ, rộng rãi và chắc chắn",4,0,0.625,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S09,shopee_21790856532,pros,Giao hàng nhanh chóng,3,0,1.0,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S09,shopee_21790856532,pros,"Giá rẻ, phù hợp với túi tiền",5,0,0.857,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S10,shopee_18888927612,pros,"Mũ đẹp, form dáng đẹp và che phủ tốt",5,0,0.778,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S10,shopee_18888927612,pros,Giao hàng nhanh và shipper nhiệt tình,4,0,0.571,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S10,shopee_18888927612,pros,"Đội sướng, chất liệu tốt, mát và dễ gấp gọn",3,0,1.0,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S10,shopee_18888927612,pros,"Giá rẻ, vừa vặn với tiền",6,0,1.0,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S10,shopee_18888927612,cons,Mũ mỏng và đóng gói sơ sài làm mất form,2,0,0.8,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S11,shopee_24906480108,pros,Hàng đẹp và chất lượng tốt,3,0,0.833,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S11,shopee_24906480108,pros,"Đeo vừa vặn, bền chắc chắn",1,0,1.0,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S11,shopee_24906480108,pros,"Giá rẻ, hạt dẻ",3,0,0.75,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S11,shopee_24906480108,pros,Giao hàng nhanh chóng,2,0,0.75,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S11,shopee_24906480108,cons,"Chữ hơi xấu, không giống hình",1,0,0.833,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S11,shopee_24906480108,cons,Hàng bị sét một ít ở sau chữ,1,0,1.0,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S12,shopee_16973326316,pros,"Tất đẹp, đi ấm chân",2,0,1.0,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S12,shopee_16973326316,pros,"Co giãn tốt, đi thoải mái",3,0,1.0,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S12,shopee_16973326316,pros,"Chất vải mềm mịn, mỏng thoáng",3,0,0.833,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S12,shopee_16973326316,pros,"Giá rẻ, giao hàng nhanh",2,0,1.0,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S12,shopee_16973326316,cons,Dễ bị xù lông khi giặt máy,1,0,0.714,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S13,shopee_28053135586,pros,"Áo rất đẹp, form siêu đẹp",3,0,0.667,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S13,shopee_28053135586,pros,"Đường kim mũi chỉ chắc chắn, ít chỉ thừa",2,0,1.0,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S13,shopee_28053135586,pros,"Chất vải tốt, đứng form",3,0,0.8,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S13,shopee_28053135586,pros,"Giá rẻ, giao hàng nhanh",3,0,1.0,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S14,shopee_25980881072,pros,"Vải đẹp, mát tay, mềm mịn",3,0,1.0,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S14,shopee_25980881072,pros,"Áo xinh, chuẩn hình, màu sắc đẹp",3,0,0.857,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S14,shopee_25980881072,pros,"Giá cả hợp lý, phải chăng",3,0,1.0,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S14,shopee_25980881072,pros,Giao hàng nhanh và đóng gói kỹ,3,0,1.0,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S15,shopee_24114331713,pros,"Quần đẹp, form dáng ok",3,0,1.0,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S15,shopee_24114331713,pros,"Chất vải kaki, vải dù đẹp mát",3,0,0.857,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S15,shopee_24114331713,pros,"Giá rẻ, phù hợp học sinh sinh viên",3,0,0.5,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S15,shopee_24114331713,pros,Giao hàng nhanh chóng,3,0,0.75,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S15,shopee_24114331713,cons,Nhiều chỉ thừa,1,0,1.0,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S15,shopee_24114331713,cons,Quần hơi dài và chun quần không chặt,1,0,0.875,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S16,shopee_25876453771,pros,"Vải áo thun mỏng mát, co giãn thoải mái",3,0,0.667,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S16,shopee_25876453771,pros,"Giá rẻ, chất lượng sản phẩm tốt",3,0,0.714,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S16,shopee_25876453771,pros,"Form áo đẹp, ít nhăn và đứng form",3,0,0.625,khong_co_trong_review,"""ít nhăn"" không có trong review; 1 minh chứng là đoạn quảng cáo của shop (spam)",tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S16,shopee_25876453771,pros,"Shop giao hàng nhanh chóng, đóng gói cẩn thận",3,0,0.889,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S17,shopee_19278428529,pros,"Áo cardigan mỏng nhẹ, mặc mát và mềm mại",3,0,0.778,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S17,shopee_19278428529,pros,"Đường may chuẩn, không có chỉ thừa",2,0,0.857,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S17,shopee_19278428529,pros,"Form dáng đẹp, tôn dáng, che bắp tay to",3,0,1.0,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S17,shopee_19278428529,pros,"Shop tư vấn nhiệt tình, giao hàng nhanh",3,0,1.0,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S18,shopee_22478587795,pros,"Chất thun gân mỏng mát, co giãn tốt",3,0,0.875,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S18,shopee_22478587795,pros,"Dây kéo xịn, đường chỉ may đẹp",1,0,1.0,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S18,shopee_22478587795,pros,"Giá rẻ, phù hợp để mặc ủ kem hoặc che nắng",3,0,0.9,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S18,shopee_22478587795,pros,Shop giao hàng nhanh và đóng gói cẩn thận,2,0,1.0,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S19,shopee_2278639024,pros,"Chất vải thun dày dặn, mềm mại và không xù lông",3,0,0.818,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S19,shopee_2278639024,pros,"Form áo đẹp, màu sắc giống hình",3,0,1.0,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S19,shopee_2278639024,pros,Thiết kế nhiều túi rộng có khóa kéo tốt,3,0,0.667,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S19,shopee_2278639024,pros,Shop giao hàng cực kỳ nhanh chóng,3,0,0.714,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S20,shopee_26753819157,pros,Áo khoác ren lưới mỏng mặc mát mẻ mùa hè,2,0,0.8,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S20,shopee_26753819157,pros,"Thiết kế xinh xắn, mặc lên trông nữ tính",2,0,0.667,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S20,shopee_26753819157,pros,"Shop tư vấn nhiệt tình, giao hàng nhanh",3,0,1.0,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại
+S20,shopee_26753819157,pros,"Đóng gói cẩn thận, sản phẩm chất lượng",3,0,0.75,co_trong_review,,tac_nhan_AI (vai Tuấn Đạt) – nhóm cần kiểm lại

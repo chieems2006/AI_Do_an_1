@@ -1,0 +1,1 @@
+{"ts": 1793836065.2943351, "model": "gemini-3.5-flash", "prompt_sha": "c91b85c8a0ecf6f9", "mock": false, "event": "call", "latency_ms": 3749.384389999932, "api_latency_ms": 3749.3129080000926, "wait_ms": 0.0, "tokens_in": 2, "tokens_out": 13, "tokens_thinking": 0, "retries": 0, "error": null, "finish_reason": "STOP"}

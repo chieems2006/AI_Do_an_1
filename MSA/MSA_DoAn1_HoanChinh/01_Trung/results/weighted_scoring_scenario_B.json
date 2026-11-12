@@ -1,0 +1,67 @@
+[
+ {
+  "model":"dinov2_s",
+  "Độ chính xác":5.0,
+  "Tầng category":1.5,
+  "Tốc độ":4.72,
+  "Tài nguyên":4.834,
+  "Phù hợp miền":5.0,
+  "License":5.0,
+  "Dễ tích hợp":4.0,
+  "tong_diem":4.483,
+  "thieu":"",
+  "hang":1
+ },
+ {
+  "model":"fashionclip",
+  "Độ chính xác":4.326,
+  "Tầng category":5.0,
+  "Tốc độ":4.705,
+  "Tài nguyên":3.127,
+  "Phù hợp miền":3.153,
+  "License":4.0,
+  "Dễ tích hợp":4.0,
+  "tong_diem":4.029,
+  "thieu":"",
+  "hang":2
+ },
+ {
+  "model":"siglip_b16",
+  "Độ chính xác":4.469,
+  "Tầng category":4.349,
+  "Tốc độ":5.0,
+  "Tài nguyên":1.0,
+  "Phù hợp miền":4.077,
+  "License":5.0,
+  "Dễ tích hợp":4.0,
+  "tong_diem":3.964,
+  "thieu":"",
+  "hang":3
+ },
+ {
+  "model":"clip_b32",
+  "Độ chính xác":1.888,
+  "Tầng category":2.968,
+  "Tốc độ":4.325,
+  "Tài nguyên":2.332,
+  "Phù hợp miền":2.23,
+  "License":5.0,
+  "Dễ tích hợp":5.0,
+  "tong_diem":3.102,
+  "thieu":"",
+  "hang":4
+ },
+ {
+  "model":"resnet50",
+  "Độ chính xác":1.0,
+  "Tầng category":1.698,
+  "Tốc độ":1.0,
+  "Tài nguyên":4.984,
+  "Phù hợp miền":1.0,
+  "License":5.0,
+  "Dễ tích hợp":5.0,
+  "tong_diem":2.467,
+  "thieu":"",
+  "hang":5
+ }
+]

@@ -1,0 +1,102 @@
+{
+ "clip_b32": {
+  "a_p05_category_val": {
+   "tau": 0.8748,
+   "test_instance_kept": 0.7167,
+   "test_category_kept": 0.9917,
+   "test_ood_rejected": 1.0
+  },
+  "b_max_ood_val+0.01": {
+   "tau": 0.8887,
+   "test_instance_kept": 0.6708,
+   "test_category_kept": 0.9417,
+   "test_ood_rejected": 1.0
+  },
+  "default_0.25": {
+   "tau": 0.25,
+   "test_instance_kept": 1.0,
+   "test_category_kept": 1.0,
+   "test_ood_rejected": 0.0
+  }
+ },
+ "dinov2_s": {
+  "a_p05_category_val": {
+   "tau": 0.7326,
+   "test_instance_kept": 0.725,
+   "test_category_kept": 0.9583,
+   "test_ood_rejected": 1.0
+  },
+  "b_max_ood_val+0.01": {
+   "tau": 0.5923,
+   "test_instance_kept": 0.9417,
+   "test_category_kept": 1.0,
+   "test_ood_rejected": 0.9722
+  },
+  "default_0.25": {
+   "tau": 0.25,
+   "test_instance_kept": 1.0,
+   "test_category_kept": 1.0,
+   "test_ood_rejected": 0.0
+  }
+ },
+ "fashionclip": {
+  "a_p05_category_val": {
+   "tau": 0.7764,
+   "test_instance_kept": 0.675,
+   "test_category_kept": 0.9833,
+   "test_ood_rejected": 1.0
+  },
+  "b_max_ood_val+0.01": {
+   "tau": 0.7039,
+   "test_instance_kept": 0.8417,
+   "test_category_kept": 1.0,
+   "test_ood_rejected": 1.0
+  },
+  "default_0.25": {
+   "tau": 0.25,
+   "test_instance_kept": 1.0,
+   "test_category_kept": 1.0,
+   "test_ood_rejected": 0.0
+  }
+ },
+ "resnet50": {
+  "a_p05_category_val": {
+   "tau": 0.6901,
+   "test_instance_kept": 0.675,
+   "test_category_kept": 0.9833,
+   "test_ood_rejected": 1.0
+  },
+  "b_max_ood_val+0.01": {
+   "tau": 0.659,
+   "test_instance_kept": 0.725,
+   "test_category_kept": 1.0,
+   "test_ood_rejected": 0.9722
+  },
+  "default_0.25": {
+   "tau": 0.25,
+   "test_instance_kept": 1.0,
+   "test_category_kept": 1.0,
+   "test_ood_rejected": 0.0
+  }
+ },
+ "siglip_b16": {
+  "a_p05_category_val": {
+   "tau": 0.8093,
+   "test_instance_kept": 0.8833,
+   "test_category_kept": 0.9667,
+   "test_ood_rejected": 1.0
+  },
+  "b_max_ood_val+0.01": {
+   "tau": 0.7531,
+   "test_instance_kept": 0.9625,
+   "test_category_kept": 1.0,
+   "test_ood_rejected": 1.0
+  },
+  "default_0.25": {
+   "tau": 0.25,
+   "test_instance_kept": 1.0,
+   "test_category_kept": 1.0,
+   "test_ood_rejected": 0.0
+  }
+ }
+}

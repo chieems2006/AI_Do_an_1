@@ -1,0 +1,48 @@
+{
+ "product_id": "shopee_25069997593",
+ "title": "Thắt lưng nam da cao cấp, dây lưng nam mặt khóa tự động sang trọng, nịt da màu đen ĐHT1",
+ "category": "PhuKienNu",
+ "brand": null,
+ "price": null,
+ "currency": null,
+ "colors": [],
+ "sizes": [],
+ "description": null,
+ "specs": {
+  "image_urls": [
+   "https://down-bs-us.img.susercontent.com/vn-11134207-7r98o-lt3qp6dirpndcb.webp"
+  ],
+  "taxonomy_rule": "vi.belt"
+ },
+ "image_paths": [],
+ "rating": 4.814,
+ "rating_count": 43,
+ "reviews": [
+  {
+   "review_id": "15299353022",
+   "rating": 5,
+   "text": "Dây da đẹp, rẻ, mn nên mua cho chồng con dùng đều oki nha",
+   "date": "2024-05-25T10:09:34.000Z",
+   "helpfulness": 4,
+   "detail_rating": "product_quality: 5\nseller_service: 5\ndelivery_service: 5"
+  },
+  {
+   "review_id": "15629426486",
+   "rating": 5,
+   "text": "Chấp nhận được trong tầm giá, hy vọng sử dụng được bền và lâu",
+   "date": "2024-06-26T04:24:23.000Z",
+   "helpfulness": 2,
+   "detail_rating": "product_quality: 5\nseller_service: 5\ndelivery_service: 5"
+  }
+ ],
+ "source": "vimrhp_shopee",
+ "source_url": "https://shopee.vn/Th%E1%BA%AFt-l%C6%B0ng-nam-da-cao-c%E1%BA%A5p-d%C3%A2y-l%C6%B0ng-nam-m%E1%BA%B7t-kh%C3%B3a-t%E1%BB%B1-%C4%91%E1%BB%99ng-sang-tr%E1%BB%8Dng-n%E1%BB%8Bt-da-m%C3%A0u-%C4%91en-%C4%90HT1-i.448364971.25069997593",
+ "license": "CC BY-NC-ND 4.0 (ViMRHP, NLDB 2025) – chỉ dùng nội bộ học thuật, không phát hành lại bản đã chỉnh",
+ "product_type": "accessory",
+ "sub_category": "belt",
+ "gender": null,
+ "size_system": "none",
+ "view_type": "unknown",
+ "variant_id": null,
+ "language": "vi"
+}

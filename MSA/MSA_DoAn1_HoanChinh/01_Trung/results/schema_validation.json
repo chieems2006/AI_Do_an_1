@@ -1,0 +1,57 @@
+{
+ "catalog_fpi_goc": {
+  "valid": 4320,
+  "invalid": 273,
+  "total": 4593,
+  "valid_pct": 94.06,
+  "error_kinds": {
+   "sub_category: 'heel_flat*' is not one of ['bag', 'beanie', 'belt', 'boot',": 270,
+   "sub_category: 'wide_brim*' is not one of ['bag', 'beanie', 'belt', 'boot',": 3
+  },
+  "first_errors": [
+   [
+    "fpi_2900",
+    "sub_category: 'heel_flat*' is not one of ['bag', 'beanie', 'belt', 'boot', 'bottom', 'bucket', 'cap', 'dress', 'eyewear', 'heel_flat',"
+   ],
+   [
+    "fpi_56933",
+    "sub_category: 'heel_flat*' is not one of ['bag', 'beanie', 'belt', 'boot', 'bottom', 'bucket', 'cap', 'dress', 'eyewear', 'heel_flat',"
+   ],
+   [
+    "fpi_56878",
+    "sub_category: 'heel_flat*' is not one of ['bag', 'beanie', 'belt', 'boot', 'bottom', 'bucket', 'cap', 'dress', 'eyewear', 'heel_flat',"
+   ],
+   [
+    "fpi_56982",
+    "sub_category: 'heel_flat*' is not one of ['bag', 'beanie', 'belt', 'boot', 'bottom', 'bucket', 'cap', 'dress', 'eyewear', 'heel_flat',"
+   ],
+   [
+    "fpi_39619",
+    "sub_category: 'heel_flat*' is not one of ['bag', 'beanie', 'belt', 'boot', 'bottom', 'bucket', 'cap', 'dress', 'eyewear', 'heel_flat',"
+   ]
+  ]
+ },
+ "catalog_fpi_taxonomy_v1_inscope": {
+  "valid": 4586,
+  "invalid": 0,
+  "total": 4586,
+  "valid_pct": 100.0,
+  "error_kinds": {},
+  "first_errors": [],
+  "excluded_out_of_scope": 7
+ },
+ "vimrhp_inscope": {
+  "valid": 361,
+  "invalid": 0,
+  "total": 361,
+  "valid_pct": 100.0,
+  "error_kinds": {},
+  "first_errors": [],
+  "excluded_out_of_scope": 148
+ },
+ "config": {
+  "schema": "src/schema/product.schema.json (draft 2020-12)",
+  "validator": "jsonschema Draft202012Validator",
+  "data_version": "shared_data v1 (prep_shared_data.py seed 42)"
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "image_sizes_top": {
+  "60x80": 4593
+ },
+ "n_images": 4593,
+ "missing_rate": {
+  "price": 1.0,
+  "sizes": 1.0,
+  "description": 1.0,
+  "brand": 0.08524198366859191,
+  "rating": 0.9147580163314081,
+  "colors": 0.08524198366859191,
+  "image_paths": 0.08524198366859191,
+  "gender": 0.0
+ },
+ "vimrhp_reviews_per_product": {
+  "mean": 21.9696261682243,
+  "min": 3,
+  "max": 43
+ },
+ "imbalance_max_min_type": 8.013422818791947
+}

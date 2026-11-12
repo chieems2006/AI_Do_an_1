@@ -1,0 +1,15 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[resnet50/catalog] 512/4593 ảnh, 173s
+[resnet50/catalog] 1024/4593 ảnh, 299s
+[resnet50/catalog] 1536/4593 ảnh, 438s
+[resnet50/catalog] 2048/4593 ảnh, 564s
+[resnet50/catalog] 2560/4593 ảnh, 702s
+[resnet50/catalog] 3072/4593 ảnh, 851s
+[resnet50/catalog] 3584/4593 ảnh, 981s
+[resnet50/catalog] 4096/4593 ảnh, 1126s
+[resnet50/catalog] 4593/4593 ảnh, 1300s
+[resnet50/queries] 512/600 ảnh, 141s
+[resnet50/queries] 600/600 ảnh, 162s
+[resnet50/ood] 60/60 ảnh, 15s
+{"model": "resnet50", "status": "ok", "error": null, "catalog_embed_total_s": 1299.6, "query_embed_ms_median": 1602.9}
+TEST: {"R@1": 0.6042, "R@5": 0.7042, "R@10": 0.7375, "MRR@10": 0.6437, "NDCG@10": 0.6661, "R@5_footwear": 0.6167, "R@5_clothing": 0.6833, "R@5_headwear": 0.7333, "R@5_accessory": 0.7833, "macro_R@5": 0.7042, "CTE@5": 0.1383, "R@5_hard": 0.9057, "CTE@5_hard": 0.1774, "cat_Hit@5": 0.6667, "cat_P@5": 0.3317, "cat_SubP@5": 0.925, "cat_CTE@5": 0.01, "cat_P@5_footwear": 0.2867, "cat_P@5_clothing": 0.24, "cat_P@5_headwear": 0.3933, "cat_P@5_accessory": 0.4067}

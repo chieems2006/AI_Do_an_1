@@ -1,0 +1,55 @@
+{
+ "n": 60,
+ "task_success_rate": 0.1167,
+ "tsr_by_route": {
+  "clarify": 0.0,
+  "compare": 0.3333,
+  "gemini_chitchat": 0.5,
+  "gemini_ood": 0.0,
+  "qa": 0.0,
+  "search": 0.2,
+  "visual": 0.0
+ },
+ "n_by_route": {
+  "visual": 18,
+  "search": 10,
+  "qa": 10,
+  "compare": 6,
+  "gemini_chitchat": 6,
+  "gemini_ood": 6,
+  "clarify": 4
+ },
+ "route_accuracy": 0.5667,
+ "latency_ms_p50": 0.0,
+ "latency_ms_p95": 0.0,
+ "gemini_rate": 0.05,
+ "tokens_per_100_turns": {
+  "in": 250.0,
+  "out": 100.0
+ },
+ "top10_errors": [
+  [
+   "visual_no_match",
+   18
+  ],
+  [
+   "route_sai",
+   17
+  ],
+  [
+   "khong_chuyen_gemini",
+   9
+  ],
+  [
+   "search_top1_sai_nhom",
+   8
+  ],
+  [
+   "compare_thieu_sp",
+   1
+  ]
+ ],
+ "cost_per_100_turns_usd": "CHƯA TÍNH – thiếu đơn giá [cần xác minh]",
+ "agent": "fake",
+ "note": "fake = chỉ kiểm thử khung, KHÔNG phải số liệu"
+}

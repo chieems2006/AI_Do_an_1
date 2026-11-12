@@ -1,0 +1,6 @@
+model,recall_at_5_macro,mrr,cross_type_error_at_5,latency_ms_p50,ram_gb,ckpt_mb,recall_at_5_min_group,cat_hit_at_5,cat_p_at_5,license_score,integration_score,source_file
+dinov2_s,0.8458,0.7909,0.0425,288.75,1.412,88.2,0.8333,0.6917,0.3067,5,4,../04_Khoa/results/bench_image_embed.csv
+siglip_b16,0.8333,0.7602,0.055,189.99,2.374,812.6,0.7833,0.7667,0.355,5,4,../04_Khoa/results/bench_image_embed.csv
+fashionclip,0.8292,0.7566,0.0617,294.22,1.559,605.1,0.7333,0.7667,0.3783,4,4,../04_Khoa/results/bench_image_embed.csv
+clip_b32,0.7208,0.6599,0.0758,428.34,1.976,605.1,0.6833,0.7,0.3533,5,5,../04_Khoa/results/bench_image_embed.csv
+resnet50,0.7042,0.6437,0.1383,1602.9,1.325,94.0,0.6167,0.6667,0.3317,5,5,../04_Khoa/results/bench_image_embed.csv

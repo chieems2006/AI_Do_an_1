@@ -1,0 +1,53 @@
+{
+ "model": "gemini-3.5-flash",
+ "date": "2026-11-04",
+ "prompt": "Chào bạn, hôm nay trời thế nào?",
+ "system": "Bạn là trợ lý mua sắm thời trang, trả lời 1 câu ngắn tiếng Việt.",
+ "note": "3 lời gọi thành công trước khi project chạm quota free tier (5 RPM, 20 request/ngày/model – đọc từ QuotaFailure trong phản hồi 429). Lời gọi thứ 4 bị 429 (RPM). Sau đó quota NGÀY của gemini-3.5-flash hết (dùng chung key cho 5 thành viên). latency_ms ở đây gồm cả lời gọi HTTP (không có chờ rate limiter).",
+ "records": [
+  {
+   "config": "default (không đặt thinkingConfig)",
+   "event": "call",
+   "latency_ms": 4506.48779900007,
+   "tokens_in": 29,
+   "tokens_out": 25,
+   "tokens_thinking": 458,
+   "finish_reason": "STOP",
+   "status": null,
+   "error": null
+  },
+  {
+   "config": "thinkingBudget=0",
+   "event": "call",
+   "latency_ms": 1844.820507999998,
+   "tokens_in": 29,
+   "tokens_out": 20,
+   "tokens_thinking": 0,
+   "finish_reason": "STOP",
+   "status": null,
+   "error": null
+  },
+  {
+   "config": "thinkingLevel=low",
+   "event": "call",
+   "latency_ms": 3362.8825260000212,
+   "tokens_in": 29,
+   "tokens_out": 24,
+   "tokens_thinking": 323,
+   "finish_reason": "STOP",
+   "status": null,
+   "error": null
+  },
+  {
+   "config": "thinkingLevel=minimal",
+   "event": "error",
+   "latency_ms": 9427.290926999944,
+   "tokens_in": null,
+   "tokens_out": null,
+   "tokens_thinking": null,
+   "finish_reason": null,
+   "status": 429,
+   "error": "HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this erro"
+  }
+ ]
+}

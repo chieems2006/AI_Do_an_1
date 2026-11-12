@@ -1,0 +1,35 @@
+{
+ "product_id": "fpi_40767",
+ "title": "Quiksilver Men Grey Firsty Fishtails Cap",
+ "category": "Accessories/Headwear/Caps",
+ "brand": "Quiksilver",
+ "price": null,
+ "currency": null,
+ "colors": [
+  "Grey"
+ ],
+ "sizes": [],
+ "description": null,
+ "specs": {
+  "season": "Summer",
+  "usage": "Casual",
+  "year": 2012,
+  "articleType": "Caps"
+ },
+ "image_paths": [
+  "fpi_images/40767.jpg"
+ ],
+ "rating": null,
+ "rating_count": null,
+ "reviews": [],
+ "source": "fashion_product_images_small",
+ "source_url": "https://huggingface.co/datasets/ashraq/fashion-product-images-small",
+ "license": "[cần xác minh] – bản gốc Kaggle paramaggarwal/fashion-product-images-dataset",
+ "product_type": "headwear",
+ "sub_category": "cap",
+ "gender": "Men",
+ "size_system": "none",
+ "view_type": "studio",
+ "variant_id": null,
+ "language": "en"
+}

@@ -1,0 +1,430 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "rpm_limit_client": 4.0,
+ "system_prompt": "Bạn là trợ lý mua sắm thời trang của cửa hàng (giày dép, quần áo, mũ, phụ kiện). Trả lời tiếng Việt, ngắn gọn (tối đa 3 câu). KHÔNG nêu giá, size, tồn kho hay thông số của sản phẩm cụ thể vì bạn không có dữ liệu cửa hàng; nếu người dùng hỏi những điều đó, hãy mời họ dùng chức năng tìm kiếm/so sánh của cửa hàng.",
+ "started": "2026-11-04 23:59:40",
+ "prompts": [
+  {
+   "id": "p01",
+   "kind": "chitchat",
+   "text": "Chào bạn, bạn là ai vậy?",
+   "origin": "agent_written"
+  },
+  {
+   "id": "p02",
+   "kind": "chitchat",
+   "text": "Cảm ơn nhé, bạn tư vấn dễ thương ghê!",
+   "origin": "agent_written"
+  },
+  {
+   "id": "p03",
+   "kind": "chitchat",
+   "text": "Hôm nay mình buồn quá, mặc gì cho vui lên được không?",
+   "origin": "agent_written"
+  },
+  {
+   "id": "p04",
+   "kind": "ood",
+   "text": "Thủ đô của nước Úc là thành phố nào?",
+   "origin": "agent_written"
+  },
+  {
+   "id": "p05",
+   "kind": "ood",
+   "text": "Viết giúp mình một đoạn code Python sắp xếp danh sách.",
+   "origin": "agent_written"
+  },
+  {
+   "id": "p06",
+   "kind": "ood",
+   "text": "Giá vàng hôm nay bao nhiêu?",
+   "origin": "agent_written"
+  },
+  {
+   "id": "p07",
+   "kind": "hard",
+   "text": "Đi đám cưới buổi tối ở ngoài trời thì nam nên phối áo và giày thế nào?",
+   "origin": "agent_written"
+  },
+  {
+   "id": "p08",
+   "kind": "hard",
+   "text": "Da mình ngăm, nên chọn mũ lưỡi trai màu gì cho hợp?",
+   "origin": "agent_written"
+  },
+  {
+   "id": "p09",
+   "kind": "hard",
+   "text": "Giày da nên bảo quản thế nào vào mùa nồm ẩm ở miền Bắc?",
+   "origin": "agent_written"
+  },
+  {
+   "id": "p10",
+   "kind": "guardrail",
+   "text": "Đôi sneaker trắng của shop giá bao nhiêu và còn size 42 không?",
+   "origin": "agent_written"
+  }
+ ],
+ "passes": {
+  "default": {
+   "generation_config": {},
+   "records": [
+    {
+     "id": "p01",
+     "kind": "chitchat",
+     "source": "gemini",
+     "cached": false,
+     "tokens_in": 99,
+     "tokens_out": 52,
+     "tokens_thinking": 0,
+     "latency_ms": 12972.206923000045,
+     "error": null,
+     "retries": 0,
+     "finish_reason": "STOP",
+     "model_version": "gemini-3.5-flash-lite",
+     "answer": "Chào bạn, tôi là trợ lý mua sắm thời trang của cửa hàng. Tôi có thể tư vấn giúp bạn cách phối đồ và chọn lựa giày dép, quần áo, mũ hay phụ kiện phù hợp. Rất vui được hỗ trợ bạn hôm nay!"
+    },
+    {
+     "id": "p02",
+     "kind": "chitchat",
+     "source": "gemini",
+     "cached": false,
+     "tokens_in": 104,
+     "tokens_out": 37,
+     "tokens_thinking": 0,
+     "latency_ms": 17167.546439000034,
+     "error": null,
+     "retries": 0,
+     "finish_reason": "STOP",
+     "model_version": "gemini-3.5-flash-lite",
+     "answer": "Hihi, không có gì nha bạn ơi, đó là niềm vui của mình mà! Bạn có muốn khám phá thêm bộ sưu tập quần áo hay phụ kiện nào mới không nè?"
+    },
+    {
+     "id": "p03",
+     "kind": "chitchat",
+     "source": "gemini",
+     "cached": false,
+     "tokens_in": 106,
+     "tokens_out": 85,
+     "tokens_thinking": 0,
+     "latency_ms": 18016.52982200005,
+     "error": null,
+     "retries": 0,
+     "finish_reason": "STOP",
+     "model_version": "gemini-3.5-flash-lite",
+     "answer": "Đừng buồn nữa nha, hôm nay bạn hãy diện ngay một bộ đồ màu sắc tươi sáng như vàng năng động hoặc hồng pastel ngọt ngào nhé! Kết hợp thêm một chiếc mũ lưỡi trai cá tính và đôi giày thể thao năng động là đủ để tâm trạng phấn chấn lên hẳn. Nếu bạn muốn xem thêm các mẫu trang phục phù hợp, hãy ghé ngay tính năng tìm kiếm của cửa hàng nhé!"
+    },
+    {
+     "id": "p04",
+     "kind": "ood",
+     "source": "gemini",
+     "cached": false,
+     "tokens_in": 103,
+     "tokens_out": 45,
+     "tokens_thinking": 0,
+     "latency_ms": 15565.53205299997,
+     "error": null,
+     "retries": 0,
+     "finish_reason": "STOP",
+     "model_version": "gemini-3.5-flash-lite",
+     "answer": "Thủ đô của nước Úc là Canberra, bạn nhé. Nếu bạn đang tìm kiếm trang phục hay phụ kiện phù hợp cho chuyến du lịch Úc sắp tới, hãy dùng tính năng tìm kiếm của cửa hàng nhé!"
+    },
+    {
+     "id": "p05",
+     "kind": "ood",
+     "source": "gemini",
+     "cached": false,
+     "tokens_in": 104,
+     "tokens_out": 46,
+     "tokens_thinking": 0,
+     "latency_ms": 12905.088932000013,
+     "error": null,
+     "retries": 0,
+     "finish_reason": "STOP",
+     "model_version": "gemini-3.5-flash-lite",
+     "answer": "Rất tiếc, tôi chỉ hỗ trợ tư vấn thời trang và không thể viết code Python cho bạn. Nếu bạn cần gợi ý phối đồ hoặc tìm kiếm sản phẩm, hãy dùng chức năng tìm kiếm của cửa hàng nhé!"
+    },
+    {
+     "id": "p06",
+     "kind": "ood",
+     "source": "gemini",
+     "cached": false,
+     "tokens_in": 98,
+     "tokens_out": 52,
+     "tokens_thinking": 0,
+     "latency_ms": 46359.45145399978,
+     "error": null,
+     "retries": 1,
+     "finish_reason": "STOP",
+     "model_version": "gemini-3.5-flash-lite",
+     "answer": "Rất tiếc, tôi là trợ lý thời trang chuyên về quần áo, giày dép và phụ kiện của cửa hàng. Tôi không có thông tin về giá vàng. Bạn có cần tôi tư vấn về xu hướng trang phục hay phụ kiện mới nhất không?"
+    },
+    {
+     "id": "p07",
+     "kind": "hard",
+     "source": "gemini",
+     "cached": false,
+     "tokens_in": 109,
+     "tokens_out": 90,
+     "tokens_thinking": 0,
+     "latency_ms": 16098.237140000037,
+     "error": null,
+     "retries": 0,
+     "finish_reason": "STOP",
+     "model_version": "gemini-3.5-flash-lite",
+     "answer": "Đi đám cưới tối ngoài trời, bạn nên mặc áo blazer lịch lãm kết hợp cùng áo sơ mi sáng màu và quần âu hoặc chinos sang trọng. Về giày, một đôi giày tây Oxford, Derby hoặc giày Loafer da sẽ là lựa chọn hoàn hảo giúp bạn vừa thanh lịch lại thoải mái trong không gian mở. Nếu cần tìm kiếm mẫu mã cụ thể, mời bạn sử dụng tính năng tìm kiếm của cửa hàng nhé!"
+    },
+    {
+     "id": "p08",
+     "kind": "hard",
+     "source": "gemini",
+     "cached": false,
+     "tokens_in": 107,
+     "tokens_out": 82,
+     "tokens_thinking": 0,
+     "latency_ms": 23882.581147999874,
+     "error": null,
+     "retries": 0,
+     "finish_reason": "STOP",
+     "model_version": "gemini-3.5-flash-lite",
+     "answer": "Da ngăm rất hợp với các màu mũ lưỡi trai trung tính như trắng, be, kem hoặc các tông màu đậm như xanh navy và đỏ đô. Những màu này sẽ giúp tôn da và tạo điểm nhấn nổi bật cho tổng thể trang phục của bạn. Để biết thêm các mẫu mã cụ thể hiện có, mời bạn sử dụng tính năng tìm kiếm hoặc so sánh sản phẩm của cửa hàng nhé!"
+    },
+    {
+     "id": "p09",
+     "kind": "hard",
+     "source": "gemini",
+     "cached": false,
+     "tokens_in": 108,
+     "tokens_out": 75,
+     "tokens_thinking": 0,
+     "latency_ms": 17376.78024800016,
+     "error": null,
+     "retries": 0,
+     "finish_reason": "STOP",
+     "model_version": "gemini-3.5-flash-lite",
+     "answer": "Vào mùa nồm ẩm, bạn nên nhét giấy báo cũ vào trong giày để hút ẩm và giữ form dáng. Hãy đặt giày ở nơi khô thoáng, tránh để trực tiếp dưới sàn nhà hay nơi ẩm ướt. Để biết thêm các sản phẩm giày da chống ẩm tốt nhất, mời bạn sử dụng tính năng tìm kiếm trên website của cửa hàng nhé!"
+    },
+    {
+     "id": "p10",
+     "kind": "guardrail",
+     "source": "gemini",
+     "cached": false,
+     "tokens_in": 108,
+     "tokens_out": 47,
+     "tokens_thinking": 0,
+     "latency_ms": 18286.951345000034,
+     "error": null,
+     "retries": 0,
+     "finish_reason": "STOP",
+     "model_version": "gemini-3.5-flash-lite",
+     "answer": "Rất tiếc, tôi không có thông tin về giá cả, size hay tình trạng tồn kho của sản phẩm. Bạn vui lòng sử dụng tính năng tìm kiếm hoặc so sánh trên website của cửa hàng để xem chi tiết nhé."
+    }
+   ],
+   "summary": {
+    "n": 10,
+    "n_success": 10,
+    "n_fallback": 0,
+    "n_cache_hit": 0,
+    "total_retries": 1,
+    "latency_ms": {
+     "n": 10,
+     "mean": 19863.0905504,
+     "p50": 17272.1633435001,
+     "p95": 36244.8598162998,
+     "p99": 44336.53312645979,
+     "max": 46359.45145399978
+    },
+    "mean_tokens_in": 104.6,
+    "mean_tokens_out": 61.1,
+    "mean_tokens_thinking": 0.0,
+    "tokens_per_100_requests": {
+     "tokens_in": 10460,
+     "tokens_out": 6110,
+     "tokens_thinking": 0
+    }
+   }
+  },
+  "default_repeat_cache": {
+   "records": [
+    {
+     "id": "p01",
+     "kind": "chitchat",
+     "source": "cache",
+     "cached": true,
+     "tokens_in": 99,
+     "tokens_out": 52,
+     "tokens_thinking": 0,
+     "latency_ms": 26.606376000017917,
+     "error": null,
+     "retries": 0,
+     "finish_reason": "STOP",
+     "model_version": "gemini-3.5-flash-lite"
+    },
+    {
+     "id": "p02",
+     "kind": "chitchat",
+     "source": "cache",
+     "cached": true,
+     "tokens_in": 104,
+     "tokens_out": 37,
+     "tokens_thinking": 0,
+     "latency_ms": 27.786503000015728,
+     "error": null,
+     "retries": 0,
+     "finish_reason": "STOP",
+     "model_version": "gemini-3.5-flash-lite"
+    },
+    {
+     "id": "p03",
+     "kind": "chitchat",
+     "source": "cache",
+     "cached": true,
+     "tokens_in": 106,
+     "tokens_out": 85,
+     "tokens_thinking": 0,
+     "latency_ms": 11.332610000181376,
+     "error": null,
+     "retries": 0,
+     "finish_reason": "STOP",
+     "model_version": "gemini-3.5-flash-lite"
+    },
+    {
+     "id": "p04",
+     "kind": "ood",
+     "source": "cache",
+     "cached": true,
+     "tokens_in": 103,
+     "tokens_out": 45,
+     "tokens_thinking": 0,
+     "latency_ms": 7.928605999950378,
+     "error": null,
+     "retries": 0,
+     "finish_reason": "STOP",
+     "model_version": "gemini-3.5-flash-lite"
+    },
+    {
+     "id": "p05",
+     "kind": "ood",
+     "source": "cache",
+     "cached": true,
+     "tokens_in": 104,
+     "tokens_out": 46,
+     "tokens_thinking": 0,
+     "latency_ms": 20.170515000017986,
+     "error": null,
+     "retries": 0,
+     "finish_reason": "STOP",
+     "model_version": "gemini-3.5-flash-lite"
+    },
+    {
+     "id": "p06",
+     "kind": "ood",
+     "source": "cache",
+     "cached": true,
+     "tokens_in": 98,
+     "tokens_out": 52,
+     "tokens_thinking": 0,
+     "latency_ms": 15.190091000022221,
+     "error": null,
+     "retries": 0,
+     "finish_reason": "STOP",
+     "model_version": "gemini-3.5-flash-lite"
+    },
+    {
+     "id": "p07",
+     "kind": "hard",
+     "source": "cache",
+     "cached": true,
+     "tokens_in": 109,
+     "tokens_out": 90,
+     "tokens_thinking": 0,
+     "latency_ms": 5.700279999928171,
+     "error": null,
+     "retries": 0,
+     "finish_reason": "STOP",
+     "model_version": "gemini-3.5-flash-lite"
+    },
+    {
+     "id": "p08",
+     "kind": "hard",
+     "source": "cache",
+     "cached": true,
+     "tokens_in": 107,
+     "tokens_out": 82,
+     "tokens_thinking": 0,
+     "latency_ms": 1.180086000204028,
+     "error": null,
+     "retries": 0,
+     "finish_reason": "STOP",
+     "model_version": "gemini-3.5-flash-lite"
+    },
+    {
+     "id": "p09",
+     "kind": "hard",
+     "source": "cache",
+     "cached": true,
+     "tokens_in": 108,
+     "tokens_out": 75,
+     "tokens_thinking": 0,
+     "latency_ms": 1.42617300002712,
+     "error": null,
+     "retries": 0,
+     "finish_reason": "STOP",
+     "model_version": "gemini-3.5-flash-lite"
+    },
+    {
+     "id": "p10",
+     "kind": "guardrail",
+     "source": "cache",
+     "cached": true,
+     "tokens_in": 108,
+     "tokens_out": 47,
+     "tokens_thinking": 0,
+     "latency_ms": 8.516582999845923,
+     "error": null,
+     "retries": 0,
+     "finish_reason": "STOP",
+     "model_version": "gemini-3.5-flash-lite"
+    }
+   ],
+   "summary": {
+    "n": 10,
+    "n_success": 10,
+    "n_fallback": 0,
+    "n_cache_hit": 10,
+    "total_retries": 0,
+    "latency_ms": {
+     "n": 10,
+     "mean": 12.583782300021085,
+     "p50": 9.92459650001365,
+     "p95": 27.255445850016713,
+     "p99": 27.680291570015925,
+     "max": 27.786503000015728
+    },
+    "mean_tokens_in": 104.6,
+    "mean_tokens_out": 61.1,
+    "mean_tokens_thinking": 0.0,
+    "tokens_per_100_requests": {
+     "tokens_in": 10460,
+     "tokens_out": 6110,
+     "tokens_thinking": 0
+    }
+   },
+   "api_calls_during_pass": 0
+  }
+ },
+ "gateway_stats": {
+  "requests": 20,
+  "api_calls": 11,
+  "cache_hits": 10,
+  "semantic_hits": 0,
+  "errors": 0,
+  "fallbacks": 0,
+  "retries": 1,
+  "tokens_in": 1046,
+  "tokens_out": 611,
+  "tokens_thinking": 0,
+  "cache_hit_rate": 0.5
+ },
+ "finished": "2026-11-05 00:02:59"
+}

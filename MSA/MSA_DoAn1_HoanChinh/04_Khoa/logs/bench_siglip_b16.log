@@ -1,0 +1,16 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[siglip_b16/catalog] 512/4593 ảnh, 170s (tổng thời gian embed các khối)
+[siglip_b16/catalog] 1024/4593 ảnh, 331s (tổng thời gian embed các khối)
+[siglip_b16/catalog] 1536/4593 ảnh, 449s (tổng thời gian embed các khối)
+[siglip_b16/catalog] 2048/4593 ảnh, 535s (tổng thời gian embed các khối)
+[siglip_b16/catalog] 2560/4593 ảnh, 617s (tổng thời gian embed các khối)
+[siglip_b16/catalog] 3072/4593 ảnh, 697s (tổng thời gian embed các khối)
+[siglip_b16/catalog] 3584/4593 ảnh, 779s (tổng thời gian embed các khối)
+[siglip_b16/catalog] 4096/4593 ảnh, 860s (tổng thời gian embed các khối)
+[siglip_b16/catalog] 4593/4593 ảnh, 941s (tổng thời gian embed các khối)
+[siglip_b16/queries] 512/600 ảnh, 80s (tổng thời gian embed các khối)
+[siglip_b16/queries] 600/600 ảnh, 93s (tổng thời gian embed các khối)
+[siglip_b16/ood] 60/60 ảnh, 9s (tổng thời gian embed các khối)
+{"model": "siglip_b16", "status": "ok", "error": null, "catalog_embed_total_s": 941.1, "query_embed_ms_median": 189.99}
+TEST: {"R@1": 0.7042, "R@5": 0.8333, "R@10": 0.8875, "MRR@10": 0.7602, "NDCG@10": 0.7905, "R@5_footwear": 0.8333, "R@5_clothing": 0.8667, "R@5_headwear": 0.7833, "R@5_accessory": 0.85, "macro_R@5": 0.8333, "CTE@5": 0.055, "R@5_hard": 0.9057, "CTE@5_hard": 0.0906, "cat_Hit@5": 0.7667, "cat_P@5": 0.355, "cat_SubP@5": 0.9683, "cat_CTE@5": 0.0, "cat_P@5_footwear": 0.3333, "cat_P@5_clothing": 0.2333, "cat_P@5_headwear": 0.3733, "cat_P@5_accessory": 0.48}

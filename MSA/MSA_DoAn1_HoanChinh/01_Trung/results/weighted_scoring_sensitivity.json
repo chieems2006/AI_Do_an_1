@@ -1,0 +1,240 @@
+{
+ "base_rank": [
+  "dinov2_s",
+  "siglip_b16",
+  "fashionclip",
+  "clip_b32",
+  "resnet50"
+ ],
+ "delta": 0.05,
+ "configs": [
+  {
+   "tieu_chi": "Độ chính xác",
+   "delta": 0.05,
+   "hang_1": "dinov2_s",
+   "thu_hang": [
+    "dinov2_s",
+    "siglip_b16",
+    "fashionclip",
+    "clip_b32",
+    "resnet50"
+   ],
+   "tong_diem": {
+    "dinov2_s": 4.848,
+    "siglip_b16": 4.008,
+    "fashionclip": 3.988,
+    "clip_b32": 2.899,
+    "resnet50": 2.278
+   }
+  },
+  {
+   "tieu_chi": "Độ chính xác",
+   "delta": -0.05,
+   "hang_1": "dinov2_s",
+   "thu_hang": [
+    "dinov2_s",
+    "siglip_b16",
+    "fashionclip",
+    "clip_b32",
+    "resnet50"
+   ],
+   "tong_diem": {
+    "dinov2_s": 4.819,
+    "siglip_b16": 3.943,
+    "fashionclip": 3.935,
+    "clip_b32": 3.088,
+    "resnet50": 2.517
+   }
+  },
+  {
+   "tieu_chi": "Tốc độ",
+   "delta": 0.05,
+   "hang_1": "dinov2_s",
+   "thu_hang": [
+    "dinov2_s",
+    "siglip_b16",
+    "fashionclip",
+    "clip_b32",
+    "resnet50"
+   ],
+   "tong_diem": {
+    "dinov2_s": 4.831,
+    "siglip_b16": 4.04,
+    "fashionclip": 4.011,
+    "clip_b32": 3.046,
+    "resnet50": 2.278
+   }
+  },
+  {
+   "tieu_chi": "Tốc độ",
+   "delta": -0.05,
+   "hang_1": "dinov2_s",
+   "thu_hang": [
+    "dinov2_s",
+    "fashionclip",
+    "siglip_b16",
+    "clip_b32",
+    "resnet50"
+   ],
+   "tong_diem": {
+    "dinov2_s": 4.835,
+    "fashionclip": 3.913,
+    "siglip_b16": 3.911,
+    "clip_b32": 2.942,
+    "resnet50": 2.517
+   }
+  },
+  {
+   "tieu_chi": "Tài nguyên",
+   "delta": 0.05,
+   "hang_1": "dinov2_s",
+   "thu_hang": [
+    "dinov2_s",
+    "fashionclip",
+    "siglip_b16",
+    "clip_b32",
+    "resnet50"
+   ],
+   "tong_diem": {
+    "dinov2_s": 4.838,
+    "fashionclip": 3.916,
+    "siglip_b16": 3.8,
+    "clip_b32": 2.926,
+    "resnet50": 2.517
+   }
+  },
+  {
+   "tieu_chi": "Tài nguyên",
+   "delta": -0.05,
+   "hang_1": "dinov2_s",
+   "thu_hang": [
+    "dinov2_s",
+    "siglip_b16",
+    "fashionclip",
+    "clip_b32",
+    "resnet50"
+   ],
+   "tong_diem": {
+    "dinov2_s": 4.829,
+    "siglip_b16": 4.151,
+    "fashionclip": 4.007,
+    "clip_b32": 3.062,
+    "resnet50": 2.278
+   }
+  },
+  {
+   "tieu_chi": "Phù hợp miền",
+   "delta": 0.05,
+   "hang_1": "dinov2_s",
+   "thu_hang": [
+    "dinov2_s",
+    "siglip_b16",
+    "fashionclip",
+    "clip_b32",
+    "resnet50"
+   ],
+   "tong_diem": {
+    "dinov2_s": 4.848,
+    "siglip_b16": 3.985,
+    "fashionclip": 3.918,
+    "clip_b32": 2.92,
+    "resnet50": 2.278
+   }
+  },
+  {
+   "tieu_chi": "Phù hợp miền",
+   "delta": -0.05,
+   "hang_1": "dinov2_s",
+   "thu_hang": [
+    "dinov2_s",
+    "fashionclip",
+    "siglip_b16",
+    "clip_b32",
+    "resnet50"
+   ],
+   "tong_diem": {
+    "dinov2_s": 4.819,
+    "fashionclip": 4.006,
+    "siglip_b16": 3.967,
+    "clip_b32": 3.068,
+    "resnet50": 2.517
+   }
+  },
+  {
+   "tieu_chi": "License",
+   "delta": 0.05,
+   "hang_1": "dinov2_s",
+   "thu_hang": [
+    "dinov2_s",
+    "siglip_b16",
+    "fashionclip",
+    "clip_b32",
+    "resnet50"
+   ],
+   "tong_diem": {
+    "dinov2_s": 4.848,
+    "siglip_b16": 4.04,
+    "fashionclip": 3.969,
+    "clip_b32": 3.086,
+    "resnet50": 2.518
+   }
+  },
+  {
+   "tieu_chi": "License",
+   "delta": -0.05,
+   "hang_1": "dinov2_s",
+   "thu_hang": [
+    "dinov2_s",
+    "fashionclip",
+    "siglip_b16",
+    "clip_b32",
+    "resnet50"
+   ],
+   "tong_diem": {
+    "dinov2_s": 4.819,
+    "fashionclip": 3.955,
+    "siglip_b16": 3.911,
+    "clip_b32": 2.902,
+    "resnet50": 2.277
+   }
+  },
+  {
+   "tieu_chi": "Dễ tích hợp",
+   "delta": 0.05,
+   "hang_1": "dinov2_s",
+   "thu_hang": [
+    "dinov2_s",
+    "siglip_b16",
+    "fashionclip",
+    "clip_b32",
+    "resnet50"
+   ],
+   "tong_diem": {
+    "dinov2_s": 4.788,
+    "siglip_b16": 3.98,
+    "fashionclip": 3.969,
+    "clip_b32": 3.086,
+    "resnet50": 2.518
+   }
+  },
+  {
+   "tieu_chi": "Dễ tích hợp",
+   "delta": -0.05,
+   "hang_1": "dinov2_s",
+   "thu_hang": [
+    "dinov2_s",
+    "siglip_b16",
+    "fashionclip",
+    "clip_b32",
+    "resnet50"
+   ],
+   "tong_diem": {
+    "dinov2_s": 4.879,
+    "siglip_b16": 3.971,
+    "fashionclip": 3.955,
+    "clip_b32": 2.902,
+    "resnet50": 2.277
+   }
+  }
+ ]
+}

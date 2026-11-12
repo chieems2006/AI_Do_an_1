@@ -1,0 +1,137 @@
+{
+ "data_version": "shared_data v1 (prep_shared_data.py seed 42)",
+ "retrieval": {
+  "n_answerable": 209,
+  "ghi_chu_nhan": null,
+  "theo_product_id": {
+   "tfidf_char": {
+    "hit@1": 0.2488,
+    "hit@5": 0.8325,
+    "mrr@10": 0.4999,
+    "latency_ms_p50": 0.68
+   },
+   "bm25": {
+    "hit@1": 0.244,
+    "hit@5": 0.8373,
+    "mrr@10": 0.4965,
+    "latency_ms_p50": 0.07
+   },
+   "bm25+rewrite": {
+    "hit@1": 0.2488,
+    "hit@5": 0.8182,
+    "mrr@10": 0.4958,
+    "latency_ms_p50": 0.07
+   },
+   "dense:intfloat/multilingual-e5-small": {
+    "hit@1": 0.2632,
+    "hit@5": 0.7943,
+    "mrr@10": 0.49,
+    "latency_ms_p50": 226.92
+   },
+   "dense:sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2": {
+    "hit@1": 0.2775,
+    "hit@5": 0.756,
+    "mrr@10": 0.4912,
+    "latency_ms_p50": 179.15
+   },
+   "hybrid(bm25+dense:intfloat/multilingual-e5-small)": {
+    "hit@1": 0.3206,
+    "hit@5": 0.866,
+    "mrr@10": 0.5484,
+    "latency_ms_p50": 221.22
+   }
+  },
+  "toan_kho": {
+   "tfidf_char": {
+    "hit@1": 0.0239,
+    "hit@5": 0.1196,
+    "mrr@10": 0.0683
+   },
+   "bm25": {
+    "hit@1": 0.0335,
+    "hit@5": 0.1627,
+    "mrr@10": 0.093
+   },
+   "bm25+rewrite": {
+    "hit@1": 0.0287,
+    "hit@5": 0.1627,
+    "mrr@10": 0.0875
+   },
+   "dense:intfloat/multilingual-e5-small": {
+    "hit@1": 0.0431,
+    "hit@5": 0.1196,
+    "mrr@10": 0.082
+   },
+   "dense:sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2": {
+    "hit@1": 0.0048,
+    "hit@5": 0.0239,
+    "mrr@10": 0.0203
+   },
+   "hybrid(bm25+dense:intfloat/multilingual-e5-small)": {
+    "hit@1": 0.0383,
+    "hit@5": 0.177,
+    "mrr@10": 0.1033
+   }
+  },
+  "top1_score_auc": {
+   "tfidf_char": 0.7171,
+   "bm25": 0.7331,
+   "bm25+rewrite": 0.7384,
+   "dense:intfloat/multilingual-e5-small": 0.7624,
+   "dense:sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2": 0.7669
+  },
+  "file": "results/rag_retrieval_eval.json"
+ },
+ "e2e": {
+  "retriever": "hybrid_rrf(bm25 + multilingual-e5-small)",
+  "llm": [
+   "gemini-3.5-flash-lite"
+  ],
+  "batch_size": 13,
+  "summary": {
+   "n_cau": 52,
+   "n_loi_llm": 0,
+   "n_answerable": 37,
+   "n_khong_dap_an": 15,
+   "refusal_accuracy (answerable=false bị từ chối đúng)": 1.0,
+   "false_refusal_rate (answerable bị từ chối)": 0.0,
+   "citation_rate (câu trả lời có ≥1 trích dẫn hợp lệ)": 1.0,
+   "cited_gold_rate (answerable được trả lời, trích trúng review bằng chứng)": 0.8649,
+   "faithfulness_judge_mean": 1.0,
+   "hallucination_rate_judge (câu trả lời không từ chối có nhận định không có trong ngữ cảnh)": 0.0,
+   "answer_relevancy_judge": 1.0,
+   "n_duoc_cham": 52,
+   "guard_triggered": 0,
+   "refusal_regex_khop_tren_cau_tu_choi": 15
+  },
+  "summary_truoc_sua_nhan": {
+   "n_cau": 52,
+   "n_loi_llm": 0,
+   "n_answerable": 36,
+   "n_khong_dap_an": 16,
+   "refusal_accuracy (answerable=false bị từ chối đúng)": 0.9375,
+   "false_refusal_rate (answerable bị từ chối)": 0.0,
+   "citation_rate (câu trả lời có ≥1 trích dẫn hợp lệ)": 1.0,
+   "cited_gold_rate (answerable được trả lời, trích trúng review bằng chứng)": 0.8611,
+   "faithfulness_judge_mean": 1.0,
+   "hallucination_rate_judge (câu trả lời không từ chối có nhận định không có trong ngữ cảnh)": 0.0,
+   "answer_relevancy_judge": 1.0,
+   "n_duoc_cham": 52,
+   "guard_triggered": 0,
+   "refusal_regex_khop_tren_cau_tu_choi": 15
+  },
+  "sua_nhan": [
+   "qa108"
+  ],
+  "token_answer_tren_moi_cau": {
+   "in": 378.9,
+   "out": 46.2
+  },
+  "luu_y": [
+   "Giám khảo là LLM cùng họ Gemini – có thiên lệch; cần người kiểm tay ≥ 50 mẫu (Bước 5 sheet Độ đo).",
+   "Sinh theo lô nhiều câu/lời gọi để tiết kiệm quota free tier (20 request/ngày/model); khi phục vụ thật dùng answer() từng câu.",
+   "Câu hỏi + bằng chứng do Gemini sinh, chưa có người duyệt."
+  ],
+  "file": "results/rag_e2e_eval.json"
+ }
+}

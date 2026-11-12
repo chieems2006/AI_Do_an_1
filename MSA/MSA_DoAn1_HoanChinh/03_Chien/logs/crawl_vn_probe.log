@@ -1,0 +1,5 @@
+2026-11-05 00:09:24,050 INFO HTTP Request: GET https://tiki.vn/robots.txt "HTTP/1.1 403 Forbidden"
+2026-11-05 00:09:24,051 WARNING robots.txt https://tiki.vn/robots.txt trả 403 ⇒ KHÔNG crawl host này
+2026-11-05 00:09:24,051 INFO robots KHÔNG cho phép / không đọc được: https://tiki.vn/giay-the-thao-nam-p123456.html
+2026-11-05 00:09:24,312 WARNING robots.txt https://shopee.vn/robots.txt trả -1 ⇒ KHÔNG crawl host này
+2026-11-05 00:09:24,312 INFO robots KHÔNG cho phép / không đọc được: https://shopee.vn/product/529458200/18390665755

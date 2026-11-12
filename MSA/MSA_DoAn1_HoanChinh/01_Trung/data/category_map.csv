@@ -1,0 +1,255 @@
+source,source_label,n_rows_source,product_type,sub_category,action,rule_id,title_refinement,verified
+fashion_product_images,Accessories/Accessories/Accessory Gift Set,97,out_of_scope,unknown,exclude,fpi.excl:set quà,,du_lieu_that
+fashion_product_images,Accessories/Accessories/Hair Accessory,1,out_of_scope,unknown,exclude,fpi.excl:phụ kiện tóc,,du_lieu_that
+fashion_product_images,Accessories/Accessories/Key chain,2,out_of_scope,unknown,exclude,fpi.excl:móc khoá,,du_lieu_that
+fashion_product_images,Accessories/Accessories/Messenger Bag,10,accessory,bag,keep,fpi.article,,du_lieu_that
+fashion_product_images,Accessories/Accessories/Travel Accessory,15,out_of_scope,unknown,exclude,fpi.excl:phụ kiện du lịch,,du_lieu_that
+fashion_product_images,Accessories/Accessories/Water Bottle,4,out_of_scope,unknown,exclude,fpi.excl:bình nước,,du_lieu_that
+fashion_product_images,Accessories/Bags/Backpacks,722,accessory,bag,keep,fpi.article,,du_lieu_that
+fashion_product_images,Accessories/Bags/Clutches,287,accessory,bag,keep,fpi.article,,du_lieu_that
+fashion_product_images,Accessories/Bags/Duffel Bag,88,accessory,bag,keep,fpi.article,,du_lieu_that
+fashion_product_images,Accessories/Bags/Handbags,1757,accessory,bag,keep,fpi.article,,du_lieu_that
+fashion_product_images,Accessories/Bags/Laptop Bag,81,accessory,bag,keep,fpi.article,,du_lieu_that
+fashion_product_images,Accessories/Bags/Messenger Bag,34,accessory,bag,keep,fpi.article,,du_lieu_that
+fashion_product_images,Accessories/Bags/Mobile Pouch,47,accessory,bag,keep,fpi.article,,du_lieu_that
+fashion_product_images,Accessories/Bags/Rucksacks,11,accessory,bag,keep,fpi.article,,du_lieu_that
+fashion_product_images,Accessories/Bags/Tablet Sleeve,3,out_of_scope,unknown,exclude,fpi.excl:túi chống sốc thiết bị,,du_lieu_that
+fashion_product_images,Accessories/Bags/Travel Accessory,1,out_of_scope,unknown,exclude,fpi.excl:phụ kiện du lịch,,du_lieu_that
+fashion_product_images,Accessories/Bags/Trolley Bag,3,accessory,bag,keep,fpi.article,,du_lieu_that
+fashion_product_images,Accessories/Bags/Waist Pouch,17,accessory,bag,keep,fpi.article,,du_lieu_that
+fashion_product_images,Accessories/Bags/Wallets,2,out_of_scope,unknown,exclude,fpi.excl:ví,,du_lieu_that
+fashion_product_images,Accessories/Belts/Belts,810,accessory,belt,keep,fpi.article,,du_lieu_that
+fashion_product_images,Accessories/Belts/Tshirts,1,clothing,top,keep,fpi.article,,du_lieu_that
+fashion_product_images,Accessories/Cufflinks/Cufflinks,106,out_of_scope,unknown,exclude,fpi.excl:khuy măng sét,,du_lieu_that
+fashion_product_images,Accessories/Cufflinks/Ties and Cufflinks,2,out_of_scope,unknown,exclude,fpi.excl:cà vạt,,du_lieu_that
+fashion_product_images,Accessories/Eyewear/Sunglasses,1073,accessory,eyewear,keep,fpi.article,,du_lieu_that
+fashion_product_images,Accessories/Gloves/Gloves,20,out_of_scope,unknown,exclude,fpi.excl:găng tay,,du_lieu_that
+fashion_product_images,Accessories/Headwear/Caps,283,headwear,cap,keep,fpi.article,headwear/beanie: 17 dòng (luật tiêu đề),du_lieu_that
+fashion_product_images,Accessories/Headwear/Hat,3,headwear,wide_brim,keep,fpi.article,headwear/beanie: 3 dòng (luật tiêu đề),du_lieu_that
+fashion_product_images,Accessories/Headwear/Headband,7,out_of_scope,unknown,exclude,"fpi.excl:băng đô (phụ kiện tóc, không phải mũ)",,du_lieu_that
+fashion_product_images,Accessories/Jewellery/Bangle,85,out_of_scope,unknown,exclude,fpi.excl:trang sức,,du_lieu_that
+fashion_product_images,Accessories/Jewellery/Bracelet,66,out_of_scope,unknown,exclude,fpi.excl:trang sức,,du_lieu_that
+fashion_product_images,Accessories/Jewellery/Earrings,416,out_of_scope,unknown,exclude,fpi.excl:trang sức,,du_lieu_that
+fashion_product_images,Accessories/Jewellery/Jewellery Set,58,out_of_scope,unknown,exclude,fpi.excl:trang sức,,du_lieu_that
+fashion_product_images,Accessories/Jewellery/Necklace and Chains,160,out_of_scope,unknown,exclude,fpi.excl:trang sức,,du_lieu_that
+fashion_product_images,Accessories/Jewellery/Pendant,176,out_of_scope,unknown,exclude,fpi.excl:trang sức,,du_lieu_that
+fashion_product_images,Accessories/Jewellery/Ring,118,out_of_scope,unknown,exclude,fpi.excl:trang sức,,du_lieu_that
+fashion_product_images,Accessories/Mufflers/Mufflers,38,out_of_scope,unknown,exclude,fpi.excl:khăn,,du_lieu_that
+fashion_product_images,Accessories/Perfumes/Perfume and Body Mist,1,out_of_scope,unknown,exclude,fpi.excl:mỹ phẩm,,du_lieu_that
+fashion_product_images,Accessories/Scarves/Scarves,118,out_of_scope,unknown,exclude,fpi.excl:khăn,,du_lieu_that
+fashion_product_images,Accessories/Shoe Accessories/Shoe Accessories,3,out_of_scope,unknown,exclude,fpi.excl:phụ kiện giày,,du_lieu_that
+fashion_product_images,Accessories/Shoe Accessories/Shoe Laces,1,out_of_scope,unknown,exclude,fpi.excl:dây giày,,du_lieu_that
+fashion_product_images,Accessories/Socks/Socks,686,out_of_scope,unknown,exclude,fpi.excl:tất/vớ,,du_lieu_that
+fashion_product_images,Accessories/Sports Accessories/Wristbands,3,out_of_scope,unknown,exclude,fpi.excl:băng cổ tay,,du_lieu_that
+fashion_product_images,Accessories/Stoles/Stoles,90,out_of_scope,unknown,exclude,fpi.excl:khăn,,du_lieu_that
+fashion_product_images,Accessories/Ties/Ties,258,out_of_scope,unknown,exclude,fpi.excl:cà vạt,,du_lieu_that
+fashion_product_images,Accessories/Umbrellas/Umbrellas,6,out_of_scope,unknown,exclude,fpi.excl:ô/dù,,du_lieu_that
+fashion_product_images,Accessories/Wallets/Wallets,925,out_of_scope,unknown,exclude,fpi.excl:ví,,du_lieu_that
+fashion_product_images,Accessories/Watches/Watches,2542,out_of_scope,unknown,exclude,fpi.excl:đồng hồ,,du_lieu_that
+fashion_product_images,Accessories/Water Bottle/Water Bottle,7,out_of_scope,unknown,exclude,fpi.excl:bình nước,,du_lieu_that
+fashion_product_images,Apparel/Apparel Set/Clothing Set,8,clothing,unknown,unknown,fpi.set_nhieu_mon,,du_lieu_that
+fashion_product_images,Apparel/Apparel Set/Kurta Sets,94,clothing,unknown,unknown,fpi.set_nhieu_mon,,du_lieu_that
+fashion_product_images,Apparel/Apparel Set/Swimwear,4,out_of_scope,unknown,exclude,fpi.excl:đồ bơi,,du_lieu_that
+fashion_product_images,Apparel/Bottomwear/Capris,175,clothing,bottom,keep,fpi.article,,du_lieu_that
+fashion_product_images,Apparel/Bottomwear/Churidar,30,clothing,bottom,keep,fpi.article,,du_lieu_that
+fashion_product_images,Apparel/Bottomwear/Jeans,602,clothing,bottom,keep,fpi.article,,du_lieu_that
+fashion_product_images,Apparel/Bottomwear/Jeggings,34,clothing,bottom,keep,fpi.article,,du_lieu_that
+fashion_product_images,Apparel/Bottomwear/Leggings,177,clothing,bottom,keep,fpi.article,,du_lieu_that
+fashion_product_images,Apparel/Bottomwear/Patiala,38,clothing,bottom,keep,fpi.article,,du_lieu_that
+fashion_product_images,Apparel/Bottomwear/Salwar,32,clothing,bottom,keep,fpi.article,,du_lieu_that
+fashion_product_images,Apparel/Bottomwear/Salwar and Dupatta,7,clothing,unknown,unknown,fpi.set_nhieu_mon,,du_lieu_that
+fashion_product_images,Apparel/Bottomwear/Shorts,545,clothing,bottom,keep,fpi.article,,du_lieu_that
+fashion_product_images,Apparel/Bottomwear/Skirts,128,clothing,bottom,keep,fpi.article,,du_lieu_that
+fashion_product_images,Apparel/Bottomwear/Stockings,32,out_of_scope,unknown,exclude,fpi.excl:tất da,,du_lieu_that
+fashion_product_images,Apparel/Bottomwear/Swimwear,13,out_of_scope,unknown,exclude,fpi.excl:đồ bơi,,du_lieu_that
+fashion_product_images,Apparel/Bottomwear/Tights,9,clothing,bottom,keep,fpi.article,,du_lieu_that
+fashion_product_images,Apparel/Bottomwear/Track Pants,304,clothing,bottom,keep,fpi.article,,du_lieu_that
+fashion_product_images,Apparel/Bottomwear/Tracksuits,29,clothing,unknown,unknown,fpi.set_nhieu_mon,,du_lieu_that
+fashion_product_images,Apparel/Bottomwear/Trousers,530,clothing,bottom,keep,fpi.article,,du_lieu_that
+fashion_product_images,Apparel/Dress/Dresses,462,clothing,dress,keep,fpi.article,,du_lieu_that
+fashion_product_images,Apparel/Dress/Jumpsuit,16,clothing,dress,keep,fpi.article,,du_lieu_that
+fashion_product_images,Apparel/Innerwear/Boxers,52,out_of_scope,unknown,exclude,fpi.excl:đồ lót,,du_lieu_that
+fashion_product_images,Apparel/Innerwear/Bra,477,out_of_scope,unknown,exclude,fpi.excl:đồ lót,,du_lieu_that
+fashion_product_images,Apparel/Innerwear/Briefs,847,out_of_scope,unknown,exclude,fpi.excl:đồ lót,,du_lieu_that
+fashion_product_images,Apparel/Innerwear/Camisoles,39,out_of_scope,unknown,exclude,fpi.excl:đồ lót,,du_lieu_that
+fashion_product_images,Apparel/Innerwear/Innerwear Vests,242,out_of_scope,unknown,exclude,fpi.excl:đồ lót,,du_lieu_that
+fashion_product_images,Apparel/Innerwear/Shapewear,9,out_of_scope,unknown,exclude,fpi.excl:đồ lót,,du_lieu_that
+fashion_product_images,Apparel/Innerwear/Trunk,140,out_of_scope,unknown,exclude,fpi.excl:đồ lót,,du_lieu_that
+fashion_product_images,Apparel/Loungewear and Nightwear/Baby Dolls,14,out_of_scope,unknown,exclude,fpi.excl:đồ ngủ,,du_lieu_that
+fashion_product_images,Apparel/Loungewear and Nightwear/Bath Robe,17,out_of_scope,unknown,exclude,fpi.excl:đồ ngủ,,du_lieu_that
+fashion_product_images,Apparel/Loungewear and Nightwear/Lounge Pants,61,out_of_scope,unknown,exclude,fpi.excl:đồ mặc nhà,,du_lieu_that
+fashion_product_images,Apparel/Loungewear and Nightwear/Lounge Shorts,34,out_of_scope,unknown,exclude,fpi.excl:đồ mặc nhà,,du_lieu_that
+fashion_product_images,Apparel/Loungewear and Nightwear/Lounge Tshirts,3,out_of_scope,unknown,exclude,fpi.excl:đồ mặc nhà,,du_lieu_that
+fashion_product_images,Apparel/Loungewear and Nightwear/Night suits,141,out_of_scope,unknown,exclude,fpi.excl:đồ ngủ,,du_lieu_that
+fashion_product_images,Apparel/Loungewear and Nightwear/Nightdress,188,out_of_scope,unknown,exclude,fpi.excl:đồ ngủ,,du_lieu_that
+fashion_product_images,Apparel/Loungewear and Nightwear/Robe,4,out_of_scope,unknown,exclude,fpi.excl:đồ ngủ,,du_lieu_that
+fashion_product_images,Apparel/Loungewear and Nightwear/Shorts,2,out_of_scope,unknown,exclude,fpi.excl:đồ mặc nhà,,du_lieu_that
+fashion_product_images,Apparel/Saree/Sarees,427,out_of_scope,unknown,exclude,fpi.excl:sari (trang phục truyền thống quấn),,du_lieu_that
+fashion_product_images,Apparel/Socks/Booties,12,out_of_scope,unknown,exclude,fpi.excl:tất/vớ trẻ em,,du_lieu_that
+fashion_product_images,Apparel/Topwear/Belts,3,accessory,belt,keep,fpi.article,,du_lieu_that
+fashion_product_images,Apparel/Topwear/Blazers,8,clothing,outerwear,keep,fpi.article,,du_lieu_that
+fashion_product_images,Apparel/Topwear/Dresses,2,clothing,dress,keep,fpi.article,,du_lieu_that
+fashion_product_images,Apparel/Topwear/Dupatta,116,out_of_scope,unknown,exclude,fpi.excl:khăn choàng,,du_lieu_that
+fashion_product_images,Apparel/Topwear/Jackets,258,clothing,outerwear,keep,fpi.article,,du_lieu_that
+fashion_product_images,Apparel/Topwear/Kurtas,1844,clothing,top,keep,fpi.article,,du_lieu_that
+fashion_product_images,Apparel/Topwear/Kurtis,234,clothing,top,keep,fpi.article,,du_lieu_that
+fashion_product_images,Apparel/Topwear/Lehenga Choli,4,clothing,unknown,unknown,fpi.set_nhieu_mon,,du_lieu_that
+fashion_product_images,Apparel/Topwear/Nehru Jackets,5,clothing,outerwear,keep,fpi.article,,du_lieu_that
+fashion_product_images,Apparel/Topwear/Rain Jacket,7,clothing,outerwear,keep,fpi.article,,du_lieu_that
+fashion_product_images,Apparel/Topwear/Rompers,12,clothing,dress,keep,fpi.article,,du_lieu_that
+fashion_product_images,Apparel/Topwear/Shirts,3212,clothing,top,keep,fpi.article,,du_lieu_that
+fashion_product_images,Apparel/Topwear/Shrug,6,clothing,outerwear,keep,fpi.article,,du_lieu_that
+fashion_product_images,Apparel/Topwear/Suspenders,40,out_of_scope,unknown,exclude,fpi.excl:dây đeo quần,,du_lieu_that
+fashion_product_images,Apparel/Topwear/Sweaters,277,clothing,top,keep,fpi.article,,du_lieu_that
+fashion_product_images,Apparel/Topwear/Sweatshirts,285,clothing,top,keep,fpi.article,,du_lieu_that
+fashion_product_images,Apparel/Topwear/Tops,1762,clothing,top,keep,fpi.article,,du_lieu_that
+fashion_product_images,Apparel/Topwear/Tshirts,7064,clothing,top,keep,fpi.article,,du_lieu_that
+fashion_product_images,Apparel/Topwear/Tunics,229,clothing,top,keep,fpi.article,,du_lieu_that
+fashion_product_images,Apparel/Topwear/Waistcoat,15,clothing,outerwear,keep,fpi.article,,du_lieu_that
+fashion_product_images,Footwear/Flip Flops/Flip Flops,913,footwear,sandal,keep,fpi.article,,du_lieu_that
+fashion_product_images,Footwear/Sandal/Flip Flops,1,footwear,sandal,keep,fpi.article,,du_lieu_that
+fashion_product_images,Footwear/Sandal/Sandals,893,footwear,sandal,keep,fpi.article,,du_lieu_that
+fashion_product_images,Footwear/Sandal/Sports Sandals,67,footwear,sandal,keep,fpi.article,,du_lieu_that
+fashion_product_images,Footwear/Shoes/Casual Shoes,2845,footwear,sneaker,keep,fpi.article,footwear/boot: 9 dòng (luật tiêu đề),du_lieu_that
+fashion_product_images,Footwear/Shoes/Flats,500,footwear,heel_flat,keep,fpi.article,footwear/boot: 5 dòng (luật tiêu đề),du_lieu_that
+fashion_product_images,Footwear/Shoes/Formal Shoes,637,footwear,leather_shoe,keep,fpi.article,footwear/boot: 3 dòng (luật tiêu đề),du_lieu_that
+fashion_product_images,Footwear/Shoes/Heels,1323,footwear,heel_flat,keep,fpi.article,footwear/boot: 1 dòng (luật tiêu đề),du_lieu_that
+fashion_product_images,Footwear/Shoes/Sandals,2,footwear,sandal,keep,fpi.article,,du_lieu_that
+fashion_product_images,Footwear/Shoes/Sports Shoes,2016,footwear,sneaker,keep,fpi.article,footwear/boot: 3 dòng (luật tiêu đề),du_lieu_that
+fashion_product_images,Free Items/Free Gifts/Backpacks,2,accessory,bag,keep,fpi.article,,du_lieu_that
+fashion_product_images,Free Items/Free Gifts/Clutches,1,accessory,bag,keep,fpi.article,,du_lieu_that
+fashion_product_images,Free Items/Free Gifts/Free Gifts,91,out_of_scope,unknown,exclude,fpi.master_excl:Free Items,,du_lieu_that
+fashion_product_images,Free Items/Free Gifts/Handbags,2,accessory,bag,keep,fpi.article,,du_lieu_that
+fashion_product_images,Free Items/Free Gifts/Laptop Bag,1,accessory,bag,keep,fpi.article,,du_lieu_that
+fashion_product_images,Free Items/Free Gifts/Scarves,1,out_of_scope,unknown,exclude,fpi.master_excl:Free Items,,du_lieu_that
+fashion_product_images,Free Items/Free Gifts/Ties,5,out_of_scope,unknown,exclude,fpi.master_excl:Free Items,,du_lieu_that
+fashion_product_images,Free Items/Free Gifts/Wallets,1,out_of_scope,unknown,exclude,fpi.master_excl:Free Items,,du_lieu_that
+fashion_product_images,Free Items/Vouchers/Ipad,1,out_of_scope,unknown,exclude,fpi.master_excl:Free Items,,du_lieu_that
+fashion_product_images,Home/Home Furnishing/Cushion Covers,1,out_of_scope,unknown,exclude,fpi.master_excl:Home,,du_lieu_that
+fashion_product_images,Personal Care/Bath and Body/Body Lotion,2,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Bath and Body/Body Wash and Scrub,1,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Bath and Body/Nail Essentials,6,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Beauty Accessories/Beauty Accessory,3,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Eyes/Eyeshadow,6,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Eyes/Kajal and Eyeliner,16,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Eyes/Mascara,12,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Fragrance/Deodorant,347,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Fragrance/Fragrance Gift Set,57,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Fragrance/Perfume and Body Mist,597,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Hair/Hair Colour,19,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Lips/Lip Care,7,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Lips/Lip Gloss,109,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Lips/Lip Liner,45,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Lips/Lip Plumper,4,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Lips/Lipstick,260,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Makeup/Compact,39,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Makeup/Concealer,11,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Makeup/Eyeshadow,26,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Makeup/Foundation and Primer,69,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Makeup/Highlighter and Blush,38,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Makeup/Kajal and Eyeliner,78,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Makeup/Makeup Remover,2,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Nails/Nail Polish,278,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Perfumes/Perfume and Body Mist,5,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Skin/Body Lotion,1,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Skin/Face Moisturisers,40,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Skin/Face Scrub and Exfoliator,1,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Skin/Face Serum and Gel,2,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Skin/Mask and Peel,9,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Skin Care/Eye Cream,4,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Skin Care/Face Moisturisers,7,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Skin Care/Face Scrub and Exfoliator,3,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Skin Care/Face Wash and Cleanser,16,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Skin Care/Mask and Peel,1,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Skin Care/Mens Grooming Kit,1,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Skin Care/Sunscreen,15,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Personal Care/Skin Care/Toner,2,out_of_scope,unknown,exclude,fpi.master_excl:Personal Care,,du_lieu_that
+fashion_product_images,Sporting Goods/Sports Equipment/Basketballs,13,out_of_scope,unknown,exclude,fpi.master_excl:Sporting Goods,,du_lieu_that
+fashion_product_images,Sporting Goods/Sports Equipment/Footballs,8,out_of_scope,unknown,exclude,fpi.master_excl:Sporting Goods,,du_lieu_that
+fashion_product_images,Sporting Goods/Wristbands/Wristbands,4,out_of_scope,unknown,exclude,fpi.master_excl:Sporting Goods,,du_lieu_that
+vimrhp_shopee,DongHo + luật:vi.subcat:DongHo,81,out_of_scope,unknown,exclude,vi.subcat:DongHo,,du_lieu_that
+vimrhp_shopee,GiayDepNam + luật:vi.sandal,75,footwear,sandal,keep,vi.sandal,,du_lieu_that
+vimrhp_shopee,GiayDepNam + luật:vi.sneaker,2,footwear,sneaker,keep,vi.sneaker,,du_lieu_that
+vimrhp_shopee,GiayDepNam + luật:vi.giay_chung,1,footwear,unknown,unknown,vi.giay_chung,,du_lieu_that
+vimrhp_shopee,GiayDepNam + luật:vi.excl:phụ kiện giày,1,out_of_scope,unknown,exclude,vi.excl:phụ kiện giày,,du_lieu_that
+vimrhp_shopee,GiayDepNu + luật:vi.heel_flat,84,footwear,heel_flat,keep,vi.heel_flat,,du_lieu_that
+vimrhp_shopee,GiayDepNu + luật:vi.sandal,8,footwear,sandal,keep,vi.sandal,,du_lieu_that
+vimrhp_shopee,PhuKienNu + luật:vi.belt,5,accessory,belt,keep,vi.belt,,du_lieu_that
+vimrhp_shopee,PhuKienNu + luật:vi.eyewear,6,accessory,eyewear,keep,vi.eyewear,,du_lieu_that
+vimrhp_shopee,PhuKienNu + luật:vi.top,1,clothing,top,keep,vi.top,,du_lieu_that
+vimrhp_shopee,PhuKienNu + luật:vi.cap,3,headwear,cap,keep,vi.cap,,du_lieu_that
+vimrhp_shopee,PhuKienNu + luật:vi.wide_brim,1,headwear,wide_brim,keep,vi.wide_brim,,du_lieu_that
+vimrhp_shopee,PhuKienNu + luật:vi.excl:khăn,1,out_of_scope,unknown,exclude,vi.excl:khăn,,du_lieu_that
+vimrhp_shopee,PhuKienNu + luật:vi.excl:khẩu trang,3,out_of_scope,unknown,exclude,vi.excl:khẩu trang,,du_lieu_that
+vimrhp_shopee,PhuKienNu + luật:vi.excl:phụ kiện khác,4,out_of_scope,unknown,exclude,vi.excl:phụ kiện khác,,du_lieu_that
+vimrhp_shopee,PhuKienNu + luật:vi.excl:phụ kiện tóc,12,out_of_scope,unknown,exclude,vi.excl:phụ kiện tóc,,du_lieu_that
+vimrhp_shopee,PhuKienNu + luật:vi.excl:trang sức,31,out_of_scope,unknown,exclude,vi.excl:trang sức,,du_lieu_that
+vimrhp_shopee,PhuKienNu + luật:vi.excl:tất/vớ,7,out_of_scope,unknown,exclude,vi.excl:tất/vớ,,du_lieu_that
+vimrhp_shopee,PhuKienNu + luật:vi.excl:ô/dù,2,out_of_scope,unknown,exclude,vi.excl:ô/dù,,du_lieu_that
+vimrhp_shopee,ThoiTrangNam + luật:vi.belt,1,accessory,belt,keep,vi.belt,,du_lieu_that
+vimrhp_shopee,ThoiTrangNam + luật:vi.bottom,5,clothing,bottom,keep,vi.bottom,,du_lieu_that
+vimrhp_shopee,ThoiTrangNam + luật:vi.outerwear,22,clothing,outerwear,keep,vi.outerwear,,du_lieu_that
+vimrhp_shopee,ThoiTrangNam + luật:vi.top,53,clothing,top,keep,vi.top,,du_lieu_that
+vimrhp_shopee,ThoiTrangNam + luật:vi.set_nhieu_mon,4,clothing,unknown,unknown,vi.set_nhieu_mon,,du_lieu_that
+vimrhp_shopee,ThoiTrangNam + luật:vi.cap,1,headwear,cap,keep,vi.cap,,du_lieu_that
+vimrhp_shopee,ThoiTrangNam + luật:vi.excl:đồ ngủ/mặc nhà,1,out_of_scope,unknown,exclude,vi.excl:đồ ngủ/mặc nhà,,du_lieu_that
+vimrhp_shopee,ThoiTrangNu + luật:vi.bottom,7,clothing,bottom,keep,vi.bottom,,du_lieu_that
+vimrhp_shopee,ThoiTrangNu + luật:vi.dress,1,clothing,dress,keep,vi.dress,,du_lieu_that
+vimrhp_shopee,ThoiTrangNu + luật:vi.outerwear,54,clothing,outerwear,keep,vi.outerwear,,du_lieu_that
+vimrhp_shopee,ThoiTrangNu + luật:vi.top,20,clothing,top,keep,vi.top,,du_lieu_that
+vimrhp_shopee,ThoiTrangNu + luật:vi.set_nhieu_mon,7,clothing,unknown,unknown,vi.set_nhieu_mon,,du_lieu_that
+vimrhp_shopee,ThoiTrangNu + luật:vi.excl:đồ lót,4,out_of_scope,unknown,exclude,vi.excl:đồ lót,,du_lieu_that
+vimrhp_shopee,ThoiTrangNu + luật:vi.excl:đồ ngủ/mặc nhà,1,out_of_scope,unknown,exclude,vi.excl:đồ ngủ/mặc nhà,,du_lieu_that
+clothing_dataset_cc0,T-Shirt,,clothing,top,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+clothing_dataset_cc0,Longsleeve,,clothing,top,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+clothing_dataset_cc0,Shirt,,clothing,top,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+clothing_dataset_cc0,Polo,,clothing,top,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+clothing_dataset_cc0,Top,,clothing,top,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+clothing_dataset_cc0,Blouse,,clothing,top,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+clothing_dataset_cc0,Hoodie,,clothing,top,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+clothing_dataset_cc0,Pants,,clothing,bottom,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+clothing_dataset_cc0,Shorts,,clothing,bottom,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+clothing_dataset_cc0,Skirt,,clothing,bottom,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+clothing_dataset_cc0,Dress,,clothing,dress,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+clothing_dataset_cc0,Outwear,,clothing,outerwear,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+clothing_dataset_cc0,Blazer,,clothing,outerwear,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+clothing_dataset_cc0,Hat,,headwear,unknown,unknown,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+clothing_dataset_cc0,Shoes,,footwear,unknown,unknown,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+clothing_dataset_cc0,Undershirt,,out_of_scope,unknown,exclude,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+clothing_dataset_cc0,Body,,out_of_scope,unknown,exclude,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+clothing_dataset_cc0,Other,,out_of_scope,unknown,exclude,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+clothing_dataset_cc0,Not sure,,out_of_scope,unknown,exclude,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+clothing_dataset_cc0,Skip,,out_of_scope,unknown,exclude,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+abo_amazon_berkeley_objects,SHOES,,footwear,unknown,unknown,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+abo_amazon_berkeley_objects,BOOT,,footwear,boot,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+abo_amazon_berkeley_objects,SANDAL,,footwear,sandal,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+abo_amazon_berkeley_objects,HAT,,headwear,unknown,unknown,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+abo_amazon_berkeley_objects,HANDBAG,,accessory,bag,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+abo_amazon_berkeley_objects,BACKPACK,,accessory,bag,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+abo_amazon_berkeley_objects,SUNGLASSES,,accessory,eyewear,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+abo_amazon_berkeley_objects,SHIRT,,clothing,top,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+abo_amazon_berkeley_objects,PANTS,,clothing,bottom,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+abo_amazon_berkeley_objects,DRESS,,clothing,dress,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+abo_amazon_berkeley_objects,COAT,,clothing,outerwear,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+abo_amazon_berkeley_objects,WATCH,,out_of_scope,unknown,exclude,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+amazon_reviews_2023_clothing_shoes_jewelry,Shoes > Athletic,,footwear,sneaker,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+amazon_reviews_2023_clothing_shoes_jewelry,Shoes > Fashion Sneakers,,footwear,sneaker,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+amazon_reviews_2023_clothing_shoes_jewelry,Shoes > Boots,,footwear,boot,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+amazon_reviews_2023_clothing_shoes_jewelry,Shoes > Sandals,,footwear,sandal,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+amazon_reviews_2023_clothing_shoes_jewelry,Shoes > Oxfords,,footwear,leather_shoe,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+amazon_reviews_2023_clothing_shoes_jewelry,Shoes > Loafers & Slip-Ons,,footwear,leather_shoe,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+amazon_reviews_2023_clothing_shoes_jewelry,Shoes > Pumps,,footwear,heel_flat,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+amazon_reviews_2023_clothing_shoes_jewelry,Shoes > Flats,,footwear,heel_flat,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+amazon_reviews_2023_clothing_shoes_jewelry,Accessories > Hats & Caps > Baseball Caps,,headwear,cap,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+amazon_reviews_2023_clothing_shoes_jewelry,Accessories > Hats & Caps > Skullies & Beanies,,headwear,beanie,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+amazon_reviews_2023_clothing_shoes_jewelry,Accessories > Hats & Caps > Bucket Hats,,headwear,bucket,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+amazon_reviews_2023_clothing_shoes_jewelry,Accessories > Hats & Caps > Sun Hats,,headwear,wide_brim,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+amazon_reviews_2023_clothing_shoes_jewelry,Accessories > Belts,,accessory,belt,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+amazon_reviews_2023_clothing_shoes_jewelry,Accessories > Sunglasses & Eyewear Accessories,,accessory,eyewear,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+amazon_reviews_2023_clothing_shoes_jewelry,Handbags & Wallets > Shoulder Bags,,accessory,bag,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+amazon_reviews_2023_clothing_shoes_jewelry,"Clothing > Tops, Tees & Shirts",,clothing,top,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+amazon_reviews_2023_clothing_shoes_jewelry,Clothing > Pants,,clothing,bottom,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+amazon_reviews_2023_clothing_shoes_jewelry,Clothing > Dresses,,clothing,dress,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+amazon_reviews_2023_clothing_shoes_jewelry,"Clothing > Coats, Jackets & Vests",,clothing,outerwear,keep,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+amazon_reviews_2023_clothing_shoes_jewelry,Jewelry,,out_of_scope,unknown,exclude,doc,,"[cần xác minh] theo tài liệu, chưa có file"
+amazon_reviews_2023_clothing_shoes_jewelry,Watches,,out_of_scope,unknown,exclude,doc,,"[cần xác minh] theo tài liệu, chưa có file"

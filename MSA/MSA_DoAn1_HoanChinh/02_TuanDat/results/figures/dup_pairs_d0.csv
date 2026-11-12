@@ -1,0 +1,41 @@
+id_a,id_b,dist,same_type_brand,same_color,title_a,title_b,title_jaccard,md5_equal,action
+fpi_11111,fpi_11110,0,True,True,Indigo Nation Men Check White Shirts,Indigo Nation Men Check White Shirts,1.0,True,drop_b
+fpi_41003,fpi_41002,0,True,True,Gini and Jony Girls Woven Blue Skirt,Gini and Jony Girls Woven Blue Skirt,1.0,True,drop_b
+fpi_43581,fpi_41304,0,True,True,Gini and Jony Boys White Shirt,Gini and Jony Boys White Check Shirt,0.857,True,drop_b
+fpi_38934,fpi_38935,0,True,True,Gini and Jony Girls Black Leggings,Gini and Jony Girls Black Leggings,1.0,True,drop_b
+fpi_13515,fpi_13514,0,True,True,Palm Tree Kids Girl Washed Blue Skirts,Palm Tree Women Washed Blue Skirts,0.625,True,drop_b
+fpi_41302,fpi_43586,0,True,False,Gini and Jony Girls Blue Saloppette,Gini and Jony Girls Blue Saloppette,1.0,True,drop_b
+fpi_31302,fpi_26114,0,True,True,John Miller Men Purple Shirt,John Miller Men Purple Shirt,1.0,True,drop_b
+fpi_39108,fpi_39107,0,True,True,ADIDAS Mumbai Indians Girls Blue Match Cap,ADIDAS Mumbai Indians Boys Blue Match Cap,0.75,True,drop_b
+fpi_33274,fpi_39326,0,True,True,Gini and Jony Girls Black Leggings,Gini and Jony Girls Black Leggings,1.0,True,drop_b
+fpi_11103,fpi_11102,0,True,True,Indigo Nation Men Stripes Blue Shirts,Indigo Nation Men Stripes Blue Shirts,1.0,True,drop_b
+fpi_41312,fpi_43589,0,True,True,Gini and Jony Girls Fixed Weast Pink Capris,Gini and Jony Girls Fixed Weast Pink Capris,1.0,True,drop_b
+fpi_11071,fpi_11072,0,True,True,Scullers Men Check Black Shirts,Scullers Men Check Black Shirts,1.0,True,drop_b
+fpi_18169,fpi_18168,0,True,True,Doodle Kids Girls Party Frock Pink Dress,Doodle Kids Girls Party Frock Pink Dress,1.0,True,drop_b
+fpi_43593,fpi_43592,0,True,True,Gini and Jony Girls Polo Striped Pink T-shirt,Gini and Jony Girls Polo Striped Pink T-shirt,1.0,True,drop_b
+fpi_31106,fpi_34026,0,True,True,Gini and Jony Boys Printed White T-shirt,Gini and Jony Boys White Printed T-shirt,1.0,True,drop_b
+fpi_9565,fpi_9566,0,True,True,John Miller Men Striped Blue Shirt,John Miller Men Stripes Blue Blue Shirts,0.5,True,drop_b
+fpi_4884,fpi_4885,0,True,True,Levis Kids Girl's Darcy Purple Teens Kidswear,Levis Kids Girl's Darcy Purple Kidswear,0.857,True,drop_b
+fpi_31656,fpi_29664,0,True,True,Indigo Nation Men White Shirt,Indigo Nation Men White Shirt,1.0,True,drop_b
+fpi_48208,fpi_29869,0,False,False,United Colors of Benetton Men Brown Sunglasses,Mayhem Men Aviator Sunglasses 1023-205d,0.2,False,keep_both_diff_group
+fpi_19369,fpi_37256,0,False,False,Redtape Men Stone Wall Blue Casual Shoes,United Colors of Benetton Men Black Shoes,0.167,False,keep_both_diff_group
+fpi_10631,fpi_9130,0,False,False,Carlton London Men CL semi-cas Black Casual Shoes,Puma Men Osu NM Grey Casual Shoes,0.25,False,keep_both_diff_group
+fpi_22887,fpi_24690,0,False,False,Woodland Men Olive Casual Sandals,Lee Cooper Men Casual Brown Shoes,0.222,False,keep_both_diff_group
+fpi_22137,fpi_23245,0,False,True,Provogue Men Brown Formal Shoes,Arrow Men Formal Coffee Brown Shoes,0.571,False,keep_both_diff_group
+fpi_17692,fpi_8210,0,False,False,Vans Men Rowley Style 99 S Red Casual Shoes,Red Tape Men's Casual Brown Shoe,0.25,False,keep_both_diff_group
+fpi_28161,fpi_16846,0,False,True,Ray-Ban Men Aviator Sunglasses,Idee Men Funky Eyewear Brown Sunglasses,0.25,False,keep_both_diff_group
+fpi_16894,fpi_38210,0,False,False,Police Men Casual Blue Sunglasses,Polaroid Men Sunglasses,0.333,False,keep_both_diff_group
+fpi_54730,fpi_35233,0,False,False,Vans Men Navy Blue Shoes,Fortune Men Black Formal Shoes,0.25,False,keep_both_diff_group
+fpi_28331,fpi_28330,0,False,False,Redtape Men Casual Brown Sandals,Red Tape Men Casual Black Sandals,0.375,False,keep_both_diff_group
+fpi_14498,fpi_7379,0,False,True,Flying Machine Men Casual Black Casual Shoes,Red Tape Men's Blk Casual Black Shoe,0.3,False,keep_both_diff_group
+fpi_43545,fpi_20716,0,False,True,Woodland Men Brown Sandals,Red Tape Men Brown Leather Casual Shoes,0.222,False,keep_both_diff_group
+fpi_22139,fpi_22154,0,False,True,Provogue Men Black Formal Shoes,Lee Cooper Men Black Formal Shoes,0.571,False,keep_both_diff_group
+fpi_28406,fpi_50201,0,False,False,Idee Men Brown Sunglasses,Stoln Women Black Sunglasses,0.143,False,keep_both_diff_group
+fpi_7968,fpi_3578,0,False,False,Fila Unisex Inferno Olive Green Floater,ADIDAS Men Black Cherokee Sports Sandals,0.0,False,keep_both_diff_group
+fpi_47621,fpi_53137,0,False,False,Portia Women Yellow Flats,Catwalk Women Brown Sandals,0.143,False,keep_both_diff_group
+fpi_38163,fpi_16884,0,False,False,Miami Blues Men Sunglasses,Police Men Casual Brown Sunglasses,0.286,False,keep_both_diff_group
+fpi_49670,fpi_16884,0,False,False,United Colors of Benetton Men Sunglass,Police Men Casual Brown Sunglasses,0.1,False,keep_both_diff_group
+fpi_54136,fpi_26181,0,True,True,Rocia Women Silver Flats,Rocia Women Silver Casual Sandals,0.5,False,review
+fpi_41876,fpi_41877,0,True,False,Estd. 1977 Men Beige & Black Sandals,Estd. 1977 Men Brown Sandals,0.5,False,variant
+fpi_25709,fpi_25711,0,True,False,ADIDAS Unisex Red Cap,ADIDAS Unisex Pink Cap,0.6,False,variant
+fpi_37243,fpi_37242,0,True,False,United Colors of Benetton Men Brown Shoes,United Colors of Benetton Men Black Shoes,0.75,False,variant

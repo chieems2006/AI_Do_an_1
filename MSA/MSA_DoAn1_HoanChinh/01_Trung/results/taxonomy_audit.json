@@ -1,0 +1,75 @@
+{
+ "fpi": {
+  "n": 30,
+  "sai": 0,
+  "mo_ho": 2,
+  "dung": 28,
+  "dat_tieu_chi_sai_le_3": true,
+  "phan_bo_mau": {
+   "clothing/top": 9,
+   "accessory/bag": 6,
+   "clothing/bottom": 5,
+   "footwear/sneaker": 4,
+   "footwear/heel_flat": 2,
+   "headwear/cap": 1,
+   "clothing/dress": 1,
+   "footwear/sandal": 1,
+   "accessory/eyewear": 1
+  }
+ },
+ "vimrhp": {
+  "n": 30,
+  "sai": 0,
+  "mo_ho": 1,
+  "dung": 29,
+  "dat_tieu_chi_sai_le_3": true,
+  "phan_bo_mau": {
+   "out_of_scope/unknown": 11,
+   "footwear/heel_flat": 6,
+   "footwear/sandal": 5,
+   "clothing/top": 3,
+   "clothing/outerwear": 3,
+   "clothing/bottom": 1,
+   "headwear/cap": 1
+  }
+ },
+ "hard_cases": [
+  {
+   "id": "fpi_53440",
+   "title": "ADIDAS Men Red Pre L Boot Sports Shoes",
+   "ket_qua": "footwear/sneaker",
+   "ghi_chu": "Ảnh là giày đá bóng; luật boot đã sửa để KHÔNG bắt (trước sửa: sai)"
+  },
+  {
+   "id": "fpi_5599",
+   "title": "Reebok Men's Trail Surpant Black Orange Shoe (nhãn Sandals)",
+   "ket_qua": "footwear/sandal",
+   "ghi_chu": "Tiêu đề ghi Shoe nhưng ảnh là sandal -> nhãn nguồn đúng, tiêu đề sai"
+  },
+  {
+   "id": "fpi_12440",
+   "title": "Timberland Unisex Casual Black Skull Caps (nhãn Hat)",
+   "ket_qua": "headwear/beanie",
+   "ghi_chu": "Nhãn Hat của FPI thực chất là mũ len -> beanie, không phải wide_brim"
+  },
+  {
+   "id": "shopee_18390665755",
+   "title": "Áo Khoác Lông 2 lớp ... có mũ tai gấu",
+   "ket_qua": "clothing/outerwear",
+   "ghi_chu": "Áo khoác có mũ trùm: danh từ đầu 'áo khoác' thắng chữ 'mũ'"
+  },
+  {
+   "id": "vi:khan lau kinh",
+   "title": "Khăn lau kính Nano ...",
+   "ket_qua": "out_of_scope",
+   "ghi_chu": "Danh từ đầu 'khăn' thắng chữ 'kính'"
+  },
+  {
+   "id": "vi:sandal cao got",
+   "title": "GIÀY SANDAL CAO GÓT NỮ ĐẾ NHỌN ...",
+   "ket_qua": "footwear/heel_flat",
+   "ghi_chu": "Quy ước: giày dép có 'cao gót' -> heel_flat kể cả sandal"
+  }
+ ],
+ "ghi_chu": "Kiểm bởi tác nhân AI (vai Trung) bằng tiêu đề + ảnh 60×80 cho FPI, chỉ tiêu đề cho ViMRHP; seed 42; CHƯA phải 2 người thật – nhóm phải kiểm lại (cột nguoi_kiem_2)."
+}

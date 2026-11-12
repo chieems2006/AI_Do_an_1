@@ -1,0 +1,66 @@
+{
+ "version": "Data v1 (public: FPI small + ViMRHP; seed 42)",
+ "counts": {
+  "total": 5021,
+  "by_type": {
+   "clothing": 2388,
+   "footwear": 1571,
+   "accessory": 764,
+   "headwear": 298
+  },
+  "by_sub": {
+   "accessory/bag": 467,
+   "accessory/belt": 106,
+   "accessory/eyewear": 142,
+   "accessory/unknown": 49,
+   "clothing/bottom": 374,
+   "clothing/dress": 73,
+   "clothing/outerwear": 110,
+   "clothing/top": 1817,
+   "clothing/unknown": 14,
+   "footwear/heel_flat*": 319,
+   "footwear/leather_shoe": 95,
+   "footwear/sandal": 400,
+   "footwear/sneaker": 731,
+   "footwear/unknown": 26,
+   "headwear/cap": 286,
+   "headwear/unknown": 9,
+   "headwear/wide_brim*": 3
+  },
+  "by_source": {
+   "fashion_product_images_small": 4593,
+   "vimrhp_shopee": 428
+  },
+  "quota_check": {
+   "footwear": {
+    "min": 1200,
+    "have": 1571,
+    "ok": true
+   },
+   "clothing": {
+    "min": 2000,
+    "have": 2388,
+    "ok": true
+   },
+   "accessory": {
+    "min": 500,
+    "have": 764,
+    "ok": true
+   },
+   "headwear": {
+    "min": 300,
+    "have": 298,
+    "ok": false
+   }
+  }
+ },
+ "schema_errors": [],
+ "schema_valid_100pct": true,
+ "catalog_sha256": "5674d36a8283c18e5fc075dd882da16877f7e0219d36abf4b9c815ee9742916b",
+ "compare_shared_catalog_fpi": {
+  "shared": 4593,
+  "mine_fpi": 4593,
+  "intersection": 4593,
+  "identical_id_set": true
+ }
+}

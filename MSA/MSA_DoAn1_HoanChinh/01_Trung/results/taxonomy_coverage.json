@@ -1,0 +1,129 @@
+{
+ "fpi": {
+  "distinct_labels": 168,
+  "labels_keep": 61,
+  "labels_unknown": 5,
+  "labels_exclude": 102,
+  "labels_unmapped": 0,
+  "rows_total": 44072,
+  "rows_keep": 32735,
+  "rows_unknown": 142,
+  "rows_exclude": 11195,
+  "rows_keep_by_leaf": {
+   "accessory/bag": 3063,
+   "accessory/belt": 813,
+   "accessory/eyewear": 1073,
+   "clothing/bottom": 2604,
+   "clothing/dress": 492,
+   "clothing/outerwear": 299,
+   "clothing/top": 14908,
+   "footwear/boot": 21,
+   "footwear/heel_flat": 1817,
+   "footwear/leather_shoe": 634,
+   "footwear/sandal": 1876,
+   "footwear/sneaker": 4849,
+   "headwear/beanie": 20,
+   "headwear/cap": 266
+  },
+  "label_coverage_pct": 100.0
+ },
+ "catalog_fpi_v1": {
+  "rows": 4593,
+  "keep": 4586,
+  "unknown": 0,
+  "exclude": 7,
+  "by_type": {
+   "clothing": 2200,
+   "footwear": 1400,
+   "accessory": 700,
+   "headwear": 286
+  },
+  "by_leaf": {
+   "accessory/bag": 465,
+   "accessory/belt": 100,
+   "accessory/eyewear": 135,
+   "clothing/bottom": 355,
+   "clothing/dress": 72,
+   "clothing/outerwear": 52,
+   "clothing/top": 1721,
+   "footwear/boot": 3,
+   "footwear/heel_flat": 269,
+   "footwear/leather_shoe": 95,
+   "footwear/sandal": 306,
+   "footwear/sneaker": 727,
+   "headwear/beanie": 20,
+   "headwear/cap": 266,
+   "out_of_scope/unknown": 7
+  },
+  "changed_vs_tam": {
+   "footwear/heel_flat* -> footwear/heel_flat": 269,
+   "footwear/sneaker -> footwear/boot": 2,
+   "footwear/heel_flat* -> footwear/boot": 1,
+   "headwear/unknown -> out_of_scope/unknown": 7,
+   "headwear/cap -> headwear/beanie": 17,
+   "headwear/wide_brim* -> headwear/beanie": 3
+  }
+ },
+ "vimrhp": {
+  "products": 509,
+  "subcategories": [
+   "DongHo",
+   "GiayDepNam",
+   "GiayDepNu",
+   "PhuKienNu",
+   "ThoiTrangNam",
+   "ThoiTrangNu"
+  ],
+  "keep": 349,
+  "unknown": 12,
+  "exclude": 148,
+  "unmatched_title_rule": 0,
+  "by_subcat": {
+   "DongHo": {
+    "out_of_scope/unknown": 81
+   },
+   "GiayDepNam": {
+    "footwear/sandal": 75,
+    "footwear/sneaker": 2,
+    "footwear/unknown": 1,
+    "out_of_scope/unknown": 1
+   },
+   "GiayDepNu": {
+    "footwear/heel_flat": 84,
+    "footwear/sandal": 8
+   },
+   "PhuKienNu": {
+    "accessory/belt": 5,
+    "accessory/eyewear": 6,
+    "clothing/top": 1,
+    "headwear/cap": 3,
+    "headwear/wide_brim": 1,
+    "out_of_scope/unknown": 60
+   },
+   "ThoiTrangNam": {
+    "accessory/belt": 1,
+    "clothing/bottom": 5,
+    "clothing/outerwear": 22,
+    "clothing/top": 53,
+    "clothing/unknown": 4,
+    "headwear/cap": 1,
+    "out_of_scope/unknown": 1
+   },
+   "ThoiTrangNu": {
+    "clothing/bottom": 7,
+    "clothing/dress": 1,
+    "clothing/outerwear": 54,
+    "clothing/top": 20,
+    "clothing/unknown": 7,
+    "out_of_scope/unknown": 5
+   }
+  },
+  "reviews_in_scope": 7575,
+  "title_rule_coverage_pct": 100.0
+ },
+ "config": {
+  "data_version": "shared_data v1 (prep_shared_data.py seed 42)",
+  "script": "scripts/build_category_map.py",
+  "fpi_articleTypes_in_table": 57
+ }
+}

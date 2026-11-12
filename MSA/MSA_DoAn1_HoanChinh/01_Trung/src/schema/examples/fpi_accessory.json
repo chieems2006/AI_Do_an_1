@@ -1,0 +1,35 @@
+{
+ "product_id": "fpi_7108",
+ "title": "Wildcraft Unisex Olive Green Backpack",
+ "category": "Accessories/Bags/Backpacks",
+ "brand": "Wildcraft",
+ "price": null,
+ "currency": null,
+ "colors": [
+  "Olive"
+ ],
+ "sizes": [],
+ "description": null,
+ "specs": {
+  "season": "Winter",
+  "usage": "Casual",
+  "year": 2015,
+  "articleType": "Backpacks"
+ },
+ "image_paths": [
+  "fpi_images/7108.jpg"
+ ],
+ "rating": null,
+ "rating_count": null,
+ "reviews": [],
+ "source": "fashion_product_images_small",
+ "source_url": "https://huggingface.co/datasets/ashraq/fashion-product-images-small",
+ "license": "[cần xác minh] – bản gốc Kaggle paramaggarwal/fashion-product-images-dataset",
+ "product_type": "accessory",
+ "sub_category": "bag",
+ "gender": "Unisex",
+ "size_system": "none",
+ "view_type": "studio",
+ "variant_id": null,
+ "language": "en"
+}

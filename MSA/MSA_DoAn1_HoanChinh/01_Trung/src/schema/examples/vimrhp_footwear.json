@@ -1,0 +1,48 @@
+{
+ "product_id": "shopee_19890682149",
+ "title": "Tông đi biển , dép kẹp đi biển độn đế cao cấp TA Store",
+ "category": "GiayDepNam",
+ "brand": null,
+ "price": null,
+ "currency": null,
+ "colors": [],
+ "sizes": [],
+ "description": null,
+ "specs": {
+  "image_urls": [
+   "https://down-bs-us.img.susercontent.com/vn-11134207-7qukw-lj4mtvukba36ff.webp"
+  ],
+  "taxonomy_rule": "vi.sandal"
+ },
+ "image_paths": [],
+ "rating": 5.0,
+ "rating_count": 24,
+ "reviews": [
+  {
+   "review_id": "12134624341",
+   "rating": 5,
+   "text": "Đúng với mô tả:đúng\nMàu sắc:hồng\nChất liệu:kbt\n\nDép xinh quá trời màu ở ngoài hồng xinh lắm tươi hơn trên ảnh nhiều ạ giao hàng nhanh",
+   "date": "2023-07-31T08:34:30.000Z",
+   "helpfulness": 3,
+   "detail_rating": "product_quality: 5\nseller_service: 5\ndelivery_service: 5"
+  },
+  {
+   "review_id": "12275157908",
+   "rating": 5,
+   "text": "Đúng với mô tả:đẹp và êm\nChất liệu:êm\nMàu sắc:đen\n\nDép đẹp và êm anh shipper dễ thương nữa em sẽ ủng hộ shop thêm",
+   "date": "2023-08-14T04:58:06.000Z",
+   "helpfulness": 4,
+   "detail_rating": "product_quality: 5\nseller_service: 5\ndelivery_service: 5"
+  }
+ ],
+ "source": "vimrhp_shopee",
+ "source_url": "https://shopee.vn/T%C3%B4ng-%C4%91i-bi%E1%BB%83n-d%C3%A9p-k%E1%BA%B9p-%C4%91i-bi%E1%BB%83n-%C4%91%E1%BB%99n-%C4%91%E1%BA%BF-cao-c%E1%BA%A5p-TA-Store-i.172758460.19890682149",
+ "license": "CC BY-NC-ND 4.0 (ViMRHP, NLDB 2025) – chỉ dùng nội bộ học thuật, không phát hành lại bản đã chỉnh",
+ "product_type": "footwear",
+ "sub_category": "sandal",
+ "gender": null,
+ "size_system": "none",
+ "view_type": "unknown",
+ "variant_id": null,
+ "language": "vi"
+}

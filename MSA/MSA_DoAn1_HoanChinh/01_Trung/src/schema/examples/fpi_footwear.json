@@ -1,0 +1,35 @@
+{
+ "product_id": "fpi_21744",
+ "title": "Vans Unisex Classic Slip-On Black Casual Shoe",
+ "category": "Footwear/Shoes/Casual Shoes",
+ "brand": "Vans",
+ "price": null,
+ "currency": null,
+ "colors": [
+  "Black"
+ ],
+ "sizes": [],
+ "description": null,
+ "specs": {
+  "season": "Fall",
+  "usage": "Casual",
+  "year": 2011,
+  "articleType": "Casual Shoes"
+ },
+ "image_paths": [
+  "fpi_images/21744.jpg"
+ ],
+ "rating": null,
+ "rating_count": null,
+ "reviews": [],
+ "source": "fashion_product_images_small",
+ "source_url": "https://huggingface.co/datasets/ashraq/fashion-product-images-small",
+ "license": "[cần xác minh] – bản gốc Kaggle paramaggarwal/fashion-product-images-dataset",
+ "product_type": "footwear",
+ "sub_category": "sneaker",
+ "gender": "Unisex",
+ "size_system": "none",
+ "view_type": "studio",
+ "variant_id": null,
+ "language": "en"
+}

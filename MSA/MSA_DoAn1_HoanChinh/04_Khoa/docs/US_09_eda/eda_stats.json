@@ -1,0 +1,260 @@
+{
+ "data_version": "shared_data v1 (prep_shared_data.py seed 42)",
+ "catalog": {
+  "n": 4593,
+  "by_type": {
+   "clothing": 2200,
+   "footwear": 1400,
+   "accessory": 700,
+   "headwear": 293
+  },
+  "by_sub": {
+   "accessory/bag": 465,
+   "accessory/belt": 100,
+   "accessory/eyewear": 135,
+   "clothing/bottom": 355,
+   "clothing/dress": 72,
+   "clothing/outerwear": 52,
+   "clothing/top": 1721,
+   "footwear/heel_flat*": 270,
+   "footwear/leather_shoe": 95,
+   "footwear/sandal": 306,
+   "footwear/sneaker": 729,
+   "headwear/cap": 283,
+   "headwear/unknown": 7,
+   "headwear/wide_brim*": 3
+  },
+  "n_article_types": 37,
+  "by_gender": {
+   "Men": 2367,
+   "Women": 1576,
+   "Unisex": 459,
+   "Boys": 104,
+   "Girls": 87
+  },
+  "top_colours": {
+   "Black": 1077,
+   "White": 578,
+   "Blue": 559,
+   "Brown": 392,
+   "Grey": 322,
+   "Red": 287,
+   "Navy Blue": 212,
+   "Green": 192,
+   "Purple": 169,
+   "Pink": 152,
+   "Yellow": 86,
+   "Beige": 80,
+   "Olive": 58,
+   "Orange": 47,
+   "Maroon": 45
+  },
+  "n_colours": 42,
+  "by_season": {
+   "Summer": 2400,
+   "Fall": 1433,
+   "Winter": 671,
+   "Spring": 89
+  },
+  "by_usage": {
+   "Casual": 3518,
+   "Sports": 570,
+   "Formal": 258,
+   "Ethnic": 237,
+   "Smart Casual": 5,
+   "Party": 3,
+   "Travel": 2
+  },
+  "year_min_max": [
+   2008.0,
+   2018.0
+  ],
+  "brands_n": 248,
+  "missing_rate": {
+   "title": 0.0,
+   "brand": 0.0,
+   "price": 1.0,
+   "description": 1.0,
+   "colors": 0.0,
+   "sizes": 1.0,
+   "rating": 1.0,
+   "reviews": 1.0,
+   "season": 0.0,
+   "usage": 0.0
+  },
+  "title_words": {
+   "mean": 5.8,
+   "median": 6.0,
+   "min": 3,
+   "max": 11
+  },
+  "dup_title_rows": 785,
+  "dup_title_groups": 325,
+  "lang_title_vi_rate": 0.0,
+  "image_sizes": {
+   "60x80": 4593
+  },
+  "image_kb": {
+   "mean": 12.09,
+   "p05": 1.34,
+   "p95": 24.47
+  },
+  "white_bg_ratio": {
+   "mean": 0.687,
+   "p05": 0.511,
+   "p50": 0.711,
+   "share_lt_0.2": 0.017
+  },
+  "white_bg_by_type": {
+   "accessory": 0.745,
+   "clothing": 0.603,
+   "footwear": 0.774,
+   "headwear": 0.771
+  }
+ },
+ "fpi_raw": {
+  "n": 44072,
+  "by_master": {
+   "Apparel": 21361,
+   "Accessories": 11244,
+   "Footwear": 9197,
+   "Personal Care": 2139,
+   "Free Items": 105,
+   "Sporting Goods": 25,
+   "Home": 1
+  },
+  "n_article_types": 141,
+  "top_article_types": {
+   "Tshirts": 7065,
+   "Shirts": 3212,
+   "Casual Shoes": 2845,
+   "Watches": 2542,
+   "Sports Shoes": 2016,
+   "Kurtas": 1844,
+   "Tops": 1762,
+   "Handbags": 1759,
+   "Heels": 1323,
+   "Sunglasses": 1073,
+   "Wallets": 928,
+   "Flip Flops": 914,
+   "Sandals": 895,
+   "Briefs": 847,
+   "Belts": 813,
+   "Backpacks": 724,
+   "Socks": 686,
+   "Formal Shoes": 637,
+   "Perfume and Body Mist": 603,
+   "Jeans": 602,
+   "Shorts": 547,
+   "Trousers": 530,
+   "Flats": 500,
+   "Bra": 477,
+   "Dresses": 464
+  },
+  "by_gender": {
+   "Men": 22104,
+   "Women": 18357,
+   "Unisex": 2126,
+   "Boys": 830,
+   "Girls": 655
+  },
+  "missing": {
+   "id": 0,
+   "gender": 0,
+   "masterCategory": 0,
+   "subCategory": 0,
+   "articleType": 0,
+   "baseColour": 0,
+   "season": 0,
+   "year": 0,
+   "usage": 0,
+   "productDisplayName": 0
+  },
+  "headwear_rows": {
+   "Caps": 283,
+   "Headband": 7,
+   "Hat": 3
+  },
+  "footwear_boot_rows": 26,
+  "beanie_rows_by_name": 19,
+  "bucket_rows_by_name": 1,
+  "catalog_coverage": 0.1042
+ },
+ "vimrhp": {
+  "n_products": 509,
+  "n_reviews": 11009,
+  "by_sub": {
+   "ThoiTrangNu": 94,
+   "GiayDepNu": 92,
+   "ThoiTrangNam": 87,
+   "DongHo": 81,
+   "GiayDepNam": 79,
+   "PhuKienNu": 76
+  },
+  "in_scope_products_excl_DongHo": 428,
+  "reviews_per_product": {
+   "mean": 21.63,
+   "median": 23.0,
+   "min": 3,
+   "max": 43
+  },
+  "rating_dist": {
+   "1": 133,
+   "2": 51,
+   "3": 134,
+   "4": 407,
+   "5": 10284
+  },
+  "rating_mean": 4.876,
+  "review_words": {
+   "mean": 32.22,
+   "median": 29.0,
+   "p95": 62.0
+  },
+  "review_vi_rate": 0.9977,
+  "review_empty_or_lt3_words": 0.0031,
+  "review_template_rate": 0.5776,
+  "review_dup_text_rate": 0.0191,
+  "title_words": {
+   "mean": 18.27,
+   "median": 18.0
+  },
+  "has_image_url_rate": 1.0,
+  "fields": [
+   "image_urls",
+   "n_reviews",
+   "product_id",
+   "reviews",
+   "source_url",
+   "title",
+   "title_words",
+   "vimrhp_subcategory"
+  ],
+  "missing_fields_vs_schema": [
+   "description",
+   "price",
+   "sizes",
+   "specs",
+   "colors"
+  ],
+  "rating_by_sub": {
+   "DongHo": 4.887,
+   "GiayDepNam": 4.933,
+   "GiayDepNu": 4.898,
+   "PhuKienNu": 4.878,
+   "ThoiTrangNam": 4.763,
+   "ThoiTrangNu": 4.902
+  }
+ },
+ "charts": [
+  "01_catalog_type_sub.png",
+  "02_fpi_raw_article_types.png",
+  "03_gender_by_type.png",
+  "04_colours_top15.png",
+  "05_season_usage.png",
+  "06_image_whitebg_filesize.png",
+  "07_title_review_length.png",
+  "08_vimrhp_rating_sub.png",
+  "09_sample_images.png"
+ ]
+}

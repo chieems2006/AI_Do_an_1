@@ -1,0 +1,12 @@
+tfidf_char {"theo_product_id": [0.8325, 0.4999], "toan_kho": [0.1196, 0.0683]}
+bm25 {"theo_product_id": [0.8373, 0.4965], "toan_kho": [0.1627, 0.093]}
+bm25+rewrite {"theo_product_id": [0.8182, 0.4958], "toan_kho": [0.1627, 0.0875]}
+Could not reach the Hub (Cannot reach https://huggingface.co/api/models/intfloat/multilingual-e5-small: offline mode is enabled. To disable it, please unset the `HF_HUB_OFFLINE` environment variable.). Using cached commit hash for 'intfloat/multilingual-e5-small'.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 21375.40it/s]
+dense:intfloat/multilingual-e5-small {"theo_product_id": [0.7943, 0.49], "toan_kho": [0.1196, 0.082]}
+Could not reach the Hub (Cannot reach https://huggingface.co/api/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2: offline mode is enabled. To disable it, please unset the `HF_HUB_OFFLINE` environment variable.). Using cached commit hash for 'sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2'.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 18298.87it/s]
+dense:sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 {"theo_product_id": [0.756, 0.4912], "toan_kho": [0.0239, 0.0203]}
+Could not reach the Hub (Cannot reach https://huggingface.co/api/models/intfloat/multilingual-e5-small: offline mode is enabled. To disable it, please unset the `HF_HUB_OFFLINE` environment variable.). Using cached commit hash for 'intfloat/multilingual-e5-small'.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 17792.17it/s]
+hybrid(bm25+dense:intfloat/multilingual-e5-small) {"theo_product_id": [0.866, 0.5484], "toan_kho": [0.177, 0.1033]}

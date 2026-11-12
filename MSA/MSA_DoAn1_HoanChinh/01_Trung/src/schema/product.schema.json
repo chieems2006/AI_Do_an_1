@@ -1,0 +1,361 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://msa.local/schema/product.schema.json",
+ "title": "MSA Product v1 (US_05)",
+ "description": "Schema sản phẩm chuẩn của MSA. Mọi khoá phải có mặt; trường 'tuỳ chọn' cho phép null. Taxonomy theo US_49 (taxonomy.md v1).",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "product_id",
+  "title",
+  "category",
+  "brand",
+  "price",
+  "currency",
+  "colors",
+  "sizes",
+  "description",
+  "specs",
+  "image_paths",
+  "rating",
+  "rating_count",
+  "reviews",
+  "source",
+  "source_url",
+  "license",
+  "product_type",
+  "sub_category",
+  "gender",
+  "size_system",
+  "view_type",
+  "variant_id",
+  "language"
+ ],
+ "properties": {
+  "product_id": {
+   "type": "string",
+   "pattern": "^[a-z0-9]+_[A-Za-z0-9_-]+$",
+   "description": "<nguồn>_<id gốc>, vd fpi_21744, shopee_18390665755. BẮT BUỘC, duy nhất."
+  },
+  "title": {
+   "type": "string",
+   "minLength": 2,
+   "description": "Tên sản phẩm gốc. BẮT BUỘC."
+  },
+  "category": {
+   "type": [
+    "string",
+    "null"
+   ],
+   "description": "Nhãn gốc của nguồn (giữ để truy vết), vd 'Footwear/Shoes/Casual Shoes' hoặc 'GiayDepNu'."
+  },
+  "brand": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "price": {
+   "type": [
+    "number",
+    "null"
+   ],
+   "minimum": 0,
+   "description": "Giá bán; null nếu nguồn không có (FPI, ViMRHP). KHÔNG được bịa."
+  },
+  "currency": {
+   "type": [
+    "string",
+    "null"
+   ],
+   "enum": [
+    "VND",
+    "USD",
+    "INR",
+    null
+   ]
+  },
+  "colors": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "sizes": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "description": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "specs": {
+   "type": [
+    "object",
+    "null"
+   ],
+   "description": "Thuộc tính có cấu trúc (season, usage, material, articleType...)."
+  },
+  "image_paths": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   },
+   "description": "Đường dẫn ảnh cục bộ tương đối data/; có thể rỗng nếu nguồn chỉ có URL không tải được (ghi URL ở specs.image_urls)."
+  },
+  "rating": {
+   "type": [
+    "number",
+    "null"
+   ],
+   "minimum": 0,
+   "maximum": 5
+  },
+  "rating_count": {
+   "type": [
+    "integer",
+    "null"
+   ],
+   "minimum": 0
+  },
+  "reviews": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "review_id",
+     "text"
+    ],
+    "properties": {
+     "review_id": {
+      "type": "string"
+     },
+     "rating": {
+      "type": [
+       "number",
+       "null"
+      ],
+      "minimum": 0,
+      "maximum": 5
+     },
+     "text": {
+      "type": "string"
+     },
+     "date": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "helpfulness": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "detail_rating": {
+      "type": [
+       "string",
+       "null"
+      ]
+     }
+    }
+   }
+  },
+  "source": {
+   "type": "string",
+   "enum": [
+    "fashion_product_images_small",
+    "vimrhp_shopee",
+    "crawl_vn",
+    "self_photo",
+    "clothing_dataset_cc0",
+    "abo",
+    "amazon_reviews_2023"
+   ]
+  },
+  "source_url": {
+   "type": "string",
+   "minLength": 4
+  },
+  "license": {
+   "type": "string",
+   "minLength": 2
+  },
+  "product_type": {
+   "type": "string",
+   "enum": [
+    "footwear",
+    "clothing",
+    "headwear",
+    "accessory"
+   ]
+  },
+  "sub_category": {
+   "type": "string",
+   "enum": [
+    "bag",
+    "beanie",
+    "belt",
+    "boot",
+    "bottom",
+    "bucket",
+    "cap",
+    "dress",
+    "eyewear",
+    "heel_flat",
+    "leather_shoe",
+    "outerwear",
+    "sandal",
+    "sneaker",
+    "top",
+    "wide_brim",
+    "unknown"
+   ]
+  },
+  "gender": {
+   "type": [
+    "string",
+    "null"
+   ],
+   "enum": [
+    "Men",
+    "Women",
+    "Unisex",
+    "Boys",
+    "Girls",
+    null
+   ]
+  },
+  "size_system": {
+   "type": "string",
+   "enum": [
+    "EU",
+    "US",
+    "UK",
+    "VN",
+    "alpha",
+    "free",
+    "numeric_waist",
+    "none"
+   ]
+  },
+  "view_type": {
+   "type": "string",
+   "enum": [
+    "studio",
+    "on_model",
+    "lifestyle",
+    "user_photo",
+    "unknown"
+   ]
+  },
+  "variant_id": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "language": {
+   "type": "string",
+   "enum": [
+    "vi",
+    "en"
+   ]
+  }
+ },
+ "allOf": [
+  {
+   "if": {
+    "properties": {
+     "product_type": {
+      "const": "footwear"
+     }
+    }
+   },
+   "then": {
+    "properties": {
+     "sub_category": {
+      "enum": [
+       "sneaker",
+       "leather_shoe",
+       "sandal",
+       "boot",
+       "heel_flat",
+       "unknown"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "if": {
+    "properties": {
+     "product_type": {
+      "const": "clothing"
+     }
+    }
+   },
+   "then": {
+    "properties": {
+     "sub_category": {
+      "enum": [
+       "top",
+       "bottom",
+       "dress",
+       "outerwear",
+       "unknown"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "if": {
+    "properties": {
+     "product_type": {
+      "const": "headwear"
+     }
+    }
+   },
+   "then": {
+    "properties": {
+     "sub_category": {
+      "enum": [
+       "cap",
+       "beanie",
+       "bucket",
+       "wide_brim",
+       "unknown"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "if": {
+    "properties": {
+     "product_type": {
+      "const": "accessory"
+     }
+    }
+   },
+   "then": {
+    "properties": {
+     "sub_category": {
+      "enum": [
+       "bag",
+       "belt",
+       "eyewear",
+       "unknown"
+      ]
+     }
+    }
+   }
+  }
+ ]
+}

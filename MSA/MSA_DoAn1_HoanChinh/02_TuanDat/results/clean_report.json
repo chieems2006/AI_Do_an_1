@@ -1,0 +1,228 @@
+{
+ "input": "/home/claude/work/shared_data/catalog_fpi.parquet",
+ "config": {
+  "phash_max_dist": 4,
+  "min_side": 32,
+  "blank_std": 3.0,
+  "cap": 800,
+  "quota": {
+   "footwear": 1200,
+   "clothing": 2000,
+   "accessory": 500,
+   "headwear": 300
+  },
+  "seed": 42,
+  "sample_per_type": 100,
+  "drop_title_jaccard": 0.6,
+  "fix_brand": true
+ },
+ "before": {
+  "n": 4593,
+  "by_type": {
+   "accessory": 700,
+   "clothing": 2200,
+   "footwear": 1400,
+   "headwear": 293
+  },
+  "by_leaf": {
+   "accessory/bag": 465,
+   "accessory/belt": 100,
+   "accessory/eyewear": 135,
+   "clothing/bottom": 355,
+   "clothing/dress": 72,
+   "clothing/outerwear": 52,
+   "clothing/top": 1721,
+   "footwear/heel_flat*": 270,
+   "footwear/leather_shoe": 95,
+   "footwear/sandal": 306,
+   "footwear/sneaker": 729,
+   "headwear/cap": 283,
+   "headwear/unknown": 7,
+   "headwear/wide_brim*": 3
+  }
+ },
+ "text_fields_changed": 59,
+ "brand_fixed": 1304,
+ "brand_unique_before_after": [
+  248,
+  302
+ ],
+ "missing_rate": {
+  "title": 0.0,
+  "brand": 0.0,
+  "price": 1.0,
+  "description": 1.0,
+  "rating": 1.0
+ },
+ "images": {
+  "checked": 4593,
+  "status": {
+   "ok": 4593
+  },
+  "size_wh": {
+   "60x80": 4593
+  },
+  "mode": {
+   "RGB": 4556,
+   "L": 37
+  },
+  "bad_rate": 0.0
+ },
+ "removed_bad_images": 0,
+ "exact_md5_duplicates": 20,
+ "phash_pairs_global_by_threshold": {
+  "0": 52,
+  "2": 634,
+  "4": 3937,
+  "6": 13940,
+  "8": 36724
+ },
+ "phash_pairs_global_cross_type_le_thr": 5,
+ "dedupe": {
+  "pairs_le_thr_total": 3937,
+  "pairs_same_type_brand": 395,
+  "pairs_action": {
+   "keep_both_diff_group": 3542,
+   "variant": 252,
+   "review": 122,
+   "drop_b": 21
+  },
+  "removed_duplicates": 21
+ },
+ "variant_groups": 120,
+ "title_refined": {
+  "cap->beanie": 18,
+  "cap->wide_brim": 6,
+  "wide_brim->beanie": 3
+ },
+ "unmapped_labels": [],
+ "removed_unknown_category": 7,
+ "removed_unknown_labels": {
+  "Headband": 7
+ },
+ "color_norm_dist": {
+  "black": 1097,
+  "blue": 784,
+  "white": 618,
+  "brown": 432,
+  "grey": 377,
+  "red": 340,
+  "green": 256,
+  "purple": 182,
+  "pink": 175,
+  "yellow": 135,
+  "beige": 96,
+  "orange": 47,
+  "multi": 26
+ },
+ "size_system_dist": {
+  "none": 4565
+ },
+ "before_cap": {
+  "n": 4565,
+  "by_type": {
+   "accessory": 700,
+   "clothing": 2180,
+   "footwear": 1400,
+   "headwear": 285
+  },
+  "by_leaf": {
+   "accessory/bag": 465,
+   "accessory/belt": 100,
+   "accessory/eyewear": 135,
+   "clothing/bottom": 349,
+   "clothing/dress": 70,
+   "clothing/outerwear": 52,
+   "clothing/top": 1709,
+   "footwear/heel_flat": 270,
+   "footwear/leather_shoe": 95,
+   "footwear/sandal": 306,
+   "footwear/sneaker": 729,
+   "headwear/beanie": 21,
+   "headwear/cap": 258,
+   "headwear/wide_brim": 6
+  }
+ },
+ "cap": {
+  "cap": 800,
+  "dropped_by_type": {
+   "accessory": 0,
+   "clothing": 180,
+   "footwear": 0,
+   "headwear": 0
+  },
+  "dropped": 180
+ },
+ "after": {
+  "n": 4385,
+  "by_type": {
+   "accessory": 700,
+   "clothing": 2000,
+   "footwear": 1400,
+   "headwear": 285
+  },
+  "by_leaf": {
+   "accessory/bag": 465,
+   "accessory/belt": 100,
+   "accessory/eyewear": 135,
+   "clothing/bottom": 349,
+   "clothing/dress": 70,
+   "clothing/outerwear": 52,
+   "clothing/top": 1529,
+   "footwear/heel_flat": 270,
+   "footwear/leather_shoe": 95,
+   "footwear/sandal": 306,
+   "footwear/sneaker": 729,
+   "headwear/beanie": 21,
+   "headwear/cap": 258,
+   "headwear/wide_brim": 6
+  }
+ },
+ "quota_check": {
+  "footwear": {
+   "quota": 1200,
+   "have": 1400,
+   "ok": true
+  },
+  "clothing": {
+   "quota": 2000,
+   "have": 2000,
+   "ok": true
+  },
+  "accessory": {
+   "quota": 500,
+   "have": 700,
+   "ok": true
+  },
+  "headwear": {
+   "quota": 300,
+   "have": 285,
+   "ok": false
+  }
+ },
+ "category_coverage": 1.0,
+ "label_check_auto_title": {
+  "accessory": {
+   "n": 100,
+   "inconsistent": 0,
+   "inconsistent_rate": 0.0
+  },
+  "clothing": {
+   "n": 100,
+   "inconsistent": 0,
+   "inconsistent_rate": 0.0
+  },
+  "footwear": {
+   "n": 100,
+   "inconsistent": 0,
+   "inconsistent_rate": 0.0
+  },
+  "headwear": {
+   "n": 100,
+   "inconsistent": 1,
+   "inconsistent_rate": 0.01
+  }
+ },
+ "label_check_human": "CHƯA ĐO – 2 người điền label_ok_annotator_1/2 trong results/label_check_sample.csv",
+ "runtime_s": 12.8
+}

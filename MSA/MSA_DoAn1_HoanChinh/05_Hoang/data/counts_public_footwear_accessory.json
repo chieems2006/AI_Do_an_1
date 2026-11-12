@@ -1,0 +1,86 @@
+{
+ "name": "public_footwear_accessory",
+ "product_types": [
+  "accessory",
+  "footwear"
+ ],
+ "output": "data/processed/public_footwear_accessory.parquet",
+ "counts": {
+  "total": 2335,
+  "by_type": {
+   "footwear": 1571,
+   "accessory": 764
+  },
+  "by_sub": {
+   "accessory/bag": 467,
+   "accessory/belt": 106,
+   "accessory/eyewear": 142,
+   "accessory/unknown": 49,
+   "footwear/heel_flat*": 319,
+   "footwear/leather_shoe": 95,
+   "footwear/sandal": 400,
+   "footwear/sneaker": 731,
+   "footwear/unknown": 26
+  },
+  "by_source": {
+   "fashion_product_images_small": 2100,
+   "vimrhp_shopee": 235
+  },
+  "quota_check": {
+   "footwear": {
+    "min": 1200,
+    "have": 1571,
+    "ok": true
+   },
+   "accessory": {
+    "min": 500,
+    "have": 764,
+    "ok": true
+   }
+  }
+ },
+ "schema_errors": [],
+ "catalog_sha256": "6eb4ee569336ff4510951cb71902f47f4c826dbe8cccaabd35654cc86807e9a7",
+ "images_sha256": "73db35ba65d7c2eb961f9ff245e6442591fde06064abc99cd8fa063f91532a43",
+ "n_images": 2100,
+ "elapsed_s": 7.0,
+ "fpi_rows_total": 44072,
+ "fpi_available_by_sub": {
+  "accessory/bag": 2985,
+  "accessory/belt": 813,
+  "accessory/eyewear": 1073,
+  "footwear/heel_flat*": 1823,
+  "footwear/leather_shoe": 637,
+  "footwear/sandal": 1876,
+  "footwear/sneaker": 4861
+ },
+ "fpi_selected": 2100,
+ "vimrhp_selected": 235,
+ "vimrhp_reviews": 5196,
+ "vimrhp_type_rule": {
+  "title_keyword": 182,
+  "group_default": 53
+ },
+ "raw_file_sha256": {
+  "train-00000-of-00002-6cff4c59f91661c3.parquet": "0f9b4042c6eea3c77aa0794630c956d1985de791c365abdb332f9d9cfa78d00a",
+  "train-00001-of-00002-bb459e5ac5f01e71.parquet": "57937f698f0bef26a2c3c3772134901ad9c42b97eeedfae9573d852cf72210c6",
+  "Fashion-dev.json": "8aebdd0e8b4efeee40a78f347699f64d38f382f17b0e4d9a8cf2a9d021f8c11a",
+  "Fashion-test.json": "7f94440411dbf47dc5c7db9d55d71a1af940c2cd7daa265eef0e26c73a1a006a",
+  "Fashion-train.json": "37e56045f053be677c238f1d6ac92665b4dd85e38c7ec85a3d4ed30831202fbb"
+ },
+ "seed": 42,
+ "quota": {
+  "footwear": 1400,
+  "clothing": 2200,
+  "accessory": 700,
+  "headwear": 10000
+ },
+ "created": "2026-11-04 23:57:56",
+ "repro_check": {
+  "run2_catalog_sha256": "6eb4ee569336ff4510951cb71902f47f4c826dbe8cccaabd35654cc86807e9a7",
+  "run2_images_sha256": "73db35ba65d7c2eb961f9ff245e6442591fde06064abc99cd8fa063f91532a43",
+  "same_catalog": true,
+  "same_images": true,
+  "parquet_roundtrip_same": true
+ }
+}

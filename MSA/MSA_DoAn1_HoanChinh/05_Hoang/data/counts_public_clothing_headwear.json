@@ -1,0 +1,85 @@
+{
+ "name": "public_clothing_headwear",
+ "product_types": [
+  "clothing",
+  "headwear"
+ ],
+ "output": "data/processed/public_clothing_headwear.parquet",
+ "counts": {
+  "total": 2686,
+  "by_type": {
+   "clothing": 2388,
+   "headwear": 298
+  },
+  "by_sub": {
+   "clothing/bottom": 374,
+   "clothing/dress": 73,
+   "clothing/outerwear": 110,
+   "clothing/top": 1817,
+   "clothing/unknown": 14,
+   "headwear/cap": 286,
+   "headwear/unknown": 9,
+   "headwear/wide_brim*": 3
+  },
+  "by_source": {
+   "fashion_product_images_small": 2493,
+   "vimrhp_shopee": 193
+  },
+  "quota_check": {
+   "clothing": {
+    "min": 2000,
+    "have": 2388,
+    "ok": true
+   },
+   "headwear": {
+    "min": 300,
+    "have": 298,
+    "ok": false
+   }
+  }
+ },
+ "schema_errors": [],
+ "catalog_sha256": "9e105186f79058be0ced90e80fab16540f3796b33ab683b403861c0ad2fe5d64",
+ "images_sha256": "890ba2ea93f4858f69eea2db7646e42009190676fedfed651f210647de0660da",
+ "n_images": 2493,
+ "elapsed_s": 41.1,
+ "fpi_rows_total": 44072,
+ "fpi_available_by_sub": {
+  "clothing/bottom": 2463,
+  "clothing/dress": 480,
+  "clothing/outerwear": 273,
+  "clothing/top": 14445,
+  "headwear/cap": 283,
+  "headwear/unknown": 7,
+  "headwear/wide_brim*": 3
+ },
+ "fpi_selected": 2493,
+ "vimrhp_selected": 193,
+ "vimrhp_reviews": 4207,
+ "vimrhp_type_rule": {
+  "title_keyword": 190,
+  "group_default": 3
+ },
+ "raw_file_sha256": {
+  "train-00000-of-00002-6cff4c59f91661c3.parquet": "0f9b4042c6eea3c77aa0794630c956d1985de791c365abdb332f9d9cfa78d00a",
+  "train-00001-of-00002-bb459e5ac5f01e71.parquet": "57937f698f0bef26a2c3c3772134901ad9c42b97eeedfae9573d852cf72210c6",
+  "Fashion-dev.json": "8aebdd0e8b4efeee40a78f347699f64d38f382f17b0e4d9a8cf2a9d021f8c11a",
+  "Fashion-test.json": "7f94440411dbf47dc5c7db9d55d71a1af940c2cd7daa265eef0e26c73a1a006a",
+  "Fashion-train.json": "37e56045f053be677c238f1d6ac92665b4dd85e38c7ec85a3d4ed30831202fbb"
+ },
+ "seed": 42,
+ "quota": {
+  "footwear": 1400,
+  "clothing": 2200,
+  "accessory": 700,
+  "headwear": 10000
+ },
+ "created": "2026-11-05 06:52:43",
+ "repro_check": {
+  "run2_catalog_sha256": "9e105186f79058be0ced90e80fab16540f3796b33ab683b403861c0ad2fe5d64",
+  "run2_images_sha256": "890ba2ea93f4858f69eea2db7646e42009190676fedfed651f210647de0660da",
+  "same_catalog": true,
+  "same_images": true,
+  "parquet_roundtrip_same": true
+ }
+}

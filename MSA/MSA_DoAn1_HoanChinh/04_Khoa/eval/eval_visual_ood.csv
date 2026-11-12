@@ -1,0 +1,61 @@
+query_id,query_image,gt_product_ids,product_type,sub_category,article_type,split,tier,source,origin
+vq_ood_perso_000,eval/queries/vq_ood_perso_000.jpg,,ood,personal_care,Deodorant,val,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_perso_001,eval/queries/vq_ood_perso_001.jpg,,ood,personal_care,Perfume and Body Mist,val,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_perso_002,eval/queries/vq_ood_perso_002.jpg,,ood,personal_care,Lipstick,val,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_perso_003,eval/queries/vq_ood_perso_003.jpg,,ood,personal_care,Deodorant,val,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_perso_004,eval/queries/vq_ood_perso_004.jpg,,ood,personal_care,Deodorant,val,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_perso_005,eval/queries/vq_ood_perso_005.jpg,,ood,personal_care,Lipstick,val,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_perso_006,eval/queries/vq_ood_perso_006.jpg,,ood,personal_care,Nail Polish,val,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_perso_007,eval/queries/vq_ood_perso_007.jpg,,ood,personal_care,Lipstick,val,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_perso_008,eval/queries/vq_ood_perso_008.jpg,,ood,personal_care,Deodorant,val,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_perso_009,eval/queries/vq_ood_perso_009.jpg,,ood,personal_care,Lipstick,val,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_perso_010,eval/queries/vq_ood_perso_010.jpg,,ood,personal_care,Perfume and Body Mist,val,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_perso_011,eval/queries/vq_ood_perso_011.jpg,,ood,personal_care,Perfume and Body Mist,val,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_perso_012,eval/queries/vq_ood_perso_012.jpg,,ood,personal_care,Lipstick,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_perso_013,eval/queries/vq_ood_perso_013.jpg,,ood,personal_care,Deodorant,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_perso_014,eval/queries/vq_ood_perso_014.jpg,,ood,personal_care,Lip Gloss,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_perso_015,eval/queries/vq_ood_perso_015.jpg,,ood,personal_care,Perfume and Body Mist,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_perso_016,eval/queries/vq_ood_perso_016.jpg,,ood,personal_care,Nail Polish,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_perso_017,eval/queries/vq_ood_perso_017.jpg,,ood,personal_care,Deodorant,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_perso_018,eval/queries/vq_ood_perso_018.jpg,,ood,personal_care,Hair Colour,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_perso_019,eval/queries/vq_ood_perso_019.jpg,,ood,personal_care,Lip Liner,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_perso_020,eval/queries/vq_ood_perso_020.jpg,,ood,personal_care,Lipstick,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_perso_021,eval/queries/vq_ood_perso_021.jpg,,ood,personal_care,Deodorant,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_perso_022,eval/queries/vq_ood_perso_022.jpg,,ood,personal_care,Perfume and Body Mist,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_perso_023,eval/queries/vq_ood_perso_023.jpg,,ood,personal_care,Lipstick,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_perso_024,eval/queries/vq_ood_perso_024.jpg,,ood,personal_care,Lip Liner,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_perso_025,eval/queries/vq_ood_perso_025.jpg,,ood,personal_care,Compact,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_perso_026,eval/queries/vq_ood_perso_026.jpg,,ood,personal_care,Deodorant,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_perso_027,eval/queries/vq_ood_perso_027.jpg,,ood,personal_care,Nail Polish,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_perso_028,eval/queries/vq_ood_perso_028.jpg,,ood,personal_care,Perfume and Body Mist,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_perso_029,eval/queries/vq_ood_perso_029.jpg,,ood,personal_care,Lipstick,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_watch_000,eval/queries/vq_ood_watch_000.jpg,,ood,watches,Watches,val,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_watch_001,eval/queries/vq_ood_watch_001.jpg,,ood,watches,Watches,val,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_watch_002,eval/queries/vq_ood_watch_002.jpg,,ood,watches,Watches,val,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_watch_003,eval/queries/vq_ood_watch_003.jpg,,ood,watches,Watches,val,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_watch_004,eval/queries/vq_ood_watch_004.jpg,,ood,watches,Watches,val,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_watch_005,eval/queries/vq_ood_watch_005.jpg,,ood,watches,Watches,val,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_watch_006,eval/queries/vq_ood_watch_006.jpg,,ood,watches,Watches,val,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_watch_007,eval/queries/vq_ood_watch_007.jpg,,ood,watches,Watches,val,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_watch_008,eval/queries/vq_ood_watch_008.jpg,,ood,watches,Watches,val,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_watch_009,eval/queries/vq_ood_watch_009.jpg,,ood,watches,Watches,val,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_watch_010,eval/queries/vq_ood_watch_010.jpg,,ood,watches,Watches,val,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_watch_011,eval/queries/vq_ood_watch_011.jpg,,ood,watches,Watches,val,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_watch_012,eval/queries/vq_ood_watch_012.jpg,,ood,watches,Watches,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_watch_013,eval/queries/vq_ood_watch_013.jpg,,ood,watches,Watches,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_watch_014,eval/queries/vq_ood_watch_014.jpg,,ood,watches,Watches,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_watch_015,eval/queries/vq_ood_watch_015.jpg,,ood,watches,Watches,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_watch_016,eval/queries/vq_ood_watch_016.jpg,,ood,watches,Watches,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_watch_017,eval/queries/vq_ood_watch_017.jpg,,ood,watches,Watches,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_watch_018,eval/queries/vq_ood_watch_018.jpg,,ood,watches,Watches,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_watch_019,eval/queries/vq_ood_watch_019.jpg,,ood,watches,Watches,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_watch_020,eval/queries/vq_ood_watch_020.jpg,,ood,watches,Watches,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_watch_021,eval/queries/vq_ood_watch_021.jpg,,ood,watches,Watches,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_watch_022,eval/queries/vq_ood_watch_022.jpg,,ood,watches,Watches,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_watch_023,eval/queries/vq_ood_watch_023.jpg,,ood,watches,Watches,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_watch_024,eval/queries/vq_ood_watch_024.jpg,,ood,watches,Watches,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_watch_025,eval/queries/vq_ood_watch_025.jpg,,ood,watches,Watches,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_watch_026,eval/queries/vq_ood_watch_026.jpg,,ood,watches,Watches,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_watch_027,eval/queries/vq_ood_watch_027.jpg,,ood,watches,Watches,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_watch_028,eval/queries/vq_ood_watch_028.jpg,,ood,watches,Watches,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope
+vq_ood_watch_029,eval/queries/vq_ood_watch_029.jpg,,ood,watches,Watches,test,ood,fpi_out_of_scope,real_image_FPI_out_of_scope

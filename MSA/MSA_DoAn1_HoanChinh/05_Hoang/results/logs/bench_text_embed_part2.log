@@ -1,0 +1,23 @@
+== minilm-l12 11:42:30
+[11:42:31] model minilm-l12
+{"model": "minilm-l12", "model_name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2", "seed": 42, "n_queries_A": 428, "A_hit@1": 0.0467, "A_hit@5
+{"model": "minilm-l12", "model_name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2", "seed": 43, "n_queries_A": 428, "A_hit@1": 0.0421, "A_hit@5
+{"model": "minilm-l12", "model_name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2", "seed": 44, "n_queries_A": 428, "A_hit@1": 0.0631, "A_hit@5
+        model                                                   model_name  n_queries_A_mean  n_queries_A_std  A_hit@1_mean  A_hit@1_std  A_hit@5_mean  A_hit@5_
+0    e5-small                               intfloat/multilingual-e5-small             428.0              0.0      0.065421     0.004673      0.144860     0.019
+1  minilm-l12  sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2             428.0              0.0      0.050623     0.011042      0.119159     0.008
+2  tfidf_char                                               TF-IDF char_wb             428.0              0.0      0.085670     0.009443      0.167445     0.011
+3  tfidf_word                                                  TF-IDF word             428.0              0.0      0.059969     0.010536      0.147196     0.011
+rc=0
+== vn-sbert 12:04:25
+[12:04:25] model vn-sbert
+{"model": "vn-sbert", "model_name": "keepitreal/vietnamese-sbert", "seed": 42, "n_queries_A": 428, "A_hit@1": 0.0701, "A_hit@5": 0.1425, "A_hit@10": 0.2079, "A_
+{"model": "vn-sbert", "model_name": "keepitreal/vietnamese-sbert", "seed": 43, "n_queries_A": 428, "A_hit@1": 0.0678, "A_hit@5": 0.1589, "A_hit@10": 0.2079, "A_
+{"model": "vn-sbert", "model_name": "keepitreal/vietnamese-sbert", "seed": 44, "n_queries_A": 428, "A_hit@1": 0.0771, "A_hit@5": 0.1636, "A_hit@10": 0.222, "A_m
+        model                                                   model_name  n_queries_A_mean  n_queries_A_std  A_hit@1_mean  A_hit@1_std  A_hit@5_mean  A_hit@5_
+0    e5-small                               intfloat/multilingual-e5-small             428.0              0.0      0.065421     0.004673      0.144860     0.019
+1  minilm-l12  sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2             428.0              0.0      0.050623     0.011042      0.119159     0.008
+2  tfidf_char                                               TF-IDF char_wb             428.0              0.0      0.085670     0.009443      0.167445     0.011
+3  tfidf_word                                                  TF-IDF word             428.0              0.0      0.059969     0.010536      0.147196     0.011
+4    vn-sbert                                  keepitreal/vietnamese-sbert             428.0              0.0      0.071651     0.004864      0.154984     0.011
+rc=0

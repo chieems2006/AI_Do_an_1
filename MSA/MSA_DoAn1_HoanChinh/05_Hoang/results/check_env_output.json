@@ -1,0 +1,177 @@
+{
+ "python": "3.13.18",
+ "platform": "Linux-6.18.44-fc-v233-x86_64-with-glibc2.39",
+ "cpu": 2,
+ "checks": [
+  {
+   "name": "python>=3.10",
+   "ok": true,
+   "required": true,
+   "detail": "3.13.18"
+  },
+  {
+   "name": "import numpy",
+   "ok": true,
+   "required": true,
+   "detail": "2.5.3 (ghim 2.5.3)"
+  },
+  {
+   "name": "import pandas",
+   "ok": true,
+   "required": true,
+   "detail": "3.0.5 (ghim 3.0.5)"
+  },
+  {
+   "name": "import pyarrow",
+   "ok": true,
+   "required": true,
+   "detail": "26.0.1 (ghim 26.0.1)"
+  },
+  {
+   "name": "import PIL",
+   "ok": true,
+   "required": true,
+   "detail": "12.3.0 (ghim 12.3.0)"
+  },
+  {
+   "name": "import imagehash",
+   "ok": true,
+   "required": true,
+   "detail": "4.3.2 (ghim 4.3.2)"
+  },
+  {
+   "name": "import sklearn",
+   "ok": true,
+   "required": true,
+   "detail": "1.9.1 (ghim 1.9.1)"
+  },
+  {
+   "name": "import faiss",
+   "ok": true,
+   "required": true,
+   "detail": "1.15.1 (ghim 1.15.1)"
+  },
+  {
+   "name": "import torch",
+   "ok": true,
+   "required": true,
+   "detail": "2.15.0 (ghim 2.15.0)"
+  },
+  {
+   "name": "import transformers",
+   "ok": true,
+   "required": true,
+   "detail": "5.22.1 (ghim 5.22.1)"
+  },
+  {
+   "name": "import sentence_transformers",
+   "ok": true,
+   "required": true,
+   "detail": "6.2.0 (ghim 6.2.0)"
+  },
+  {
+   "name": "import open_clip",
+   "ok": true,
+   "required": true,
+   "detail": "3.3.0 (ghim 3.3.0)"
+  },
+  {
+   "name": "import fastapi",
+   "ok": true,
+   "required": true,
+   "detail": "0.162.0 (ghim 0.162.0)"
+  },
+  {
+   "name": "import uvicorn",
+   "ok": true,
+   "required": true,
+   "detail": "0.54.0 (ghim 0.54.0)"
+  },
+  {
+   "name": "import httpx",
+   "ok": true,
+   "required": true,
+   "detail": "0.28.1 (ghim 0.28.1)"
+  },
+  {
+   "name": "import pydantic",
+   "ok": true,
+   "required": true,
+   "detail": "2.13.5 (ghim 2.13.5)"
+  },
+  {
+   "name": "import multipart",
+   "ok": true,
+   "required": true,
+   "detail": "0.0.32 (ghim 0.0.32)"
+  },
+  {
+   "name": "import pytest",
+   "ok": true,
+   "required": true,
+   "detail": "9.1.1 (ghim 9.1.1)"
+  },
+  {
+   "name": "import gradio",
+   "ok": true,
+   "required": false,
+   "detail": "6.31.0 (ghim 6.31.0)"
+  },
+  {
+   "name": "import matplotlib",
+   "ok": true,
+   "required": false,
+   "detail": "3.11.2 (ghim 3.11.2)"
+  },
+  {
+   "name": "import huggingface_hub",
+   "ok": true,
+   "required": false,
+   "detail": "2.4.0 (ghim 2.4.0)"
+  },
+  {
+   "name": "RAM >= 6 GB",
+   "ok": true,
+   "required": false,
+   "detail": "7.8 GB"
+  },
+  {
+   "name": "đĩa trống >= 5 GB",
+   "ok": true,
+   "required": false,
+   "detail": "13.4 GB"
+  },
+  {
+   "name": "cấu trúc thư mục",
+   "ok": true,
+   "required": false,
+   "detail": "đủ"
+  },
+  {
+   "name": "GEMINI_API_KEY đã đặt",
+   "ok": false,
+   "required": false,
+   "detail": "không – đặt trong .env hoặc MSA_LLM_MOCK=1"
+  },
+  {
+   "name": "GEMINI_MODEL",
+   "ok": true,
+   "required": false,
+   "detail": "gemini-3.5-flash (mặc định)"
+  },
+  {
+   "name": "faiss search",
+   "ok": true,
+   "required": true,
+   "detail": "IndexFlatIP OK"
+  },
+  {
+   "name": "torch CPU matmul",
+   "ok": true,
+   "required": true,
+   "detail": "threads=2"
+  }
+ ],
+ "elapsed_s": 17.45,
+ "ok": true
+}

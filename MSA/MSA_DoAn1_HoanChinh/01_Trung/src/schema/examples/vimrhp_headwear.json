@@ -1,0 +1,48 @@
+{
+ "product_id": "shopee_18888927612",
+ "title": "Mũ chống nắng nửa đầu Hàn Quốc, nón vành rộng có móc đeo khẩu trang, mũ chống nắng buộc tóc đuôi ngựa.",
+ "category": "PhuKienNu",
+ "brand": null,
+ "price": null,
+ "currency": null,
+ "colors": [],
+ "sizes": [],
+ "description": null,
+ "specs": {
+  "image_urls": [
+   "https://down-bs-us.img.susercontent.com/vn-11134207-7qukw-lh086etewnhv25.webp"
+  ],
+  "taxonomy_rule": "vi.wide_brim"
+ },
+ "image_paths": [],
+ "rating": 4.917,
+ "rating_count": 24,
+ "reviews": [
+  {
+   "review_id": "14959985675",
+   "rating": 5,
+   "text": "sản phẩm quá đẹp a, mọi người mua nhé, quá ngon bổ rẻ quá bất ngờ với chất lượng luôn a",
+   "date": "2024-04-22T11:36:34.000Z",
+   "helpfulness": 3,
+   "detail_rating": "product_quality: 5\nseller_service: 5\ndelivery_service: 5\ndriver_service: 5"
+  },
+  {
+   "review_id": "11610251515",
+   "rating": 5,
+   "text": "Lần đầu tiên mua hàng của shop , hàng rất đẹp mẫu mã đa dạng giao hàng nhanh mũ hơi mềm nhưng đẹp lắm nói chung là với giá này là quá rẻ sẽ ủng hộ shop nhiều nhiều",
+   "date": "2023-05-29T07:34:00.000Z",
+   "helpfulness": 4,
+   "detail_rating": "product_quality: 5\nseller_service: 5\ndelivery_service: 5"
+  }
+ ],
+ "source": "vimrhp_shopee",
+ "source_url": "https://shopee.vn/M%C5%A9-ch%E1%BB%91ng-n%E1%BA%AFng-n%E1%BB%ADa-%C4%91%E1%BA%A7u-H%C3%A0n-Qu%E1%BB%91c-n%C3%B3n-v%C3%A0nh-r%E1%BB%99ng-c%C3%B3-m%C3%B3c-%C4%91eo-kh%E1%BA%A9u-trang-m%C5%A9-ch%E1%BB%91ng-n%E1%BA%AFng-bu%E1%BB%99c-t%C3%B3c-%C4%91u%C3%B4i-ng%E1%BB%B1a.-i.966862914.18888927612",
+ "license": "CC BY-NC-ND 4.0 (ViMRHP, NLDB 2025) – chỉ dùng nội bộ học thuật, không phát hành lại bản đã chỉnh",
+ "product_type": "headwear",
+ "sub_category": "wide_brim",
+ "gender": null,
+ "size_system": "none",
+ "view_type": "unknown",
+ "variant_id": null,
+ "language": "vi"
+}

@@ -1,0 +1,3 @@
+query_id,file,product_type,scenario,gt_product_ids,annotator_1,annotator_2,agreed,n_items_in_image,captured_by,consent,note
+VQ001,data/eval/visual_queries/VQ001.jpg,footwear,tu_chup,fpi_XXXXX|fpi_YYYYY,,,,1,,,VÍ DỤ ĐỊNH DẠNG – xoá dòng này khi nhập thật
+VQ002,data/eval/visual_queries/VQ002.jpg,clothing,nguoi_mac_nhieu_mon,fpi_AAAAA,,,,3,,,VÍ DỤ – ảnh người mặc nhiều món: ghi product_type của món cần tìm
